@@ -47,7 +47,6 @@ export default function CulturalMap() {
           style: "https://tiles.openfreemap.org/styles/liberty",
           center: [31.5, 48.5],
           zoom: 5.5,
-          failIfMajorPerformanceCaveat: false,
         });
 
         mapInstance.current = map;

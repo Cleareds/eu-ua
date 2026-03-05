@@ -12,12 +12,6 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eu-ua.com"),
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/favicon.svg",
-  },
   title: {
     default: "EU-UA.com — Ukraine & Europe",
     template: "%s — EU-UA.com",
