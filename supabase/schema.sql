@@ -24,8 +24,12 @@ create table if not exists cities (
   description text not null,
   connections jsonb not null default '[]',
   notable_figures jsonb not null default '[]',
-  european_influences jsonb not null default '[]'
+  european_influences jsonb not null default '[]',
+  sources jsonb not null default '[]'
 );
+
+-- Migration: add sources column if upgrading from an older schema
+-- alter table cities add column if not exists sources jsonb not null default '[]';
 
 -- ─────────────────────────────────────────
 -- Data Dashboard Points

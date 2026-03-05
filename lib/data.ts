@@ -35,6 +35,7 @@ export async function getCities(): Promise<City[]> {
     ...c,
     notableFigures: c.notable_figures,
     europeanInfluences: c.european_influences,
+    sources: c.sources ?? [],
   })) as City[];
 }
 

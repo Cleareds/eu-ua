@@ -50,6 +50,7 @@ async function seedCities() {
     connections: c.connections,
     notable_figures: c.notableFigures,
     european_influences: c.europeanInfluences,
+    sources: c.sources ?? [],
   }));
   const { error } = await db.from("cities").upsert(rows, { onConflict: "id" });
   if (error) throw error;

@@ -7,6 +7,11 @@ export interface EUChapter {
   description: string;
 }
 
+export interface CitySource {
+  title: string;
+  url: string;
+}
+
 export interface City {
   id: string;
   name: string;
@@ -16,6 +21,7 @@ export interface City {
   connections: string[];
   notableFigures: string[];
   europeanInfluences: string[];
+  sources: CitySource[];
 }
 
 export interface TradeDataPoint {

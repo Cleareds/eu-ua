@@ -4,23 +4,33 @@
     "name": "Kyiv",
     "lat": 50.45,
     "lng": 30.52,
-    "description": "Ukraine's capital and largest city, Kyiv is one of the oldest cities in Eastern Europe, founded in the 5th century. Its medieval architecture, golden-domed monasteries, and rich cultural heritage reflect centuries of European history and trade connections.",
+    "description": "Ukraine's capital and largest city, Kyiv is one of the oldest cities in Eastern Europe, founded in the 5th century. Its medieval architecture, golden-domed monasteries, and rich cultural heritage reflect centuries of European history and trade connections. The city was a major centre of the Kyivan Rus state and maintains active sister-city ties with capitals across Europe.",
     "connections": [
-      "Trade partner with Poland, Germany, and Czech Republic",
-      "Sister city with Warsaw, Berlin, and Brussels",
-      "Hub for EU-funded reconstruction projects post-2022",
-      "Seat of Ukraine's EU accession coordination office"
+      "Sister cities with Warsaw, Berlin, Brussels, Vilnius, Tallinn, Bratislava, and Florence",
+      "Seat of Ukraine's EU accession coordination office and negotiation team",
+      "Hub for EU-funded urban reconstruction projects post-2022 (EU4Cities programme)",
+      "Pan-European Transport Corridor III passes through the city",
+      "Home to 130+ embassies and EU delegation headquarters"
     ],
     "notableFigures": [
-      "Yaroslav the Wise — medieval ruler who cemented European dynastic ties",
-      "Lesya Ukrainka — poet whose works are part of European literary canon",
-      "Mykhailo Hrushevsky — historian who documented Ukraine's European identity"
+      "Yaroslav the Wise (978–1054) — Grand Prince who cemented European dynastic ties; his daughters married kings of France, Hungary, and Norway",
+      "Lesya Ukrainka (1871–1913) — poet and playwright; her drama-poems drew on Ancient Greek, biblical, and medieval European themes",
+      "Mykhailo Hrushevsky (1866–1934) — historian who documented Ukraine's distinct European identity in his 10-volume history",
+      "Agapetus of the Caves (11th century) — physician-monk, pioneer of European monastic medicine"
     ],
     "europeanInfluences": [
-      "Byzantine architecture via Hagia Sophia–inspired Saint Sophia Cathedral",
-      "Baroque style from Polish and German craftsmen (17th–18th century)",
-      "Art Nouveau buildings along Khreshchatyk and Bankova Streets",
-      "Gothic Revival in St. Nicholas Roman Catholic Cathedral"
+      "Saint Sophia Cathedral (1037, UNESCO) — built by Byzantine masters to rival Hagia Sophia in Constantinople",
+      "Baroque style introduced by Polish and German craftsmen in 17th–18th century (Kyiv-Pechersk Lavra bell tower)",
+      "Art Nouveau facades along Khreshchatyk and Bankova Street (early 20th century)",
+      "Gothic Revival in St. Nicholas Roman Catholic Cathedral (1909, designed by Vladyslav Horodetsʹky)",
+      "Historicist and Viennese Secession buildings around Lypky district"
+    ],
+    "sources": [
+      { "title": "UNESCO: Saint-Sophia Cathedral & Kyiv-Pechersk Lavra", "url": "https://whc.unesco.org/en/list/527/" },
+      { "title": "Kyiv City Sister Cities", "url": "https://en.wikipedia.org/wiki/Kyiv#Twin_towns_and_sister_cities" },
+      { "title": "Wikipedia: Kyiv", "url": "https://en.wikipedia.org/wiki/Kyiv" },
+      { "title": "EU Delegation to Ukraine", "url": "https://www.eeas.europa.eu/ukraine_en" },
+      { "title": "EU4Cities — Urban Recovery Programme", "url": "https://eu4cities.eu" }
     ]
   },
   {
@@ -28,23 +38,33 @@
     "name": "Lviv",
     "lat": 49.84,
     "lng": 24.03,
-    "description": "Lviv's Old Town is a UNESCO World Heritage Site, reflecting a remarkable blend of Central European architectural styles. Founded in 1256, the city was part of the Polish-Lithuanian Commonwealth, the Habsburg Empire, and later interwar Poland — each era leaving lasting cultural imprints.",
+    "description": "Lviv's Old Town is a UNESCO World Heritage Site, reflecting a remarkable blend of Central European architectural styles. Founded in 1256 by Prince Danylo of Halych, the city was part of the Polish-Lithuanian Commonwealth, the Habsburg Empire, and interwar Poland — each era leaving lasting cultural imprints. Today it is Ukraine's cultural capital and the gateway to EU integration, just 80 km from the Polish border.",
     "connections": [
-      "Gateway city for EU integration, 80 km from Polish border",
-      "Strong trade ties with Kraków, Vienna, and Prague",
-      "Home to Ukrainian Catholic University with EU academic partnerships",
-      "Major transit hub on the Pan-European Transport Corridor V"
+      "Gateway city for EU integration — 80 km from the Polish border at Shehyni/Medyka",
+      "Strong academic ties with Kraków's Jagiellonian University, Vienna, and Wrocław",
+      "Ukrainian Catholic University (UCU) — active Erasmus+ partnerships across 40 European universities",
+      "Pan-European Transport Corridor V (Trieste–Ljubljana–Budapest–Lviv–Kyiv)",
+      "Rail connection to Warsaw, Budapest, Vienna, and Prague (pre-2022 restored services)"
     ],
     "notableFigures": [
-      "Ivan Franko — writer and scholar, champion of Ukrainian modernism",
-      "Leopold von Sacher-Masoch — Austrian author born in Lviv, part of European literary culture",
-      "Stepan Bandera — controversial nationalist figure who studied in Prague"
+      "Ivan Franko (1856–1916) — writer, scholar, and social activist; studied in Vienna and Chernivtsi; nominated for Nobel Prize in Literature",
+      "Leopold von Sacher-Masoch (1836–1895) — Austrian author born in Lviv, part of European literary culture",
+      "Johannes Hevelius (1611–1687) — astronomer who mapped the moon; spent time in Gdańsk but shaped science in this region",
+      "Stanisław Lem (1921–2006) — science-fiction author born in Lwów (Lviv), one of the most widely read Polish-language writers in the world"
     ],
     "europeanInfluences": [
-      "Gothic foundations in the Latin Cathedral (14th century)",
-      "Renaissance architecture from Italian masters in Rynok Square",
-      "Baroque Dominican Church built by architects from Rome and Vienna",
-      "Secession (Viennese Art Nouveau) in 19th-century buildings"
+      "Gothic foundations of the Latin Cathedral (construction began 1360, consecrated 1479)",
+      "Italian Renaissance in Rynok Square — Black Stone House (1577) and Kornyakt Tower by Italian masters",
+      "Baroque Dominican Church (1749–1764) designed by architects from Rome and Vienna",
+      "Viennese Secession and Historicist buildings in the Franківський and Halytskyi districts",
+      "Habsburg-era coffeehouses — the café culture (kaviarnia) survives to this day"
+    ],
+    "sources": [
+      { "title": "UNESCO: Historic Centre of Lviv", "url": "https://whc.unesco.org/en/list/664/" },
+      { "title": "Wikipedia: Lviv", "url": "https://en.wikipedia.org/wiki/Lviv" },
+      { "title": "Ukrainian Catholic University — Erasmus+", "url": "https://ucu.edu.ua/en/international/" },
+      { "title": "Lviv City Council — Official Portal", "url": "https://city-adm.lviv.ua/en" },
+      { "title": "Pan-European Transport Corridor V", "url": "https://en.wikipedia.org/wiki/Pan-European_corridors#Corridor_V" }
     ]
   },
   {
@@ -52,23 +72,33 @@
     "name": "Odesa",
     "lat": 46.48,
     "lng": 30.73,
-    "description": "Founded in 1794 by order of Catherine II with French engineers and Greek merchants, Odesa was always an international city. Its grand boulevards, opera house, and cosmopolitan history of Greek, Jewish, Italian, and French communities make it one of Europe's most storied port cities.",
+    "description": "Founded in 1794 by order of Catherine II with French engineers and Greek merchants, Odesa was always an international city. Its grand boulevards, opera house modelled on Vienna's Burgtheater, and cosmopolitan history of Greek, Jewish, Italian, and French communities make it one of Europe's most storied port cities. Odesa is a UNESCO World Heritage Site (inscribed 2023) and a UNESCO Creative City of Film.",
     "connections": [
-      "Black Sea port connecting Ukraine to Mediterranean trade routes",
-      "Historic ties with Marseille, Genoa, and Constantinople",
-      "UNESCO Creative City of Film",
-      "Key node in EU's grain export corridors"
+      "UNESCO World Heritage Site — Historic Centre of Odesa (inscribed 2023)",
+      "UNESCO Creative City of Film since 2019",
+      "Black Sea port connecting Ukraine to Mediterranean, Danube, and EU trade routes",
+      "Historic trade ties with Marseille, Genoa, Athens, and Constantinople",
+      "Key node in the EU-backed Black Sea Grain Initiative (2022–2023)"
     ],
     "notableFigures": [
-      "Aleksandr Pushkin — Russian poet who lived in Odesa and called it 'Europe'",
-      "Isaac Babel — author who documented Odesa's multicultural Jewish life",
-      "Armand Emmanuel de Richelieu — French Duke who founded and governed Odesa"
+      "Armand Emmanuel de Richelieu (1766–1822) — French Duke and first governor of Odesa; built the city's European character",
+      "Isaac Babel (1894–1940) — author who documented Odesa's cosmopolitan Jewish culture in the Odessa Stories",
+      "Aleksandr Pushkin (1799–1837) — Russian poet exiled to Odesa (1823–1824); called the city 'Europe'",
+      "Vera Kholodnaya (1893–1919) — 'Queen of the Screen', early European silent film actress"
     ],
     "europeanInfluences": [
-      "Neoclassical French urban planning (Richelieu-era boulevards)",
-      "Odesa Opera House modeled on Vienna's Burgtheater",
-      "Greek Revival architecture in Primorsky Boulevard",
-      "Italian Baroque in the Cathedral of the Transfiguration"
+      "French Neoclassical urban planning — Richelieu-era grid of boulevards (1795–1820)",
+      "Odesa Opera and Ballet Theatre (1887) — modelled on Dresden Opera and Vienna's Burgtheater",
+      "Primorsky Boulevard — Greek Revival colonnade and Potemkin Stairs (193 steps to the sea)",
+      "Cathedral of the Transfiguration rebuilt in Italian Baroque style",
+      "Multi-ethnic European heritage: Greek, French, Italian, Jewish, and German communities"
+    ],
+    "sources": [
+      { "title": "UNESCO: Historic Centre of Odesa", "url": "https://whc.unesco.org/en/list/1703/" },
+      { "title": "UNESCO Creative Cities — Odesa (Film)", "url": "https://www.unesco.org/en/creative-cities/odesa" },
+      { "title": "Wikipedia: Odesa", "url": "https://en.wikipedia.org/wiki/Odesa" },
+      { "title": "Wikipedia: Odesa Opera and Ballet Theatre", "url": "https://en.wikipedia.org/wiki/Odesa_National_Academic_Opera_and_Ballet_Theatre" },
+      { "title": "Black Sea Grain Initiative — UN", "url": "https://www.un.org/en/black-sea-grain-initiative" }
     ]
   },
   {
@@ -76,23 +106,33 @@
     "name": "Kharkiv",
     "lat": 49.99,
     "lng": 36.23,
-    "description": "Ukraine's second-largest city and its first Soviet capital, Kharkiv was also a major centre of Ukrainian culture and science. Its constructivist architecture and research universities reflect both Soviet and pre-Soviet European academic traditions.",
+    "description": "Ukraine's second-largest city and first Soviet capital (1919–1934), Kharkiv was also a major centre of Ukrainian cultural renaissance in the 1920s. Its iconic constructivist architecture and Karazin University — one of Eastern Europe's oldest — reflect both pre-Soviet European academic traditions and bold 20th-century modernism. Today the city is a major IT and innovation hub.",
     "connections": [
-      "Major industrial and technology hub with EU R&D partnerships",
-      "Karazin University — one of Eastern Europe's oldest, founded 1804",
-      "Sister city with Leipzig, Germany",
-      "IT cluster attracting EU-backed investment in wartime relocation"
+      "V.N. Karazin Kharkiv National University — founded 1804, one of the oldest in Eastern Europe",
+      "Sister city with Leipzig (Germany) and Nuremberg (Germany)",
+      "Major IT cluster — 'IT capital of Ukraine', with EU-backed tech relocation programmes post-2022",
+      "Horizon Europe research partnerships in science and technology",
+      "Kharkiv IT Cluster — 60,000+ IT professionals, many working for EU clients"
     ],
     "notableFigures": [
-      "Hryhorii Skovoroda — Ukrainian philosopher, 'the Ukrainian Socrates'",
-      "Simon Petliura — leader of the Ukrainian People's Republic",
-      "Vasyl Karazin — founded the first university in Ukraine (1804)"
+      "Hryhorii Skovoroda (1722–1794) — Ukrainian philosopher and poet, 'the Ukrainian Socrates'",
+      "Vasyl Karazin (1773–1842) — scientist and public figure who founded the first university in Ukraine",
+      "Lev Landau (1908–1968) — Nobel Prize–winning physicist, studied and worked in Kharkiv",
+      "Ilya Mechnikov (1845–1916) — Nobel Prize–winning biologist (immunology), studied in Kharkiv"
     ],
     "europeanInfluences": [
-      "Constructivist Derzhprom skyscraper (1928) — one of Europe's first",
-      "German Baroque influence in Uspensky Cathedral",
-      "European Enlightenment ideals in Karazin University founding charter",
-      "French urban planning in the 19th-century city center"
+      "Derzhprom constructivist skyscraper (1928) — one of the first reinforced-concrete skyscrapers in Europe",
+      "Karazin University charter inspired by Enlightenment ideals from German and French universities",
+      "German Baroque influence in the Dormition (Uspensky) Cathedral (18th century)",
+      "Ukrainian avant-garde art movement (Boichukism) flourished in 1920s Kharkiv",
+      "French urban planning principles in the 19th-century city grid"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Kharkiv", "url": "https://en.wikipedia.org/wiki/Kharkiv" },
+      { "title": "V.N. Karazin Kharkiv National University", "url": "https://www.univer.kharkov.ua/en" },
+      { "title": "Wikipedia: Derzhprom", "url": "https://en.wikipedia.org/wiki/Derzhprom" },
+      { "title": "Nobel Prize — Lev Landau", "url": "https://www.nobelprize.org/prizes/physics/1962/landau/biographical/" },
+      { "title": "Kharkiv IT Cluster", "url": "https://kharkiv.it/" }
     ]
   },
   {
@@ -100,23 +140,271 @@
     "name": "Chernivtsi",
     "lat": 48.29,
     "lng": 25.94,
-    "description": "Known as 'Little Vienna', Chernivtsi was the capital of the Duchy of Bukovina under the Habsburg Empire. Its stunning university (a UNESCO site), ornate churches, and café culture are direct legacies of Austro-Hungarian rule and mark the city as a living piece of Central European heritage.",
+    "description": "Known as 'Little Vienna', Chernivtsi was the capital of the Duchy of Bukovina under the Habsburg Empire. Its stunning university (a UNESCO World Heritage Site), ornate churches, and café culture are direct legacies of Austro-Hungarian rule. The city was famously multilingual — Ukrainian, German, Romanian, Yiddish — and gave rise to one of the 20th century's most important German-language poetic traditions.",
     "connections": [
-      "Near the borders of Romania and Moldova",
-      "UNESCO World Heritage site: Residence of Bukovinian and Dalmatian Metropolitans",
-      "Strong cultural ties with Vienna, Czernowitz German-language literary tradition",
-      "Erasmus+ exchange hub for students from western Ukraine"
+      "UNESCO World Heritage Site: Residence of Bukovinian and Dalmatian Metropolitans (2011)",
+      "Near the borders of Romania and Moldova — cultural crossroads of three nations",
+      "Strong ties with Vienna, Graz, and the German-language Czernowitz literary tradition",
+      "Chernivtsi National University — Erasmus+ partnerships with Austrian and German universities",
+      "Bukovina Institute (Augsburg) preserves German-language heritage of Czernowitz"
     ],
     "notableFigures": [
-      "Paul Celan — German-language poet, one of the most important post-Holocaust voices",
-      "Joseph Roth — Austrian novelist who celebrated Bukovinian multiculturalism",
-      "Rose Ausländer — German-language poet born in Czernowitz"
+      "Paul Celan (1920–1970) — German-language poet; born in Czernowitz; 'Todesfuge' is one of the most important post-Holocaust poems in any language",
+      "Rose Ausländer (1901–1988) — German-language poet born in Czernowitz; survived the Holocaust in hiding",
+      "Joseph Roth (1894–1939) — Austrian novelist who celebrated Bukovinian multiculturalism in 'The Radetzky March'",
+      "Gregor von Rezzori (1914–1998) — Austrian-German author who memorialised Czernowitz in 'Memoirs of an Anti-Semite'"
     ],
     "europeanInfluences": [
-      "Viennese Historicist architecture throughout the city center",
-      "Byzantine-Moorish-Gothic fusion in the Residence of Metropolitan (UNESCO)",
-      "Austro-Hungarian café culture still practiced today",
-      "German-language literary heritage (Czernowitz was a multilingual city)"
+      "Viennese Historicist architecture throughout the city centre — built under Habsburg rule (1774–1918)",
+      "Residence of the Metropolitan (now Chernivtsi University) — Byzantine-Moorish-Gothic fusion designed by Czech architect Josef Hlávka (1864–1882)",
+      "Austro-Hungarian café culture still practised today (kaffeehäuser tradition)",
+      "Multilingual literary heritage — German, Ukrainian, Romanian, and Yiddish coexisted for centuries",
+      "Habsburg-era rail station (1866) connected to Vienna and Lemberg (Lviv)"
+    ],
+    "sources": [
+      { "title": "UNESCO: Residence of Bukovinian and Dalmatian Metropolitans", "url": "https://whc.unesco.org/en/list/1330/" },
+      { "title": "Wikipedia: Chernivtsi", "url": "https://en.wikipedia.org/wiki/Chernivtsi" },
+      { "title": "Paul Celan — Poetry Foundation", "url": "https://www.poetryfoundation.org/poets/paul-celan" },
+      { "title": "Bukovina Institute Augsburg", "url": "https://www.bukowina-institut.de/en/" },
+      { "title": "Chernivtsi National University", "url": "https://www.chnu.edu.ua/en/" }
+    ]
+  },
+  {
+    "id": "uzhhorod",
+    "name": "Uzhhorod",
+    "lat": 48.62,
+    "lng": 22.30,
+    "description": "Ukraine's westernmost city, Uzhhorod sits where Ukrainian, Slovak, and Hungarian cultures converge. Part of the Kingdom of Hungary for nearly a millennium, then Czechoslovakia (1919–1938), and briefly Soviet Ukraine, the city's castle, sakura-lined promenade, and Baroque churches tell a layered Central European story. It is the closest Ukrainian city to the EU's Schengen zone — just 2 km from the Slovak border.",
+    "connections": [
+      "2 km from the Slovak border (Vyšné Nemecké / Uzhhorod crossing) — closest Ukrainian city to Schengen",
+      "Historic ties with Budapest, Prague, and Bratislava under Czechoslovak and Austro-Hungarian rule",
+      "Uzhhorod National University — Erasmus+ partnerships with Slovak, Czech, and Hungarian universities",
+      "Cross-border Euroregion Carpathia — joint cultural programmes with Slovakia, Hungary, and Poland",
+      "Trans-European energy corridor — gas transmission infrastructure connecting to Slovakia"
+    ],
+    "notableFigures": [
+      "Avgustyn Voloshyn (1874–1945) — leader of the Carpatho-Ukraine republic (1938–1939); died in Soviet captivity",
+      "Fedir Manajlo (1910–1978) — Transcarpathian painter who bridged Ukrainian and Central European folk art",
+      "Ernest Seton-Thompson (1860–1946) — naturalist who had Uzhhorod family roots",
+      "Andy Warhol (1928–1987) — parents emigrated from the Uzhhorod region (Miková village) to Pittsburgh"
+    ],
+    "europeanInfluences": [
+      "Uzhhorod Castle — 11th-century Hungarian fortress rebuilt in Renaissance style (16th century)",
+      "Baroque Jesuit church (17th century) — built by the Esterházy family of Hungary",
+      "Czechoslovak-era civic architecture (1919–1938) — Functionalist public buildings downtown",
+      "Sakura (cherry blossom) promenade along the Uzh River — planted in 1945, now a beloved city symbol",
+      "Greek Catholic heritage — Union of Uzhhorod (1646) linked Transcarpathian Church to Rome"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Uzhhorod", "url": "https://en.wikipedia.org/wiki/Uzhhorod" },
+      { "title": "Euroregion Carpathia", "url": "https://en.wikipedia.org/wiki/Euroregion_Carpatia" },
+      { "title": "Andy Warhol Museum of Modern Art, Medzilaborce (Andy's Slovak roots)", "url": "https://www.warhol.sk/en/" },
+      { "title": "Wikipedia: Carpatho-Ukraine", "url": "https://en.wikipedia.org/wiki/Carpatho-Ukraine" },
+      { "title": "Uzhhorod National University", "url": "https://www.uzhnu.edu.ua/en/" }
+    ]
+  },
+  {
+    "id": "ivano-frankivsk",
+    "name": "Ivano-Frankivsk",
+    "lat": 48.92,
+    "lng": 24.71,
+    "description": "Founded in 1662 as Stanisławów by the Polish Potocki family, Ivano-Frankivsk (as it was renamed in 1962) was a key fortress city of the Polish-Lithuanian Commonwealth and later a Habsburg administrative centre. Its well-preserved Baroque old town, active civil society, and proximity to the Carpathian mountains make it a vibrant cultural hub in western Ukraine.",
+    "connections": [
+      "Strong ties with Kraków, Łódź, and Lublin through shared Polish-Lithuanian Commonwealth history",
+      "Gateway to the Carpathian Euroregion (EU cross-border cooperation area with Slovakia and Poland)",
+      "Vasyl Stefanyk Precarpathian National University — Erasmus+ partnerships in EU",
+      "Ivano-Frankivsk IT cluster — growing tech sector with EU client base",
+      "Pan-European Heritage Route through Galician historic cities"
+    ],
+    "notableFigures": [
+      "Vasyl Stefanyk (1871–1936) — Ukrainian expressionist short-story writer; studied in Kraków",
+      "Stanysław Vincenz (1888–1971) — Polish-Ukrainian writer who documented Hutsul Carpathian culture",
+      "Roman Shukhevych (1907–1950) — commander of the Ukrainian Insurgent Army (UPA)",
+      "Sofia Rotaru (born 1947) — iconic Ukrainian singer born near Chernivtsi; studied in Ivano-Frankivsk"
+    ],
+    "europeanInfluences": [
+      "Baroque fortification and church complex — the old town layout follows Polish-Lithuanian Commonwealth urban planning",
+      "Collegiate Church of the Resurrection (1672) — converted to an art museum, original Baroque interior preserved",
+      "Habsburg-era prefecture building and administrative grid (late 18th–19th century)",
+      "Art Nouveau residential buildings along Nezalezhnosti Street",
+      "Hutsul folk art tradition — recognized by UNESCO as Intangible Cultural Heritage of Ukraine"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Ivano-Frankivsk", "url": "https://en.wikipedia.org/wiki/Ivano-Frankivsk" },
+      { "title": "Carpathian Euroregion", "url": "https://en.wikipedia.org/wiki/Carpathian_Euroregion" },
+      { "title": "Vasyl Stefanyk — Encyclopedia of Ukraine", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CT%5CStefanykVasyl.htm" },
+      { "title": "Precarpathian National University", "url": "https://pnu.edu.ua/en/" },
+      { "title": "UNESCO: Hutsul Culture", "url": "https://ich.unesco.org/en/state/ukraine-UA" }
+    ]
+  },
+  {
+    "id": "kamianets-podilskyi",
+    "name": "Kamianets-Podilskyi",
+    "lat": 48.68,
+    "lng": 26.58,
+    "description": "Perched on a rocky island surrounded by the Smotrych River canyon, Kamianets-Podilskyi is home to one of the best-preserved medieval fortress complexes in Eastern Europe. Ruled successively by Lithuanian, Polish, Ottoman, and Russian powers, the city's fortified old town contains Gothic, Renaissance, Baroque, and Ottoman architectural layers — a unique cultural palimpsest on Ukraine's UNESCO Tentative List.",
+    "connections": [
+      "On Ukraine's UNESCO World Heritage Tentative List — nomination in progress",
+      "Historic ties with Poland: capital of Podolia under the Polish-Lithuanian Commonwealth",
+      "Ottoman possession (1672–1699) — the only significant Ottoman urban imprint in today's Ukraine",
+      "National Historical-Architectural Reserve — protected site under Ukrainian law",
+      "Growing cultural tourism with visitors from Poland, Czech Republic, and Slovakia"
+    ],
+    "notableFigures": [
+      "Jan Zamoyski (1542–1605) — Polish Grand Chancellor who fortified the city",
+      "John III Sobieski (1629–1696) — Polish king who recaptured the fortress from the Ottomans (1699)",
+      "Mykhailo Kotsiubynsky (1864–1913) — Ukrainian modernist writer who lived in Podolia",
+      "Tadeusz Czacki (1765–1813) — Polish educator and historian, prominent in the Podolia region"
+    ],
+    "europeanInfluences": [
+      "Gothic fortress towers (14th–15th century) — Lithuanian Grand Duchy construction",
+      "Renaissance palace complex within the fortress — Polish royal period (16th century)",
+      "Cathedral of SS Peter and Paul — Gothic church converted to a mosque by Ottomans and back to a church (minaret still standing)",
+      "Armenian traders' quarter — medieval Armenian colony with its own church (14th century)",
+      "Baroque Dominican Church and Monastery (17th century) — Polish Baroque at its finest"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Kamianets-Podilskyi", "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi" },
+      { "title": "UNESCO Tentative List — Kamianets-Podilskyi Historic Complex", "url": "https://whc.unesco.org/en/tentativelists/5536/" },
+      { "title": "Kamianets-Podilskyi Castle — Official Site", "url": "https://www.old-kamyanets.com.ua/en/" },
+      { "title": "Wikipedia: Podolia", "url": "https://en.wikipedia.org/wiki/Podolia" },
+      { "title": "National Historical-Architectural Reserve", "url": "https://kpzapovednik.com.ua/" }
+    ]
+  },
+  {
+    "id": "dnipro",
+    "name": "Dnipro",
+    "lat": 48.46,
+    "lng": 35.04,
+    "description": "Ukraine's fourth-largest city and major industrial powerhouse, Dnipro (formerly Dnipropetrovsk) sits at the heart of Ukraine on the great Dnipro River. Closed to foreigners during Soviet times due to its rocket and space industry, the city has reinvented itself as a cultural and tech hub. It was home to the Yuzhmash factory that produced Soviet intercontinental missiles — and now produces EU-partnered space launch vehicles.",
+    "connections": [
+      "Yuzhmash/Yuzhnoye Design Bureau — produces Antares and Vega rocket components for EU space missions",
+      "Sister city with Cologne (Germany) and Haifa (Israel)",
+      "Major logistics hub on the Dnipro River waterway (EU-supported infrastructure)",
+      "Oles Honchar Dnipro National University — partnerships with German and Polish universities",
+      "Key city in EU's Ukraine Recovery Plan for industrial transformation"
+    ],
+    "notableFigures": [
+      "Leon Trotsky (1879–1940) — revolutionary leader who had early ties to Kherson and Dnipro region",
+      "Leonid Brezhnev (1906–1982) — Soviet General Secretary, born in Kamianske near Dnipro",
+      "Dmytro Yavornytsky (1855–1940) — historian and archivist of Cossack heritage, based in Dnipro",
+      "Ihor Kolomoisky (born 1963) — oligarch who co-founded PrivatBank, headquartered in Dnipro"
+    ],
+    "europeanInfluences": [
+      "Neoclassical Karl-Marx-Prospekt (now Dmytro Yavornytsky Prospekt) — wide Soviet boulevard echoing Haussmann-era Paris",
+      "Art Nouveau residential buildings in the historic Monastyrsky Island district",
+      "Transfiguration Cathedral (1830–1835) — Neoclassical style inspired by European ecclesiastical design",
+      "German Mennonite settlements in the Dnipro region (18th–19th century) — cultural and agricultural influence",
+      "Space-age modernist architecture (1960s–70s) — unique constructivist urban landscape"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Dnipro (city)", "url": "https://en.wikipedia.org/wiki/Dnipro_(city)" },
+      { "title": "Yuzhnoye Design Bureau (space rockets)", "url": "https://www.yuzhnoye.com/en/" },
+      { "title": "Wikipedia: Yuzhmash", "url": "https://en.wikipedia.org/wiki/Yuzhmash" },
+      { "title": "Oles Honchar Dnipro National University", "url": "https://www.dnu.dp.ua/en" },
+      { "title": "EU Ukraine Recovery Plan — European Commission", "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_22_4548" }
+    ]
+  },
+  {
+    "id": "poltava",
+    "name": "Poltava",
+    "lat": 49.59,
+    "lng": 34.55,
+    "description": "Poltava is best known as the site of the 1709 Battle of Poltava, where Peter the Great defeated Charles XII of Sweden — a turning point that shifted the European balance of power. The city preserves the battlefield and monuments to both armies. It is also the heartland of Ukrainian literary identity: Nikolai Gogol was born nearby, and the region's folk traditions shaped European Romantic writers.",
+    "connections": [
+      "Battlefield of Poltava (1709) — Charles XII of Sweden was allied with Ukrainian Hetman Ivan Mazepa; the battle reshaped European geopolitics",
+      "Sister city with Uppsala (Sweden) — since 2009, marking the 300th anniversary of the battle",
+      "Poltava National Technical Yuri Kondratyuk University — named after a Ukrainian space pioneer",
+      "Poltavshchyna region was a major node in Hetmanate cultural connections with Western Europe",
+      "EU-supported cross-border cultural heritage preservation programmes"
+    ],
+    "notableFigures": [
+      "Ivan Mazepa (1639–1709) — Hetman of Ukraine; ally of Charles XII; celebrated in works by Byron, Voltaire, Hugo, and Liszt",
+      "Yuri Kondratyuk (1897–1941) — Ukrainian engineer who independently derived the mathematics for a lunar orbit rendezvous — used by NASA in the Apollo programme",
+      "Ivan Kotliarevsky (1769–1838) — author of Eneida, the first major work of modern Ukrainian literature; born in Poltava",
+      "Panteleimon Kulish (1819–1897) — writer and ethnographer who created the Kulishivka Ukrainian orthography"
+    ],
+    "europeanInfluences": [
+      "Battle of Poltava (1709) — Swedish Carolinian military architecture influenced the Poltava fortress layout",
+      "Hetmanate Baroque — a distinctive Ukrainian fusion of Central European Baroque with Byzantine traditions (17th–18th century)",
+      "Poltava Gubernial Zemstvo building (1903–1908) — Ukrainian Moderne style synthesising Art Nouveau and folk motifs",
+      "Poltava Museum of Local Lore — collections document trade and cultural exchange with Europe across three centuries",
+      "Ivan Mazepa's diplomatic correspondence with France, Sweden, and the Holy Roman Empire preserved in European archives"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Battle of Poltava", "url": "https://en.wikipedia.org/wiki/Battle_of_Poltava" },
+      { "title": "Wikipedia: Ivan Mazepa", "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa" },
+      { "title": "NASA — Yuri Kondratyuk and the Moon Route", "url": "https://www.nasa.gov/history/alsj/a410/Kondratyuk.html" },
+      { "title": "Wikipedia: Poltava", "url": "https://en.wikipedia.org/wiki/Poltava" },
+      { "title": "Wikipedia: Hetmanate Baroque", "url": "https://en.wikipedia.org/wiki/Cossack_Baroque" }
+    ]
+  },
+  {
+    "id": "zaporizhzhia",
+    "name": "Zaporizhzhia",
+    "lat": 47.84,
+    "lng": 35.14,
+    "description": "Zaporizhzhia — meaning 'beyond the rapids' — was home to the Zaporozhian Sich, the famous self-governing fortress republic of the Cossacks (16th–18th century). The Sich was a unique proto-democratic institution in early modern Europe. Today the city is Ukraine's major industrial centre on the Dnipro River, home to the Zaporizhzhia Nuclear Power Plant — Europe's largest nuclear facility.",
+    "connections": [
+      "Zaporozhian Sich (1552–1775) — Cossack proto-democratic republic that maintained diplomatic ties with Poland, Sweden, Ottoman Empire, and France",
+      "Zaporizhzhia Nuclear Power Plant — Europe's largest nuclear facility (6 reactors, 5,700 MW), under IAEA monitoring since 2022",
+      "IAEA mission permanently stationed at ZNPP since 2022 — ongoing EU security concern",
+      "Zaporizhzhia National University — research partnerships with EU institutions",
+      "Major industrial base: Motor Sich aircraft engines used in EU aviation sector"
+    ],
+    "notableFigures": [
+      "Ivan Sirko (c.1610–1680) — legendary Cossack military leader, hetman of the Sich; allegedly co-author of the satirical 'Letter of the Zaporozhian Cossacks to the Sultan'",
+      "Bohdan Khmelnytsky (c.1595–1657) — Hetman who led the Cossack uprising of 1648; trained at a Jesuit college in Lviv",
+      "Dmytro Yavornytsky (1855–1940) — historian who documented Cossack heritage; his collection is in Dnipro museum",
+      "Ilya Repin (1844–1930) — Russian-Ukrainian painter who depicted the Cossacks in his famous 1891 painting 'Reply of the Zaporozhian Cossacks'"
+    ],
+    "europeanInfluences": [
+      "Zaporozhian Sich — compared by Voltaire and other Enlightenment thinkers to ancient Sparta for its warrior democracy",
+      "Khortytsya Island National Reserve — the original Sich site, now a museum complex",
+      "Constructivist Dniproges hydroelectric dam (1927–1932) — designed with input from American and German engineers; one of the largest dams in Europe at the time",
+      "Motor Sich — aircraft engine manufacturer supplying Mi helicopters to European and UN peacekeeping missions",
+      "Ilya Repin's painting of the Cossacks (1891) — inspired European Romanticism and orientalism"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Zaporozhian Sich", "url": "https://en.wikipedia.org/wiki/Zaporozhian_Sich" },
+      { "title": "IAEA: Zaporizhzhia Nuclear Power Plant Updates", "url": "https://www.iaea.org/topics/zaporizhzhya-nuclear-power-plant" },
+      { "title": "Wikipedia: Zaporizhzhia", "url": "https://en.wikipedia.org/wiki/Zaporizhzhia" },
+      { "title": "Wikipedia: Dniproges (hydroelectric dam)", "url": "https://en.wikipedia.org/wiki/Dniproges" },
+      { "title": "Khortytsya National Reserve", "url": "https://ukr-reserve.zp.ua/en" }
+    ]
+  },
+  {
+    "id": "vinnytsia",
+    "name": "Vinnytsia",
+    "lat": 49.23,
+    "lng": 28.47,
+    "description": "Vinnytsia is one of central Ukraine's most liveable cities, known for its 'Roshen Fountain' — the largest floating fountain in Europe — and a thriving cultural scene. In the 17th century it was a key city of the Polish-Lithuanian Commonwealth. Today it is a model of Ukrainian urban development, ranked among Ukraine's most business-friendly cities, with active EU municipal cooperation programmes.",
+    "connections": [
+      "Sister cities with Lublin (Poland), Würzburg (Germany), Szombathely (Hungary), and Radom (Poland)",
+      "EU4Business programme — one of first Ukrainian cities to implement EU SME standards",
+      "Vinnytsia National Technical University — EU-funded engineering programmes",
+      "Active Covenant of Mayors for Climate & Energy — signatory since 2016",
+      "UN and EU post-war urban resilience pilot city (2022–present)"
+    ],
+    "notableFigures": [
+      "Mykola Leontovych (1877–1921) — composer of 'Shchedryk' (known in the West as 'Carol of the Bells'); worked in Podolia region",
+      "Larysa Kosach (Lesya Ukrainka, 1871–1913) — spent time in Vinnytsia region during her illness",
+      "Simon Petliura (1879–1926) — leader of the Ukrainian People's Republic, worked briefly in Vinnytsia",
+      "Nikolai Pirogov (1810–1881) — pioneering Russian-Ukrainian surgeon who retired to his estate near Vinnytsia; his home is now a museum"
+    ],
+    "europeanInfluences": [
+      "Polish-Lithuanian Commonwealth fortifications and Jesuit college (17th century) — architectural legacy in the old town",
+      "Pirogov Museum-Estate — Neoclassical manor of the surgeon who revolutionised European battlefield medicine",
+      "Art Nouveau public buildings along Soborna Street (early 20th century)",
+      "Roshen Fountain (2011) — largest floating fountain in Europe, 850 m long, on the Southern Bug River",
+      "Covenant of Mayors — EU energy and climate action framework adopted city-wide"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Vinnytsia", "url": "https://en.wikipedia.org/wiki/Vinnytsia" },
+      { "title": "Covenant of Mayors — Vinnytsia", "url": "https://www.covenantofmayors.eu/about/covenant-community/signatories/signatory.html?id=3839" },
+      { "title": "Wikipedia: Mykola Leontovych (Carol of the Bells)", "url": "https://en.wikipedia.org/wiki/Mykola_Leontovych" },
+      { "title": "Pirogov Museum-Estate", "url": "https://uk.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9-%D1%83%D1%81%D0%B0%D0%B4%D0%B1%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8_%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%BE%D0%B2%D0%B0" },
+      { "title": "EU4Business Ukraine — EBRD", "url": "https://www.ebrd.com/what-we-do/sectors/small-and-medium-enterprises/eu4business.html" }
     ]
   }
 ]

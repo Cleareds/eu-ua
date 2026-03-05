@@ -1,4 +1,5 @@
 import { City } from "@/lib/types";
+import { ExternalLink } from "lucide-react";
 
 export default function CityPanel({ city, onClose }: { city: City; onClose: () => void }) {
   return (
@@ -69,6 +70,31 @@ export default function CityPanel({ city, onClose }: { city: City; onClose: () =
                 <li key={fig} className="flex items-start gap-2 text-sm text-gray-700">
                   <span className="mt-0.5 shrink-0">👤</span>
                   <span>{fig}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Sources */}
+        {city.sources && city.sources.length > 0 && (
+          <div className="border-t pt-4" style={{ borderColor: "#E5E7EB" }}>
+            <h3 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#6B7280" }}>
+              Sources & Further Reading
+            </h3>
+            <ul className="space-y-2">
+              {city.sources.map((source) => (
+                <li key={source.url}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-1.5 text-xs hover:underline"
+                    style={{ color: "#003399" }}
+                  >
+                    <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                    <span>{source.title}</span>
+                  </a>
                 </li>
               ))}
             </ul>
