@@ -20,15 +20,6 @@ export default function CulturalMap() {
     async function initMap() {
       if (!mapRef.current || mapInstance.current) return;
 
-      // Only bail out if there is genuinely no WebGL context at all.
-      // Let MapLibre handle GPU/driver-level issues via its own error event.
-      const testCanvas = document.createElement("canvas");
-      const testGl = testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl");
-      if (!testGl) {
-        setWebglError(true);
-        return;
-      }
-
       try {
         const maplibregl = (await import("maplibre-gl")).default;
 
