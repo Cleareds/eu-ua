@@ -1,0 +1,162 @@
+[
+  {
+    "id": "mariupol-drama-theatre",
+    "name": "Mariupol Drama Theatre",
+    "city": "Mariupol",
+    "lat": 47.0966,
+    "lng": 37.5470,
+    "type": "Theatre",
+    "description": "On 16 March 2022 a Russian airstrike destroyed the Mariupol Drama Theatre while an estimated 1,000–1,300 civilians were sheltering inside. The word 'CHILDREN' had been written in large letters in front of the building to identify it as a civilian refuge. Satellite imagery confirmed the strike. AP and other investigators concluded at least 600 people were killed, making it the deadliest single cultural site attack of the war.",
+    "damage": "destroyed",
+    "date": "2022-03-16",
+    "sources": [
+      { "title": "Wikipedia: Mariupol theatre airstrike", "url": "https://en.wikipedia.org/wiki/Mariupol_theatre_airstrike" },
+      { "title": "AP Investigation: At least 600 killed in Mariupol theatre", "url": "https://apnews.com/article/mariupol-theatre-deaths-hundreds-russia-ukraine-war" },
+      { "title": "Human Rights Watch: Mariupol Theatre", "url": "https://www.hrw.org/news/2022/03/18/ukraine-russian-forces-deadly-strikes-mariupol-drama-theater" }
+    ]
+  },
+  {
+    "id": "mariupol-art-school",
+    "name": "Mariupol Art School No. 12",
+    "city": "Mariupol",
+    "lat": 47.1012,
+    "lng": 37.5425,
+    "type": "School / Shelter",
+    "description": "On 20 March 2022 a Russian airstrike destroyed the Mariupol Art School where approximately 400 civilians — mostly women, children, and the elderly — were sheltering. The Red Cross had registered the school as a shelter. The attack killed an unknown number of civilians; survivors were trapped under rubble for days.",
+    "damage": "destroyed",
+    "date": "2022-03-20",
+    "sources": [
+      { "title": "Wikipedia: Siege of Mariupol — Art School attack", "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol_(2022)#Art_school" },
+      { "title": "ICRC: Mariupol shelter attacks", "url": "https://www.icrc.org/en/document/ukraine-icrc-deeply-concerned-about-people-trapped-mariupol" },
+      { "title": "BBC: Mariupol Art School bombing", "url": "https://www.bbc.com/news/world-europe-60826769" }
+    ]
+  },
+  {
+    "id": "odesa-transfiguration-cathedral",
+    "name": "Cathedral of the Transfiguration",
+    "city": "Odesa",
+    "lat": 46.4878,
+    "lng": 30.7388,
+    "type": "Cathedral",
+    "description": "On 23 July 2023 a Russian Kalibr cruise missile struck the Cathedral of the Transfiguration in central Odesa during the city's UNESCO World Heritage inscription celebrations. The cathedral's 65-metre bell tower was shattered, the interior was gutted, and 18th-century artworks were destroyed. The attack came one day after Russia withdrew from the Black Sea Grain Initiative. UNESCO called it a 'cultural catastrophe'.",
+    "damage": "severely_damaged",
+    "date": "2023-07-23",
+    "sources": [
+      { "title": "Wikipedia: Odesa Cathedral of the Transfiguration attack", "url": "https://en.wikipedia.org/wiki/2023_Odesa_Cathedral_of_the_Transfiguration_attack" },
+      { "title": "UNESCO statement on Odesa cathedral strike", "url": "https://www.unesco.org/en/articles/odesa-once-again-targeted-russia-unesco-condemns-deliberate-attack-cultural-heritage" },
+      { "title": "The Guardian: Odesa cathedral bombed", "url": "https://www.theguardian.com/world/2023/jul/23/russia-strikes-odesa-cathedral-ukraine-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "ivankiv-museum",
+    "name": "Ivankiv Historical and Local Lore Museum",
+    "city": "Ivankiv",
+    "lat": 50.9333,
+    "lng": 29.9056,
+    "type": "Museum",
+    "description": "On 27 February 2022, just three days into the full-scale invasion, Russian forces burned down the Ivankiv Museum, destroying 25 original paintings by the celebrated Ukrainian folk artist Maria Pryimachenko (1909–1997). Pryimachenko's naive art has been exhibited at the Louvre and is loved across Europe. Villagers saved some works by cutting them from burning frames, but most were lost.",
+    "damage": "destroyed",
+    "date": "2022-02-27",
+    "sources": [
+      { "title": "Wikipedia: Ivankiv Historical Museum fire", "url": "https://en.wikipedia.org/wiki/Ivankiv_Historical_and_Local_Lore_Museum" },
+      { "title": "Wikipedia: Maria Pryimachenko", "url": "https://en.wikipedia.org/wiki/Maria_Pryimachenko" },
+      { "title": "The Art Newspaper: Ivankiv Museum destruction", "url": "https://www.theartnewspaper.com/2022/03/01/ukrainian-folk-artist-maria-prymachenko-paintings-burned-in-museum-fire" }
+    ]
+  },
+  {
+    "id": "sviatohirsk-lavra",
+    "name": "Sviatohirsk Lavra (Holy Mountains Monastery)",
+    "city": "Sviatohirsk",
+    "lat": 49.0653,
+    "lng": 37.5563,
+    "type": "Monastery",
+    "description": "Sviatohirsk Lavra, a 17th-century Orthodox monastery on the chalk cliffs of the Siverskyi Donets River, is one of Ukraine's holiest sites and was on the UNESCO World Heritage Tentative List. In May–June 2022 it came under intense Russian shelling; the main All Saints Skete was burned down, several historic buildings were damaged, and dozens of monks and displaced civilians sheltering there were killed or wounded.",
+    "damage": "severely_damaged",
+    "date": "2022-06-01",
+    "sources": [
+      { "title": "Wikipedia: Sviatohirsk Lavra", "url": "https://en.wikipedia.org/wiki/Sviatohirsk_Lavra" },
+      { "title": "UNESCO: Sviatohirsk Lavra damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "Reuters: Sviatohirsk monastery shelled", "url": "https://www.reuters.com/world/europe/ukraines-holiest-monastery-charred-abandoned-after-shelling-2022-06-09/" }
+    ]
+  },
+  {
+    "id": "kherson-art-museum",
+    "name": "Kherson Regional Art Museum",
+    "city": "Kherson",
+    "lat": 46.6354,
+    "lng": 32.6169,
+    "type": "Museum",
+    "description": "During the Russian occupation of Kherson (March–November 2022), Russian forces systematically looted the Kherson Regional Art Museum, removing over 10,000 artworks — including works by Aivazovsky, Repin, and Shishkin — and transporting them to Crimea. After liberation, the emptied museum building itself was damaged by Russian shelling from across the Dnipro River. It remains one of the largest art thefts in European history since World War II.",
+    "damage": "severely_damaged",
+    "date": "2022-11-01",
+    "sources": [
+      { "title": "Wikipedia: Kherson Regional Art Museum", "url": "https://en.wikipedia.org/wiki/Kherson_Regional_Art_Museum" },
+      { "title": "The Art Newspaper: Kherson museum looting", "url": "https://www.theartnewspaper.com/2022/11/14/kherson-regional-art-museum-looted-by-russian-forces" },
+      { "title": "UNESCO: Cultural property looting in Ukraine", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "chernihiv-historic-centre",
+    "name": "Chernihiv Historical Centre",
+    "city": "Chernihiv",
+    "lat": 51.4980,
+    "lng": 31.2895,
+    "type": "Historic District",
+    "description": "During the 35-day siege of Chernihiv in March 2022, Russian forces fired over 700 airstrikes and artillery barrages at the city. The historic centre — home to 11th–12th century churches including the Cathedral of Sts Boris and Hlib and the Transfiguration Cathedral (both on Ukraine's UNESCO Tentative List) — suffered damage to surrounding buildings, though the main medieval churches survived. Over 700 residential and civic buildings were damaged or destroyed.",
+    "damage": "damaged",
+    "date": "2022-03-10",
+    "sources": [
+      { "title": "Wikipedia: Siege of Chernihiv (2022)", "url": "https://en.wikipedia.org/wiki/Siege_of_Chernihiv" },
+      { "title": "UNESCO: Cultural Heritage Chernihiv", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "Human Rights Watch: Chernihiv", "url": "https://www.hrw.org/news/2022/03/31/ukraine-russian-forces-killing-civilians-chernihiv" }
+    ]
+  },
+  {
+    "id": "kharkiv-karazin-university",
+    "name": "V.N. Karazin Kharkiv National University",
+    "city": "Kharkiv",
+    "lat": 49.9955,
+    "lng": 36.2316,
+    "type": "University",
+    "description": "The historic main building of Karazin University — founded in 1804 and one of the oldest universities in Eastern Europe — was struck by Russian missiles on 2 March 2022, damaging the iconic 19th-century facade and several departments. The university, with 20,000+ students and extensive EU academic partnerships, has continued to operate partly remotely due to ongoing shelling of Kharkiv.",
+    "damage": "damaged",
+    "date": "2022-03-02",
+    "sources": [
+      { "title": "V.N. Karazin Kharkiv National University", "url": "https://www.univer.kharkov.ua/en" },
+      { "title": "Times Higher Education: Kharkiv University damage", "url": "https://www.timeshighereducation.com/news/kharkiv-universitys-main-building-hit-missile-attack" },
+      { "title": "Wikipedia: Kharkiv", "url": "https://en.wikipedia.org/wiki/Kharkiv" }
+    ]
+  },
+  {
+    "id": "mykolaiv-history-museum",
+    "name": "Mykolaiv Regional Museum of Local History",
+    "city": "Mykolaiv",
+    "lat": 46.9752,
+    "lng": 32.0128,
+    "type": "Museum",
+    "description": "On 29 July 2022 a Russian missile struck the Mykolaiv Regional Museum of Local History, destroying part of the building and damaging irreplaceable collections covering the ancient Greek, Scythian, and Cossack heritage of the Black Sea region. The museum's staff had been unable to evacuate all collections before the strike.",
+    "damage": "severely_damaged",
+    "date": "2022-07-29",
+    "sources": [
+      { "title": "UNESCO: Mykolaiv Museum attack", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "Wikipedia: Mykolaiv", "url": "https://en.wikipedia.org/wiki/Mykolaiv" },
+      { "title": "ICOMOS: Ukraine Heritage Emergency", "url": "https://www.icomos.org/en/focus/armed-conflicts-and-heritage/84977-icomos-calls-for-the-protection-of-ukraine-s-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "skovoroda-museum",
+    "name": "Hryhorii Skovoroda Literary Memorial Museum",
+    "city": "Skovorodynivka",
+    "lat": 50.2033,
+    "lng": 36.3511,
+    "type": "Memorial Museum",
+    "description": "On 7 May 2022 a Russian airstrike destroyed the Hryhorii Skovoroda Literary Memorial Museum in Skovorodynivka village (Kharkiv region). The museum was dedicated to Ukraine's greatest philosopher (1722–1794) and was housed in the 18th-century manor where Skovoroda spent the last years of his life and died. Staff had moved the most valuable items to safety two days before the strike.",
+    "damage": "destroyed",
+    "date": "2022-05-07",
+    "sources": [
+      { "title": "Wikipedia: Hryhorii Skovoroda Literary Memorial Museum", "url": "https://en.wikipedia.org/wiki/Hryhorii_Skovoroda_Literary_Memorial_Museum" },
+      { "title": "Wikipedia: Hryhorii Skovoroda", "url": "https://en.wikipedia.org/wiki/Hryhorii_Skovoroda" },
+      { "title": "The Guardian: Skovoroda museum destroyed", "url": "https://www.theguardian.com/world/2022/may/07/russian-shelling-destroys-museum-dedicated-to-ukraines-greatest-philosopher" }
+    ]
+  }
+]

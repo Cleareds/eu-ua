@@ -12,6 +12,8 @@ export interface CitySource {
   url: string;
 }
 
+export type CityStatus = "free" | "occupied" | "liberated";
+
 export interface City {
   id: string;
   name: string;
@@ -21,6 +23,23 @@ export interface City {
   connections: string[];
   notableFigures: string[];
   europeanInfluences: string[];
+  sources: CitySource[];
+  status?: CityStatus;
+  occupiedSince?: string;
+}
+
+export type SiteDamage = "destroyed" | "severely_damaged" | "damaged";
+
+export interface CulturalSite {
+  id: string;
+  name: string;
+  city: string;
+  lat: number;
+  lng: number;
+  type: string;
+  description: string;
+  damage: SiteDamage;
+  date: string;
   sources: CitySource[];
 }
 

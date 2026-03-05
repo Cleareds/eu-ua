@@ -4,7 +4,7 @@
  */
 
 import { createReadClient } from "./supabase/server";
-import type { EUChapter, City, EUUkraineData, Myth, QuizQuestion, NewsItem } from "./types";
+import type { EUChapter, City, EUUkraineData, Myth, QuizQuestion, NewsItem, CulturalSite } from "./types";
 
 // JSON fallbacks
 import chaptersJSON from "@/data/euChapters.json";
@@ -13,6 +13,7 @@ import dataJSON from "@/data/euUkraineData.json";
 import mythsJSON from "@/data/myths.json";
 import quizJSON from "@/data/quiz.json";
 import newsJSON from "@/data/news-timeline.json";
+import culturalSitesJSON from "@/data/cultural-sites.json";
 
 function db() {
   return createReadClient();
@@ -75,6 +76,10 @@ export async function getQuizQuestions(): Promise<QuizQuestion[]> {
   const { data, error } = await client.from("quiz_questions").select("*").order("id");
   if (error || !data?.length) return quizJSON as QuizQuestion[];
   return data as QuizQuestion[];
+}
+
+export async function getCulturalSites(): Promise<CulturalSite[]> {
+  return culturalSitesJSON as CulturalSite[];
 }
 
 export async function getNews(limit = 20): Promise<NewsItem[]> {
