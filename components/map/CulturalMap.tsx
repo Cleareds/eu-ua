@@ -20,21 +20,11 @@ export default function CulturalMap() {
     async function initMap() {
       if (!mapRef.current || mapInstance.current) return;
 
-      // Check WebGL support — also verify the context is functional (not sandboxed/disabled)
+      // Only bail out if there is genuinely no WebGL context at all.
+      // Let MapLibre handle GPU/driver-level issues via its own error event.
       const testCanvas = document.createElement("canvas");
-      const gl = (testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl")) as WebGLRenderingContext | null;
-      if (!gl || gl.isContextLost()) {
-        setWebglError(true);
-        return;
-      }
-      // Sandboxed environments return a context but with renderer = "Disabled"
-      try {
-        const renderer = String(gl.getParameter(gl.RENDERER) ?? "");
-        if (!renderer || renderer.toLowerCase().includes("disabled")) {
-          setWebglError(true);
-          return;
-        }
-      } catch {
+      const testGl = testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl");
+      if (!testGl) {
         setWebglError(true);
         return;
       }
@@ -52,8 +42,9 @@ export default function CulturalMap() {
         mapInstance.current = map;
 
         map.on("error", (e) => {
-          console.error("MapLibre error:", e);
-          if (e.error?.message?.includes("WebGL") || e.error?.message?.includes("painter")) {
+          const msg = e.error?.message ?? "";
+          // Only fall back on fatal WebGL initialisation failure, not tile/network errors
+          if (msg.includes("Failed to initialize WebGL") || msg.includes("WebGL context")) {
             setWebglError(true);
             map.remove();
             mapInstance.current = null;
