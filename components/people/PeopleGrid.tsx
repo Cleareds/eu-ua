@@ -22,7 +22,7 @@ const ERA_COLORS: Record<string, { bg: string; text: string }> = {
   "20th-century":       { bg: "#EFF6FF", text: "#003399" },
 };
 
-const ALL_ERAS = ["all", "medieval", "early-modern", "national-awakening", "19th-century", "20th-century", "modern"];
+const ALL_ERAS = ["all", "medieval", "early-modern", "national-awakening", "modern"];
 
 function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();

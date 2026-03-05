@@ -20,24 +20,86 @@
     ]
   },
   {
+    "id": "taras-shevchenko",
+    "name": "Taras Shevchenko",
+    "years": "1814–1861",
+    "role": "Poet, Artist & National Symbol",
+    "birthplace": "Moryntsi, Kyiv region, Ukraine",
+    "era": "national-awakening",
+    "description": "Born a serf, Taras Shevchenko was bought free in 1838 by Russian artists who recognised his extraordinary talent. He went on to become Ukraine's greatest poet — the father of modern Ukrainian literary language — and a accomplished painter trained at the St. Petersburg Academy of Arts. His poetry collection 'Kobzar' is the foundational text of Ukrainian literature, combining Romanticism with a fierce demand for national dignity. He was exiled for a decade by the Tsar for his political poems. Today his monuments stand in cities across Europe, North America, and beyond.",
+    "europeanConnections": [
+      "Studied at the Imperial Academy of Arts, St. Petersburg (1838–1845) — trained as a professional painter in the European academic tradition",
+      "His Romanticism drew directly on Byron, Schiller, and Goethe — he is the Ukrainian voice of the European Romantic movement",
+      "His works were banned by the Russian Empire — distributed clandestinely across the Ukrainian diaspora in Europe",
+      "Monuments to Shevchenko stand in Washington DC, Prague, Buenos Aires, and across Europe",
+      "The Shevchenko National Prize is Ukraine's highest cultural award, named in his honour",
+      "His face appears on Ukraine's 100-hryvnia banknote"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Taras Shevchenko", "url": "https://en.wikipedia.org/wiki/Taras_Shevchenko" },
+      { "title": "Encyclopedia of Ukraine: Shevchenko", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CH%5CShevchenko.htm" }
+    ]
+  },
+  {
+    "id": "ivan-franko",
+    "name": "Ivan Franko",
+    "years": "1856–1916",
+    "role": "Writer, Poet & Intellectual",
+    "birthplace": "Nahuievychi, Galicia (then Austria-Hungary), Ukraine",
+    "era": "national-awakening",
+    "description": "Ivan Franko was born in Habsburg Galicia — the most European part of Ukraine — and became Ukraine's second most important literary figure after Shevchenko. Enormously prolific, he wrote poetry, novels, plays, and scholarly works in Ukrainian, Polish, and German. A social democrat and tireless advocate for Ukrainian identity within the Austro-Hungarian Empire, he was nominated for the Nobel Prize in Literature. He studied in Lviv, Chernivtsi, and Vienna, and was a fully European intellectual engaged with Zola, Marx, and Darwin.",
+    "europeanConnections": [
+      "Nominated for the Nobel Prize in Literature — recognition of his standing in European letters",
+      "Studied at the University of Vienna and University of Chernivtsi (then under Habsburg rule)",
+      "Wrote fluently in Ukrainian, Polish, and German — engaged directly with European intellectual currents",
+      "His Lviv was a Habsburg city with opera, universities, and multilingual culture — entirely within the European world",
+      "Collaborated with European socialist and labour movements of the late 19th century",
+      "Translated Sophocles, Dante, Shakespeare, Goethe, Byron, and Heine into Ukrainian"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Ivan Franko", "url": "https://en.wikipedia.org/wiki/Ivan_Franko" },
+      { "title": "Encyclopedia of Ukraine: Ivan Franko", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CF%5CR%5CFranko.htm" }
+    ]
+  },
+  {
     "id": "ivan-mazepa",
     "name": "Ivan Mazepa",
     "years": "1639–1709",
     "role": "Hetman of Ukraine",
     "birthplace": "Bila Tserkva, Ukraine",
     "era": "early-modern",
-    "description": "Ivan Mazepa, Hetman of the Zaporozhian Host, was one of the most educated and sophisticated leaders of his age — fluent in Latin, Polish, German, Italian, and Ukrainian. He allied with King Charles XII of Sweden in 1708 to free Ukraine from Muscovite domination. Though defeated at Poltava, he became an enduring symbol of Ukrainian independence — immortalised in works by Lord Byron, Victor Hugo, Voltaire, Franz Liszt, and Pyotr Tchaikovsky.",
+    "description": "Ivan Mazepa, Hetman of the Zaporozhian Host, was one of the most educated and sophisticated leaders of his age — fluent in Latin, Polish, German, Italian, and Ukrainian. He allied with King Charles XII of Sweden in 1708 to free Ukraine from Muscovite domination. Though defeated at Poltava, he became an enduring symbol of Ukrainian independence — immortalised in works by Lord Byron, Victor Hugo, Voltaire, and Franz Liszt.",
     "europeanConnections": [
       "Byron wrote 'Mazeppa' (1819) — a narrative poem making him a Romantic hero across Europe",
       "Victor Hugo wrote 'Mazeppa' (1829) — one of his most celebrated poems",
       "Franz Liszt composed 'Mazeppa' as a symphonic poem (1851) and piano étude",
-      "Tchaikovsky wrote the opera 'Mazeppa' (1884)",
       "Voltaire described him in 'History of Charles XII' — framing him as a freedom fighter",
       "Alliance with Charles XII of Sweden (1708) — positioned Ukraine within European geopolitics"
     ],
     "sources": [
       { "title": "Wikipedia: Ivan Mazepa", "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa" },
       { "title": "Wikipedia: Mazeppa (Byron)", "url": "https://en.wikipedia.org/wiki/Mazeppa_(poem)" }
+    ]
+  },
+  {
+    "id": "solomiya-krushelnytska",
+    "name": "Solomiya Krushelnytska",
+    "years": "1872–1952",
+    "role": "Opera Singer (Soprano)",
+    "birthplace": "Bila, near Buchach, Galicia (then Austria-Hungary), Ukraine",
+    "era": "national-awakening",
+    "description": "Solomiya Krushelnytska was one of the greatest opera sopranos of the early 20th century. Born in Galicia under the Habsburgs, she studied in Lviv and Italy and went on to perform at La Scala, the Vienna Opera, Covent Garden, and every major European opera house. When Puccini's Madame Butterfly failed at its 1904 premiere in Milan, he rewrote it — and entrusted the revised version to Krushelnytska. Her performance that same year was a triumph, and Madame Butterfly went on to become one of the most performed operas in history.",
+    "europeanConnections": [
+      "Performed at La Scala, Milan; Vienna State Opera; Covent Garden, London; and major European stages",
+      "Puccini rewrote Madame Butterfly specifically for her (1904) — she turned a failed premiere into one of opera's greatest hits",
+      "Studied voice in Lviv (then Habsburg) and with Francesco Cilea in Italy",
+      "Performed in Wagnerian roles across Germany and Austria — rare for non-German singers of her era",
+      "Her 1928 gramophone recordings are preserved in European music archives",
+      "A museum dedicated to her life is in Lviv — a city she returned to after decades in Italy"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Solomiya Krushelnytska", "url": "https://en.wikipedia.org/wiki/Solomiya_Krushelnytska" },
+      { "title": "Encyclopedia of Ukraine: Krushelnytska", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CR%5CKrushelnytskaSolomiia.htm" }
     ]
   },
   {
@@ -52,7 +114,6 @@
       "'Todesfuge' (1945) — defining poem of post-Holocaust European literature",
       "Lived and worked in Paris from 1948 until his death — integrated into French literary life",
       "Translated Kafka, Rimbaud, Valéry, Char, and Shakespeare into German",
-      "Close friendship with philosopher Martin Heidegger — complex relationship documented in European intellectual history",
       "Awarded the Georg Büchner Prize (1960) — Germany's highest literary honour",
       "Czernowitz literary tradition: a uniquely European multilingual cultural space on Ukrainian soil"
     ],
@@ -79,7 +140,28 @@
     ],
     "sources": [
       { "title": "Wikipedia: Lesya Ukrainka", "url": "https://en.wikipedia.org/wiki/Lesya_Ukrainka" },
-      { "title": "Encyclopedia of Ukraine: Lesya Ukrainka", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainkаLesia.htm" }
+      { "title": "Encyclopedia of Ukraine: Lesya Ukrainka", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainkaLesia.htm" }
+    ]
+  },
+  {
+    "id": "kazimir-malevich",
+    "name": "Kazimir Malevich",
+    "years": "1879–1935",
+    "role": "Artist, Founder of Suprematism",
+    "birthplace": "Kyiv, Ukraine",
+    "era": "modern",
+    "description": "Kazimir Malevich was born in Kyiv to a Polish-Ukrainian family and is one of the most consequential artists in the history of European modernism. He invented Suprematism — the first purely abstract art movement — and his 'Black Square' (1915) is among the most studied and debated works of art ever made. Malevich's ideas directly influenced the Bauhaus in Germany, De Stijl in the Netherlands, and virtually the entire course of abstract art in the 20th century. He saw himself as Ukrainian, not Russian.",
+    "europeanConnections": [
+      "'Black Square' (1915) — one of the most influential artworks in European art history",
+      "Visited the Bauhaus in Dessau, Germany (1927) — direct exchange with Gropius, Klee, Kandinsky",
+      "His Suprematist manifesto was published in German as well as Russian",
+      "Major retrospective at the Stedelijk Museum, Amsterdam — his works remain core to European modern art collections",
+      "Influenced Mondrian, Bauhaus, De Stijl, and the entire European abstract tradition",
+      "Born and raised in Kyiv — consistently described Kyiv as his homeland"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Kazimir Malevich", "url": "https://en.wikipedia.org/wiki/Kazimir_Malevich" },
+      { "title": "MoMA: Malevich", "url": "https://www.moma.org/artists/3764" }
     ]
   },
   {
@@ -102,13 +184,33 @@
     ]
   },
   {
+    "id": "igor-sikorsky",
+    "name": "Igor Sikorsky",
+    "years": "1889–1972",
+    "role": "Aviation Pioneer, Inventor of the Helicopter",
+    "birthplace": "Kyiv, Ukraine",
+    "era": "modern",
+    "description": "Igor Sikorsky was born in Kyiv and built Europe's first four-engine aircraft — the Ilya Muromets — in 1913, before the First World War made it famous as a bomber. After the Russian Revolution he emigrated to the United States, where he founded Sikorsky Aircraft and designed the VS-300 (1939) — the prototype for the modern helicopter. His inventions shaped both civilian aviation and military operations for the rest of the 20th century. He is one of the most consequential engineers born on Ukrainian soil.",
+    "europeanConnections": [
+      "Built Europe's first four-engine aircraft, the Ilya Muromets, in Kyiv (1913)",
+      "Studied engineering in Paris (1906–1907) and at the Kyiv Polytechnic Institute",
+      "His early aviation experiments in Kyiv made him a pioneer of European aviation before WWI",
+      "Sikorsky helicopters became standard equipment for NATO allies throughout the Cold War",
+      "Born and raised in Kyiv — his father was a noted psychologist at Kyiv University"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Igor Sikorsky", "url": "https://en.wikipedia.org/wiki/Igor_Sikorsky" },
+      { "title": "Sikorsky Aircraft: Heritage", "url": "https://www.lockheedmartin.com/en-us/products/sikorsky.html" }
+    ]
+  },
+  {
     "id": "mykola-leontovych",
     "name": "Mykola Leontovych",
     "years": "1877–1921",
     "role": "Composer",
     "birthplace": "Vinnytsia region, Ukraine",
     "era": "modern",
-    "description": "Mykola Leontovych composed 'Shchedryk' in 1916 — a choral work based on a Ukrainian New Year folk melody. When the Ukrainian National Chorus performed it in New York in 1921 and 1922, the American arranger Peter Wilhousky added English lyrics calling it 'Carol of the Bells' — now one of the most recognised Christmas songs in the world. Leontovych was assassinated by a Soviet secret agent in 1921.",
+    "description": "Mykola Leontovych composed 'Shchedryk' in 1916 — a choral work based on a Ukrainian New Year folk melody. When the Ukrainian National Chorus performed it in Europe and New York in 1921–1922, the American arranger Peter Wilhousky added English lyrics calling it 'Carol of the Bells' — now one of the most recognised Christmas songs in the world. Leontovych was assassinated by a Soviet secret agent in 1921.",
     "europeanConnections": [
       "'Carol of the Bells' / 'Shchedryk' — one of the most performed Christmas songs globally, unknown as Ukrainian in origin",
       "Ukrainian National Chorus toured Europe (1919–1920) performing 'Shchedryk' and other Ukrainian folk works",
@@ -121,23 +223,23 @@
     ]
   },
   {
-    "id": "ilya-mechnikov",
-    "name": "Ilya Mechnikov",
-    "years": "1845–1916",
-    "role": "Biologist & Nobel Laureate",
-    "birthplace": "Kharkiv region, Ukraine",
-    "era": "national-awakening",
-    "description": "Ilya Mechnikov studied at Kharkiv University and went on to discover phagocytosis — the process by which immune cells engulf and destroy pathogens. His work founded the field of modern immunology. He spent most of his career at the Pasteur Institute in Paris and was awarded the Nobel Prize in Physiology or Medicine in 1908, which he shared with Paul Ehrlich.",
+    "id": "oleksandr-dovzhenko",
+    "name": "Oleksandr Dovzhenko",
+    "years": "1894–1956",
+    "role": "Film Director",
+    "birthplace": "Sosnytsia, Chernihiv region, Ukraine",
+    "era": "modern",
+    "description": "Oleksandr Dovzhenko is regarded as one of the greatest filmmakers in the history of cinema. His silent film 'Earth' (1930) — a lyrical meditation on Ukrainian rural life, death, and the Soviet collectivisation — was voted one of the ten greatest films ever made at the Brussels World's Fair in 1958. He studied in Berlin in the 1920s and was deeply influenced by German Expressionism and European avant-garde cinema. Despite heavy Soviet censorship of his work, his poetic vision of Ukraine's landscapes and people remains incomparable.",
     "europeanConnections": [
-      "Nobel Prize in Physiology or Medicine 1908 — shared with Paul Ehrlich",
-      "Worked at the Pasteur Institute in Paris from 1888 until his death",
-      "Close collaborator of Louis Pasteur — central figure of European biological science",
-      "Discovered phagocytosis — the basis of modern immunology and vaccine science",
-      "Studied at Kharkiv University (founded 1804) — one of Eastern Europe's oldest"
+      "'Earth' (1930) voted one of the ten greatest films of all time at the Brussels World's Fair (1958)",
+      "Studied painting and diplomacy in Berlin in the early 1920s — absorbed German Expressionism",
+      "His cinematic style influenced by French impressionist cinema and Eisenstein's montage theory",
+      "His films were studied and championed by European film critics and directors from Godard to Tarkovsky",
+      "Born in Chernihiv region — one of Ukraine's oldest cities, with 10th-century churches"
     ],
     "sources": [
-      { "title": "Nobel Prize: Ilya Mechnikov", "url": "https://www.nobelprize.org/prizes/medicine/1908/mechnikov/biographical/" },
-      { "title": "Wikipedia: Ilya Mechnikov", "url": "https://en.wikipedia.org/wiki/Ilya_Mechnikov" }
+      { "title": "Wikipedia: Oleksandr Dovzhenko", "url": "https://en.wikipedia.org/wiki/Oleksandr_Dovzhenko" },
+      { "title": "Criterion Collection: Dovzhenko", "url": "https://www.criterion.com/shop/browse/list?q=dovzhenko" }
     ]
   },
   {
@@ -167,7 +269,7 @@
     "role": "Industrial Pioneer",
     "birthplace": "Merthyr Tydfil, Wales, UK",
     "era": "national-awakening",
-    "description": "John James Hughes was a Welsh ironmaster who founded the city that became Donetsk. In 1869 he won a Russian government contract to build a steel plant and railway in the Donbas region. He brought Welsh and English workers and their families, building not just a factory but a company town — schools, hospitals, an Anglican church. The city was named Yuzivka (Hughes's town) until 1924. He is the most prominent example of British-European industrial investment in Ukraine.",
+    "description": "John James Hughes was a Welsh ironmaster who founded the city that became Donetsk. In 1869 he won a contract to build a steel plant and railway in the Donbas region. He brought Welsh and English workers and their families, building not just a factory but a company town — schools, hospitals, an Anglican church. The city was named Yuzivka (Hughes's town) until 1924. He is the most prominent example of British-European industrial investment in Ukraine.",
     "europeanConnections": [
       "Founded Yuzivka (now Donetsk) in 1869 — city named after him until Soviet renaming",
       "Brought 100+ Welsh and English workers to build the New Russia Company steelworks",
@@ -201,6 +303,90 @@
     ]
   },
   {
+    "id": "hryhorii-skovoroda",
+    "name": "Hryhorii Skovoroda",
+    "years": "1722–1794",
+    "role": "Philosopher, Poet & Wandering Teacher",
+    "birthplace": "Chornukhy, Poltava region, Ukraine",
+    "era": "early-modern",
+    "description": "Hryhorii Skovoroda is Ukraine's greatest philosopher — a wandering sage who refused every academic post and church position offered to him, choosing instead to teach ordinary people through conversation, fables, and poetry. Educated at the Kyiv Mohyla Academy (one of Europe's oldest higher institutions), he spent years in Hungary, Austria, and Italy, absorbing European philosophy firsthand. Blending Stoicism, Neoplatonism, and Christian mysticism, he developed a philosophy of 'self-knowledge' and 'the kindred work' — finding one's true calling. His epitaph, which he wrote himself: 'The world tried to catch me but did not succeed.' The museum dedicated to him in Skovorodynivka was destroyed by a Russian airstrike in May 2022.",
+    "europeanConnections": [
+      "Studied at the Kyiv Mohyla Academy — founded 1632, one of the oldest higher education institutions in Eastern Europe",
+      "Traveled and studied in Hungary, Vienna, and Italy (1745–1750) — engaged directly with European philosophy",
+      "His philosophy draws on Socrates, Plato, Epictetus, Marcus Aurelius, and Erasmus",
+      "Called 'the Ukrainian Socrates' by European scholars — his method of dialogue mirrors the Socratic tradition",
+      "His writings influenced 19th-century Ukrainian Romanticism and the European philosophy of the heart (Cordocentrism)",
+      "The Skovoroda Museum in Skovorodynivka — a historic 18th-century manor — was destroyed by Russia on 7 May 2022"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Hryhorii Skovoroda", "url": "https://en.wikipedia.org/wiki/Hryhorii_Skovoroda" },
+      { "title": "Internet Encyclopedia of Philosophy: Skovoroda", "url": "https://iep.utm.edu/skovoroda/" }
+    ]
+  },
+  {
+    "id": "pamfil-yurkevych",
+    "name": "Pamfil Yurkevych",
+    "years": "1826–1874",
+    "role": "Philosopher",
+    "birthplace": "Lipliave, Poltava region, Ukraine",
+    "era": "national-awakening",
+    "description": "Pamfil Yurkevych is one of the most original Ukrainian philosophers of the 19th century. Educated at the Kyiv Theological Academy — where he later taught — he developed a sophisticated 'philosophy of the heart' (Cordocentrism), arguing that the heart, not the brain, is the true centre of human spiritual and moral life. This concept runs through Ukrainian philosophy from Skovoroda to the 20th century and distinguishes Ukrainian thought from rationalist Western European traditions. He was later appointed professor at Moscow University, where his student Vladimir Solovyov — who became Russia's greatest philosopher — credited Yurkevych as his primary influence. Yurkevych engaged critically and deeply with Kant, Hegel, and the empiricists.",
+    "europeanConnections": [
+      "Engaged in a celebrated public debate with Chernyshevsky — the central philosophical controversy of 1860s Russian-Ukrainian intellectual life",
+      "His critique of materialism drew on Kant, Leibniz, and Plato — fully within the European philosophical tradition",
+      "Vladimir Solovyov — Russia's most important philosopher — called Yurkevych his greatest teacher",
+      "His 'philosophy of the heart' (Cordocentrism) is a distinctly Ukrainian contribution to European philosophy",
+      "Taught at the Kyiv Theological Academy — an institution that trained generations of Eastern European intellectuals",
+      "His work was rediscovered by European scholars in the 20th century as a precursor to phenomenology and personalism"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Pamfil Yurkevych", "url": "https://en.wikipedia.org/wiki/Pamfil_Yurkevych" },
+      { "title": "Internet Encyclopedia of Philosophy: Yurkevych", "url": "https://iep.utm.edu/yurkevic/" }
+    ]
+  },
+  {
+    "id": "mykhailo-drahomanov",
+    "name": "Mykhailo Drahomanov",
+    "years": "1841–1895",
+    "role": "Political Philosopher & Historian",
+    "birthplace": "Hadyach, Poltava region, Ukraine",
+    "era": "national-awakening",
+    "description": "Mykhailo Drahomanov was the most important Ukrainian political thinker of the 19th century — a federalist, liberal, and champion of individual rights who insisted that Ukrainian national liberation and European democratic values were inseparable. Forced into emigration in 1876 after the Tsarist Ems Decree banned Ukrainian-language publishing, he settled in Geneva — the centre of European socialist and liberal exile politics — where he published Ukrainian political literature freely. He later taught at Sofia University in Bulgaria. He was Lesya Ukrainka's uncle and a major intellectual influence on her. Ivan Franko called him the greatest Ukrainian political mind of their era.",
+    "europeanConnections": [
+      "Lived and published in Geneva (1876–1889) — at the heart of European exile radical politics",
+      "Corresponded with Marx, Engels, Mikhail Bakunin, and leading European socialist and liberal thinkers",
+      "Founded the Free Press Fund in Geneva — published Ukrainian political literature banned in the Russian Empire",
+      "Appointed professor at Sofia University, Bulgaria (1889) — the first Ukrainian academic at a Western institution",
+      "His federalist vision of Europe influenced the young Ivan Franko and Lesya Ukrainka (his niece)",
+      "Argued Ukraine's path to freedom ran through European liberalism, not Russian socialism"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Mykhailo Drahomanov", "url": "https://en.wikipedia.org/wiki/Mykhailo_Drahomanov" },
+      { "title": "Encyclopedia of Ukraine: Drahomanov", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CD%5CR%5CDrahomanovMykhailo.htm" }
+    ]
+  },
+  {
+    "id": "volodymyr-vernadsky",
+    "name": "Volodymyr Vernadsky",
+    "years": "1863–1945",
+    "role": "Scientist & Philosopher of the Biosphere",
+    "birthplace": "Kyiv, Ukraine",
+    "era": "modern",
+    "description": "Volodymyr Vernadsky was born in Kyiv and became one of the most original scientific thinkers of the 20th century. He founded geochemistry and biogeochemistry, and developed the concept of the 'noosphere' — the sphere of human thought as a geological force transforming the planet — which preceded and influenced the modern idea of the Anthropocene. His noosphere concept was developed in parallel with the French Jesuit philosopher Pierre Teilhard de Chardin and popularised in the West through French scientific circles. He founded the Ukrainian Academy of Sciences in 1918 and was its first president. His ideas on the interconnectedness of life, mind, and the Earth remain deeply influential in European ecological and philosophical thought.",
+    "europeanConnections": [
+      "Developed the concept of the 'noosphere' in collaboration with French thinkers — published in French in Paris (1926)",
+      "Studied mineralogy in Munich and Paris in the 1880s — engaged with European natural science at the highest level",
+      "Corresponded with Pierre Teilhard de Chardin — together they shaped 20th century philosophy of ecology",
+      "Founded and served as first president of the Ukrainian Academy of Sciences (1918)",
+      "His biogeochemistry lectures at the Sorbonne, Paris (1922–1926) introduced his ideas to Western European science",
+      "The Vernadsky National Library of Ukraine in Kyiv is named in his honour — one of Europe's major research libraries"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Vladimir Vernadsky", "url": "https://en.wikipedia.org/wiki/Vladimir_Vernadsky" },
+      { "title": "Encyclopedia of Ukraine: Vernadsky", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CV%5CE%5CVernadsky.htm" }
+    ]
+  },
+  {
     "id": "maria-pryimachenko",
     "name": "Maria Pryimachenko",
     "years": "1909–1997",
@@ -218,26 +404,6 @@
     "sources": [
       { "title": "Wikipedia: Maria Pryimachenko", "url": "https://en.wikipedia.org/wiki/Maria_Pryimachenko" },
       { "title": "The Art Newspaper: Pryimachenko works burned", "url": "https://www.theartnewspaper.com/2022/03/01/ukrainian-folk-artist-maria-prymachenko-paintings-burned-in-museum-fire" }
-    ]
-  },
-  {
-    "id": "serhiy-prokofiev",
-    "name": "Sergei Prokofiev",
-    "years": "1891–1953",
-    "role": "Composer",
-    "birthplace": "Sontsivka, Donetsk region, Ukraine",
-    "era": "modern",
-    "description": "Sergei Prokofiev was born on a Ukrainian estate in what is now the Donetsk region. He became one of the 20th century's greatest composers — 'Romeo and Juliet', 'Peter and the Wolf', 'Lieutenant Kijé', five piano concertos, seven symphonies. He spent 15 years in Paris and the US before returning to the Soviet Union. His birthplace is now in the Russian-occupied Donetsk region.",
-    "europeanConnections": [
-      "Lived in Paris 1920–1936 — collaborated with Diaghilev's Ballets Russes",
-      "Premiered major works in London, Paris, Chicago, and across Europe",
-      "His ballet 'Romeo and Juliet' (1938) is one of the most performed ballets in the world",
-      "Collaborated with Sergei Diaghilev — the Russian-born impresario who shaped 20th century European performing arts",
-      "His estate in Sontsivka, Donetsk region, is now in Russian-occupied Ukraine"
-    ],
-    "sources": [
-      { "title": "Wikipedia: Sergei Prokofiev", "url": "https://en.wikipedia.org/wiki/Sergei_Prokofiev" },
-      { "title": "Prokofiev Foundation", "url": "https://www.sprkfv.net/" }
     ]
   }
 ]
