@@ -1,22 +1,23 @@
 /**
- * Generates portrait images for all people in data/people.json
- * using gemini-2.5-flash-image via the Gemini API generateContent endpoint.
+ * Downloads real historical photos from Wikipedia, then uses gemini-2.5-flash-image
+ * to restyle each one as a consistent black-and-white portrait.
  *
  * Usage:
  *   GEMINI_API_KEY=your_key npx tsx scripts/generate-people-images.ts
  *   GEMINI_API_KEY=your_key npx tsx scripts/generate-people-images.ts --force
  *   GEMINI_API_KEY=your_key npx tsx scripts/generate-people-images.ts --id=taras-shevchenko
  *
- * Output: public/people/{id}.png (1024×1024, square)
+ * Output: public/people/{id}.png (square, B&W)
  */
 
 import fs from "fs";
 import path from "path";
 import https from "https";
+import http from "http";
 
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) {
-  console.error("Error: GEMINI_API_KEY environment variable is not set.");
+  console.error("Error: GEMINI_API_KEY is not set.");
   process.exit(1);
 }
 
@@ -31,140 +32,152 @@ const peopleJson = JSON.parse(
 const outputDir = path.join(process.cwd(), "public/people");
 fs.mkdirSync(outputDir, { recursive: true });
 
-// Shared suffix for every prompt — enforces consistent portrait format
-const PORTRAIT_SUFFIX =
-  "Square 1:1 format, tight head-and-shoulders crop, subject looking directly at viewer, " +
-  "sharp focus on face, soft studio lighting, plain dark neutral background. " +
-  "Photorealistic, highly detailed, cinematic portrait photography style. " +
-  "No text, no watermarks, no borders, no landscapes, no full-body shots.";
-
-// Per-person prompts based on actual historical photographs, paintings, and forensic reconstructions
-const PROMPTS: Record<string, string> = {
-  "yaroslav-wise":
-    `Photorealistic portrait of Yaroslav the Wise (978–1054), Grand Prince of Kyiv. ` +
-    `Based on forensic facial reconstruction from his skull: broad Slavic face, strong square jaw, ` +
-    `prominent cheekbones, full dark beard streaked with grey, deep-set authoritative eyes, ` +
-    `wearing a Byzantine-style gold crown and royal red and gold robes. ` +
-    `Medieval ruler, dignified and powerful. ${PORTRAIT_SUFFIX}`,
-
-  "taras-shevchenko":
-    `Photorealistic portrait of Taras Shevchenko (1814–1861), Ukrainian national poet and painter. ` +
-    `Based on his own self-portraits and contemporaneous photographs: round broad Slavic face, ` +
-    `prominent wide nose, large dark expressive eyes, dark hair, full beard and mustache turning grey, ` +
-    `wearing a simple dark coat or peasant shirt. Warm, soulful, world-weary expression. ${PORTRAIT_SUFFIX}`,
-
-  "ivan-franko":
-    `Photorealistic portrait of Ivan Franko (1856–1916), Ukrainian writer and intellectual. ` +
-    `Based on late 19th-century photographs: stocky broad-shouldered man, full dark beard ` +
-    `going grey at the edges, broad forehead, intense deep-set grey-brown eyes, ` +
-    `wearing a dark suit with high collar. Galician intellectual, mid-50s appearance. ${PORTRAIT_SUFFIX}`,
-
-  "ivan-mazepa":
-    `Photorealistic portrait of Ivan Mazepa (1639–1709), Hetman of Ukraine. ` +
-    `Based on contemporary 17th-century portrait paintings: aristocratic weathered face in his late 60s, ` +
-    `long pointed Cossack mustache with no beard, long dark hair greying at temples, ` +
-    `wearing elaborately embroidered Hetman's regalia with a fur-trimmed coat. ` +
-    `Proud, noble, resolute expression. ${PORTRAIT_SUFFIX}`,
-
-  "solomiya-krushelnytska":
-    `Photorealistic portrait of Solomiya Krushelnytska (1872–1952), Ukrainian opera soprano. ` +
-    `Based on early 20th-century opera photographs: beautiful oval face, dark lustrous hair ` +
-    `elegantly styled up, fine Galician features, large expressive dark eyes, ` +
-    `wearing an elegant dark evening dress. Graceful, commanding operatic presence, age 30s-40s. ${PORTRAIT_SUFFIX}`,
-
-  "paul-celan":
-    `Photorealistic studio portrait of a European man in his 40s, 1950s Paris. ` +
-    `Thin angular face, dark hair swept back from a high forehead, ` +
-    `deep-set melancholic eyes, prominent straight nose, wearing a dark suit with tie. ` +
-    `Introspective, poetic expression. ${PORTRAIT_SUFFIX}`,
-
-  "lesya-ukrainka":
-    `Photorealistic portrait of Lesya Ukrainka (1871–1913), Ukrainian poet and playwright. ` +
-    `Based on 1890s-1900s photographs: delicate pale oval face, dark hair parted in the middle ` +
-    `and pulled back, large sad intelligent eyes, fine features, slight fragility in her appearance ` +
-    `from chronic illness, wearing a simple dark blouse with white collar. Age mid-30s. ${PORTRAIT_SUFFIX}`,
-
-  "kazimir-malevich":
-    `Photorealistic portrait of Kazimir Malevich (1879–1935), Kyiv-born founder of Suprematism. ` +
-    `Based on known photographs and self-portraits: very strong broad face, high prominent Slavic ` +
-    `cheekbones, piercing wide-set grey eyes, short dark hair, clean-shaven, ` +
-    `wearing a simple dark shirt or artist's smock. Intense, uncompromising, direct gaze. ${PORTRAIT_SUFFIX}`,
-
-  "yuri-kondratyuk":
-    `Photorealistic portrait of Yuri Kondratyuk (1897–1941), Ukrainian space pioneer and engineer. ` +
-    `Based on 1920s-30s photographs: young man in his 30s, angular Slavic face, dark hair, ` +
-    `high forehead, thoughtful intelligent eyes, wearing a simple Soviet-era shirt or jacket. ` +
-    `Self-taught genius, modest, quietly intense expression. ${PORTRAIT_SUFFIX}`,
-
-  "igor-sikorsky":
-    `Photorealistic studio portrait of a distinguished American engineer, age 60s, mid-20th century. ` +
-    `Round kind face, balding on top with dark hair on sides, warm intelligent eyes, clean-shaven, ` +
-    `wearing a suit and tie. Approachable, confident, senior executive presence. ${PORTRAIT_SUFFIX}`,
-
-  "mykola-leontovych":
-    `Photorealistic portrait of Mykola Leontovych (1877–1921), Ukrainian composer of Carol of the Bells. ` +
-    `Based on contemporary photographs: gentle face, dark full beard and mustache, ` +
-    `sensitive musician's eyes, modest dark clothing. Quiet, introspective, artistic expression. ${PORTRAIT_SUFFIX}`,
-
-  "oleksandr-dovzhenko":
-    `Photorealistic portrait of Oleksandr Dovzhenko (1894–1956), Ukrainian film director. ` +
-    `Based on known photographs: strong angular Slavic face, high cheekbones, deep-set intense ` +
-    `dark eyes, dark hair, clean-shaven, wearing a dark shirt or jacket. ` +
-    `Visionary filmmaker, authoritative, passionate expression. ${PORTRAIT_SUFFIX}`,
-
-  "lev-landau":
-    `Photorealistic studio portrait of a European scientist, age 45, mid-20th century. ` +
-    `Elongated thin face, dark deep-set eyes, wire-rimmed round glasses, dark receding hair, ` +
-    `slender build, wearing a suit jacket with open collar. ` +
-    `Intellectually vibrant, slightly eccentric, animated expression. ${PORTRAIT_SUFFIX}`,
-
-  "john-hughes":
-    `Photorealistic portrait of John Hughes (1814–1889), Welsh industrialist who founded Donetsk. ` +
-    `Victorian-era Welsh businessman: sturdy stocky build, full Victorian-style beard and sideburns, ` +
-    `dark hair, confident industrialist's bearing, wearing a formal Victorian frock coat and cravat. ` +
-    `Self-made man, determined and pragmatic expression. ${PORTRAIT_SUFFIX}`,
-
-  "vasyl-stus":
-    `Photorealistic portrait of a Ukrainian poet and political prisoner of the Soviet era, 1970s. ` +
-    `Gaunt thin face marked by hardship, intensely dark deep-set eyes burning with conviction, ` +
-    `dark hair, slight stubble, wearing a simple dark shirt. ` +
-    `Suffering yet unbroken, defiant inner strength, age late 30s to 40s. ${PORTRAIT_SUFFIX}`,
-
-  "hryhorii-skovoroda":
-    `Photorealistic portrait of Hryhorii Skovoroda (1722–1794), Ukraine's greatest philosopher. ` +
-    `Based on 18th-century portrait paintings: elderly man in his 60s-70s, long flowing white ` +
-    `beard and long grey-white hair, wise deep-set eyes, lean weathered wanderer's face, ` +
-    `wearing simple dark philosopher's robes or a plain dark coat. Serene, wise, Socratic expression. ${PORTRAIT_SUFFIX}`,
-
-  "pamfil-yurkevych":
-    `Photorealistic portrait of Pamfil Yurkevych (1826–1874), Ukrainian philosopher. ` +
-    `19th-century Ukrainian academic: full dark beard and mustache, high scholarly forehead, ` +
-    `thoughtful eyes, wearing a dark academic frock coat. ` +
-    `Gentle, deeply contemplative, philosophical expression. ${PORTRAIT_SUFFIX}`,
-
-  "mykhailo-drahomanov":
-    `Photorealistic portrait of Mykhailo Drahomanov (1841–1895), Ukrainian political philosopher. ` +
-    `Based on 1870s-90s photographs: full dark beard and mustache streaked with grey, ` +
-    `broad intellectual forehead, intense dark eyes, wearing a dark frock coat. ` +
-    `Revolutionary intellectual, passionate, principled expression. ${PORTRAIT_SUFFIX}`,
-
-  "volodymyr-vernadsky":
-    `Photorealistic portrait of Volodymyr Vernadsky (1863–1945), Ukrainian scientist and philosopher. ` +
-    `Based on well-known photographs: distinguished elderly man in his 70s-80s, ` +
-    `full neat white beard, white hair, wire-rimmed glasses, warm wise eyes, ` +
-    `wearing a dark suit. Gentle, brilliant, grandfatherly scientific authority. ${PORTRAIT_SUFFIX}`,
-
-  "maria-pryimachenko":
-    `Photorealistic portrait of an elderly Ukrainian folk artist and painter from the Kyiv region, age 70s-80s. ` +
-    `Round warm peasant face, white hair pulled neatly back, kind eyes full of life and creativity, ` +
-    `wearing a traditional Ukrainian embroidered blouse (vyshyvanka) with a dark cardigan. ` +
-    `Warm, wise, earthy Ukrainian grandmother artist. ${PORTRAIT_SUFFIX}`,
+// Wikipedia article titles for each person
+const WIKI_TITLES: Record<string, string> = {
+  "yaroslav-wise":          "Yaroslav_the_Wise",
+  "taras-shevchenko":       "Taras_Shevchenko",
+  "ivan-franko":            "Ivan_Franko",
+  "ivan-mazepa":            "Ivan_Mazepa",
+  "solomiya-krushelnytska": "Solomiya_Krushelnytska",
+  "paul-celan":             "Paul_Celan",
+  "lesya-ukrainka":         "Lesya_Ukrainka",
+  "kazimir-malevich":       "Kazimir_Malevich",
+  "yuri-kondratyuk":        "Yuri_Kondratyuk",
+  "igor-sikorsky":          "Igor_Sikorsky",
+  "mykola-leontovych":      "Mykola_Leontovych",
+  "oleksandr-dovzhenko":    "Oleksandr_Dovzhenko",
+  "lev-landau":             "Lev_Landau",
+  "john-hughes":            "John_Hughes_(industrialist)",
+  "vasyl-stus":             "Vasyl_Stus",
+  "hryhorii-skovoroda":     "Hryhorii_Skovoroda",
+  "pamfil-yurkevych":       "Pamfil_Yurkevych",
+  "mykhailo-drahomanov":    "Mykhailo_Drahomanov",
+  "volodymyr-vernadsky":    "Vladimir_Vernadsky",
+  "maria-pryimachenko":     "Maria_Pryimachenko",
 };
 
-async function generateImage(prompt: string): Promise<{ data: Buffer; mimeType: string }> {
+// Style prompt applied to every image
+const RESTYLE_PROMPT =
+  "Apply a dramatic black-and-white photographic treatment to this historical image. " +
+  "High-contrast monochrome: deep rich blacks, bright whites, sharp mid-tones. " +
+  "Tight head-and-shoulders crop centred on the face, plain dark background. " +
+  "Square 1:1 output. Cinematic editorial style. No text, no watermarks, no borders.";
+
+// Fallback direct Wikimedia Commons URLs for people whose Wikipedia summary has no image
+const FALLBACK_IMAGE_URLS: Record<string, { url: string; mimeType: string }> = {
+  "paul-celan": {
+    url: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Celan_1938.jpg",
+    mimeType: "image/jpeg",
+  },
+  "john-hughes": {
+    url: "https://upload.wikimedia.org/wikipedia/en/0/08/John_James_Hughes.jpg",
+    mimeType: "image/jpeg",
+  },
+  "vasyl-stus": {
+    url: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Vasyl_Stus_%281938-1985%29.jpg",
+    mimeType: "image/jpeg",
+  },
+  "pamfil-yurkevych": {
+    url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Pamfil_Yurkevych.jpg",
+    mimeType: "image/jpeg",
+  },
+};
+
+// Text-only B&W portrait prompts for people where image-to-image is blocked
+const TEXT_ONLY_BW_PROMPTS: Record<string, string> = {
+  "paul-celan":
+    "Dramatic black-and-white studio portrait of a Jewish poet from Chernivtsi, Ukraine, living in Paris in the 1960s. " +
+    "Thin angular face, dark hair swept back from high forehead, deep melancholic eyes, prominent nose, wearing dark suit and tie. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "kazimir-malevich":
+    "Dramatic black-and-white studio portrait of a Ukrainian-born avant-garde artist from Kyiv, early 20th century. " +
+    "Strong broad face, very high prominent cheekbones, piercing wide-set eyes, short hair, clean-shaven. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "yuri-kondratyuk":
+    "Dramatic black-and-white studio portrait of a young Ukrainian self-taught engineer and space pioneer, 1920s Soviet era, age early 30s. " +
+    "Angular Slavic face, dark hair, high forehead, intelligent thoughtful eyes, simple shirt. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "igor-sikorsky":
+    "Dramatic black-and-white studio portrait of a distinguished Ukrainian-American aviation engineer and inventor, age 60s, mid-20th century. " +
+    "Round kind face, balding on top with dark hair on sides, warm intelligent eyes, clean-shaven, formal suit and tie. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "lev-landau":
+    "Dramatic black-and-white studio portrait of a theoretical physicist who worked in Kharkiv, Ukraine, Nobel laureate, age 45, mid-20th century. " +
+    "Famously elongated thin face, dark deep-set eyes, wire-rimmed round glasses, dark receding hair, slender build, suit jacket. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "volodymyr-vernadsky":
+    "Dramatic black-and-white studio portrait of an elderly distinguished Ukrainian scientist and philosopher, founder of the Ukrainian Academy of Sciences, age late 70s. " +
+    "Full neat white beard, white hair, wire-rimmed glasses, warm wise eyes, dark suit. " +
+    "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+};
+
+// ─── HTTP helpers ────────────────────────────────────────────────────────────
+
+function fetchBuffer(url: string): Promise<Buffer> {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith("https://") ? https : http;
+    client.get(url, { headers: { "User-Agent": "eu-ua-portrait-script/1.0" } }, (res) => {
+      if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 303) {
+        return fetchBuffer(res.headers.location!).then(resolve).catch(reject);
+      }
+      if (res.statusCode !== 200) {
+        return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
+      }
+      const chunks: Buffer[] = [];
+      res.on("data", (c) => chunks.push(c));
+      res.on("end", () => resolve(Buffer.concat(chunks)));
+      res.on("error", reject);
+    }).on("error", reject);
+  });
+}
+
+function fetchJson(url: string): Promise<any> {
+  return fetchBuffer(url).then((b) => JSON.parse(b.toString("utf-8")));
+}
+
+// ─── Wikipedia image fetcher ─────────────────────────────────────────────────
+
+async function getWikipediaImage(title: string): Promise<{ url: string; mimeType: string } | null> {
+  // Try REST v1 summary first
+  try {
+    const data = await fetchJson(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
+    );
+    const imgUrl: string | undefined = data.originalimage?.source ?? data.thumbnail?.source;
+    if (imgUrl) {
+      const mime = imgUrl.match(/\.png(\?|$)/i) ? "image/png" : "image/jpeg";
+      return { url: imgUrl, mimeType: mime };
+    }
+  } catch {}
+
+  // Fallback: MediaWiki API pageimages
+  try {
+    const data = await fetchJson(
+      `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&format=json&pithumbsize=600&piprop=original`
+    );
+    const pages = Object.values(data.query?.pages ?? {}) as any[];
+    const imgUrl = pages[0]?.original?.source ?? pages[0]?.thumbnail?.source;
+    if (imgUrl) {
+      const mime = imgUrl.match(/\.png(\?|$)/i) ? "image/png" : "image/jpeg";
+      return { url: imgUrl, mimeType: mime };
+    }
+  } catch {}
+
+  return null;
+}
+
+// ─── Gemini image-to-image ───────────────────────────────────────────────────
+
+async function restyle(imageBuffer: Buffer, mimeType: string): Promise<{ data: Buffer; mimeType: string }> {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      contents: [{
+        role: "user",
+        parts: [
+          { text: RESTYLE_PROMPT },
+          { inlineData: { mimeType, data: imageBuffer.toString("base64") } },
+        ],
+      }],
       generationConfig: { responseModalities: ["IMAGE", "TEXT"] },
     });
 
@@ -180,97 +193,153 @@ async function generateImage(prompt: string): Promise<{ data: Buffer; mimeType: 
 
     const req = https.request(options, (res) => {
       const chunks: Buffer[] = [];
-      res.on("data", (chunk) => chunks.push(chunk));
+      res.on("data", (c) => chunks.push(c));
       res.on("end", () => {
         const raw = Buffer.concat(chunks).toString("utf-8");
         try {
           const json = JSON.parse(raw);
-          if (json.error) {
-            reject(new Error(`API error: ${json.error.message}`));
-            return;
-          }
+          if (json.error) return reject(new Error(`API error: ${json.error.message}`));
           const parts: any[] = json.candidates?.[0]?.content?.parts ?? [];
-          const imagePart = parts.find((p: any) => p.inlineData?.mimeType?.startsWith("image/"));
-          if (!imagePart) {
-            // Log any text response for debugging
-            const textPart = parts.find((p: any) => p.text);
-            reject(new Error(`No image in response. Text: ${textPart?.text ?? raw.slice(0, 300)}`));
-            return;
+          const imgPart = parts.find((p: any) => p.inlineData?.mimeType?.startsWith("image/"));
+          if (!imgPart) {
+            const text = parts.find((p: any) => p.text)?.text ?? "";
+            const reason = json.candidates?.[0]?.finishReason ?? "";
+            return reject(new Error(`No image returned. Reason: ${reason}. ${text.slice(0, 200)}`));
           }
           resolve({
-            data: Buffer.from(imagePart.inlineData.data, "base64"),
-            mimeType: imagePart.inlineData.mimeType,
+            data: Buffer.from(imgPart.inlineData.data, "base64"),
+            mimeType: imgPart.inlineData.mimeType,
           });
-        } catch (e) {
-          reject(new Error(`Failed to parse response: ${raw.slice(0, 400)}`));
+        } catch {
+          reject(new Error(`Parse error: ${raw.slice(0, 300)}`));
         }
       });
     });
-
     req.on("error", reject);
     req.write(body);
     req.end();
   });
 }
 
-function mimeToExt(mime: string): string {
-  if (mime.includes("png")) return "png";
-  if (mime.includes("webp")) return "webp";
-  return "jpg";
+async function generateTextOnly(prompt: string): Promise<{ data: Buffer; mimeType: string }> {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      generationConfig: { responseModalities: ["IMAGE", "TEXT"] },
+    });
+    const options = {
+      hostname: "generativelanguage.googleapis.com",
+      path: `/v1beta/models/gemini-2.5-flash-image:generateContent?key=${API_KEY}`,
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Content-Length": Buffer.byteLength(body) },
+    };
+    const req = https.request(options, (res) => {
+      const chunks: Buffer[] = [];
+      res.on("data", (c) => chunks.push(c));
+      res.on("end", () => {
+        const raw = Buffer.concat(chunks).toString("utf-8");
+        try {
+          const json = JSON.parse(raw);
+          if (json.error) return reject(new Error(`API error: ${json.error.message}`));
+          const parts: any[] = json.candidates?.[0]?.content?.parts ?? [];
+          const imgPart = parts.find((p: any) => p.inlineData?.mimeType?.startsWith("image/"));
+          if (!imgPart) return reject(new Error(`No image: ${json.candidates?.[0]?.finishReason}`));
+          resolve({ data: Buffer.from(imgPart.inlineData.data, "base64"), mimeType: imgPart.inlineData.mimeType });
+        } catch { reject(new Error(`Parse error: ${raw.slice(0, 200)}`)); }
+      });
+    });
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
 }
 
-async function sleep(ms: number) {
+function ext(mime: string) {
+  return mime.includes("png") ? "png" : mime.includes("webp") ? "webp" : "jpg";
+}
+
+function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+// ─── Main ────────────────────────────────────────────────────────────────────
+
 async function main() {
   const people: any[] = onlyId
-    ? peopleJson.filter((p: { id: string }) => p.id === onlyId)
+    ? peopleJson.filter((p: any) => p.id === onlyId)
     : peopleJson;
 
-  if (people.length === 0) {
-    console.error(`No person found with id "${onlyId}"`);
-    process.exit(1);
-  }
+  if (!people.length) { console.error(`No person found: "${onlyId}"`); process.exit(1); }
 
-  console.log(`Generating portraits for ${people.length} people using gemini-2.5-flash-image...\n`);
+  console.log(`Processing ${people.length} portraits...\n`);
 
   for (let i = 0; i < people.length; i++) {
     const person = people[i];
-    const prompt = PROMPTS[person.id];
+    const wikiTitle = WIKI_TITLES[person.id];
 
-    if (!prompt) {
-      console.warn(`  ⚠ No prompt defined for "${person.id}" — skipping`);
+    if (!wikiTitle) {
+      console.warn(`  ⚠ No Wikipedia title for "${person.id}" — skipping`);
       continue;
     }
 
-    // Check if any image file already exists for this person
-    const existing = ["png", "jpg", "webp"]
-      .map((ext) => path.join(outputDir, `${person.id}.${ext}`))
-      .find((p) => fs.existsSync(p));
+    const existingFile = ["png", "jpg", "webp"]
+      .map((e) => path.join(outputDir, `${person.id}.${e}`))
+      .find((f) => fs.existsSync(f));
 
-    if (!force && existing) {
-      console.log(`  ✓ ${person.name} — already exists (${path.basename(existing)}), skipping`);
+    if (!force && existingFile) {
+      console.log(`  ✓ ${person.name} — already exists, skipping`);
       continue;
     }
 
-    console.log(`  → ${person.name} (${person.years})...`);
+    process.stdout.write(`  → ${person.name}... `);
 
+    // 1. Fetch reference image from Wikipedia (with fallback to direct Wikimedia URL)
+    let imgInfo = await getWikipediaImage(wikiTitle);
+    if (!imgInfo) {
+      imgInfo = FALLBACK_IMAGE_URLS[person.id] ?? null;
+      if (!imgInfo) {
+        console.log(`SKIP — no image found`);
+        continue;
+      }
+    }
+
+    let sourceBuffer: Buffer;
     try {
-      const { data, mimeType } = await generateImage(prompt);
-      const ext = mimeToExt(mimeType);
-      const outPath = path.join(outputDir, `${person.id}.${ext}`);
+      sourceBuffer = await fetchBuffer(imgInfo.url);
+      process.stdout.write(`got reference (${Math.round(sourceBuffer.length / 1024)}KB)... `);
+    } catch (e) {
+      console.log(`SKIP — download failed: ${(e as Error).message}`);
+      continue;
+    }
 
-      // Remove any old versions with different extension
+    // 2. Restyle via Gemini (with text-only fallback if image-to-image is blocked)
+    try {
+      let result: { data: Buffer; mimeType: string };
+      try {
+        result = await restyle(sourceBuffer, imgInfo.mimeType);
+      } catch (e) {
+        const fallbackPrompt = TEXT_ONLY_BW_PROMPTS[person.id];
+        if (fallbackPrompt && (e as Error).message.includes("IMAGE_OTHER") || (e as Error).message.includes("RECITATION")) {
+          process.stdout.write(`(image blocked, using text fallback)... `);
+          result = await generateTextOnly(fallbackPrompt);
+        } else {
+          throw e;
+        }
+      }
+      const { data, mimeType: outMime } = result;
+      const outExt = ext(outMime);
+      const outPath = path.join(outputDir, `${person.id}.${outExt}`);
+
+      // Remove old versions with different extensions
       ["png", "jpg", "webp"].forEach((e) => {
         const old = path.join(outputDir, `${person.id}.${e}`);
-        if (e !== ext && fs.existsSync(old)) fs.unlinkSync(old);
+        if (e !== outExt && fs.existsSync(old)) fs.unlinkSync(old);
       });
 
       fs.writeFileSync(outPath, data);
-      console.log(`  ✓ Saved ${person.id}.${ext} (${Math.round(data.length / 1024)} KB)`);
-    } catch (err) {
-      console.error(`  ✗ ${person.name}: ${(err as Error).message}`);
+      console.log(`saved ${person.id}.${outExt} (${Math.round(data.length / 1024)}KB)`);
+    } catch (e) {
+      console.log(`FAILED — ${(e as Error).message}`);
     }
 
     if (i < people.length - 1) await sleep(1500);
@@ -279,7 +348,4 @@ async function main() {
   console.log("\nDone.");
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main().catch((e) => { console.error(e); process.exit(1); });
