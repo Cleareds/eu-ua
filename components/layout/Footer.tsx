@@ -25,6 +25,9 @@ export default function Footer() {
               {[
                 { href: "/eu-accession", label: "EU Accession Chapters" },
                 { href: "/cultural-map", label: "Cultural Map" },
+                { href: "/timeline", label: "Historical Timeline" },
+                { href: "/people", label: "Notable People" },
+                { href: "/heritage", label: "Heritage Tracker" },
                 { href: "/data-dashboard", label: "Data Dashboard" },
                 { href: "/myths", label: "Myths & Reality" },
                 { href: "/quiz", label: "Knowledge Quiz" },
@@ -45,6 +48,18 @@ export default function Footer() {
             </p>
             <p className="mt-4 text-xs text-gray-500">
               © {new Date().getFullYear()} EU-UA.com — Educational use only.
+            </p>
+            <p className="mt-2 text-xs text-gray-500">
+              Built by{" "}
+              <a
+                href="https://cleareds.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors underline underline-offset-2"
+              >
+                Cleareds
+              </a>{" "}
+              — Belgium
             </p>
           </div>
         </div>
