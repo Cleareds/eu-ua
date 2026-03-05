@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kyiv",
+    "name": "Kyiv",
+    "lat": 50.45,
+    "lng": 30.52,
+    "description": "Ukraine's capital and largest city, Kyiv is one of the oldest cities in Eastern Europe, founded in the 5th century. Its medieval architecture, golden-domed monasteries, and rich cultural heritage reflect centuries of European history and trade connections.",
+    "connections": [
+      "Trade partner with Poland, Germany, and Czech Republic",
+      "Sister city with Warsaw, Berlin, and Brussels",
+      "Hub for EU-funded reconstruction projects post-2022",
+      "Seat of Ukraine's EU accession coordination office"
+    ],
+    "notableFigures": [
+      "Yaroslav the Wise — medieval ruler who cemented European dynastic ties",
+      "Lesya Ukrainka — poet whose works are part of European literary canon",
+      "Mykhailo Hrushevsky — historian who documented Ukraine's European identity"
+    ],
+    "europeanInfluences": [
+      "Byzantine architecture via Hagia Sophia–inspired Saint Sophia Cathedral",
+      "Baroque style from Polish and German craftsmen (17th–18th century)",
+      "Art Nouveau buildings along Khreshchatyk and Bankova Streets",
+      "Gothic Revival in St. Nicholas Roman Catholic Cathedral"
+    ]
+  },
+  {
+    "id": "lviv",
+    "name": "Lviv",
+    "lat": 49.84,
+    "lng": 24.03,
+    "description": "Lviv's Old Town is a UNESCO World Heritage Site, reflecting a remarkable blend of Central European architectural styles. Founded in 1256, the city was part of the Polish-Lithuanian Commonwealth, the Habsburg Empire, and later interwar Poland — each era leaving lasting cultural imprints.",
+    "connections": [
+      "Gateway city for EU integration, 80 km from Polish border",
+      "Strong trade ties with Kraków, Vienna, and Prague",
+      "Home to Ukrainian Catholic University with EU academic partnerships",
+      "Major transit hub on the Pan-European Transport Corridor V"
+    ],
+    "notableFigures": [
+      "Ivan Franko — writer and scholar, champion of Ukrainian modernism",
+      "Leopold von Sacher-Masoch — Austrian author born in Lviv, part of European literary culture",
+      "Stepan Bandera — controversial nationalist figure who studied in Prague"
+    ],
+    "europeanInfluences": [
+      "Gothic foundations in the Latin Cathedral (14th century)",
+      "Renaissance architecture from Italian masters in Rynok Square",
+      "Baroque Dominican Church built by architects from Rome and Vienna",
+      "Secession (Viennese Art Nouveau) in 19th-century buildings"
+    ]
+  },
+  {
+    "id": "odesa",
+    "name": "Odesa",
+    "lat": 46.48,
+    "lng": 30.73,
+    "description": "Founded in 1794 by order of Catherine II with French engineers and Greek merchants, Odesa was always an international city. Its grand boulevards, opera house, and cosmopolitan history of Greek, Jewish, Italian, and French communities make it one of Europe's most storied port cities.",
+    "connections": [
+      "Black Sea port connecting Ukraine to Mediterranean trade routes",
+      "Historic ties with Marseille, Genoa, and Constantinople",
+      "UNESCO Creative City of Film",
+      "Key node in EU's grain export corridors"
+    ],
+    "notableFigures": [
+      "Aleksandr Pushkin — Russian poet who lived in Odesa and called it 'Europe'",
+      "Isaac Babel — author who documented Odesa's multicultural Jewish life",
+      "Armand Emmanuel de Richelieu — French Duke who founded and governed Odesa"
+    ],
+    "europeanInfluences": [
+      "Neoclassical French urban planning (Richelieu-era boulevards)",
+      "Odesa Opera House modeled on Vienna's Burgtheater",
+      "Greek Revival architecture in Primorsky Boulevard",
+      "Italian Baroque in the Cathedral of the Transfiguration"
+    ]
+  },
+  {
+    "id": "kharkiv",
+    "name": "Kharkiv",
+    "lat": 49.99,
+    "lng": 36.23,
+    "description": "Ukraine's second-largest city and its first Soviet capital, Kharkiv was also a major centre of Ukrainian culture and science. Its constructivist architecture and research universities reflect both Soviet and pre-Soviet European academic traditions.",
+    "connections": [
+      "Major industrial and technology hub with EU R&D partnerships",
+      "Karazin University — one of Eastern Europe's oldest, founded 1804",
+      "Sister city with Leipzig, Germany",
+      "IT cluster attracting EU-backed investment in wartime relocation"
+    ],
+    "notableFigures": [
+      "Hryhorii Skovoroda — Ukrainian philosopher, 'the Ukrainian Socrates'",
+      "Simon Petliura — leader of the Ukrainian People's Republic",
+      "Vasyl Karazin — founded the first university in Ukraine (1804)"
+    ],
+    "europeanInfluences": [
+      "Constructivist Derzhprom skyscraper (1928) — one of Europe's first",
+      "German Baroque influence in Uspensky Cathedral",
+      "European Enlightenment ideals in Karazin University founding charter",
+      "French urban planning in the 19th-century city center"
+    ]
+  },
+  {
+    "id": "chernivtsi",
+    "name": "Chernivtsi",
+    "lat": 48.29,
+    "lng": 25.94,
+    "description": "Known as 'Little Vienna', Chernivtsi was the capital of the Duchy of Bukovina under the Habsburg Empire. Its stunning university (a UNESCO site), ornate churches, and café culture are direct legacies of Austro-Hungarian rule and mark the city as a living piece of Central European heritage.",
+    "connections": [
+      "Near the borders of Romania and Moldova",
+      "UNESCO World Heritage site: Residence of Bukovinian and Dalmatian Metropolitans",
+      "Strong cultural ties with Vienna, Czernowitz German-language literary tradition",
+      "Erasmus+ exchange hub for students from western Ukraine"
+    ],
+    "notableFigures": [
+      "Paul Celan — German-language poet, one of the most important post-Holocaust voices",
+      "Joseph Roth — Austrian novelist who celebrated Bukovinian multiculturalism",
+      "Rose Ausländer — German-language poet born in Czernowitz"
+    ],
+    "europeanInfluences": [
+      "Viennese Historicist architecture throughout the city center",
+      "Byzantine-Moorish-Gothic fusion in the Residence of Metropolitan (UNESCO)",
+      "Austro-Hungarian café culture still practiced today",
+      "German-language literary heritage (Czernowitz was a multilingual city)"
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Which Ukrainian city has a UNESCO-listed ensemble of Austro-Hungarian architecture and is known as 'Little Vienna'?",
+    "options": ["Kyiv", "Lviv", "Odesa", "Chernivtsi"],
+    "correct": 3,
+    "explanation": "Chernivtsi was the capital of the Duchy of Bukovina under the Habsburg Empire. Its Residence of Bukovinian and Dalmatian Metropolitans is a UNESCO World Heritage Site, and the city's architecture is a direct legacy of Austro-Hungarian rule."
+  },
+  {
+    "id": 2,
+    "question": "What year did Ukraine sign the EU-Ukraine Association Agreement, including the Deep and Comprehensive Free Trade Area (DCFTA)?",
+    "options": ["2004", "2010", "2014", "2019"],
+    "correct": 2,
+    "explanation": "Ukraine signed the Association Agreement with the EU on June 27, 2014, after the Euromaidan Revolution. The DCFTA provisions began entering into force provisionally in January 2016. This agreement is the cornerstone of Ukraine's European integration path."
+  },
+  {
+    "id": 3,
+    "question": "How many of the 35 EU accession negotiation chapters has Ukraine opened for formal negotiations as of 2024?",
+    "options": ["0", "3", "6", "12"],
+    "correct": 1,
+    "explanation": "Ukraine formally opened accession negotiations in June 2024 after receiving EU candidate status in June 2022. As of 2024, the screening phase is underway for most chapters, with negotiations formally launched on a subset. The process is accelerating rapidly."
+  },
+  {
+    "id": 4,
+    "question": "Approximately how many Ukrainian students were studying in EU countries by 2023?",
+    "options": ["45,000", "120,000", "390,000", "750,000"],
+    "correct": 2,
+    "explanation": "The number of Ukrainian students in EU countries surged from around 45,000 in 2015 to approximately 390,000 by 2023. This includes both pre-war Erasmus+ students and those who relocated following the 2022 invasion, making Ukraine the largest source of foreign students in many EU member states."
+  },
+  {
+    "id": 5,
+    "question": "The Odesa Opera House was modeled after which famous European opera house?",
+    "options": ["La Scala in Milan", "Vienna's Burgtheater", "Paris Opera (Palais Garnier)", "Covent Garden in London"],
+    "correct": 1,
+    "explanation": "The Odesa National Academic Theater of Opera and Ballet, built in 1887, was designed by Viennese architects Fellner and Helmer and modeled on Vienna's Burgtheater. This is a powerful symbol of Odesa's deep European architectural and cultural heritage."
+  }
+]

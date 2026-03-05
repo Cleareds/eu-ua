@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "myth": "Ukraine is historically isolated from Europe and has no deep cultural roots in European civilization.",
+    "reality": "Ukraine has been at the crossroads of European civilizations for millennia. Kyiv was a major medieval European city when Paris was still a small town. The Kyivan Rus was connected by dynastic marriages to France, England, Hungary, Norway and Sweden. Western Ukraine was part of the Habsburg Empire for over a century, leaving deep architectural and cultural legacies that persist today.",
+    "sources": [
+      { "title": "Kyiv: A History of the City", "url": "https://en.wikipedia.org/wiki/History_of_Kyiv" },
+      { "title": "Ukrainian-European Historical Connections", "url": "https://euromaidanpress.com/2015/01/26/ukraine-in-europe/" }
+    ]
+  },
+  {
+    "id": 2,
+    "myth": "Ukraine is too large and poor to join the EU — it would be a burden on EU finances.",
+    "reality": "Ukraine has the largest territory and significant agricultural potential in Europe. It is already the EU's largest neighbour by land area. EU enlargement historically increased the EU's economic size — Poland's GDP quadrupled after joining. Ukraine's reconstruction could be a massive economic opportunity, and its agricultural output already feeds much of the EU. The European Commission has assessed the costs as manageable relative to the economic gains.",
+    "sources": [
+      { "title": "European Commission: Ukraine Enlargement Assessment 2023", "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_4884" },
+      { "title": "CEPR: Economic Effects of Ukraine's EU Accession", "url": "https://cepr.org/publications/policy-insights" }
+    ]
+  },
+  {
+    "id": 3,
+    "myth": "Ukrainians and Russians are basically the same people and speak the same language.",
+    "reality": "Ukrainian and Russian are distinct Slavic languages with different grammar, vocabulary, and pronunciation — no more mutually intelligible than Spanish and Portuguese. Ukrainian has been spoken and written since at least the 13th century. Ukraine developed a distinct national identity, literature, and culture over centuries. The tsarist and Soviet regimes repeatedly tried to suppress the Ukrainian language, but it survived and flourished. Today, over 67% of Ukrainians consider Ukrainian their native language.",
+    "sources": [
+      { "title": "UNESCO Atlas of the World's Languages in Danger", "url": "https://www.unesco.org/en/languages-education" },
+      { "title": "Ukrainian vs Russian: Linguistic Analysis", "url": "https://euromaidanpress.com/2022/03/18/how-different-are-ukrainian-and-russian/" }
+    ]
+  },
+  {
+    "id": 4,
+    "myth": "Ukraine is deeply corrupt and will never be able to reform enough to meet EU standards.",
+    "reality": "Ukraine has made substantial anti-corruption progress since 2014 and especially since 2022. It established independent anti-corruption institutions (NABU, SAPO, HACC) that are EU-mandated benchmarks. Transparency International's Corruption Perceptions Index shows consistent improvement. The EU has acknowledged progress in its 2023 and 2024 progress reports. Reform momentum under wartime conditions has been remarkable and comparable to other accession candidates.",
+    "sources": [
+      { "title": "Transparency International: Ukraine CPI Scores", "url": "https://www.transparency.org/en/countries/ukraine" },
+      { "title": "European Commission Ukraine Progress Report 2023", "url": "https://ec.europa.eu/neighbourhood-enlargement/ukraine_en" }
+    ]
+  },
+  {
+    "id": 5,
+    "myth": "NATO and EU membership for Ukraine will provoke Russia and make Europe less safe.",
+    "reality": "Historical evidence shows the opposite: countries that joined NATO and the EU became dramatically safer and more stable. The Baltic states, Poland, and Czech Republic all joined despite Russian objections, and they are now among the most secure countries in Europe. Ukraine without NATO membership has been invaded twice (2014 and 2022). Security experts widely argue that integrating Ukraine into European institutions provides deterrence, not provocation.",
+    "sources": [
+      { "title": "RAND Corporation: NATO Enlargement and Security", "url": "https://www.rand.org/pubs/research_reports" },
+      { "title": "ECFR: Security Arguments for Ukraine's Integration", "url": "https://ecfr.eu/publication/ukraine-nato-membership/" }
+    ]
+  },
+  {
+    "id": 6,
+    "myth": "Ukrainian agriculture would destroy EU farmers if Ukraine joined the Common Market.",
+    "reality": "Ukraine's agricultural integration with the EU is already underway through the DCFTA and autonomous trade measures. EU-Ukraine agricultural trade has grown substantially without causing the feared disruptions. Transition periods and phased integration (as used with all new member states) can manage adjustment. Moreover, Ukraine's agricultural productivity would strengthen European food security and reduce dependence on non-EU suppliers.",
+    "sources": [
+      { "title": "European Parliament: Ukraine Agriculture and EU Integration", "url": "https://www.europarl.europa.eu/thinktank/en/document/EXPO_IDA(2023)702580" },
+      { "title": "Bruegel Institute: Agricultural Trade Post-Accession", "url": "https://www.bruegel.org/policy-brief/ukraine-eu-agriculture" }
+    ]
+  }
+]
