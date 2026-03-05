@@ -88,3 +88,38 @@ export interface TimelineMilestone {
   title: string;
   description: string;
 }
+
+export type TimelineEra = "ancient" | "medieval" | "early-modern" | "national-awakening" | "independence" | "eu-path" | "modern";
+export type TimelineType = "cultural" | "political" | "military" | "diplomatic";
+
+export interface TimelineEvent {
+  id: string;
+  year: string;
+  yearSort: number;
+  title: string;
+  description: string;
+  era: TimelineEra;
+  type: TimelineType;
+  europeanConnection: boolean;
+  sourceLabel: string;
+  sourceUrl: string;
+}
+
+export interface PersonSource {
+  title: string;
+  url: string;
+}
+
+export type PersonEra = "medieval" | "early-modern" | "modern" | "19th-century" | "20th-century";
+
+export interface Person {
+  id: string;
+  name: string;
+  years: string;
+  role: string;
+  birthplace: string;
+  era: PersonEra | string;
+  description: string;
+  europeanConnections: string[];
+  sources: PersonSource[];
+}

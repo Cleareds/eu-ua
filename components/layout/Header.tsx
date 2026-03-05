@@ -7,7 +7,10 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/eu-accession", label: "EU Accession" },
-  { href: "/cultural-map", label: "Cultural Map" },
+  { href: "/cultural-map", label: "Map" },
+  { href: "/timeline", label: "Timeline" },
+  { href: "/people", label: "People" },
+  { href: "/heritage", label: "Heritage" },
   { href: "/data-dashboard", label: "Data" },
   { href: "/news", label: "News" },
   { href: "/myths", label: "Myths" },

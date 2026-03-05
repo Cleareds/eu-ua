@@ -1,0 +1,243 @@
+[
+  {
+    "id": "yaroslav-wise",
+    "name": "Yaroslav the Wise",
+    "years": "c. 978–1054",
+    "role": "Grand Prince of Kyiv",
+    "birthplace": "Kyiv",
+    "era": "medieval",
+    "description": "Yaroslav the Wise transformed Kyiv into one of Europe's premier capitals. He built Saint Sophia Cathedral, founded monasteries and schools, codified Ukrainian law (Ruska Pravda), and married his children into the royal families of France, Norway, Hungary, and Poland. Medieval Europe's rulers viewed Kyiv as a peer — not a periphery.",
+    "europeanConnections": [
+      "Daughter Anna married King Henry I of France (1051) — her son became King Philip I",
+      "Daughter Elizabeth married King Harald III of Norway",
+      "Daughter Anastasia married King Andrew I of Hungary",
+      "Son Vsevolod married a Greek princess, daughter of Byzantine Emperor Constantine IX",
+      "Commissioned Saint Sophia Cathedral (1037) by Byzantine masters — UNESCO World Heritage Site"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Yaroslav the Wise", "url": "https://en.wikipedia.org/wiki/Yaroslav_the_Wise" },
+      { "title": "UNESCO: Saint-Sophia Cathedral", "url": "https://whc.unesco.org/en/list/527/" }
+    ]
+  },
+  {
+    "id": "ivan-mazepa",
+    "name": "Ivan Mazepa",
+    "years": "1639–1709",
+    "role": "Hetman of Ukraine",
+    "birthplace": "Bila Tserkva, Ukraine",
+    "era": "early-modern",
+    "description": "Ivan Mazepa, Hetman of the Zaporozhian Host, was one of the most educated and sophisticated leaders of his age — fluent in Latin, Polish, German, Italian, and Ukrainian. He allied with King Charles XII of Sweden in 1708 to free Ukraine from Muscovite domination. Though defeated at Poltava, he became an enduring symbol of Ukrainian independence — immortalised in works by Lord Byron, Victor Hugo, Voltaire, Franz Liszt, and Pyotr Tchaikovsky.",
+    "europeanConnections": [
+      "Byron wrote 'Mazeppa' (1819) — a narrative poem making him a Romantic hero across Europe",
+      "Victor Hugo wrote 'Mazeppa' (1829) — one of his most celebrated poems",
+      "Franz Liszt composed 'Mazeppa' as a symphonic poem (1851) and piano étude",
+      "Tchaikovsky wrote the opera 'Mazeppa' (1884)",
+      "Voltaire described him in 'History of Charles XII' — framing him as a freedom fighter",
+      "Alliance with Charles XII of Sweden (1708) — positioned Ukraine within European geopolitics"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Ivan Mazepa", "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa" },
+      { "title": "Wikipedia: Mazeppa (Byron)", "url": "https://en.wikipedia.org/wiki/Mazeppa_(poem)" }
+    ]
+  },
+  {
+    "id": "paul-celan",
+    "name": "Paul Celan",
+    "years": "1920–1970",
+    "role": "Poet",
+    "birthplace": "Chernivtsi (then Romania), Ukraine",
+    "era": "modern",
+    "description": "Paul Celan (born Paul Antschel) grew up in the multilingual Czernowitz (Chernivtsi) — a city where Ukrainian, German, Romanian, and Yiddish coexisted under the Habsburg legacy. A survivor of the Holocaust who lost both parents in Nazi camps, he became one of the most important German-language poets of the 20th century. His poem 'Todesfuge' (Death Fugue) is among the most studied poems in any language.",
+    "europeanConnections": [
+      "'Todesfuge' (1945) — defining poem of post-Holocaust European literature",
+      "Lived and worked in Paris from 1948 until his death — integrated into French literary life",
+      "Translated Kafka, Rimbaud, Valéry, Char, and Shakespeare into German",
+      "Close friendship with philosopher Martin Heidegger — complex relationship documented in European intellectual history",
+      "Awarded the Georg Büchner Prize (1960) — Germany's highest literary honour",
+      "Czernowitz literary tradition: a uniquely European multilingual cultural space on Ukrainian soil"
+    ],
+    "sources": [
+      { "title": "Poetry Foundation: Paul Celan", "url": "https://www.poetryfoundation.org/poets/paul-celan" },
+      { "title": "Wikipedia: Paul Celan", "url": "https://en.wikipedia.org/wiki/Paul_Celan" }
+    ]
+  },
+  {
+    "id": "lesya-ukrainka",
+    "name": "Lesya Ukrainka",
+    "years": "1871–1913",
+    "role": "Poet & Playwright",
+    "birthplace": "Novohrad-Volynsky, Ukraine",
+    "era": "national-awakening",
+    "description": "Larysa Kosach, known as Lesya Ukrainka, was Ukraine's greatest female writer and one of the most important figures in European Symbolism. Ill with tuberculosis for most of her life, she drew on Ancient Greek drama, medieval European epics, and biblical themes to write plays of extraordinary intellectual ambition. She spoke a dozen languages and her work is part of world literature.",
+    "europeanConnections": [
+      "Read and wrote in Greek, Latin, French, German, Italian, Polish, Russian, Bulgarian — used European sources directly",
+      "Her drama 'Cassandra' (1907) retells the Trojan War — a European classical tradition reframed through Ukrainian experience",
+      "'The Forest Song' (1911) — a symbolist fairy drama compared to Ibsen and Maeterlinck",
+      "Translated Homer, Heine, Byron, and Victor Hugo into Ukrainian",
+      "Lived and treated in Italy, Egypt, and Germany — part of European intellectual networks",
+      "Her face appears on Ukraine's 200-hryvnia banknote"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Lesya Ukrainka", "url": "https://en.wikipedia.org/wiki/Lesya_Ukrainka" },
+      { "title": "Encyclopedia of Ukraine: Lesya Ukrainka", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainkаLesia.htm" }
+    ]
+  },
+  {
+    "id": "yuri-kondratyuk",
+    "name": "Yuri Kondratyuk",
+    "years": "1897–1941",
+    "role": "Engineer & Space Pioneer",
+    "birthplace": "Poltava region, Ukraine",
+    "era": "modern",
+    "description": "Yuri Kondratyuk (born Oleksandr Shargei) was a self-taught Ukrainian engineer who independently derived the mathematics for the optimal route to the Moon — lunar orbit rendezvous — in the 1920s, without access to Western scientific literature. NASA used his calculations for the Apollo missions. The path from Earth orbit to lunar landing and back is still called the 'Kondratyuk Route'.",
+    "europeanConnections": [
+      "NASA engineer John Houbolt cited Kondratyuk's work in designing the Apollo lunar orbit rendezvous (1962)",
+      "Apollo astronaut Neil Armstrong visited Kondratyuk's Novosibirsk granary (where he worked) in 1970 and took a pinch of soil to the Moon",
+      "His 1929 book 'The Conquest of Interplanetary Space' was rediscovered by Western scientists",
+      "Poltava Technical University named in his honour — a symbol of Ukrainian scientific contribution to European and global progress"
+    ],
+    "sources": [
+      { "title": "NASA: Yuri Kondratyuk and the Moon Route", "url": "https://www.nasa.gov/history/alsj/a410/Kondratyuk.html" },
+      { "title": "Wikipedia: Yuri Kondratyuk", "url": "https://en.wikipedia.org/wiki/Yuri_Kondratyuk" }
+    ]
+  },
+  {
+    "id": "mykola-leontovych",
+    "name": "Mykola Leontovych",
+    "years": "1877–1921",
+    "role": "Composer",
+    "birthplace": "Vinnytsia region, Ukraine",
+    "era": "modern",
+    "description": "Mykola Leontovych composed 'Shchedryk' in 1916 — a choral work based on a Ukrainian New Year folk melody. When the Ukrainian National Chorus performed it in New York in 1921 and 1922, the American arranger Peter Wilhousky added English lyrics calling it 'Carol of the Bells' — now one of the most recognised Christmas songs in the world. Leontovych was assassinated by a Soviet secret agent in 1921.",
+    "europeanConnections": [
+      "'Carol of the Bells' / 'Shchedryk' — one of the most performed Christmas songs globally, unknown as Ukrainian in origin",
+      "Ukrainian National Chorus toured Europe (1919–1920) performing 'Shchedryk' and other Ukrainian folk works",
+      "Work collected and adapted Ukrainian folk traditions that predate Christianity",
+      "His murder in 1921 was part of the Soviet campaign to eliminate Ukrainian cultural intelligentsia"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Mykola Leontovych", "url": "https://en.wikipedia.org/wiki/Mykola_Leontovych" },
+      { "title": "Wikipedia: Carol of the Bells", "url": "https://en.wikipedia.org/wiki/Carol_of_the_Bells" }
+    ]
+  },
+  {
+    "id": "ilya-mechnikov",
+    "name": "Ilya Mechnikov",
+    "years": "1845–1916",
+    "role": "Biologist & Nobel Laureate",
+    "birthplace": "Kharkiv region, Ukraine",
+    "era": "national-awakening",
+    "description": "Ilya Mechnikov studied at Kharkiv University and went on to discover phagocytosis — the process by which immune cells engulf and destroy pathogens. His work founded the field of modern immunology. He spent most of his career at the Pasteur Institute in Paris and was awarded the Nobel Prize in Physiology or Medicine in 1908, which he shared with Paul Ehrlich.",
+    "europeanConnections": [
+      "Nobel Prize in Physiology or Medicine 1908 — shared with Paul Ehrlich",
+      "Worked at the Pasteur Institute in Paris from 1888 until his death",
+      "Close collaborator of Louis Pasteur — central figure of European biological science",
+      "Discovered phagocytosis — the basis of modern immunology and vaccine science",
+      "Studied at Kharkiv University (founded 1804) — one of Eastern Europe's oldest"
+    ],
+    "sources": [
+      { "title": "Nobel Prize: Ilya Mechnikov", "url": "https://www.nobelprize.org/prizes/medicine/1908/mechnikov/biographical/" },
+      { "title": "Wikipedia: Ilya Mechnikov", "url": "https://en.wikipedia.org/wiki/Ilya_Mechnikov" }
+    ]
+  },
+  {
+    "id": "lev-landau",
+    "name": "Lev Landau",
+    "years": "1908–1968",
+    "role": "Physicist & Nobel Laureate",
+    "birthplace": "Baku (worked in Kharkiv), Azerbaijan/Ukraine",
+    "era": "modern",
+    "description": "Lev Landau spent the most formative years of his career at the Ukrainian Physico-Technical Institute (UPTI) in Kharkiv — the USSR's leading physics centre — from 1932 to 1937. He developed the theory of second-order phase transitions, worked on quantum mechanics, and co-authored the legendary 'Course of Theoretical Physics' series (10 volumes). He won the Nobel Prize in Physics in 1962.",
+    "europeanConnections": [
+      "Nobel Prize in Physics 1962 — for his theories of condensed matter",
+      "Studied in Göttingen, Copenhagen (with Niels Bohr), Cambridge, and Zürich on a Rockefeller Fellowship",
+      "UPTI Kharkiv was described as 'the cradle of Soviet physics' — trained physicists who later worked across Europe",
+      "The 'Landau-Lifshitz Course of Theoretical Physics' remains a standard reference in European physics education",
+      "Survived Stalin's purges — arrested 1938, released 1939 after intervention by Pyotr Kapitsa"
+    ],
+    "sources": [
+      { "title": "Nobel Prize: Lev Landau", "url": "https://www.nobelprize.org/prizes/physics/1962/landau/biographical/" },
+      { "title": "Wikipedia: Lev Landau", "url": "https://en.wikipedia.org/wiki/Lev_Landau" }
+    ]
+  },
+  {
+    "id": "john-hughes",
+    "name": "John Hughes",
+    "years": "1814–1889",
+    "role": "Industrial Pioneer",
+    "birthplace": "Merthyr Tydfil, Wales, UK",
+    "era": "national-awakening",
+    "description": "John James Hughes was a Welsh ironmaster who founded the city that became Donetsk. In 1869 he won a Russian government contract to build a steel plant and railway in the Donbas region. He brought Welsh and English workers and their families, building not just a factory but a company town — schools, hospitals, an Anglican church. The city was named Yuzivka (Hughes's town) until 1924. He is the most prominent example of British-European industrial investment in Ukraine.",
+    "europeanConnections": [
+      "Founded Yuzivka (now Donetsk) in 1869 — city named after him until Soviet renaming",
+      "Brought 100+ Welsh and English workers to build the New Russia Company steelworks",
+      "Built the first major steel plant in the Russian Empire using Western European technology",
+      "The John Hughes Society in Merthyr Tydfil preserves his legacy today",
+      "His story illustrates Western European economic entanglement with Ukraine over 150 years"
+    ],
+    "sources": [
+      { "title": "Wikipedia: John Hughes (industrialist)", "url": "https://en.wikipedia.org/wiki/John_Hughes_(industrialist)" },
+      { "title": "BBC Wales: John Hughes and Donetsk", "url": "https://www.bbc.co.uk/wales/history/sites/themes/society/industry_ukraine.shtml" }
+    ]
+  },
+  {
+    "id": "vasyl-stus",
+    "name": "Vasyl Stus",
+    "years": "1938–1985",
+    "role": "Poet & Dissident",
+    "birthplace": "Rakhivka, Donetsk region, Ukraine",
+    "era": "modern",
+    "description": "Vasyl Stus was Ukraine's most important dissident poet of the Soviet era — arrested for protesting political repression, he spent 23 of his last 25 years in Soviet labour camps. He was nominated for the Nobel Prize in Literature in 1985 by the West German PEN Centre; the Soviet authorities responded by transferring him to a harsher regime where he died in September 1985 under disputed circumstances. He was posthumously rehabilitated and is now recognised as one of Ukraine's greatest literary figures.",
+    "europeanConnections": [
+      "Nominated for the Nobel Prize in Literature (1985) by West German PEN — nomination suppressed by Soviet pressure",
+      "Amnesty International designated him a Prisoner of Conscience",
+      "His poetry was smuggled to and published in the Ukrainian diaspora in Germany and the US",
+      "European human rights organisations campaigned for his release throughout the 1970s-80s",
+      "Born in Donetsk region — now occupied by Russia — a symbolic link between cultural resistance and current occupation"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Vasyl Stus", "url": "https://en.wikipedia.org/wiki/Vasyl_Stus" },
+      { "title": "Amnesty International: Vasyl Stus", "url": "https://www.amnesty.org/en/latest/news/2021/09/ukraine-vasyl-stus/" }
+    ]
+  },
+  {
+    "id": "maria-pryimachenko",
+    "name": "Maria Pryimachenko",
+    "years": "1909–1997",
+    "role": "Folk Artist",
+    "birthplace": "Bolotnya, Kyiv region, Ukraine",
+    "era": "modern",
+    "description": "Maria Pryimachenko was a self-taught Ukrainian folk artist whose vibrant, fantastical paintings of animals and mythical creatures have been exhibited at the Louvre in Paris, the Museum of Folk Art in Montreal, and galleries across Europe. Pablo Picasso said of her work: 'I bow before the artistic miracle of this wonderful Ukrainian woman.' On 27 February 2022, three days into the full-scale invasion, Russian forces burned 25 of her original paintings in the Ivankiv Museum.",
+    "europeanConnections": [
+      "Exhibited at the Louvre, Paris (1966) — solo show at one of the world's greatest museums",
+      "Exhibited in Canada, Italy, Czech Republic, and across Europe",
+      "Pablo Picasso praised her work — 'I bow before the artistic miracle of this wonderful Ukrainian woman'",
+      "UNESCO distinguished her among the great masters of folk art",
+      "25 original works destroyed by Russian forces in Ivankiv Museum, 27 February 2022"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Maria Pryimachenko", "url": "https://en.wikipedia.org/wiki/Maria_Pryimachenko" },
+      { "title": "The Art Newspaper: Pryimachenko works burned", "url": "https://www.theartnewspaper.com/2022/03/01/ukrainian-folk-artist-maria-prymachenko-paintings-burned-in-museum-fire" }
+    ]
+  },
+  {
+    "id": "serhiy-prokofiev",
+    "name": "Sergei Prokofiev",
+    "years": "1891–1953",
+    "role": "Composer",
+    "birthplace": "Sontsivka, Donetsk region, Ukraine",
+    "era": "modern",
+    "description": "Sergei Prokofiev was born on a Ukrainian estate in what is now the Donetsk region. He became one of the 20th century's greatest composers — 'Romeo and Juliet', 'Peter and the Wolf', 'Lieutenant Kijé', five piano concertos, seven symphonies. He spent 15 years in Paris and the US before returning to the Soviet Union. His birthplace is now in the Russian-occupied Donetsk region.",
+    "europeanConnections": [
+      "Lived in Paris 1920–1936 — collaborated with Diaghilev's Ballets Russes",
+      "Premiered major works in London, Paris, Chicago, and across Europe",
+      "His ballet 'Romeo and Juliet' (1938) is one of the most performed ballets in the world",
+      "Collaborated with Sergei Diaghilev — the Russian-born impresario who shaped 20th century European performing arts",
+      "His estate in Sontsivka, Donetsk region, is now in Russian-occupied Ukraine"
+    ],
+    "sources": [
+      { "title": "Wikipedia: Sergei Prokofiev", "url": "https://en.wikipedia.org/wiki/Sergei_Prokofiev" },
+      { "title": "Prokofiev Foundation", "url": "https://www.sprkfv.net/" }
+    ]
+  }
+]
