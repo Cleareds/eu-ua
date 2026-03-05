@@ -1,14 +1,18 @@
-import mythsData from "@/data/myths.json";
-import { Myth } from "@/lib/types";
+import { getMyths } from "@/lib/data";
 import MythCard from "@/components/myths/MythCard";
 
 export const metadata = {
-  title: "Myths & Reality — EU-UA.com",
-  description: "Common myths about Ukraine and Europe, fact-checked with credible sources.",
+  title: "Ukraine & Europe Myths Debunked — Fact Check",
+  description: "Common myths about Ukraine's relationship with Europe, fact-checked with credible sources. Is Ukraine really isolated from Europe? Are Ukrainians and Russians the same people?",
+  openGraph: {
+    title: "Ukraine & Europe Myths Debunked",
+    description: "6 common misconceptions about Ukraine and Europe, fact-checked with evidence and credible sources.",
+  },
+  keywords: ["Ukraine Europe myths", "Ukraine EU facts", "Ukraine history Europe", "Ukraine Russia difference", "Ukraine EU member"],
 };
 
-export default function MythsPage() {
-  const myths = mythsData as Myth[];
+export default async function MythsPage() {
+  const myths = await getMyths();
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -20,6 +24,9 @@ export default function MythsPage() {
         <p className="text-gray-600">
           Common misconceptions about Ukraine's relationship with Europe — debunked with evidence and credible sources.
           Click any card to read the full reality check.
+        </p>
+        <p className="text-xs text-gray-400 mt-3">
+          Independent initiative. Sources listed inside each card. Not affiliated with any government or EU institution.
         </p>
       </div>
 

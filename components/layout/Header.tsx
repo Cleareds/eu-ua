@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/eu-accession", label: "EU Accession" },
   { href: "/cultural-map", label: "Cultural Map" },
   { href: "/data-dashboard", label: "Data" },
+  { href: "/news", label: "News" },
   { href: "/myths", label: "Myths" },
   { href: "/quiz", label: "Quiz" },
 ];

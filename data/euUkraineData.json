@@ -1,17 +1,18 @@
 {
   "tradeShare": [
-    { "year": 2012, "value": 26 },
-    { "year": 2013, "value": 26 },
-    { "year": 2014, "value": 31 },
-    { "year": 2015, "value": 34 },
-    { "year": 2016, "value": 37 },
-    { "year": 2017, "value": 40 },
-    { "year": 2018, "value": 42 },
-    { "year": 2019, "value": 41 },
-    { "year": 2020, "value": 40 },
-    { "year": 2021, "value": 38 },
-    { "year": 2022, "value": 61 },
-    { "year": 2023, "value": 65 }
+    { "year": 2012, "value": 25.7 },
+    { "year": 2013, "value": 26.5 },
+    { "year": 2014, "value": 31.0 },
+    { "year": 2015, "value": 34.3 },
+    { "year": 2016, "value": 37.1 },
+    { "year": 2017, "value": 39.8 },
+    { "year": 2018, "value": 42.1 },
+    { "year": 2019, "value": 41.0 },
+    { "year": 2020, "value": 40.2 },
+    { "year": 2021, "value": 38.4 },
+    { "year": 2022, "value": 58.3 },
+    { "year": 2023, "value": 62.1 },
+    { "year": 2024, "value": 61.0 }
   ],
   "students": [
     { "year": 2015, "value": 45000 },
@@ -22,19 +23,23 @@
     { "year": 2020, "value": 165000 },
     { "year": 2021, "value": 178000 },
     { "year": 2022, "value": 320000 },
-    { "year": 2023, "value": 390000 }
+    { "year": 2023, "value": 390000 },
+    { "year": 2024, "value": 435000 },
+    { "year": 2025, "value": 470000 }
   ],
   "assistance": [
-    { "year": 2014, "value": 1.2 },
-    { "year": 2015, "value": 1.8 },
-    { "year": 2016, "value": 2.1 },
-    { "year": 2017, "value": 2.3 },
-    { "year": 2018, "value": 2.6 },
-    { "year": 2019, "value": 2.8 },
-    { "year": 2020, "value": 3.5 },
-    { "year": 2021, "value": 4.1 },
-    { "year": 2022, "value": 38.0 },
-    { "year": 2023, "value": 85.0 }
+    { "year": 2014, "value": 1.6 },
+    { "year": 2015, "value": 2.2 },
+    { "year": 2016, "value": 1.8 },
+    { "year": 2017, "value": 1.5 },
+    { "year": 2018, "value": 2.0 },
+    { "year": 2019, "value": 1.4 },
+    { "year": 2020, "value": 1.2 },
+    { "year": 2021, "value": 2.3 },
+    { "year": 2022, "value": 12.0 },
+    { "year": 2023, "value": 18.0 },
+    { "year": 2024, "value": 19.5 },
+    { "year": 2025, "value": 21.0 }
   ],
   "tradeGrowth": [
     { "year": 2010, "value": 11.6 },
@@ -50,6 +55,7 @@
     { "year": 2020, "value": 15.8 },
     { "year": 2021, "value": 21.2 },
     { "year": 2022, "value": 19.4 },
-    { "year": 2023, "value": 23.1 }
+    { "year": 2023, "value": 23.1 },
+    { "year": 2024, "value": 24.5 }
   ]
 }

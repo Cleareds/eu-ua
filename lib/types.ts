@@ -27,6 +27,7 @@ export interface EUUkraineData {
   tradeShare: TradeDataPoint[];
   students: TradeDataPoint[];
   assistance: TradeDataPoint[];
+  tradeGrowth: TradeDataPoint[];
 }
 
 export interface MythSource {

@@ -1,15 +1,25 @@
 "use client";
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from "recharts";
-import euData from "@/data/euUkraineData.json";
+import SourceModal from "@/components/ui/source-modal";
+import type { TradeDataPoint } from "@/lib/types";
 
-export default function AssistanceChart() {
+const sources = [
+  { label: "European Commission — Ukraine Facility (€50B, 2024–2027)", url: "https://commission.europa.eu/topics/eu-solidarity-ukraine/eu-assistance-ukraine/ukraine-facility_en", description: "Official Ukraine Facility page — €26.8B disbursed by Dec 2025" },
+  { label: "Council of the EU — EU financial assistance to Ukraine", url: "https://www.consilium.europa.eu/en/policies/ukraine-solidarity-financial-support/", description: "Council tracking of all financial support instruments" },
+  { label: "EEAS — EU Assistance to Ukraine", url: "https://www.eeas.europa.eu/delegations/united-states-america/eu-assistance-ukraine-us-dollars_en", description: "Total EU assistance tracker including military and humanitarian" },
+];
+
+export default function AssistanceChart({ data }: { data: TradeDataPoint[] }) {
   return (
     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-      <h3 className="font-bold text-base mb-1" style={{ color: "#1A1A2E" }}>EU Financial Assistance to Ukraine</h3>
-      <p className="text-xs text-gray-400 mb-4">Annual EU financial support in billions of euros</p>
+      <div className="flex items-start justify-between mb-1 gap-2">
+        <h3 className="font-bold text-base" style={{ color: "#1A1A2E" }}>EU Financial Assistance to Ukraine</h3>
+        <SourceModal title="EU Financial Assistance to Ukraine" sources={sources} note="Annual macro-financial EU assistance (loans + grants). Does not include military support or EU member state bilateral aid. 2024–2025 figures reflect Ukraine Facility disbursements. Total EU assistance including all instruments exceeds €194B." />
+      </div>
+      <p className="text-xs text-gray-400 mb-4">Annual EU macro-financial support in billions of euros (European Commission)</p>
       <ResponsiveContainer width="100%" height={220}>
-        <AreaChart data={euData.assistance}>
+        <AreaChart data={data}>
           <defs>
             <linearGradient id="assistGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#003399" stopOpacity={0.3} />
@@ -24,7 +34,6 @@ export default function AssistanceChart() {
           <Area type="monotone" dataKey="value" stroke="#003399" strokeWidth={2.5} fill="url(#assistGrad)" />
         </AreaChart>
       </ResponsiveContainer>
-      <p className="text-xs text-gray-400 mt-3">Source: European Commission — macro-financial, humanitarian, military assistance combined</p>
     </div>
   );
 }
