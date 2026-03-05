@@ -10,6 +10,7 @@ export default function CulturalMap() {
   const mapInstance = useRef<import("maplibre-gl").Map | null>(null);
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [webglError, setWebglError] = useState(false);
 
   const cities = citiesData as City[];
 
@@ -19,58 +20,65 @@ export default function CulturalMap() {
     async function initMap() {
       if (!mapRef.current || mapInstance.current) return;
 
-      const maplibregl = (await import("maplibre-gl")).default;
+      // Check WebGL support before attempting to create the map
+      const canvas = document.createElement("canvas");
+      const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      if (!gl) {
+        setWebglError(true);
+        return;
+      }
 
-      map = new maplibregl.Map({
-        container: mapRef.current,
-        style: "https://tiles.openfreemap.org/styles/liberty",
-        center: [31.5, 48.5],
-        zoom: 5.5,
-      });
+      try {
+        const maplibregl = (await import("maplibre-gl")).default;
 
-      mapInstance.current = map;
-
-      map.on("load", () => {
-        setMapLoaded(true);
-
-        // Add city markers
-        cities.forEach((city) => {
-          const el = document.createElement("div");
-          el.style.cssText = `
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #003399;
-            border: 3px solid #FFD700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 11px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
-          `;
-          el.textContent = city.name.slice(0, 2).toUpperCase();
-          el.title = city.name;
-
-          el.addEventListener("mouseenter", () => {
-            el.style.transform = "scale(1.2)";
-          });
-          el.addEventListener("mouseleave", () => {
-            el.style.transform = "scale(1)";
-          });
-          el.addEventListener("click", () => {
-            setSelectedCity(city);
-            map.flyTo({ center: [city.lng, city.lat], zoom: 7, duration: 800 });
-          });
-
-          new maplibregl.Marker({ element: el })
-            .setLngLat([city.lng, city.lat])
-            .addTo(map);
+        map = new maplibregl.Map({
+          container: mapRef.current,
+          style: "https://tiles.openfreemap.org/styles/liberty",
+          center: [31.5, 48.5],
+          zoom: 5.5,
+          failIfMajorPerformanceCaveat: false,
         });
-      });
+
+        mapInstance.current = map;
+
+        map.on("error", (e) => {
+          console.error("MapLibre error:", e);
+          if (e.error?.message?.includes("WebGL")) {
+            setWebglError(true);
+            map.remove();
+            mapInstance.current = null;
+          }
+        });
+
+        map.on("load", () => {
+          setMapLoaded(true);
+
+          cities.forEach((city) => {
+            const el = document.createElement("div");
+            el.style.cssText = `
+              width: 36px; height: 36px; border-radius: 50%;
+              background-color: #003399; border: 3px solid #FFD700;
+              cursor: pointer; display: flex; align-items: center;
+              justify-content: center; color: white; font-weight: bold;
+              font-size: 11px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+              transition: transform 0.2s;
+            `;
+            el.textContent = city.name.slice(0, 2).toUpperCase();
+            el.title = city.name;
+
+            el.addEventListener("mouseenter", () => { el.style.transform = "scale(1.2)"; });
+            el.addEventListener("mouseleave", () => { el.style.transform = "scale(1)"; });
+            el.addEventListener("click", () => {
+              setSelectedCity(city);
+              map.flyTo({ center: [city.lng, city.lat], zoom: 7, duration: 800 });
+            });
+
+            new maplibregl.Marker({ element: el }).setLngLat([city.lng, city.lat]).addTo(map);
+          });
+        });
+      } catch {
+        setWebglError(true);
+      }
     }
 
     initMap();
@@ -81,9 +89,46 @@ export default function CulturalMap() {
     };
   }, []);
 
+  // Fallback grid when WebGL isn't available
+  if (webglError) {
+    return (
+      <div className="flex h-full">
+        <div className="flex-1 overflow-y-auto p-6" style={{ backgroundColor: "#F8F9FA" }}>
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6 p-4 rounded-xl border text-sm" style={{ backgroundColor: "#FEF3C7", borderColor: "#FDE68A", color: "#92400E" }}>
+              <span className="font-semibold">Interactive map unavailable</span> — your browser or environment doesn't support WebGL. Showing city cards instead.
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {cities.map((city) => (
+                <button
+                  key={city.id}
+                  onClick={() => setSelectedCity(city)}
+                  className="text-left p-5 bg-white rounded-2xl border hover:border-blue-300 hover:shadow-md transition-all"
+                  style={selectedCity?.id === city.id ? { borderColor: "#003399", backgroundColor: "#EFF6FF" } : { borderColor: "#E5E7EB" }}
+                >
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm mb-3"
+                    style={{ backgroundColor: "#003399" }}>
+                    {city.name.slice(0, 2).toUpperCase()}
+                  </div>
+                  <h3 className="font-bold mb-1" style={{ color: "#1A1A2E" }}>{city.name}</h3>
+                  <p className="text-xs text-gray-500 line-clamp-3">{city.description}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {selectedCity && (
+          <div className="w-80 xl:w-96 border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0">
+            <CityPanel city={selectedCity} onClose={() => setSelectedCity(null)} />
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="flex h-full">
-      {/* Map */}
       <div className="flex-1 relative">
         <div ref={mapRef} className="w-full h-full" />
 
@@ -96,7 +141,6 @@ export default function CulturalMap() {
           </div>
         )}
 
-        {/* City list overlay */}
         {mapLoaded && (
           <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 max-w-xs">
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#003399" }}>
@@ -121,10 +165,9 @@ export default function CulturalMap() {
         )}
       </div>
 
-      {/* Side panel */}
       {selectedCity && (
         <div
-          className="w-80 xl:w-96 border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0 transition-all"
+          className="w-80 xl:w-96 border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0"
           style={{ animation: "slideIn 0.3s ease-out" }}
         >
           <CityPanel city={selectedCity} onClose={() => setSelectedCity(null)} />
