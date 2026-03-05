@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Person } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
 
@@ -26,6 +27,35 @@ const ALL_ERAS = ["all", "medieval", "early-modern", "national-awakening", "mode
 
 function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
+}
+
+function PersonAvatar({ person, eraStyle }: { person: Person; eraStyle: { bg: string; text: string } }) {
+  const [imgError, setImgError] = useState(false);
+  const src = `/people/${person.id}.jpg`;
+
+  if (!imgError) {
+    return (
+      <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2" style={{ borderColor: eraStyle.text }}>
+        <Image
+          src={src}
+          alt={person.name}
+          width={64}
+          height={64}
+          className="w-full h-full object-cover"
+          onError={() => setImgError(true)}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="w-16 h-16 rounded-full flex items-center justify-center text-lg font-bold shrink-0"
+      style={{ backgroundColor: eraStyle.bg, color: eraStyle.text }}
+    >
+      {getInitials(person.name)}
+    </div>
+  );
 }
 
 export default function PeopleGrid({ people }: { people: Person[] }) {
@@ -74,12 +104,7 @@ export default function PeopleGrid({ people }: { people: Person[] }) {
               {/* Card header */}
               <div className="p-5 flex items-start gap-4">
                 {/* Avatar */}
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-                  style={{ backgroundColor: eraStyle.bg, color: eraStyle.text }}
-                >
-                  {getInitials(person.name)}
-                </div>
+                <PersonAvatar person={person} eraStyle={eraStyle} />
                 <div className="min-w-0">
                   <h3 className="font-bold text-sm leading-snug" style={{ color: "#1A1A2E" }}>{person.name}</h3>
                   <p className="text-xs text-gray-500 mt-0.5">{person.years}</p>

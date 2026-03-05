@@ -32,6 +32,22 @@
     ]
   },
   {
+    "id": "mariupol-local-history-museum",
+    "name": "Mariupol City Museum of Local History",
+    "city": "Mariupol",
+    "lat": 47.0980,
+    "lng": 37.5502,
+    "type": "Museum",
+    "description": "During the siege and occupation of Mariupol, Russian forces looted the City Museum of Local History, removing thousands of artefacts relating to the city's Greek heritage, Cossack history, and industrial past. The museum building itself was damaged in the fighting. Mariupol was founded by Greek colonists expelled from Crimea by Catherine II in 1778, and its museum held irreplaceable records of that 2,500-year cultural continuity.",
+    "damage": "severely_damaged",
+    "date": "2022-03-25",
+    "sources": [
+      { "title": "Wikipedia: Siege of Mariupol (2022)", "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol_(2022)" },
+      { "title": "UNESCO: Cultural Heritage Ukraine", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "The Art Newspaper: Mariupol museum looted", "url": "https://www.theartnewspaper.com/2022/04/06/russian-forces-loot-museums-in-mariupol" }
+    ]
+  },
+  {
     "id": "odesa-transfiguration-cathedral",
     "name": "Cathedral of the Transfiguration",
     "city": "Odesa",
@@ -45,6 +61,22 @@
       { "title": "Wikipedia: Odesa Cathedral of the Transfiguration attack", "url": "https://en.wikipedia.org/wiki/2023_Odesa_Cathedral_of_the_Transfiguration_attack" },
       { "title": "UNESCO statement on Odesa cathedral strike", "url": "https://www.unesco.org/en/articles/odesa-once-again-targeted-russia-unesco-condemns-deliberate-attack-cultural-heritage" },
       { "title": "The Guardian: Odesa cathedral bombed", "url": "https://www.theguardian.com/world/2023/jul/23/russia-strikes-odesa-cathedral-ukraine-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "odesa-historic-centre",
+    "name": "Odesa Historic Centre (UNESCO World Heritage)",
+    "city": "Odesa",
+    "lat": 46.4825,
+    "lng": 30.7233,
+    "type": "Historic District",
+    "description": "Odesa's historic centre — inscribed on the UNESCO World Heritage List in January 2023 — has been repeatedly struck by Russian missiles and drones throughout 2023 and 2024. The district's 19th-century neoclassical and eclectic architecture, including the famous Potemkin Stairs and the Odesa Opera House surroundings, sustained blast and shrapnel damage from multiple strikes. UNESCO and ICOMOS have called for international protection of the site.",
+    "damage": "damaged",
+    "date": "2023-09-01",
+    "sources": [
+      { "title": "UNESCO World Heritage: Historic Centre of Odesa", "url": "https://whc.unesco.org/en/list/1703/" },
+      { "title": "UNESCO: Odesa repeated attacks", "url": "https://www.unesco.org/en/articles/odesa-once-again-targeted-russia-unesco-condemns-deliberate-attack-cultural-heritage" },
+      { "title": "The Guardian: Odesa UNESCO site shelled", "url": "https://www.theguardian.com/world/2023/sep/05/russia-attacks-odesa-again-hours-after-cultural-heritage-talks" }
     ]
   },
   {
@@ -64,6 +96,22 @@
     ]
   },
   {
+    "id": "babyn-yar-memorial-area",
+    "name": "Babyn Yar Holocaust Memorial — TV Tower Strike",
+    "city": "Kyiv",
+    "lat": 50.4720,
+    "lng": 30.4480,
+    "type": "Memorial Site",
+    "description": "On 1 March 2022, Russian cruise missiles struck the Kyiv TV tower adjacent to the Babyn Yar Holocaust memorial — the site where Nazi forces massacred over 33,771 Jews in two days in September 1941 (the largest single massacre of the Holocaust). Five people were killed in the missile strike. Shrapnel damaged buildings within the memorial grounds. The attack was condemned worldwide as a deliberate strike on one of Europe's most sacred Holocaust remembrance sites.",
+    "damage": "damaged",
+    "date": "2022-03-01",
+    "sources": [
+      { "title": "Wikipedia: Babyn Yar", "url": "https://en.wikipedia.org/wiki/Babi_Yar" },
+      { "title": "BBC: Russian missile hits Kyiv TV tower near Babyn Yar", "url": "https://www.bbc.com/news/world-europe-60585709" },
+      { "title": "Babyn Yar Holocaust Memorial Center: Statement", "url": "https://www.byhmc.org/" }
+    ]
+  },
+  {
     "id": "sviatohirsk-lavra",
     "name": "Sviatohirsk Lavra (Holy Mountains Monastery)",
     "city": "Sviatohirsk",
@@ -80,6 +128,22 @@
     ]
   },
   {
+    "id": "vinnytsia-house-of-officers",
+    "name": "Vinnytsia House of Officers & City Centre",
+    "city": "Vinnytsia",
+    "lat": 49.2333,
+    "lng": 28.4682,
+    "type": "Cultural Centre",
+    "description": "On 14 July 2022 Russia fired Kalibr cruise missiles at central Vinnytsia, striking the House of Officers — a historic cultural and concert venue — and adjacent buildings. 23 civilians were killed including four children; 202 were wounded. Among those killed was Liza Dmytrieva, a four-year-old girl with Down syndrome, whose photo became a symbol of Russia's war against Ukrainian civilians. Historic buildings surrounding the venue sustained heavy structural damage.",
+    "damage": "destroyed",
+    "date": "2022-07-14",
+    "sources": [
+      { "title": "Wikipedia: 2022 Vinnytsia missile strikes", "url": "https://en.wikipedia.org/wiki/2022_Vinnytsia_missile_strikes" },
+      { "title": "BBC: Vinnytsia missile strike kills 23", "url": "https://www.bbc.com/news/world-europe-62172525" },
+      { "title": "Human Rights Watch: Vinnytsia attack", "url": "https://www.hrw.org/news/2022/07/15/ukraine-russian-missile-strike-kills-civilians-vinnytsia" }
+    ]
+  },
+  {
     "id": "kherson-art-museum",
     "name": "Kherson Regional Art Museum",
     "city": "Kherson",
@@ -93,6 +157,54 @@
       { "title": "Wikipedia: Kherson Regional Art Museum", "url": "https://en.wikipedia.org/wiki/Kherson_Regional_Art_Museum" },
       { "title": "The Art Newspaper: Kherson museum looting", "url": "https://www.theartnewspaper.com/2022/11/14/kherson-regional-art-museum-looted-by-russian-forces" },
       { "title": "UNESCO: Cultural property looting in Ukraine", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "kherson-cathedral-holy-spirit",
+    "name": "Kherson Cathedral of the Holy Spirit",
+    "city": "Kherson",
+    "lat": 46.6408,
+    "lng": 32.6157,
+    "type": "Cathedral",
+    "description": "The Cathedral of the Holy Spirit in Kherson — an 18th-century Orthodox church that survived Napoleon and both World Wars — was damaged by Russian shelling after Ukraine's liberation of the city in November 2022. Russian forces continued to shell Kherson from the opposite bank of the Dnipro River throughout 2023 and 2024, repeatedly striking the city's historic core. The cathedral sustained damage to its roof and facades from shrapnel and blast waves.",
+    "damage": "damaged",
+    "date": "2023-02-15",
+    "sources": [
+      { "title": "Wikipedia: Kherson", "url": "https://en.wikipedia.org/wiki/Kherson" },
+      { "title": "UNESCO: Ukraine Cultural Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "ICOMOS: Ukraine Heritage Emergency", "url": "https://www.icomos.org/en/focus/armed-conflicts-and-heritage/84977-icomos-calls-for-the-protection-of-ukraine-s-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "khortytsia-national-reserve",
+    "name": "National Nature Reserve Khortytsia",
+    "city": "Zaporizhzhia",
+    "lat": 47.8210,
+    "lng": 35.0760,
+    "type": "Historic Reserve",
+    "description": "Khortytsia Island on the Dnipro River near Zaporizhzhia is the cradle of Cossack civilisation — the site of the historic Zaporozhian Sich, the independent Cossack republic that formed the nucleus of Ukrainian statehood in the 16th–18th centuries. The island is a National Nature Reserve with a museum of Cossack history and reconstructed Sich fortifications. Russian forces shelled the island and surrounding area multiple times in 2022, damaging infrastructure and creating a risk to the archaeological and historical sites.",
+    "damage": "damaged",
+    "date": "2022-04-10",
+    "sources": [
+      { "title": "Wikipedia: Khortytsia", "url": "https://en.wikipedia.org/wiki/Khortytsia" },
+      { "title": "UNESCO: Ukraine Cultural Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "Wikipedia: Zaporizhian Sich", "url": "https://en.wikipedia.org/wiki/Zaporizhian_Sich" }
+    ]
+  },
+  {
+    "id": "izium-churches-cultural",
+    "name": "Izium Churches & Cultural Buildings",
+    "city": "Izium",
+    "lat": 49.2044,
+    "lng": 37.2772,
+    "type": "Historic District",
+    "description": "Izium, a historic city in Kharkiv region, was occupied by Russian forces from April to September 2022. During the occupation, numerous churches, the city museum, and historic buildings were looted and damaged. After liberation, Ukrainian authorities documented the systematic destruction of the historic core: the Resurrection Cathedral (built 1682), the Church of the Nativity, and surrounding 17th–18th century structures all suffered damage. The city's museum collections were partially looted.",
+    "damage": "severely_damaged",
+    "date": "2022-04-01",
+    "sources": [
+      { "title": "Wikipedia: Izium, Ukraine", "url": "https://en.wikipedia.org/wiki/Izium,_Ukraine" },
+      { "title": "Human Rights Watch: Izium abuses and destruction", "url": "https://www.hrw.org/news/2022/09/24/ukraine-russian-forces-executed-civilians-izium" },
+      { "title": "UNESCO: Ukraine Cultural Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
     ]
   },
   {
@@ -128,6 +240,22 @@
     ]
   },
   {
+    "id": "kharkiv-art-museum",
+    "name": "Kharkiv Art Museum (KMAM)",
+    "city": "Kharkiv",
+    "lat": 49.9935,
+    "lng": 36.2324,
+    "type": "Museum",
+    "description": "The Kharkiv Art Museum — one of Ukraine's oldest and largest art museums, founded in 1805 — sustained damage from Russian shelling that struck central Kharkiv throughout 2022. The museum holds over 25,000 works including Ukrainian fine art from the 17th–20th centuries, European paintings, and an important collection of Ukrainian avant-garde art from the 1920s Kharkiv school. Museum staff worked to evacuate the most vulnerable works as shelling continued.",
+    "damage": "damaged",
+    "date": "2022-03-15",
+    "sources": [
+      { "title": "Kharkiv Art Museum official site", "url": "https://artmuseum.kh.ua/" },
+      { "title": "The Art Newspaper: Kharkiv under fire", "url": "https://www.theartnewspaper.com/2022/03/02/kharkiv-ukraine-attack-museum-heritage" },
+      { "title": "UNESCO: Ukraine Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
+    ]
+  },
+  {
     "id": "mykolaiv-history-museum",
     "name": "Mykolaiv Regional Museum of Local History",
     "city": "Mykolaiv",
@@ -157,6 +285,54 @@
       { "title": "Wikipedia: Hryhorii Skovoroda Literary Memorial Museum", "url": "https://en.wikipedia.org/wiki/Hryhorii_Skovoroda_Literary_Memorial_Museum" },
       { "title": "Wikipedia: Hryhorii Skovoroda", "url": "https://en.wikipedia.org/wiki/Hryhorii_Skovoroda" },
       { "title": "The Guardian: Skovoroda museum destroyed", "url": "https://www.theguardian.com/world/2022/may/07/russian-shelling-destroys-museum-dedicated-to-ukraines-greatest-philosopher" }
+    ]
+  },
+  {
+    "id": "saint-michael-cathedral-kharkiv",
+    "name": "Saint Michael's Church, Kharkiv Oblast",
+    "city": "Kharkiv",
+    "lat": 50.0048,
+    "lng": 36.2317,
+    "type": "Church",
+    "description": "Dozens of Orthodox churches across Kharkiv region were damaged or destroyed by Russian shelling and airstrikes in 2022–2024. UNESCO documented damage to religious buildings across Kharkiv, Donetsk, Luhansk, Zaporizhzhia, Mykolaiv, Kherson, and Kyiv oblasts. Many of these churches date from the 17th–18th centuries and represent irreplaceable examples of Ukrainian Baroque ecclesiastical architecture — a distinct style that flourished under the Hetmanate.",
+    "damage": "damaged",
+    "date": "2022-05-01",
+    "sources": [
+      { "title": "UNESCO: Over 230 sites damaged (2023 report)", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
+      { "title": "ICOMOS: Armed Conflict and Heritage", "url": "https://www.icomos.org/en/focus/armed-conflicts-and-heritage/84977-icomos-calls-for-the-protection-of-ukraine-s-cultural-heritage" },
+      { "title": "Wikipedia: Ukrainian Baroque", "url": "https://en.wikipedia.org/wiki/Ukrainian_Baroque" }
+    ]
+  },
+  {
+    "id": "lysychansk-school-museum",
+    "name": "Lysychansk Local History Museum",
+    "city": "Lysychansk",
+    "lat": 48.8929,
+    "lng": 38.4478,
+    "type": "Museum",
+    "description": "Lysychansk, in Luhansk region, fell to Russian forces in July 2022 after weeks of devastating bombardment. The city's local history museum and several cultural institutions were damaged during the fighting. Lysychansk held one of the oldest glass factories in Eastern Europe (founded 1764) and its museum documented the industrial and cultural heritage of the Donbas region before Russian occupation reshaped the area.",
+    "damage": "damaged",
+    "date": "2022-06-20",
+    "sources": [
+      { "title": "Wikipedia: Lysychansk", "url": "https://en.wikipedia.org/wiki/Lysychansk" },
+      { "title": "BBC: Battle for Lysychansk", "url": "https://www.bbc.com/news/world-europe-61685049" },
+      { "title": "UNESCO: Ukraine Cultural Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
+    ]
+  },
+  {
+    "id": "zaporizhzhia-municipal-museum",
+    "name": "Zaporizhzhia Regional Museum",
+    "city": "Zaporizhzhia",
+    "lat": 47.8388,
+    "lng": 35.1396,
+    "type": "Museum",
+    "description": "Zaporizhzhia — the city on the Dnipro River closest to the front line — has been struck by Russian missiles hundreds of times since 2022, including a mass missile strike on 9 October 2022 that killed 17 civilians and damaged multiple cultural buildings in the city centre. The regional museum and surrounding historic buildings sustained repeated damage. Zaporizhzhia is also home to Europe's largest nuclear power plant, seized by Russia and used as a military base.",
+    "damage": "damaged",
+    "date": "2022-10-09",
+    "sources": [
+      { "title": "Wikipedia: Zaporizhzhia, Ukraine", "url": "https://en.wikipedia.org/wiki/Zaporizhzhia" },
+      { "title": "BBC: Zaporizhzhia missile strikes", "url": "https://www.bbc.com/news/world-europe-63183258" },
+      { "title": "UNESCO: Ukraine Cultural Heritage Damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
     ]
   }
 ]
