@@ -30,7 +30,7 @@ export default function CulturalMap() {
       // Sandboxed environments return a context but with renderer = "Disabled"
       try {
         const renderer = String(gl.getParameter(gl.RENDERER) ?? "");
-        if (!renderer || renderer.toLowerCase().includes("disabled") || renderer.toLowerCase().includes("swiftshader")) {
+        if (!renderer || renderer.toLowerCase().includes("disabled")) {
           setWebglError(true);
           return;
         }
