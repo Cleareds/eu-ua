@@ -31,7 +31,8 @@ function getInitials(name: string) {
 
 function PersonAvatar({ person, eraStyle }: { person: Person; eraStyle: { bg: string; text: string } }) {
   const [imgError, setImgError] = useState(false);
-  const src = `/people/${person.id}.jpg`;
+  // Script outputs .png; fall back to .jpg for backwards compat
+  const src = `/people/${person.id}.png`;
 
   if (!imgError) {
     return (
