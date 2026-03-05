@@ -20,10 +20,21 @@ export default function CulturalMap() {
     async function initMap() {
       if (!mapRef.current || mapInstance.current) return;
 
-      // Check WebGL support before attempting to create the map
-      const canvas = document.createElement("canvas");
-      const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-      if (!gl) {
+      // Check WebGL support — also verify the context is functional (not sandboxed/disabled)
+      const testCanvas = document.createElement("canvas");
+      const gl = (testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl")) as WebGLRenderingContext | null;
+      if (!gl || gl.isContextLost()) {
+        setWebglError(true);
+        return;
+      }
+      // Sandboxed environments return a context but with renderer = "Disabled"
+      try {
+        const renderer = String(gl.getParameter(gl.RENDERER) ?? "");
+        if (!renderer || renderer.toLowerCase().includes("disabled") || renderer.toLowerCase().includes("swiftshader")) {
+          setWebglError(true);
+          return;
+        }
+      } catch {
         setWebglError(true);
         return;
       }
@@ -43,7 +54,7 @@ export default function CulturalMap() {
 
         map.on("error", (e) => {
           console.error("MapLibre error:", e);
-          if (e.error?.message?.includes("WebGL")) {
+          if (e.error?.message?.includes("WebGL") || e.error?.message?.includes("painter")) {
             setWebglError(true);
             map.remove();
             mapInstance.current = null;
