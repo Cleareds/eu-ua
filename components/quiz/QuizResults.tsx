@@ -5,22 +5,22 @@ interface Props {
   questions: QuizQuestion[];
   answers: (number | null)[];
   onRetry: () => void;
+  onBack: () => void;
 }
 
-export default function QuizResults({ questions, answers, onRetry }: Props) {
+function getMessage(pct: number): string {
+  if (pct === 100) return "Perfect score! You are a true expert on Ukraine's European identity.";
+  if (pct >= 80) return "Excellent! You have deep knowledge of Ukraine's European heritage.";
+  if (pct >= 60) return "Solid knowledge! You know Ukraine's European connections better than most.";
+  if (pct >= 40) return "Good start! Keep exploring to deepen your understanding.";
+  return "Keep exploring! There's a lot to discover about Ukraine's European journey.";
+}
+
+export default function QuizResults({ questions, answers, onRetry, onBack }: Props) {
   const score = answers.filter((a, i) => a === questions[i].correct).length;
   const total = questions.length;
   const pct = Math.round((score / total) * 100);
-
-  const messages = [
-    { min: 0, max: 1, text: "Keep exploring! There's a lot to discover about Ukraine's European journey." },
-    { min: 2, max: 2, text: "Good start! You know the basics. Explore more to deepen your understanding." },
-    { min: 3, max: 3, text: "Solid knowledge! You know Ukraine's European connections better than most." },
-    { min: 4, max: 4, text: "Impressive! You have strong knowledge of Ukraine's European identity." },
-    { min: 5, max: 5, text: "Expert level! You know Ukraine's European heritage inside and out." },
-  ];
-
-  const message = messages.find((m) => score >= m.min && score <= m.max)?.text ?? "";
+  const message = getMessage(pct);
 
   return (
     <div className="max-w-2xl mx-auto text-center">
@@ -47,7 +47,11 @@ export default function QuizResults({ questions, answers, onRetry }: Props) {
         {questions.map((q, i) => {
           const correct = answers[i] === q.correct;
           return (
-            <div key={q.id} className="flex items-start gap-3 p-4 rounded-xl border" style={{ borderColor: correct ? "#BBF7D0" : "#FECACA", backgroundColor: correct ? "#F0FDF4" : "#FEF2F2" }}>
+            <div
+              key={q.id}
+              className="flex items-start gap-3 p-4 rounded-xl border"
+              style={{ borderColor: correct ? "#BBF7D0" : "#FECACA", backgroundColor: correct ? "#F0FDF4" : "#FEF2F2" }}
+            >
               <span className="font-bold text-lg shrink-0" style={{ color: correct ? "#059669" : "#DC2626" }}>
                 {correct ? "✓" : "✗"}
               </span>
@@ -66,6 +70,13 @@ export default function QuizResults({ questions, answers, onRetry }: Props) {
 
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <button
+          onClick={onBack}
+          className="px-6 py-3 rounded-lg font-semibold text-sm border-2 transition-colors"
+          style={{ borderColor: "#6B7280", color: "#6B7280" }}
+        >
+          ← All Categories
+        </button>
         <button
           onClick={onRetry}
           className="px-6 py-3 rounded-lg font-semibold text-sm border-2 transition-colors"

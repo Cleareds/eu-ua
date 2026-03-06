@@ -7,7 +7,14 @@ import QuizResults from "./QuizResults";
 
 type Phase = "intro" | "question" | "results";
 
-export default function QuizClient({ questions }: { questions: QuizQuestionType[] }) {
+interface Props {
+  questions: QuizQuestionType[];
+  categoryTitle: string;
+  categoryIcon: string;
+  onBack: () => void;
+}
+
+export default function QuizClient({ questions, categoryTitle, categoryIcon, onBack }: Props) {
   const [phase, setPhase] = useState<Phase>("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(() => Array(questions.length).fill(null));
@@ -33,7 +40,6 @@ export default function QuizClient({ questions }: { questions: QuizQuestionType[
     setCurrentIndex((prev) => {
       const next = prev + 1;
       if (next >= questions.length) {
-        // Use a timeout to ensure answers state is committed before showing results
         setPhase("results");
         return prev;
       }
@@ -46,10 +52,15 @@ export default function QuizClient({ questions }: { questions: QuizQuestionType[
     <>
       {phase === "intro" && (
         <div className="text-center">
-          <div className="text-6xl mb-6">🧠</div>
-          <h1 className="text-4xl font-bold mb-4" style={{ color: "#1A1A2E" }}>Ukraine & Europe Quiz</h1>
+          <button
+            onClick={onBack}
+            className="mb-8 text-sm text-gray-500 hover:text-gray-800 transition-colors flex items-center gap-1 mx-auto"
+          >
+            ← All categories
+          </button>
+          <div className="text-6xl mb-6">{categoryIcon}</div>
+          <h1 className="text-4xl font-bold mb-2" style={{ color: "#1A1A2E" }}>{categoryTitle}</h1>
           <p className="text-gray-600 max-w-xl mx-auto mb-8 text-lg">
-            Test your knowledge of Ukraine&apos;s European identity, history, and EU integration journey.{" "}
             {questions.length} questions — how well do you know Ukraine?
           </p>
           <div className="flex justify-center gap-8 mb-10">
@@ -90,6 +101,7 @@ export default function QuizClient({ questions }: { questions: QuizQuestionType[
           questions={questions}
           answers={answers}
           onRetry={handleStart}
+          onBack={onBack}
         />
       )}
     </>

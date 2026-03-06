@@ -11,27 +11,67 @@
     "question": "What year did Ukraine sign the EU-Ukraine Association Agreement, including the Deep and Comprehensive Free Trade Area (DCFTA)?",
     "options": ["2004", "2010", "2014", "2019"],
     "correct": 2,
-    "explanation": "Ukraine signed the Association Agreement with the EU on June 27, 2014, after the Euromaidan Revolution. The DCFTA provisions began entering into force provisionally in January 2016. This agreement is the cornerstone of Ukraine's European integration path."
+    "explanation": "Ukraine signed the Association Agreement with the EU on June 27, 2014, after the Euromaidan Revolution. The DCFTA provisions began entering into force provisionally in January 2016."
   },
   {
     "id": 3,
-    "question": "How many of the 35 EU accession negotiation chapters has Ukraine opened for formal negotiations as of 2024?",
-    "options": ["0", "3", "6", "12"],
+    "question": "The Odesa Opera House was modeled after which famous European opera house?",
+    "options": ["La Scala in Milan", "Vienna's Burgtheater", "Paris Opera (Palais Garnier)", "Covent Garden in London"],
     "correct": 1,
-    "explanation": "Ukraine formally opened accession negotiations in June 2024 after receiving EU candidate status in June 2022. As of 2024, the screening phase is underway for most chapters, with negotiations formally launched on a subset. The process is accelerating rapidly."
+    "explanation": "The Odesa National Academic Theater of Opera and Ballet, built in 1887, was designed by Viennese architects Fellner and Helmer and modeled on Vienna's Burgtheater — a symbol of Odesa's deep European cultural heritage."
   },
   {
     "id": 4,
     "question": "Approximately how many Ukrainian students were studying in EU countries by 2023?",
     "options": ["45,000", "120,000", "390,000", "750,000"],
     "correct": 2,
-    "explanation": "The number of Ukrainian students in EU countries surged from around 45,000 in 2015 to approximately 390,000 by 2023. This includes both pre-war Erasmus+ students and those who relocated following the 2022 invasion, making Ukraine the largest source of foreign students in many EU member states."
+    "explanation": "The number of Ukrainian students in EU countries surged from around 45,000 in 2015 to approximately 390,000 by 2023, making Ukraine the largest source of foreign students in many EU member states."
   },
   {
     "id": 5,
-    "question": "The Odesa Opera House was modeled after which famous European opera house?",
-    "options": ["La Scala in Milan", "Vienna's Burgtheater", "Paris Opera (Palais Garnier)", "Covent Garden in London"],
+    "question": "When did Ukraine officially apply for EU membership?",
+    "options": ["February 2014", "February 2019", "February 2022", "June 2023"],
+    "correct": 2,
+    "explanation": "President Zelensky signed Ukraine's formal EU membership application on February 28, 2022 — just four days after Russia's full-scale invasion. The EU granted Ukraine candidate status on June 23, 2022."
+  },
+  {
+    "id": 6,
+    "question": "What was Euromaidan?",
+    "options": [
+      "A 2013–2014 pro-European revolution in Kyiv",
+      "Ukraine's first EU trade agreement signed in 2004",
+      "A Ukrainian cultural festival celebrated across Europe",
+      "An EU aid package for Ukraine's reconstruction"
+    ],
+    "correct": 0,
+    "explanation": "Euromaidan (November 2013 – February 2014) was a wave of pro-European protests in Kyiv's Maidan Nezalezhnosti (Independence Square) that led to the ousting of President Yanukovych after he rejected the EU Association Agreement."
+  },
+  {
+    "id": 7,
+    "question": "How many UNESCO World Heritage Sites does Ukraine have?",
+    "options": ["3", "7", "12", "19"],
     "correct": 1,
-    "explanation": "The Odesa National Academic Theater of Opera and Ballet, built in 1887, was designed by Viennese architects Fellner and Helmer and modeled on Vienna's Burgtheater. This is a powerful symbol of Odesa's deep European architectural and cultural heritage."
+    "explanation": "Ukraine has 7 UNESCO World Heritage Sites, including Saint Sophia Cathedral in Kyiv, Lviv's historic centre, the Residence of Bukovinian and Dalmatian Metropolitans in Chernivtsi, the Ancient City of Tauric Chersonese, and the Struve Geodetic Arc."
+  },
+  {
+    "id": 8,
+    "question": "Which percentage of Ukraine's total exports went to EU countries in 2023?",
+    "options": ["21%", "38%", "58%", "72%"],
+    "correct": 2,
+    "explanation": "By 2023, the EU accounted for approximately 58% of Ukraine's total exports — a dramatic rise from 26% in 2013. The DCFTA gradually eliminated tariffs and aligned Ukrainian standards with EU regulations, transforming trade patterns."
+  },
+  {
+    "id": 9,
+    "question": "Which Ukrainian city is often called the 'Pearl of the Black Sea' and was added to the UNESCO World Heritage List in 2023?",
+    "options": ["Mariupol", "Odesa", "Mykolaiv", "Kherson"],
+    "correct": 1,
+    "explanation": "Odesa's historic centre was inscribed on UNESCO's World Heritage List in January 2023 under an emergency procedure, partly to draw international attention to the risk posed by the ongoing war. The city features extraordinary neoclassical and eclectic architecture."
+  },
+  {
+    "id": 10,
+    "question": "The Kyiv Pechersk Lavra (Monastery of the Caves), a UNESCO World Heritage Site, was founded in which century?",
+    "options": ["9th century", "11th century", "13th century", "15th century"],
+    "correct": 1,
+    "explanation": "The Kyiv Pechersk Lavra was founded in 1051 by monks Anthony and Theodosius, making it one of the oldest monasteries in Eastern Europe. Its famous cave system contains the remains of early Christian saints and is central to Ukrainian Orthodox heritage."
   }
 ]

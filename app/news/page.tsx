@@ -1,6 +1,8 @@
 import { getNews } from "@/lib/data";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "EU-Ukraine News — EU-UA.com",
   description: "Latest news on Ukraine's EU integration, accession negotiations, and European connections. Updated daily.",

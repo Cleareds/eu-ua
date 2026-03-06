@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "Kyiv is one of the oldest cities in Eastern Europe. Approximately when was it founded?",
+    "options": ["5th century AD", "8th century AD", "11th century AD", "13th century AD"],
+    "correct": 0,
+    "explanation": "Archaeological evidence suggests Kyiv was settled by Slavic tribes in the 5th century AD. It became the capital of the Kyivan Rus state in the 9th century, a medieval polity that shaped the culture, law, and religion of Ukraine, Russia, and Belarus. Kyiv was the most important city in Eastern Europe during the 10th–12th centuries."
+  },
+  {
+    "id": 2,
+    "question": "Lviv's Old Town is a UNESCO World Heritage Site. Which empire most shaped its architectural character?",
+    "options": ["Ottoman Empire", "Russian Empire", "Austro-Hungarian Empire", "Venetian Republic"],
+    "correct": 2,
+    "explanation": "Lviv (known as Lemberg under Habsburg rule) was capital of the Kingdom of Galicia and Lodomeria within the Austro-Hungarian Empire from 1772 to 1918. Its eclectic architecture — from Gothic to Baroque to Art Nouveau — reflects 150 years of Central European cultural development."
+  },
+  {
+    "id": 3,
+    "question": "Odesa, founded in 1794, sits on the coast of which body of water?",
+    "options": ["Caspian Sea", "Sea of Azov", "Black Sea", "Danube Delta"],
+    "correct": 2,
+    "explanation": "Odesa is Ukraine's main seaport, located on the northwestern shore of the Black Sea. Founded by Catherine II of Russia on the site of an older Ottoman fortress, it quickly became a cosmopolitan trading hub with French, Italian, Greek, and Jewish communities shaping its culture."
+  },
+  {
+    "id": 4,
+    "question": "Which Ukrainian city served as the empire's capital of Bukovina under Habsburg rule and has Austro-Hungarian architecture on a UNESCO list?",
+    "options": ["Ternopil", "Ivano-Frankivsk", "Uzhhorod", "Chernivtsi"],
+    "correct": 3,
+    "explanation": "Chernivtsi (Czernowitz in German) was the flourishing capital of the Duchy of Bukovina. Its Residence of Bukovinian and Dalmatian Metropolitans is a UNESCO World Heritage Site. The city produced Nobel Prize winners and was home to poet Paul Celan, exemplifying its multicultural Central European identity."
+  },
+  {
+    "id": 5,
+    "question": "Kharkiv, Ukraine's second-largest city, was the capital of Soviet Ukraine from 1919 to 1934. It is primarily located in which part of Ukraine?",
+    "options": ["Western Ukraine", "Central Ukraine", "Eastern Ukraine", "Southern Ukraine"],
+    "correct": 2,
+    "explanation": "Kharkiv is located in northeast Ukraine, close to the Russian border. Founded in 1654, it grew rapidly under Soviet industrialisation. Today it is a major scientific and educational hub, home to several universities and research institutes, and has suffered significant damage from Russian shelling since 2022."
+  },
+  {
+    "id": 6,
+    "question": "The Carpathian Mountains, stretching across western Ukraine, are part of a range shared with which other countries?",
+    "options": [
+      "Poland, Slovakia, Czech Republic, Romania",
+      "Poland, Germany, Austria, Switzerland",
+      "Romania, Moldova, Bulgaria, Hungary",
+      "Slovakia, Austria, Slovenia, Croatia"
+    ],
+    "correct": 0,
+    "explanation": "The Carpathians form a 1,500 km arc across Central and Eastern Europe — shared by Czech Republic, Slovakia, Poland, Ukraine, Romania, and Hungary. The Ukrainian Carpathians are home to the Hutsul people, ancient beech forests (UNESCO), and the highest peak in Ukraine, Hoverla (2,061 m)."
+  },
+  {
+    "id": 7,
+    "question": "The Dnipro River, Ukraine's central waterway, flows into which body of water?",
+    "options": ["Caspian Sea", "Sea of Azov", "Black Sea", "Danube Delta"],
+    "correct": 2,
+    "explanation": "The Dnipro (Dnieper) is Europe's fourth-longest river, flowing from Russia through Belarus and the length of Ukraine before emptying into the Black Sea near Kherson. It divides Ukraine into eastern (Left Bank) and western (Right Bank) regions and has been central to Ukrainian identity for millennia."
+  },
+  {
+    "id": 8,
+    "question": "Uzhhorod, the capital of Zakarpattia Oblast, was part of which country before World War II?",
+    "options": ["Poland", "Romania", "Czechoslovakia", "Yugoslavia"],
+    "correct": 2,
+    "explanation": "Uzhhorod (Ungvár in Hungarian, Užhorod in Slovak) was part of Czechoslovakia from 1918 to 1939, then briefly of the Carpatho-Ukraine state. It joined the Soviet Union in 1945. The region's history under Hungary, Austria-Hungary, and Czechoslovakia gives it a distinctly Central European character."
+  },
+  {
+    "id": 9,
+    "question": "Khortytsia island in the Dnipro River near Zaporizhzhia was historically the base of which famous military force?",
+    "options": ["The Cossack Hetmanate", "The Zaporizhian Sich (Cossack Host)", "The Kievan Rus Guard", "The Crimean Khanate"],
+    "correct": 1,
+    "explanation": "Khortytsia island was the heart of the Zaporizhian Sich — the fortress-state of the Zaporozhian Cossacks from the 16th to 18th centuries. The Cossacks developed a proto-democratic system of governance that historians consider an early form of European republicanism. The island is now a national reserve."
+  },
+  {
+    "id": 10,
+    "question": "Mariupol, the port city on the Sea of Azov, was heavily devastated in 2022. What was it historically known for before the war?",
+    "options": [
+      "Wine production and tourism",
+      "Steel production and a large Greek community",
+      "Shipbuilding and naval bases",
+      "Agricultural exports and grain storage"
+    ],
+    "correct": 1,
+    "explanation": "Mariupol was home to the massive Azovstal and Ilyich steel plants, making it one of Ukraine's most important industrial cities. It also had a significant Greek-descended community (Mariupilites) settled there in the 18th century from Crimea. The city's Azov Steel plant became a symbol of Ukrainian resistance in 2022."
+  }
+]

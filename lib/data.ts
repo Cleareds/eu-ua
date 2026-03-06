@@ -12,6 +12,9 @@ import citiesJSON from "@/data/cities.json";
 import dataJSON from "@/data/euUkraineData.json";
 import mythsJSON from "@/data/myths.json";
 import quizJSON from "@/data/quiz.json";
+import quizPeopleJSON from "@/data/quiz-people.json";
+import quizPlacesJSON from "@/data/quiz-places.json";
+import quizHeritageJSON from "@/data/quiz-heritage.json";
 import newsJSON from "@/data/news-timeline.json";
 import culturalSitesJSON from "@/data/cultural-sites.json";
 
@@ -76,6 +79,20 @@ export async function getQuizQuestions(): Promise<QuizQuestion[]> {
   const { data, error } = await client.from("quiz_questions").select("*").order("id");
   if (error || !data?.length) return quizJSON as QuizQuestion[];
   return data as QuizQuestion[];
+}
+
+export async function getAllQuizCategories(): Promise<{
+  general: QuizQuestion[];
+  people: QuizQuestion[];
+  places: QuizQuestion[];
+  heritage: QuizQuestion[];
+}> {
+  return {
+    general: quizJSON as QuizQuestion[],
+    people: quizPeopleJSON as QuizQuestion[],
+    places: quizPlacesJSON as QuizQuestion[],
+    heritage: quizHeritageJSON as QuizQuestion[],
+  };
 }
 
 export async function getCulturalSites(): Promise<CulturalSite[]> {

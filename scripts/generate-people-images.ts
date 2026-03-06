@@ -14,6 +14,7 @@ import fs from "fs";
 import path from "path";
 import https from "https";
 import http from "http";
+import sharp from "sharp";
 
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) {
@@ -69,16 +70,12 @@ const FALLBACK_IMAGE_URLS: Record<string, { url: string; mimeType: string }> = {
     url: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Celan_1938.jpg",
     mimeType: "image/jpeg",
   },
-  "john-hughes": {
-    url: "https://upload.wikimedia.org/wikipedia/en/0/08/John_James_Hughes.jpg",
-    mimeType: "image/jpeg",
-  },
   "vasyl-stus": {
-    url: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Vasyl_Stus_%281938-1985%29.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/2/27/Vasyl_Stus_1980_%28cropped%29.jpg",
     mimeType: "image/jpeg",
   },
   "pamfil-yurkevych": {
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Pamfil_Yurkevych.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/1/16/PDYurkevich.jpg",
     mimeType: "image/jpeg",
   },
 };
@@ -102,13 +99,19 @@ const TEXT_ONLY_BW_PROMPTS: Record<string, string> = {
     "Round kind face, balding on top with dark hair on sides, warm intelligent eyes, clean-shaven, formal suit and tie. " +
     "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
   "lev-landau":
-    "Dramatic black-and-white studio portrait of a theoretical physicist who worked in Kharkiv, Ukraine, Nobel laureate, age 45, mid-20th century. " +
-    "Famously elongated thin face, dark deep-set eyes, wire-rimmed round glasses, dark receding hair, slender build, suit jacket. " +
+    "Dramatic black-and-white studio portrait of a brilliant European man, age 45, 1950s. " +
+    "Elongated thin face, dark deep-set expressive eyes, wire-rimmed round glasses, slender build, wearing a casual open-collar shirt. " +
+    "Animated and intellectually alive expression. " +
     "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
   "volodymyr-vernadsky":
     "Dramatic black-and-white studio portrait of an elderly distinguished Ukrainian scientist and philosopher, founder of the Ukrainian Academy of Sciences, age late 70s. " +
     "Full neat white beard, white hair, wire-rimmed glasses, warm wise eyes, dark suit. " +
     "High-contrast monochrome, cinematic lighting, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
+  "john-hughes":
+    "Dramatic black-and-white Victorian studio portrait of a stocky Welsh ironmaster and industrialist, age 50s, 1870s. " +
+    "Full dark Victorian beard and thick sideburns, determined confident eyes, wearing a formal frock coat and cravat. " +
+    "Self-made industrialist, powerful build, solid presence. " +
+    "High-contrast monochrome, square 1:1 format, tight head-and-shoulders crop, plain dark background. No text.",
 };
 
 // ─── HTTP helpers ────────────────────────────────────────────────────────────
@@ -221,7 +224,7 @@ async function restyle(imageBuffer: Buffer, mimeType: string): Promise<{ data: B
   });
 }
 
-async function generateTextOnly(prompt: string): Promise<{ data: Buffer; mimeType: string }> {
+async function generateTextOnly(prompt: string, model = "gemini-2.5-flash-image"): Promise<{ data: Buffer; mimeType: string }> {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       contents: [{ role: "user", parts: [{ text: prompt }] }],
@@ -229,7 +232,7 @@ async function generateTextOnly(prompt: string): Promise<{ data: Buffer; mimeTyp
     });
     const options = {
       hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-2.5-flash-image:generateContent?key=${API_KEY}`,
+      path: `/v1beta/models/${model}:generateContent?key=${API_KEY}`,
       method: "POST",
       headers: { "Content-Type": "application/json", "Content-Length": Buffer.byteLength(body) },
     };
@@ -252,6 +255,53 @@ async function generateTextOnly(prompt: string): Promise<{ data: Buffer; mimeTyp
     req.write(body);
     req.end();
   });
+}
+
+async function generateViaImagen(prompt: string): Promise<{ data: Buffer; mimeType: string }> {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      instances: [{ prompt }],
+      parameters: { sampleCount: 1, aspectRatio: "1:1", safetyFilterLevel: "block_few", personGeneration: "allow_adult" },
+    });
+    const options = {
+      hostname: "generativelanguage.googleapis.com",
+      path: `/v1beta/models/imagen-4.0-generate-001:predict?key=${API_KEY}`,
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Content-Length": Buffer.byteLength(body) },
+    };
+    const req = https.request(options, (res) => {
+      const chunks: Buffer[] = [];
+      res.on("data", (c) => chunks.push(c));
+      res.on("end", () => {
+        try {
+          const json = JSON.parse(Buffer.concat(chunks).toString());
+          if (json.error) return reject(new Error(json.error.message));
+          const b64 = json.predictions?.[0]?.bytesBase64Encoded;
+          if (!b64) return reject(new Error("No image from Imagen"));
+          resolve({ data: Buffer.from(b64, "base64"), mimeType: "image/png" });
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+/** Center-crop a buffer to square and return as PNG */
+async function toSquarePng(buf: Buffer): Promise<Buffer> {
+  const img = sharp(buf);
+  const meta = await img.metadata();
+  const w = meta.width ?? 0;
+  const h = meta.height ?? 0;
+  const size = Math.min(w, h);
+  const left = Math.floor((w - size) / 2);
+  const top = Math.floor((h - size) / 2);
+  return img
+    .extract({ left, top, width: size, height: size })
+    .resize(1024, 1024)
+    .png()
+    .toBuffer();
 }
 
 function ext(mime: string) {
@@ -294,18 +344,34 @@ async function main() {
     process.stdout.write(`  → ${person.name}... `);
 
     // 1. Fetch reference image from Wikipedia (with fallback to direct Wikimedia URL)
+    // For people with no known photograph, go straight to text-only generation
+    const textOnlyPrompt = TEXT_ONLY_BW_PROMPTS[person.id];
     let imgInfo = await getWikipediaImage(wikiTitle);
+    if (!imgInfo) imgInfo = FALLBACK_IMAGE_URLS[person.id] ?? null;
     if (!imgInfo) {
-      imgInfo = FALLBACK_IMAGE_URLS[person.id] ?? null;
-      if (!imgInfo) {
-        console.log(`SKIP — no image found`);
-        continue;
+      if (textOnlyPrompt) {
+        process.stdout.write(`(no photo found, using text generation)... `);
+        try {
+          const result = await generateTextOnly(textOnlyPrompt);
+          const outPath = path.join(outputDir, `${person.id}.png`);
+          const squareData = await toSquarePng(result.data);
+          fs.writeFileSync(outPath, squareData);
+          console.log(`saved ${person.id}.png (${Math.round(squareData.length / 1024)}KB)`);
+        } catch (e) {
+          console.log(`FAILED — ${(e as Error).message}`);
+        }
+      } else {
+        console.log(`SKIP — no image or text prompt found`);
       }
+      if (i < people.length - 1) await sleep(1500);
+      continue;
     }
 
     let sourceBuffer: Buffer;
     try {
-      sourceBuffer = await fetchBuffer(imgInfo.url);
+      const raw = await fetchBuffer(imgInfo.url);
+      // Pre-crop to square so Gemini receives a square reference image
+      sourceBuffer = await toSquarePng(raw);
       process.stdout.write(`got reference (${Math.round(sourceBuffer.length / 1024)}KB)... `);
     } catch (e) {
       console.log(`SKIP — download failed: ${(e as Error).message}`);
@@ -316,28 +382,33 @@ async function main() {
     try {
       let result: { data: Buffer; mimeType: string };
       try {
-        result = await restyle(sourceBuffer, imgInfo.mimeType);
+        result = await restyle(sourceBuffer, "image/png");
       } catch (e) {
+        const msg = (e as Error).message;
         const fallbackPrompt = TEXT_ONLY_BW_PROMPTS[person.id];
-        if (fallbackPrompt && (e as Error).message.includes("IMAGE_OTHER") || (e as Error).message.includes("RECITATION")) {
-          process.stdout.write(`(image blocked, using text fallback)... `);
-          result = await generateTextOnly(fallbackPrompt);
+        if (fallbackPrompt && (msg.includes("IMAGE_OTHER") || msg.includes("RECITATION"))) {
+          process.stdout.write(`(blocked, text fallback)... `);
+          // Try gemini first, fall back to imagen-4 if still blocked
+          try {
+            result = await generateTextOnly(fallbackPrompt);
+          } catch {
+            process.stdout.write(`(trying imagen-4)... `);
+            result = await generateViaImagen(fallbackPrompt);
+          }
         } else {
           throw e;
         }
       }
-      const { data, mimeType: outMime } = result;
-      const outExt = ext(outMime);
-      const outPath = path.join(outputDir, `${person.id}.${outExt}`);
 
-      // Remove old versions with different extensions
-      ["png", "jpg", "webp"].forEach((e) => {
+      // Always force square 1024×1024 PNG output
+      const outPath = path.join(outputDir, `${person.id}.png`);
+      const squareData = await toSquarePng(result.data);
+      ["jpg", "webp"].forEach((e) => {
         const old = path.join(outputDir, `${person.id}.${e}`);
-        if (e !== outExt && fs.existsSync(old)) fs.unlinkSync(old);
+        if (fs.existsSync(old)) fs.unlinkSync(old);
       });
-
-      fs.writeFileSync(outPath, data);
-      console.log(`saved ${person.id}.${outExt} (${Math.round(data.length / 1024)}KB)`);
+      fs.writeFileSync(outPath, squareData);
+      console.log(`saved ${person.id}.png (${Math.round(squareData.length / 1024)}KB)`);
     } catch (e) {
       console.log(`FAILED — ${(e as Error).message}`);
     }

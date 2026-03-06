@@ -31,6 +31,7 @@ export default function Footer() {
                 { href: "/data-dashboard", label: "Data Dashboard" },
                 { href: "/myths", label: "Myths & Reality" },
                 { href: "/quiz", label: "Knowledge Quiz" },
+                { href: "/contact", label: "Contact & Support" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="hover:text-white transition-colors">{l.label}</Link>

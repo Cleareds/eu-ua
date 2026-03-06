@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "question": "How many UNESCO World Heritage Sites does Ukraine officially have?",
+    "options": ["3", "7", "12", "21"],
+    "correct": 1,
+    "explanation": "Ukraine has 7 UNESCO World Heritage Sites: Saint Sophia Cathedral and Kyiv Pechersk Lavra; Lviv's historic centre; Struve Geodetic Arc; Ancient City of Tauric Chersonese (Crimea); Residence of Bukovinian Metropolitans in Chernivtsi; ancient beech forests; and Odesa's historic centre (inscribed 2023 under emergency procedure)."
+  },
+  {
+    "id": 2,
+    "question": "In March 2022, Russian forces bombed the Mariupol Drama Theatre. Why was this site particularly significant?",
+    "options": [
+      "It housed a major art collection",
+      "Hundreds of civilians were sheltering inside",
+      "It was a UNESCO-listed monument",
+      "It was headquarters of the city administration"
+    ],
+    "correct": 1,
+    "explanation": "The Mariupol Drama Theatre was being used as a shelter by hundreds of civilians — estimates suggest 1,000–1,200 people. The word 'ДЕТИ' (Children) was written in large letters on the ground outside to warn pilots. The building was destroyed in the airstrike. UNESCO and international bodies classified this as an attack on cultural heritage and civilian lives."
+  },
+  {
+    "id": 3,
+    "question": "The Ivankiv Historical and Local History Museum, destroyed in 2022, housed a collection of works by which famous Ukrainian folk artist?",
+    "options": ["Maria Pryimachenko", "Kateryna Bilokur", "Hanna Sobachko-Shostak", "Paraska Plytka-Horytsvit"],
+    "correct": 0,
+    "explanation": "The museum housed 25 original paintings by Maria Pryimachenko (1909–1997), one of Ukraine's most celebrated folk artists. Picasso himself reportedly said of her work: 'This genius of a Ukrainian woman astonishes and enchants me.' Many irreplaceable works were burned when Russian forces set fire to the museum in February 2022. Some were saved by locals."
+  },
+  {
+    "id": 4,
+    "question": "Babyn Yar in Kyiv is a site of immense historical importance. What happened there in 1941?",
+    "options": [
+      "The signing of Ukraine's first constitution",
+      "A major World War I battle",
+      "A mass Nazi massacre — primarily of Jews",
+      "The founding of the Ukrainian Orthodox Church"
+    ],
+    "correct": 2,
+    "explanation": "Over September 29–30, 1941, Nazi forces and collaborators massacred 33,771 Jewish people at Babyn Yar — one of the largest single mass killings of the Holocaust. Over the following months, more than 100,000 people were killed at the site, including Roma, Soviet prisoners of war, and Ukrainian nationalists. In March 2022, a Russian missile struck near the site."
+  },
+  {
+    "id": 5,
+    "question": "The historic centre of Odesa was added to UNESCO's World Heritage List in January 2023. Why was it added so rapidly, bypassing normal procedures?",
+    "options": [
+      "It celebrated 300 years of Ukrainian independence",
+      "An emergency procedure was used due to the threat of war damage",
+      "New archaeological discoveries elevated its importance",
+      "A major international petition achieved the record signatures"
+    ],
+    "correct": 1,
+    "explanation": "UNESCO used an 'emergency inscription' process for Odesa — only the third time in history — to provide international recognition and protection amid Russia's full-scale invasion. The inscription drew global attention to the threat facing Odesa's extraordinary neoclassical and eclectic 19th-century architecture."
+  },
+  {
+    "id": 6,
+    "question": "The Chernivtsi National University building, now a UNESCO World Heritage Site, originally served as what?",
+    "options": [
+      "The Habsburg imperial palace for Galicia",
+      "The Residence of the Bukovinian and Dalmatian Metropolitans",
+      "The Austro-Hungarian military headquarters",
+      "A medieval cathedral complex"
+    ],
+    "correct": 1,
+    "explanation": "The Residence of the Bukovinian and Dalmatian Metropolitans, built 1864–1882 by Czech architect Josef Hlávka, was the palace-complex of the Greek Catholic bishops of Bukovina. It blends Byzantine, Moorish, and Romanesque elements with red-brick Central European style. Today it houses Chernivtsi National University and is a UNESCO World Heritage Site."
+  },
+  {
+    "id": 7,
+    "question": "Which Ukrainian church, symbolising resistance, was destroyed by Soviet authorities in 1937 and rebuilt in 1999?",
+    "options": [
+      "Saint Andrew's Church, Kyiv",
+      "Saint Michael's Golden-Domed Cathedral, Kyiv",
+      "Dormition Cathedral, Kyiv Pechersk Lavra",
+      "Cathedral of the Transfiguration, Poltava"
+    ],
+    "correct": 1,
+    "explanation": "Saint Michael's Golden-Domed Cathedral (12th century) was demolished by Soviet authorities in 1937 to make room for a government complex. It was faithfully reconstructed and reconsecrated in 1999 after Ukrainian independence. The monastery is now the seat of the Orthodox Church of Ukraine and is a powerful symbol of Ukrainian cultural survival."
+  },
+  {
+    "id": 8,
+    "question": "The Khortytsia National Reserve protects remnants of which ancient civilisation alongside Cossack history?",
+    "options": ["Scythian", "Roman", "Byzantine", "Greek colonial"],
+    "correct": 0,
+    "explanation": "Khortytsia contains significant Scythian burial mounds (kurgans), rock carvings, and artefacts from the Scythian period (7th–3rd century BC). The Scythians were a nomadic Iranian-speaking people who created a sophisticated culture on the Ukrainian steppe. The island also preserves the historical Zaporizhian Cossack fortress site."
+  },
+  {
+    "id": 9,
+    "question": "According to UNESCO and Ukrainian government estimates, approximately how many cultural heritage sites were damaged or destroyed in Ukraine between 2022 and 2024?",
+    "options": ["Under 100", "Around 300", "Over 1,000", "Around 5,000"],
+    "correct": 2,
+    "explanation": "UNESCO verified damage to over 340 sites by mid-2024, but Ukrainian authorities documented over 1,000 damaged or destroyed cultural sites — including museums, libraries, churches, theatres, and monuments. The actual number continues to grow as access to frontline areas improves."
+  },
+  {
+    "id": 10,
+    "question": "Saint Sophia Cathedral in Kyiv, a UNESCO World Heritage Site, is famous for its intact medieval mosaics and frescoes from the 11th century. It was commissioned by which ruler?",
+    "options": ["Prince Volodymyr the Great", "Yaroslav the Wise", "Prince Sviatoslav", "Danylo of Galicia"],
+    "correct": 1,
+    "explanation": "Saint Sophia Cathedral was commissioned by Yaroslav the Wise (ruled 1019–1054) and completed around 1037. It served as the main cathedral of Kyivan Rus and a model for Orthodox church architecture across Eastern Europe. Its original Byzantine mosaics — including the famous golden-background Orans Virgin — are among the best-preserved in the world."
+  }
+]
