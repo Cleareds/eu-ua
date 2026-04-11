@@ -122,7 +122,8 @@ export default function CulturalMap() {
 
         {mapLoaded && (
           <>
-          {/* Toggle button – always visible */}
+          {/* Toggle button – mobile only, hidden when a city/site is selected */}
+          {!selection && (
           <button
             onClick={() => setLegendOpen((v) => !v)}
             className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-2.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest md:hidden"
@@ -136,8 +137,9 @@ export default function CulturalMap() {
             )}
             {!legendOpen && "Legend"}
           </button>
+          )}
           <div
-            className={`absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-56 transition-all duration-200 ${legendOpen ? "translate-x-0 opacity-100" : "-translate-x-[110%] opacity-0 pointer-events-none"} md:translate-x-0 md:opacity-100 md:pointer-events-auto`}
+            className={`absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-56 transition-all duration-200 ${legendOpen && !selection ? "translate-x-0 opacity-100" : "-translate-x-[110%] opacity-0 pointer-events-none"} ${selection ? "md:hidden" : "md:translate-x-0 md:opacity-100 md:pointer-events-auto"}`}
             style={{ zIndex: 1000 }}
           >
             {/* Close button – mobile only */}
@@ -232,7 +234,7 @@ export default function CulturalMap() {
 
       {selection && (
         <div
-          className="absolute inset-y-0 right-0 w-full sm:w-80 xl:w-96 sm:relative border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0"
+          className="w-80 xl:w-96 border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0"
           style={{ animation: "slideIn 0.3s ease-out" }}
         >
           {selection.type === "city" ? (
