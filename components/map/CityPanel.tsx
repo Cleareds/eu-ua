@@ -20,6 +20,17 @@ export default function CityPanel({ city, onClose }: { city: City; onClose: () =
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-5 space-y-6">
+        {/* City image */}
+        {city.image && (
+          <div className="relative w-full h-40 rounded-lg overflow-hidden">
+            <img
+              src={city.image}
+              alt={city.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
+
         {/* Description */}
         <div>
           <p className="text-sm text-gray-700 leading-relaxed">{city.description}</p>

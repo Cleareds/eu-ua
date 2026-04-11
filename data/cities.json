@@ -27,12 +27,28 @@
       "Historicist and Viennese Secession buildings around Lypky district"
     ],
     "sources": [
-      { "title": "UNESCO: Saint-Sophia Cathedral & Kyiv-Pechersk Lavra", "url": "https://whc.unesco.org/en/list/527/" },
-      { "title": "Kyiv City Sister Cities", "url": "https://en.wikipedia.org/wiki/Kyiv#Twin_towns_and_sister_cities" },
-      { "title": "Wikipedia: Kyiv", "url": "https://en.wikipedia.org/wiki/Kyiv" },
-      { "title": "EU Delegation to Ukraine", "url": "https://www.eeas.europa.eu/ukraine_en" },
-      { "title": "EU4Cities — Urban Recovery Programme", "url": "https://eu4cities.eu" }
-    ]
+      {
+        "title": "UNESCO: Saint-Sophia Cathedral & Kyiv-Pechersk Lavra",
+        "url": "https://whc.unesco.org/en/list/527/"
+      },
+      {
+        "title": "Kyiv City Sister Cities",
+        "url": "https://en.wikipedia.org/wiki/Kyiv#Twin_towns_and_sister_cities"
+      },
+      {
+        "title": "Wikipedia: Kyiv",
+        "url": "https://en.wikipedia.org/wiki/Kyiv"
+      },
+      {
+        "title": "EU Delegation to Ukraine",
+        "url": "https://www.eeas.europa.eu/ukraine_en"
+      },
+      {
+        "title": "EU4Cities — Urban Recovery Programme",
+        "url": "https://eu4cities.eu"
+      }
+    ],
+    "image": "/images/cities/kyiv.jpg"
   },
   {
     "id": "lviv",
@@ -61,11 +77,24 @@
       "Habsburg-era coffeehouses — the café culture (kaviarnia) survives to this day"
     ],
     "sources": [
-      { "title": "UNESCO: Historic Centre of Lviv", "url": "https://whc.unesco.org/en/list/664/" },
-      { "title": "Wikipedia: Lviv", "url": "https://en.wikipedia.org/wiki/Lviv" },
-      { "title": "Ukrainian Catholic University — Erasmus+", "url": "https://ucu.edu.ua/en/international/" },
-      { "title": "Lviv City Council — Official Portal", "url": "https://city-adm.lviv.ua/en" }
-    ]
+      {
+        "title": "UNESCO: Historic Centre of Lviv",
+        "url": "https://whc.unesco.org/en/list/664/"
+      },
+      {
+        "title": "Wikipedia: Lviv",
+        "url": "https://en.wikipedia.org/wiki/Lviv"
+      },
+      {
+        "title": "Ukrainian Catholic University — Erasmus+",
+        "url": "https://ucu.edu.ua/en/international/"
+      },
+      {
+        "title": "Lviv City Council — Official Portal",
+        "url": "https://city-adm.lviv.ua/en"
+      }
+    ],
+    "image": "/images/cities/lviv.jpg"
   },
   {
     "id": "odesa",
@@ -95,11 +124,24 @@
       "Multi-ethnic European heritage: Greek, French, Italian, Jewish, and German communities"
     ],
     "sources": [
-      { "title": "UNESCO: Historic Centre of Odesa", "url": "https://whc.unesco.org/en/list/1703/" },
-      { "title": "UNESCO Creative Cities — Odesa (Film)", "url": "https://www.unesco.org/en/creative-cities/odesa" },
-      { "title": "Wikipedia: Odesa", "url": "https://en.wikipedia.org/wiki/Odesa" },
-      { "title": "Wikipedia: Odesa Opera and Ballet Theatre", "url": "https://en.wikipedia.org/wiki/Odesa_National_Academic_Opera_and_Ballet_Theatre" }
-    ]
+      {
+        "title": "UNESCO: Historic Centre of Odesa",
+        "url": "https://whc.unesco.org/en/list/1703/"
+      },
+      {
+        "title": "UNESCO Creative Cities — Odesa (Film)",
+        "url": "https://www.unesco.org/en/creative-cities/odesa"
+      },
+      {
+        "title": "Wikipedia: Odesa",
+        "url": "https://en.wikipedia.org/wiki/Odesa"
+      },
+      {
+        "title": "Wikipedia: Odesa Opera and Ballet Theatre",
+        "url": "https://en.wikipedia.org/wiki/Odesa_National_Academic_Opera_and_Ballet_Theatre"
+      }
+    ],
+    "image": "/images/cities/odesa.jpg"
   },
   {
     "id": "kharkiv",
@@ -127,11 +169,24 @@
       "Ukrainian avant-garde art movement (Boichukism) flourished in 1920s Kharkiv"
     ],
     "sources": [
-      { "title": "Wikipedia: Kharkiv", "url": "https://en.wikipedia.org/wiki/Kharkiv" },
-      { "title": "V.N. Karazin Kharkiv National University", "url": "https://www.univer.kharkov.ua/en" },
-      { "title": "Wikipedia: Derzhprom", "url": "https://en.wikipedia.org/wiki/Derzhprom" },
-      { "title": "Nobel Prize — Lev Landau", "url": "https://www.nobelprize.org/prizes/physics/1962/landau/biographical/" }
-    ]
+      {
+        "title": "Wikipedia: Kharkiv",
+        "url": "https://en.wikipedia.org/wiki/Kharkiv"
+      },
+      {
+        "title": "V.N. Karazin Kharkiv National University",
+        "url": "https://www.univer.kharkov.ua/en"
+      },
+      {
+        "title": "Wikipedia: Derzhprom",
+        "url": "https://en.wikipedia.org/wiki/Derzhprom"
+      },
+      {
+        "title": "Nobel Prize — Lev Landau",
+        "url": "https://www.nobelprize.org/prizes/physics/1962/landau/biographical/"
+      }
+    ],
+    "image": "/images/cities/kharkiv.jpg"
   },
   {
     "id": "chernivtsi",
@@ -158,17 +213,30 @@
       "Multilingual literary heritage — German, Ukrainian, Romanian, and Yiddish coexisted for centuries"
     ],
     "sources": [
-      { "title": "UNESCO: Residence of Bukovinian and Dalmatian Metropolitans", "url": "https://whc.unesco.org/en/list/1330/" },
-      { "title": "Wikipedia: Chernivtsi", "url": "https://en.wikipedia.org/wiki/Chernivtsi" },
-      { "title": "Paul Celan — Poetry Foundation", "url": "https://www.poetryfoundation.org/poets/paul-celan" },
-      { "title": "Bukovina Institute Augsburg", "url": "https://www.bukowina-institut.de/en/" }
-    ]
+      {
+        "title": "UNESCO: Residence of Bukovinian and Dalmatian Metropolitans",
+        "url": "https://whc.unesco.org/en/list/1330/"
+      },
+      {
+        "title": "Wikipedia: Chernivtsi",
+        "url": "https://en.wikipedia.org/wiki/Chernivtsi"
+      },
+      {
+        "title": "Paul Celan — Poetry Foundation",
+        "url": "https://www.poetryfoundation.org/poets/paul-celan"
+      },
+      {
+        "title": "Bukovina Institute Augsburg",
+        "url": "https://www.bukowina-institut.de/en/"
+      }
+    ],
+    "image": "/images/cities/chernivtsi.jpg"
   },
   {
     "id": "uzhhorod",
     "name": "Uzhhorod",
     "lat": 48.62,
-    "lng": 22.30,
+    "lng": 22.3,
     "status": "free",
     "description": "Ukraine's westernmost city, Uzhhorod sits where Ukrainian, Slovak, and Hungarian cultures converge. Part of the Kingdom of Hungary for nearly a millennium, then Czechoslovakia (1919–1938), the city's castle, sakura-lined promenade, and Baroque churches tell a layered Central European story. It is the closest Ukrainian city to the EU's Schengen zone — just 2 km from the Slovak border.",
     "connections": [
@@ -188,11 +256,24 @@
       "Greek Catholic heritage — Union of Uzhhorod (1646) linked Transcarpathian Church to Rome"
     ],
     "sources": [
-      { "title": "Wikipedia: Uzhhorod", "url": "https://en.wikipedia.org/wiki/Uzhhorod" },
-      { "title": "Euroregion Carpathia", "url": "https://en.wikipedia.org/wiki/Euroregion_Carpatia" },
-      { "title": "Andy Warhol Museum of Modern Art, Medzilaborce", "url": "https://www.warhol.sk/en/" },
-      { "title": "Uzhhorod National University", "url": "https://www.uzhnu.edu.ua/en/" }
-    ]
+      {
+        "title": "Wikipedia: Uzhhorod",
+        "url": "https://en.wikipedia.org/wiki/Uzhhorod"
+      },
+      {
+        "title": "Euroregion Carpathia",
+        "url": "https://en.wikipedia.org/wiki/Euroregion_Carpatia"
+      },
+      {
+        "title": "Andy Warhol Museum of Modern Art, Medzilaborce",
+        "url": "https://www.warhol.sk/en/"
+      },
+      {
+        "title": "Uzhhorod National University",
+        "url": "https://www.uzhnu.edu.ua/en/"
+      }
+    ],
+    "image": "/images/cities/uzhhorod.jpg"
   },
   {
     "id": "ivano-frankivsk",
@@ -216,10 +297,20 @@
       "Habsburg-era prefecture building and administrative grid (late 18th–19th century)"
     ],
     "sources": [
-      { "title": "Wikipedia: Ivano-Frankivsk", "url": "https://en.wikipedia.org/wiki/Ivano-Frankivsk" },
-      { "title": "Carpathian Euroregion", "url": "https://en.wikipedia.org/wiki/Carpathian_Euroregion" },
-      { "title": "Precarpathian National University", "url": "https://pnu.edu.ua/en/" }
-    ]
+      {
+        "title": "Wikipedia: Ivano-Frankivsk",
+        "url": "https://en.wikipedia.org/wiki/Ivano-Frankivsk"
+      },
+      {
+        "title": "Carpathian Euroregion",
+        "url": "https://en.wikipedia.org/wiki/Carpathian_Euroregion"
+      },
+      {
+        "title": "Precarpathian National University",
+        "url": "https://pnu.edu.ua/en/"
+      }
+    ],
+    "image": "/images/cities/ivano-frankivsk.jpg"
   },
   {
     "id": "kamianets-podilskyi",
@@ -244,10 +335,20 @@
       "Armenian traders' quarter — medieval Armenian colony with its own church (14th century)"
     ],
     "sources": [
-      { "title": "Wikipedia: Kamianets-Podilskyi", "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi" },
-      { "title": "UNESCO Tentative List — Kamianets-Podilskyi", "url": "https://whc.unesco.org/en/tentativelists/5536/" },
-      { "title": "Kamianets-Podilskyi Castle", "url": "https://www.old-kamyanets.com.ua/en/" }
-    ]
+      {
+        "title": "Wikipedia: Kamianets-Podilskyi",
+        "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi"
+      },
+      {
+        "title": "UNESCO Tentative List — Kamianets-Podilskyi",
+        "url": "https://whc.unesco.org/en/tentativelists/5536/"
+      },
+      {
+        "title": "Kamianets-Podilskyi Castle",
+        "url": "https://www.old-kamyanets.com.ua/en/"
+      }
+    ],
+    "image": "/images/cities/kamianets-podilskyi.jpg"
   },
   {
     "id": "dnipro",
@@ -272,10 +373,20 @@
       "Transfiguration Cathedral (1830–1835) — Neoclassical style inspired by European ecclesiastical design"
     ],
     "sources": [
-      { "title": "Wikipedia: Dnipro (city)", "url": "https://en.wikipedia.org/wiki/Dnipro_(city)" },
-      { "title": "Yuzhnoye Design Bureau", "url": "https://www.yuzhnoye.com/en/" },
-      { "title": "Wikipedia: Yuzhmash", "url": "https://en.wikipedia.org/wiki/Yuzhmash" }
-    ]
+      {
+        "title": "Wikipedia: Dnipro (city)",
+        "url": "https://en.wikipedia.org/wiki/Dnipro_(city)"
+      },
+      {
+        "title": "Yuzhnoye Design Bureau",
+        "url": "https://www.yuzhnoye.com/en/"
+      },
+      {
+        "title": "Wikipedia: Yuzhmash",
+        "url": "https://en.wikipedia.org/wiki/Yuzhmash"
+      }
+    ],
+    "image": "/images/cities/dnipro.jpg"
   },
   {
     "id": "poltava",
@@ -300,10 +411,20 @@
       "Poltava Gubernial Zemstvo building (1903–1908) — Ukrainian Moderne style synthesising Art Nouveau and folk motifs"
     ],
     "sources": [
-      { "title": "Wikipedia: Battle of Poltava", "url": "https://en.wikipedia.org/wiki/Battle_of_Poltava" },
-      { "title": "Wikipedia: Ivan Mazepa", "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa" },
-      { "title": "NASA — Yuri Kondratyuk and the Moon Route", "url": "https://www.nasa.gov/history/alsj/a410/Kondratyuk.html" }
-    ]
+      {
+        "title": "Wikipedia: Battle of Poltava",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Poltava"
+      },
+      {
+        "title": "Wikipedia: Ivan Mazepa",
+        "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa"
+      },
+      {
+        "title": "NASA — Yuri Kondratyuk and the Moon Route",
+        "url": "https://www.nasa.gov/history/alsj/a410/Kondratyuk.html"
+      }
+    ],
+    "image": "/images/cities/poltava.jpg"
   },
   {
     "id": "zaporizhzhia",
@@ -327,10 +448,20 @@
       "Constructivist Dniproges hydroelectric dam (1927–1932) — designed with input from American and German engineers"
     ],
     "sources": [
-      { "title": "Wikipedia: Zaporozhian Sich", "url": "https://en.wikipedia.org/wiki/Zaporozhian_Sich" },
-      { "title": "IAEA: Zaporizhzhia Nuclear Power Plant", "url": "https://www.iaea.org/topics/zaporizhzhya-nuclear-power-plant" },
-      { "title": "Wikipedia: Zaporizhzhia", "url": "https://en.wikipedia.org/wiki/Zaporizhzhia" }
-    ]
+      {
+        "title": "Wikipedia: Zaporozhian Sich",
+        "url": "https://en.wikipedia.org/wiki/Zaporozhian_Sich"
+      },
+      {
+        "title": "IAEA: Zaporizhzhia Nuclear Power Plant",
+        "url": "https://www.iaea.org/topics/zaporizhzhya-nuclear-power-plant"
+      },
+      {
+        "title": "Wikipedia: Zaporizhzhia",
+        "url": "https://en.wikipedia.org/wiki/Zaporizhzhia"
+      }
+    ],
+    "image": "/images/cities/zaporizhzhia.jpg"
   },
   {
     "id": "vinnytsia",
@@ -354,15 +485,25 @@
       "Roshen Fountain (2011) — largest floating fountain in Europe, 850 m long"
     ],
     "sources": [
-      { "title": "Wikipedia: Vinnytsia", "url": "https://en.wikipedia.org/wiki/Vinnytsia" },
-      { "title": "Wikipedia: 2022 Vinnytsia missile strike", "url": "https://en.wikipedia.org/wiki/2022_Vinnytsia_missile_strike" },
-      { "title": "Wikipedia: Mykola Leontovych (Carol of the Bells)", "url": "https://en.wikipedia.org/wiki/Mykola_Leontovych" }
-    ]
+      {
+        "title": "Wikipedia: Vinnytsia",
+        "url": "https://en.wikipedia.org/wiki/Vinnytsia"
+      },
+      {
+        "title": "Wikipedia: 2022 Vinnytsia missile strike",
+        "url": "https://en.wikipedia.org/wiki/2022_Vinnytsia_missile_strike"
+      },
+      {
+        "title": "Wikipedia: Mykola Leontovych (Carol of the Bells)",
+        "url": "https://en.wikipedia.org/wiki/Mykola_Leontovych"
+      }
+    ],
+    "image": "/images/cities/vinnytsia.jpg"
   },
   {
     "id": "chernihiv",
     "name": "Chernihiv",
-    "lat": 51.50,
+    "lat": 51.5,
     "lng": 31.29,
     "status": "free",
     "description": "One of Ukraine's oldest cities, Chernihiv dates to the 7th century and was one of the most important cities of Kyivan Rus. It preserves the densest concentration of pre-Mongol architecture in Eastern Europe. In March 2022, Russian forces besieged the city for 35 days, hitting the historic centre with over 700 air strikes. Dozens of historic buildings were damaged, though the main cathedral complexes survived.",
@@ -383,16 +524,26 @@
       "Chernihiv was on the medieval trade route from the Varangians to the Greeks"
     ],
     "sources": [
-      { "title": "Wikipedia: Chernihiv", "url": "https://en.wikipedia.org/wiki/Chernihiv" },
-      { "title": "Wikipedia: Siege of Chernihiv (2022)", "url": "https://en.wikipedia.org/wiki/Siege_of_Chernihiv" },
-      { "title": "UNESCO: Cultural Heritage in Conflict — Ukraine", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
-    ]
+      {
+        "title": "Wikipedia: Chernihiv",
+        "url": "https://en.wikipedia.org/wiki/Chernihiv"
+      },
+      {
+        "title": "Wikipedia: Siege of Chernihiv (2022)",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Chernihiv"
+      },
+      {
+        "title": "UNESCO: Cultural Heritage in Conflict — Ukraine",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      }
+    ],
+    "image": "/images/cities/chernihiv.jpg"
   },
   {
     "id": "mykolaiv",
     "name": "Mykolaiv",
     "lat": 46.98,
-    "lng": 32.00,
+    "lng": 32.0,
     "status": "free",
     "description": "Mykolaiv, founded in 1789 by Prince Potemkin, is Ukraine's shipbuilding capital and a major Black Sea port. In 2022 Russian forces attempted to capture the city but were repelled; the city endured months of intense bombardment, with the Mykolaiv Regional History Museum suffering a direct missile hit that destroyed part of its collections.",
     "connections": [
@@ -413,10 +564,20 @@
       "Shipbuilding traditions shared with Gdańsk, Rotterdam, and Marseille"
     ],
     "sources": [
-      { "title": "Wikipedia: Mykolaiv", "url": "https://en.wikipedia.org/wiki/Mykolaiv" },
-      { "title": "Wikipedia: Battle of Mykolaiv (2022)", "url": "https://en.wikipedia.org/wiki/Battle_of_Mykolaiv_(2022)" },
-      { "title": "UNESCO: Mykolaiv Museum damage", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" }
-    ]
+      {
+        "title": "Wikipedia: Mykolaiv",
+        "url": "https://en.wikipedia.org/wiki/Mykolaiv"
+      },
+      {
+        "title": "Wikipedia: Battle of Mykolaiv (2022)",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Mykolaiv_(2022)"
+      },
+      {
+        "title": "UNESCO: Mykolaiv Museum damage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      }
+    ],
+    "image": "/images/cities/mykolaiv.jpg"
   },
   {
     "id": "kherson",
@@ -444,16 +605,29 @@
       "Cathedral of the Holy Virgin (1786) — Neoclassical, contains Potemkin's tomb"
     ],
     "sources": [
-      { "title": "Wikipedia: Kherson", "url": "https://en.wikipedia.org/wiki/Kherson" },
-      { "title": "Wikipedia: Liberation of Kherson", "url": "https://en.wikipedia.org/wiki/Liberation_of_Kherson" },
-      { "title": "UNESCO: Kherson Art Museum looting", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
-      { "title": "Wikipedia: Kherson Regional Art Museum", "url": "https://en.wikipedia.org/wiki/Kherson_Regional_Art_Museum" }
-    ]
+      {
+        "title": "Wikipedia: Kherson",
+        "url": "https://en.wikipedia.org/wiki/Kherson"
+      },
+      {
+        "title": "Wikipedia: Liberation of Kherson",
+        "url": "https://en.wikipedia.org/wiki/Liberation_of_Kherson"
+      },
+      {
+        "title": "UNESCO: Kherson Art Museum looting",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Kherson Regional Art Museum",
+        "url": "https://en.wikipedia.org/wiki/Kherson_Regional_Art_Museum"
+      }
+    ],
+    "image": "/images/cities/kherson.jpg"
   },
   {
     "id": "mariupol",
     "name": "Mariupol",
-    "lat": 47.10,
+    "lat": 47.1,
     "lng": 37.54,
     "status": "occupied",
     "occupiedSince": "2022-05",
@@ -476,18 +650,34 @@
       "Pre-war EU business partnerships with Metinvest steel group (exports to EU countries)"
     ],
     "sources": [
-      { "title": "Wikipedia: Siege of Mariupol (2022)", "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol_(2022)" },
-      { "title": "Mariupol Drama Theatre bombing — Wikipedia", "url": "https://en.wikipedia.org/wiki/Mariupol_theatre_airstrike" },
-      { "title": "UNESCO: Damage to cultural heritage in Mariupol", "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage" },
-      { "title": "Amnesty International: Mariupol siege", "url": "https://www.amnesty.org/en/latest/news/2022/05/ukraine-mariupol-the-last-days-of-a-besieged-city/" },
-      { "title": "Wikipedia: Azovstal steel plant", "url": "https://en.wikipedia.org/wiki/Azovstal_Iron_and_Steel_Works" }
-    ]
+      {
+        "title": "Wikipedia: Siege of Mariupol (2022)",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol_(2022)"
+      },
+      {
+        "title": "Mariupol Drama Theatre bombing — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mariupol_theatre_airstrike"
+      },
+      {
+        "title": "UNESCO: Damage to cultural heritage in Mariupol",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Amnesty International: Mariupol siege",
+        "url": "https://www.amnesty.org/en/latest/news/2022/05/ukraine-mariupol-the-last-days-of-a-besieged-city/"
+      },
+      {
+        "title": "Wikipedia: Azovstal steel plant",
+        "url": "https://en.wikipedia.org/wiki/Azovstal_Iron_and_Steel_Works"
+      }
+    ],
+    "image": "/images/cities/mariupol.jpg"
   },
   {
     "id": "donetsk",
     "name": "Donetsk",
     "lat": 47.99,
-    "lng": 37.80,
+    "lng": 37.8,
     "status": "occupied",
     "occupiedSince": "2014-04",
     "description": "Donetsk, with a pre-war population of nearly one million, is the largest Ukrainian city under Russian occupation. Founded in 1869 as 'Yuzivka' by Welsh industrialist John Hughes, it was the heart of the Donbas coal and steel region. The city has been occupied by Russian-backed forces since April 2014. Its cultural institutions — museums, universities, theatres — have been under Russian control for over a decade.",
@@ -509,11 +699,24 @@
       "Pre-war cultural scene: Donetsk Opera House, Prokofiev Philharmonic, National University — now under occupation"
     ],
     "sources": [
-      { "title": "Wikipedia: Donetsk", "url": "https://en.wikipedia.org/wiki/Donetsk" },
-      { "title": "Wikipedia: John Hughes (industrialist)", "url": "https://en.wikipedia.org/wiki/John_Hughes_(industrialist)" },
-      { "title": "Wikipedia: War in Donbas", "url": "https://en.wikipedia.org/wiki/War_in_Donbas_(2014%E2%80%932022)" },
-      { "title": "Vasyl Stus — Nobel Peace Prize candidacy", "url": "https://en.wikipedia.org/wiki/Vasyl_Stus" }
-    ]
+      {
+        "title": "Wikipedia: Donetsk",
+        "url": "https://en.wikipedia.org/wiki/Donetsk"
+      },
+      {
+        "title": "Wikipedia: John Hughes (industrialist)",
+        "url": "https://en.wikipedia.org/wiki/John_Hughes_(industrialist)"
+      },
+      {
+        "title": "Wikipedia: War in Donbas",
+        "url": "https://en.wikipedia.org/wiki/War_in_Donbas_(2014%E2%80%932022)"
+      },
+      {
+        "title": "Vasyl Stus — Nobel Peace Prize candidacy",
+        "url": "https://en.wikipedia.org/wiki/Vasyl_Stus"
+      }
+    ],
+    "image": "/images/cities/donetsk.jpg"
   },
   {
     "id": "luhansk",
@@ -541,11 +744,24 @@
       "Rich tradition of Ukrainian-language literary culture suppressed since 2014"
     ],
     "sources": [
-      { "title": "Wikipedia: Luhansk", "url": "https://en.wikipedia.org/wiki/Luhansk" },
-      { "title": "Wikipedia: War in Donbas", "url": "https://en.wikipedia.org/wiki/War_in_Donbas_(2014%E2%80%932022)" },
-      { "title": "Vladimir Dahl — Wikipedia", "url": "https://en.wikipedia.org/wiki/Vladimir_Dahl" },
-      { "title": "UN Human Rights: Donbas reports", "url": "https://www.ohchr.org/en/countries/ukraine" }
-    ]
+      {
+        "title": "Wikipedia: Luhansk",
+        "url": "https://en.wikipedia.org/wiki/Luhansk"
+      },
+      {
+        "title": "Wikipedia: War in Donbas",
+        "url": "https://en.wikipedia.org/wiki/War_in_Donbas_(2014%E2%80%932022)"
+      },
+      {
+        "title": "Vladimir Dahl — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Vladimir_Dahl"
+      },
+      {
+        "title": "UN Human Rights: Donbas reports",
+        "url": "https://www.ohchr.org/en/countries/ukraine"
+      }
+    ],
+    "image": "/images/cities/luhansk.jpg"
   },
   {
     "id": "melitopol",
@@ -571,16 +787,26 @@
       "Pre-war Melitopol cherry festival — the city was famed as Ukraine's 'cherry capital', a tradition with European agri-tourism parallels"
     ],
     "sources": [
-      { "title": "Wikipedia: Melitopol", "url": "https://en.wikipedia.org/wiki/Melitopol" },
-      { "title": "Wikipedia: Abduction of Ivan Fedorov", "url": "https://en.wikipedia.org/wiki/Abduction_of_Ivan_Fedorov" },
-      { "title": "Wikipedia: Molotschna Mennonite Colony", "url": "https://en.wikipedia.org/wiki/Molotschna_Mennonite_settlement" }
-    ]
+      {
+        "title": "Wikipedia: Melitopol",
+        "url": "https://en.wikipedia.org/wiki/Melitopol"
+      },
+      {
+        "title": "Wikipedia: Abduction of Ivan Fedorov",
+        "url": "https://en.wikipedia.org/wiki/Abduction_of_Ivan_Fedorov"
+      },
+      {
+        "title": "Wikipedia: Molotschna Mennonite Colony",
+        "url": "https://en.wikipedia.org/wiki/Molotschna_Mennonite_settlement"
+      }
+    ],
+    "image": "/images/cities/melitopol.jpg"
   },
   {
     "id": "simferopol",
     "name": "Simferopol",
     "lat": 44.95,
-    "lng": 34.10,
+    "lng": 34.1,
     "status": "occupied",
     "occupiedSince": "2014-03",
     "description": "Simferopol, the capital of Crimea, has been under Russian military occupation since March 2014. A historically multicultural city with strong Crimean Tatar, Greek, Ukrainian, and European heritage, it has seen systematic suppression of Crimean Tatar and Ukrainian identity since occupation. The Mejlis (Crimean Tatar parliament) was banned by Russia and its leaders imprisoned or exiled.",
@@ -602,11 +828,24 @@
       "Crimean War (1853–1856) — British, French, and Ottoman presence shaped the modern city"
     ],
     "sources": [
-      { "title": "Wikipedia: Simferopol", "url": "https://en.wikipedia.org/wiki/Simferopol" },
-      { "title": "Wikipedia: Russian annexation of Crimea (2014)", "url": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea" },
-      { "title": "Crimean Tatar Mejlis — Wikipedia", "url": "https://en.wikipedia.org/wiki/Mejlis_of_the_Crimean_Tatar_People" },
-      { "title": "UN: Human Rights in Crimea", "url": "https://www.ohchr.org/en/countries/ukraine" }
-    ]
+      {
+        "title": "Wikipedia: Simferopol",
+        "url": "https://en.wikipedia.org/wiki/Simferopol"
+      },
+      {
+        "title": "Wikipedia: Russian annexation of Crimea (2014)",
+        "url": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea"
+      },
+      {
+        "title": "Crimean Tatar Mejlis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mejlis_of_the_Crimean_Tatar_People"
+      },
+      {
+        "title": "UN: Human Rights in Crimea",
+        "url": "https://www.ohchr.org/en/countries/ukraine"
+      }
+    ],
+    "image": "/images/cities/simferopol.jpg"
   },
   {
     "id": "sevastopol",
@@ -634,10 +873,23 @@
       "Neoclassical urban plan inspired by Greek-revival ideals of the Russian Empire"
     ],
     "sources": [
-      { "title": "UNESCO: Ancient City of Tauric Chersonese", "url": "https://whc.unesco.org/en/list/1411/" },
-      { "title": "Wikipedia: Sevastopol", "url": "https://en.wikipedia.org/wiki/Sevastopol" },
-      { "title": "Wikipedia: Russian annexation of Crimea", "url": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea" },
-      { "title": "Wikipedia: Crimean War", "url": "https://en.wikipedia.org/wiki/Crimean_War" }
-    ]
+      {
+        "title": "UNESCO: Ancient City of Tauric Chersonese",
+        "url": "https://whc.unesco.org/en/list/1411/"
+      },
+      {
+        "title": "Wikipedia: Sevastopol",
+        "url": "https://en.wikipedia.org/wiki/Sevastopol"
+      },
+      {
+        "title": "Wikipedia: Russian annexation of Crimea",
+        "url": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea"
+      },
+      {
+        "title": "Wikipedia: Crimean War",
+        "url": "https://en.wikipedia.org/wiki/Crimean_War"
+      }
+    ],
+    "image": "/images/cities/sevastopol.jpg"
   }
 ]

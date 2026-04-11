@@ -39,9 +39,9 @@ interface NewsItem {
 
 async function fetchLatestNews(): Promise<RawArticle[]> {
   if (!NEWS_API_KEY) throw new Error("NEWS_API_KEY not set");
-  const query = encodeURIComponent("Ukraine EU accession integration European Union");
-  const from = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-  const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&language=en&sortBy=publishedAt&pageSize=10&apiKey=${NEWS_API_KEY}`;
+  const query = encodeURIComponent('Ukraine AND ("EU accession" OR "European Union" OR "EU integration" OR "EU membership" OR "European integration")');
+  const from = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+  const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&language=en&sortBy=relevancy&pageSize=10&apiKey=${NEWS_API_KEY}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`NewsAPI error: ${res.status} ${res.statusText}`);
   const data = await res.json() as { articles: RawArticle[] };

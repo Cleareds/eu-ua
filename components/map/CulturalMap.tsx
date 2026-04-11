@@ -35,6 +35,7 @@ export default function CulturalMap() {
   const [selection, setSelection] = useState<Selection>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [showSites, setShowSites] = useState(true);
+  const [legendOpen, setLegendOpen] = useState(false);
 
   const cities = citiesData as City[];
   const culturalSites = culturalSitesData as CulturalSite[];
@@ -120,7 +121,33 @@ export default function CulturalMap() {
         )}
 
         {mapLoaded && (
-          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-56" style={{ zIndex: 1000 }}>
+          <>
+          {/* Toggle button – always visible */}
+          <button
+            onClick={() => setLegendOpen((v) => !v)}
+            className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-2.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest md:hidden"
+            style={{ zIndex: 1001, color: "#003399" }}
+            aria-label={legendOpen ? "Close legend" : "Open legend"}
+          >
+            {legendOpen ? (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+            )}
+            {!legendOpen && "Legend"}
+          </button>
+          <div
+            className={`absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 w-56 transition-all duration-200 ${legendOpen ? "translate-x-0 opacity-100" : "-translate-x-[110%] opacity-0 pointer-events-none"} md:translate-x-0 md:opacity-100 md:pointer-events-auto`}
+            style={{ zIndex: 1000 }}
+          >
+            {/* Close button – mobile only */}
+            <button
+              onClick={() => setLegendOpen(false)}
+              className="absolute top-2 right-2 p-1 rounded-lg hover:bg-gray-100 md:hidden"
+              aria-label="Close legend"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7280" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
             {/* Legend */}
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#003399" }}>Legend</p>
             <div className="space-y-1.5 text-xs mb-4">
@@ -199,12 +226,13 @@ export default function CulturalMap() {
               </div>
             </div>
           </div>
+          </>
         )}
       </div>
 
       {selection && (
         <div
-          className="w-80 xl:w-96 border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0"
+          className="absolute inset-y-0 right-0 w-full sm:w-80 xl:w-96 sm:relative border-l border-gray-200 bg-white shadow-xl overflow-hidden flex-shrink-0"
           style={{ animation: "slideIn 0.3s ease-out" }}
         >
           {selection.type === "city" ? (

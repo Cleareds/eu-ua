@@ -24,6 +24,7 @@ export interface City {
   notableFigures: string[];
   europeanInfluences: string[];
   sources: CitySource[];
+  image?: string;
   status?: CityStatus;
   occupiedSince?: string;
 }
