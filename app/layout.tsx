@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DisclaimerBanner from "@/components/ui/disclaimer-banner";
+import Breadcrumbs from "@/components/ui/breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,8 +57,32 @@ export default function RootLayout({
         `}} />
       </head>
       <body className={`${geistSans.variable} antialiased min-h-screen flex flex-col`} style={{ backgroundColor: "#F8F9FA", color: "#1A1A2E" }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "EU-UA.com",
+              url: "https://eu-ua.com",
+              description: "An independent educational platform exploring Ukraine's European identity, tracking EU accession progress, and connecting the cultural ties between Ukraine and Europe.",
+              publisher: {
+                "@type": "Organization",
+                name: "EU-UA.com",
+                url: "https://eu-ua.com",
+                logo: { "@type": "ImageObject", url: "https://eu-ua.com/og-image.png" },
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://eu-ua.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
         <DisclaimerBanner />
         <Header />
+        <Breadcrumbs />
         <main className="flex-1">
           {children}
         </main>

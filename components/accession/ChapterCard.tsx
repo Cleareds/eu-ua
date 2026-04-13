@@ -1,15 +1,9 @@
-import { EUChapter, ChapterStatus } from "@/lib/types";
+import { EUChapter } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-const statusConfig: Record<ChapterStatus, { label: string; color: string; bg: string }> = {
-  not_started: { label: "Not Started", color: "#6B7280", bg: "#F3F4F6" },
-  screening: { label: "Screening", color: "#D97706", bg: "#FEF3C7" },
-  negotiation: { label: "Negotiation", color: "#2563EB", bg: "#DBEAFE" },
-  completed: { label: "Completed", color: "#059669", bg: "#D1FAE5" },
-};
+import { CHAPTER_STATUS } from "@/lib/constants";
 
 export default function ChapterCard({ chapter }: { chapter: EUChapter }) {
-  const status = statusConfig[chapter.status];
+  const status = CHAPTER_STATUS[chapter.status];
   return (
     <div className="bg-white rounded-xl p-5 border border-gray-100 hover:border-blue-200 hover:shadow-sm transition-all flex flex-col gap-3">
       <div className="flex items-start justify-between gap-2">

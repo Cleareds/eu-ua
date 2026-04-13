@@ -2,71 +2,157 @@
   {
     "id": 1,
     "question": "Taras Shevchenko is considered the father of modern Ukrainian literature. What was his other major artistic talent?",
-    "options": ["Sculpture", "Painting and engraving", "Architecture", "Music composition"],
+    "options": [
+      "Sculpture",
+      "Painting and engraving",
+      "Architecture",
+      "Music composition"
+    ],
     "correct": 1,
     "explanation": "Shevchenko (1814–1861) was not only a poet but also a gifted painter and engraver. He studied at the Imperial Academy of Arts in St. Petersburg and was made an academician. His art depicted everyday Ukrainian life and was as influential as his poetry."
   },
   {
     "id": 2,
     "question": "Opera singer Solomiya Krushelnytska, born in Galicia (western Ukraine), achieved international fame and was particularly celebrated in which city?",
-    "options": ["Vienna", "Paris", "Milan", "London"],
+    "options": [
+      "Vienna",
+      "Paris",
+      "Milan",
+      "London"
+    ],
     "correct": 2,
     "explanation": "Krushelnytska (1872–1952) conquered the La Scala stage in Milan and became one of the greatest sopranos of her era. Giacomo Puccini himself chose her to re-premiere Madama Butterfly in 1904 after the opera's disastrous Milan debut — she rescued it into a triumph."
   },
   {
     "id": 3,
     "question": "Kazimir Malevich, born in Kyiv in 1879, founded which revolutionary art movement?",
-    "options": ["Cubism", "Surrealism", "Suprematism", "Dadaism"],
+    "options": [
+      "Cubism",
+      "Surrealism",
+      "Suprematism",
+      "Dadaism"
+    ],
     "correct": 2,
     "explanation": "Malevich founded Suprematism, an abstract art movement based on geometric forms. His 'Black Square' (1915) is one of the most influential artworks in modern art history. Though he worked in Russia, his roots were in Ukraine and Poland."
   },
   {
     "id": 4,
     "question": "Igor Sikorsky, born in Kyiv in 1889, is remembered as the pioneer of which major invention?",
-    "options": ["Commercial jet engines", "The modern helicopter", "Submarine sonar systems", "Radar technology"],
+    "options": [
+      "Commercial jet engines",
+      "The modern helicopter",
+      "Submarine sonar systems",
+      "Radar technology"
+    ],
     "correct": 1,
     "explanation": "Sikorsky designed the world's first practical helicopter, the VS-300, in 1939 in the United States, where he had emigrated. His company, Sikorsky Aircraft, became one of the world's leading helicopter manufacturers. He is also credited with the first multi-engine fixed-wing aircraft (1913)."
   },
   {
     "id": 5,
     "question": "Hryhorii Skovoroda (1722–1794), often called 'the Ukrainian Socrates', was primarily known as which of the following?",
-    "options": ["Military commander", "Philosopher, poet, and wandering teacher", "Orthodox patriarch", "Court musician"],
+    "options": [
+      "Military commander",
+      "Philosopher, poet, and wandering teacher",
+      "Orthodox patriarch",
+      "Court musician"
+    ],
     "correct": 1,
     "explanation": "Skovoroda refused wealth and comfort, wandering Ukraine teaching and writing philosophy. His works emphasize self-knowledge, the 'inner person', and happiness through living in accordance with one's true nature. He is considered the father of Ukrainian philosophy."
   },
   {
     "id": 6,
     "question": "Ivan Franko (1856–1916), a leading Ukrainian writer and activist, was born in which region shaped by Austro-Hungarian rule?",
-    "options": ["Eastern Ukraine", "Crimea", "Galicia", "Volhynia"],
+    "options": [
+      "Eastern Ukraine",
+      "Crimea",
+      "Galicia",
+      "Volhynia"
+    ],
     "correct": 2,
     "explanation": "Franko was born in Nahuievychi, Galicia, then part of Austria-Hungary. He studied in Lviv and Vienna, corresponded with European intellectuals, and was nominated for the Nobel Prize in Literature. He is often called the 'Stonecutter' — symbolising his determination to carve out Ukrainian identity."
   },
   {
     "id": 7,
     "question": "Mykola Leontovych (1877–1921) is internationally famous for composing which piece, known in English as 'Carol of the Bells'?",
-    "options": ["Shchedryk", "Kolyada", "Vesna", "Kupala"],
+    "options": [
+      "Shchedryk",
+      "Kolyada",
+      "Vesna",
+      "Kupala"
+    ],
     "correct": 0,
     "explanation": "Leontovych arranged 'Shchedryk' (a traditional Ukrainian New Year's song) into the choral piece that became 'Carol of the Bells' after its 1921 US premiere by the Ukrainian National Chorus. It is now one of the most performed Christmas songs in the world."
   },
   {
     "id": 8,
     "question": "Lesya Ukrainka (1871–1913) is celebrated as one of Ukraine's greatest poets. What language did she NOT write in?",
-    "options": ["Ukrainian", "French", "Russian", "German"],
+    "options": [
+      "Ukrainian",
+      "French",
+      "Russian",
+      "German"
+    ],
     "correct": 2,
     "explanation": "Lesya Ukrainka wrote primarily in Ukrainian and was deeply European in her outlook — she translated works from German, French, and ancient Greek, and corresponded with European intellectuals. She deliberately avoided Russian, asserting Ukrainian as a full literary language against imperial pressure."
   },
   {
     "id": 9,
     "question": "Mykhailo Drahomanov (1841–1895) was a Ukrainian political thinker who spent years in exile in which European city, where he taught and wrote?",
-    "options": ["Paris", "Geneva", "Vienna", "London"],
+    "options": [
+      "Paris",
+      "Geneva",
+      "Vienna",
+      "London"
+    ],
     "correct": 1,
     "explanation": "Drahomanov lived and worked in Geneva from 1876, establishing the first Ukrainian political periodical abroad. He developed a federalist and liberal vision for Ukraine within Europe and corresponded extensively with Western socialists and democrats. He became a professor in Sofia, Bulgaria, near the end of his life."
   },
   {
     "id": 10,
     "question": "Oleksandr Dovzhenko (1894–1956) was a pioneering Ukrainian filmmaker. His 1930 film 'Earth' was declared one of the greatest films of all time by which prestigious institution?",
-    "options": ["Hollywood Foreign Press", "Brussels World Exhibition jury", "The Venice Film Festival", "The BFI Sight & Sound poll"],
+    "options": [
+      "Hollywood Foreign Press",
+      "Brussels World Exhibition jury",
+      "The Venice Film Festival",
+      "The BFI Sight & Sound poll"
+    ],
     "correct": 3,
     "explanation": "Dovzhenko's 'Earth' (1930) appeared on multiple Sight & Sound polls as one of cinema's greatest masterpieces. He brought a deeply Ukrainian aesthetic — lyrical, tied to nature and the land — to cinema, and is considered a founding figure of both Ukrainian and world film art."
+  },
+  {
+    "id": 11,
+    "question": "Who founded the city of Kyiv according to legend?",
+    "options": [
+      "Prince Oleg",
+      "Yaroslav the Wise",
+      "Kyi, Shchek, Khoryv, and their sister Lybid",
+      "Volodymyr the Great"
+    ],
+    "correct": 2,
+    "explanation": "According to the founding legend recorded in the Primary Chronicle, Kyiv was founded by three brothers — Kyi, Shchek, and Khoryv — and their sister Lybid. The city is named after the eldest brother, Kyi."
+  },
+  {
+    "id": 12,
+    "question": "Which Ukrainian-born scientist won the Nobel Prize in Physics in 1962?",
+    "options": [
+      "Igor Sikorsky",
+      "Lev Landau",
+      "Sergei Korolev",
+      "Yuri Kondratyuk"
+    ],
+    "correct": 1,
+    "explanation": "Lev Landau, born in Baku but raised and educated in Ukraine (Kharkiv), won the 1962 Nobel Prize in Physics for his pioneering theories on condensed matter, particularly liquid helium."
+  },
+  {
+    "id": 13,
+    "question": "Who composed the original melody that became known worldwide as 'Carol of the Bells'?",
+    "options": [
+      "Mykola Lysenko",
+      "Borys Lyatoshynsky",
+      "Mykola Leontovych",
+      "Kyrylo Stetsenko"
+    ],
+    "correct": 2,
+    "explanation": "Mykola Leontovych composed 'Shchedryk' in 1916, a choral piece based on a Ukrainian folk melody. It was later adapted by Peter Wilhousky as 'Carol of the Bells' and became one of the world's most recognizable holiday songs."
   }
 ]

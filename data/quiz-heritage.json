@@ -2,7 +2,12 @@
   {
     "id": 1,
     "question": "How many UNESCO World Heritage Sites does Ukraine officially have?",
-    "options": ["3", "7", "12", "21"],
+    "options": [
+      "3",
+      "7",
+      "12",
+      "21"
+    ],
     "correct": 1,
     "explanation": "Ukraine has 7 UNESCO World Heritage Sites: Saint Sophia Cathedral and Kyiv Pechersk Lavra; Lviv's historic centre; Struve Geodetic Arc; Ancient City of Tauric Chersonese (Crimea); Residence of Bukovinian Metropolitans in Chernivtsi; ancient beech forests; and Odesa's historic centre (inscribed 2023 under emergency procedure)."
   },
@@ -21,7 +26,12 @@
   {
     "id": 3,
     "question": "The Ivankiv Historical and Local History Museum, destroyed in 2022, housed a collection of works by which famous Ukrainian folk artist?",
-    "options": ["Maria Pryimachenko", "Kateryna Bilokur", "Hanna Sobachko-Shostak", "Paraska Plytka-Horytsvit"],
+    "options": [
+      "Maria Pryimachenko",
+      "Kateryna Bilokur",
+      "Hanna Sobachko-Shostak",
+      "Paraska Plytka-Horytsvit"
+    ],
     "correct": 0,
     "explanation": "The museum housed 25 original paintings by Maria Pryimachenko (1909–1997), one of Ukraine's most celebrated folk artists. Picasso himself reportedly said of her work: 'This genius of a Ukrainian woman astonishes and enchants me.' Many irreplaceable works were burned when Russian forces set fire to the museum in February 2022. Some were saved by locals."
   },
@@ -76,22 +86,97 @@
   {
     "id": 8,
     "question": "The Khortytsia National Reserve protects remnants of which ancient civilisation alongside Cossack history?",
-    "options": ["Scythian", "Roman", "Byzantine", "Greek colonial"],
+    "options": [
+      "Scythian",
+      "Roman",
+      "Byzantine",
+      "Greek colonial"
+    ],
     "correct": 0,
     "explanation": "Khortytsia contains significant Scythian burial mounds (kurgans), rock carvings, and artefacts from the Scythian period (7th–3rd century BC). The Scythians were a nomadic Iranian-speaking people who created a sophisticated culture on the Ukrainian steppe. The island also preserves the historical Zaporizhian Cossack fortress site."
   },
   {
     "id": 9,
     "question": "According to UNESCO and Ukrainian government estimates, approximately how many cultural heritage sites were damaged or destroyed in Ukraine between 2022 and 2024?",
-    "options": ["Under 100", "Around 300", "Over 1,000", "Around 5,000"],
+    "options": [
+      "Under 100",
+      "Around 300",
+      "Over 1,000",
+      "Around 5,000"
+    ],
     "correct": 2,
     "explanation": "UNESCO verified damage to over 340 sites by mid-2024, but Ukrainian authorities documented over 1,000 damaged or destroyed cultural sites — including museums, libraries, churches, theatres, and monuments. The actual number continues to grow as access to frontline areas improves."
   },
   {
     "id": 10,
     "question": "Saint Sophia Cathedral in Kyiv, a UNESCO World Heritage Site, is famous for its intact medieval mosaics and frescoes from the 11th century. It was commissioned by which ruler?",
-    "options": ["Prince Volodymyr the Great", "Yaroslav the Wise", "Prince Sviatoslav", "Danylo of Galicia"],
+    "options": [
+      "Prince Volodymyr the Great",
+      "Yaroslav the Wise",
+      "Prince Sviatoslav",
+      "Danylo of Galicia"
+    ],
     "correct": 1,
     "explanation": "Saint Sophia Cathedral was commissioned by Yaroslav the Wise (ruled 1019–1054) and completed around 1037. It served as the main cathedral of Kyivan Rus and a model for Orthodox church architecture across Eastern Europe. Its original Byzantine mosaics — including the famous golden-background Orans Virgin — are among the best-preserved in the world."
+  },
+  {
+    "id": 11,
+    "question": "When was the historic centre of Odesa inscribed on the UNESCO World Heritage List?",
+    "options": [
+      "2019",
+      "2021",
+      "2023",
+      "2024"
+    ],
+    "correct": 2,
+    "explanation": "The historic centre of Odesa was inscribed on the UNESCO World Heritage List in January 2023 through an emergency procedure, recognizing both its outstanding universal value and the threat posed by the ongoing conflict."
+  },
+  {
+    "id": 12,
+    "question": "What was stored in the Melitopol museum that was looted during the Russian occupation?",
+    "options": [
+      "Byzantine icons",
+      "Scythian gold artifacts",
+      "Cossack weaponry",
+      "Ancient Greek pottery"
+    ],
+    "correct": 1,
+    "explanation": "The Melitopol Museum of Local History housed a collection of Scythian gold artifacts, including ornamental pieces dating back over 2,000 years. These were looted by Russian forces during their occupation of the city in 2022."
+  },
+  {
+    "id": 13,
+    "question": "Which philosopher's memorial museum was destroyed by Russian shelling in the Kharkiv region?",
+    "options": [
+      "Pamfil Yurkevych",
+      "Hryhorii Skovoroda",
+      "Mykhailo Drahomanov",
+      "Volodymyr Vernadsky"
+    ],
+    "correct": 1,
+    "explanation": "The Hryhorii Skovoroda Literary Memorial Museum in the village of Skovorodynivka, Kharkiv Oblast, was destroyed by a Russian missile strike on 7 May 2022. Skovoroda (1722–1794) is considered Ukraine's most important Enlightenment philosopher."
+  },
+  {
+    "id": 14,
+    "question": "The Derzhprom building in Kharkiv is a landmark example of what architectural style?",
+    "options": [
+      "Art Nouveau",
+      "Baroque",
+      "Constructivism",
+      "Neoclassicism"
+    ],
+    "correct": 2,
+    "explanation": "Derzhprom (the State Industry Building), completed in 1928 in Kharkiv, is one of the finest examples of Constructivist architecture in the world. It was the first Soviet skyscraper and has been on Ukraine's tentative list for UNESCO World Heritage status."
+  },
+  {
+    "id": 15,
+    "question": "As of 2024, approximately how many cultural sites has UNESCO verified as damaged in Ukraine since the full-scale invasion?",
+    "options": [
+      "Around 50",
+      "Around 150",
+      "Around 350",
+      "Around 600"
+    ],
+    "correct": 2,
+    "explanation": "By 2024, UNESCO had verified damage to approximately 350 cultural sites in Ukraine, including religious sites, museums, monuments, libraries, and historic buildings. The actual number is believed to be significantly higher."
   }
 ]

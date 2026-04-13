@@ -120,18 +120,6 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Polish%E2%80%93Lithuanian_Commonwealth"
   },
   {
-    "id": "cossack-hetmanate",
-    "year": "1648",
-    "yearSort": 1648,
-    "title": "Khmelnytsky Uprising — Cossack Hetmanate",
-    "description": "Bohdan Khmelnytsky led the Cossack uprising against Polish rule, establishing the Hetmanate — a proto-state with elected leadership, law codes, and diplomatic relations with Poland, Sweden, Ottoman Empire, Venice, and France. Khmelnytsky himself studied at a Jesuit college in Lviv.",
-    "era": "early-modern",
-    "type": "political",
-    "europeanConnection": true,
-    "sourceLabel": "Wikipedia: Khmelnytsky Uprising",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Khmelnytsky_Uprising"
-  },
-  {
     "id": "union-of-brest",
     "year": "1596",
     "yearSort": 1596,
@@ -142,6 +130,18 @@
     "europeanConnection": true,
     "sourceLabel": "Wikipedia: Union of Brest",
     "sourceUrl": "https://en.wikipedia.org/wiki/Union_of_Brest"
+  },
+  {
+    "id": "cossack-hetmanate",
+    "year": "1648",
+    "yearSort": 1648,
+    "title": "Khmelnytsky Uprising — Cossack Hetmanate",
+    "description": "Bohdan Khmelnytsky led the Cossack uprising against Polish rule, establishing the Hetmanate — a proto-state with elected leadership, law codes, and diplomatic relations with Poland, Sweden, Ottoman Empire, Venice, and France. Khmelnytsky himself studied at a Jesuit college in Lviv.",
+    "era": "early-modern",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Khmelnytsky Uprising",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Khmelnytsky_Uprising"
   },
   {
     "id": "battle-poltava",
@@ -228,6 +228,18 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Declaration_of_Independence_of_Ukraine"
   },
   {
+    "id": "budapest-memorandum",
+    "year": "5 December 1994",
+    "yearSort": 1994,
+    "title": "Budapest Memorandum — Ukraine Gives Up Nuclear Weapons",
+    "description": "Ukraine surrendered the world's third-largest nuclear arsenal in exchange for security guarantees from Russia, the US, and UK. The Budapest Memorandum promised to respect Ukraine's sovereignty and territorial integrity. Russia's 2014 and 2022 invasions constituted a direct violation.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Budapest Memorandum",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Budapest_Memorandum_on_Security_Assurances"
+  },
+  {
     "id": "council-of-europe",
     "year": "9 November 1995",
     "yearSort": 1995,
@@ -240,16 +252,16 @@
     "sourceUrl": "https://www.coe.int/en/web/portal/ukraine"
   },
   {
-    "id": "budapest-memorandum",
-    "year": "5 December 1994",
-    "yearSort": 1994,
-    "title": "Budapest Memorandum — Ukraine Gives Up Nuclear Weapons",
-    "description": "Ukraine surrendered the world's third-largest nuclear arsenal in exchange for security guarantees from Russia, the US, and UK. The Budapest Memorandum promised to respect Ukraine's sovereignty and territorial integrity. Russia's 2014 and 2022 invasions constituted a direct violation.",
+    "id": "pca-signed",
+    "year": "1998",
+    "yearSort": 1998,
+    "title": "EU-Ukraine Partnership and Cooperation Agreement",
+    "description": "The Partnership and Cooperation Agreement (PCA) between the EU and Ukraine entered into force on 1 March 1998, establishing the first formal legal framework for bilateral relations. It covered political dialogue, trade, investment, and legislative approximation, laying the groundwork for deeper integration. The PCA remained the basis of EU-Ukraine relations until the Association Agreement replaced it.",
     "era": "eu-path",
     "type": "diplomatic",
     "europeanConnection": true,
-    "sourceLabel": "Wikipedia: Budapest Memorandum",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Budapest_Memorandum_on_Security_Assurances"
+    "sourceLabel": "European Commission – EU-Ukraine PCA",
+    "sourceUrl": "https://ec.europa.eu/neighbourhood-enlargement/european-neighbourhood-policy/countries-region/ukraine_en"
   },
   {
     "id": "orange-revolution",
@@ -264,16 +276,28 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Orange_Revolution"
   },
   {
-    "id": "visa-free",
-    "year": "11 June 2017",
-    "yearSort": 2017,
-    "title": "Visa-Free Travel to the EU",
-    "description": "Ukraine received visa-free access to the Schengen Area for short stays — a landmark moment for ordinary Ukrainians. Within a year, millions exercised the right for the first time. The EU became not an abstract political concept but a place you could actually visit.",
+    "id": "eastern-partnership",
+    "year": "2009",
+    "yearSort": 2009,
+    "title": "Eastern Partnership Launched",
+    "description": "The EU launched the Eastern Partnership (EaP) in May 2009 in Prague, creating a structured framework for deeper cooperation with six post-Soviet states including Ukraine. The initiative offered association agreements, deep free trade areas, and visa liberalization as incentives for political and economic reforms. For Ukraine, the EaP became the primary vehicle for advancing its European integration agenda.",
     "era": "eu-path",
     "type": "diplomatic",
     "europeanConnection": true,
-    "sourceLabel": "European Commission: Visa liberalisation",
-    "sourceUrl": "https://ec.europa.eu/home-affairs/content/eu-ukraine-association-agreement_en"
+    "sourceLabel": "European Council – Eastern Partnership",
+    "sourceUrl": "https://www.consilium.europa.eu/en/policies/eastern-partnership/"
+  },
+  {
+    "id": "energy-community",
+    "year": "2011",
+    "yearSort": 2011,
+    "title": "Ukraine Joins the EU Energy Community",
+    "description": "Ukraine became a full member of the Energy Community in February 2011, committing to adopt EU energy legislation and integrate its energy market with the European network. This was a significant step toward energy security and regulatory alignment with EU standards. It helped Ukraine diversify energy sources and reduce dependence on Russian gas supplies.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Energy Community – Ukraine",
+    "sourceUrl": "https://www.energy-community.org/implementation/Ukraine.html"
   },
   {
     "id": "euromaidan",
@@ -312,6 +336,30 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea"
   },
   {
+    "id": "dcfta-provisional",
+    "year": "2016",
+    "yearSort": 2016,
+    "title": "DCFTA Provisionally Applied",
+    "description": "The Deep and Comprehensive Free Trade Area (DCFTA) between the EU and Ukraine began provisional application on 1 January 2016, creating the most ambitious trade agreement ever offered to a non-member state. It went beyond traditional free trade by requiring Ukraine to align regulations, standards, and institutions with EU norms. The DCFTA opened European markets to Ukrainian exports and catalyzed structural economic reforms.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission – EU-Ukraine DCFTA",
+    "sourceUrl": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/ukraine_en"
+  },
+  {
+    "id": "visa-free",
+    "year": "11 June 2017",
+    "yearSort": 2017,
+    "title": "Visa-Free Travel to the EU",
+    "description": "Ukraine received visa-free access to the Schengen Area for short stays — a landmark moment for ordinary Ukrainians. Within a year, millions exercised the right for the first time. The EU became not an abstract political concept but a place you could actually visit.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission: Visa liberalisation",
+    "sourceUrl": "https://ec.europa.eu/home-affairs/content/eu-ukraine-association-agreement_en"
+  },
+  {
     "id": "full-scale-invasion",
     "year": "24 February 2022",
     "yearSort": 2022,
@@ -348,6 +396,30 @@
     "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2022/06/23/european-council-decision-on-ukraine/"
   },
   {
+    "id": "trade-liberalization-2022",
+    "year": "2022",
+    "yearSort": 2022.4,
+    "title": "EU Fully Liberalizes Trade with Ukraine",
+    "description": "In June 2022, the EU suspended all import duties, quotas, and trade defence measures on Ukrainian exports for one year, later extended multiple times. This unprecedented measure aimed to support Ukraine's war-battered economy by giving its products unrestricted access to the EU single market. It represented the most far-reaching unilateral trade liberalization the EU had ever granted.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission – Autonomous Trade Measures",
+    "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_22_3721"
+  },
+  {
+    "id": "sanctions-alignment",
+    "year": "2022–present",
+    "yearSort": 2022.5,
+    "title": "Ukraine Aligns with EU Sanctions Against Russia",
+    "description": "Following Russia's full-scale invasion, Ukraine systematically aligned its sanctions regime with the EU's successive sanctions packages against Russia. This alignment covered financial sanctions, trade restrictions, and individual designations, demonstrating Ukraine's commitment to EU foreign policy coordination. The alignment rate exceeded 90%, one of the highest among candidate countries.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission – Ukraine Progress Report",
+    "sourceUrl": "https://neighbourhood-enlargement.ec.europa.eu/ukraine-report-2023_en"
+  },
+  {
     "id": "negotiations-opened",
     "year": "December 2023",
     "yearSort": 2023,
@@ -360,6 +432,18 @@
     "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2023/12/14/"
   },
   {
+    "id": "macro-financial-2023",
+    "year": "2023",
+    "yearSort": 2023,
+    "title": "EU Disburses First €4.5B Macro-Financial Tranche",
+    "description": "In early 2023, the EU disbursed the first tranche of an unprecedented €18 billion macro-financial assistance package to Ukraine, providing €4.5 billion in highly concessional loans. This was the largest single financial assistance package the EU had ever provided to a non-member state and helped keep Ukraine's government and economy functioning during wartime. The funds supported essential public services including pensions, salaries, and hospitals.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission – Macro-Financial Assistance",
+    "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_228"
+  },
+  {
     "id": "cluster1-opened",
     "year": "June 2024",
     "yearSort": 2024,
@@ -370,6 +454,42 @@
     "europeanConnection": true,
     "sourceLabel": "EC: Ukraine 2024 Enlargement Package",
     "sourceUrl": "https://enlargement.ec.europa.eu/countries/ukraine_en"
+  },
+  {
+    "id": "ukraine-facility-2024",
+    "year": "2024",
+    "yearSort": 2024.1,
+    "title": "EU Approves €50B Ukraine Facility",
+    "description": "In February 2024, the European Council approved the Ukraine Facility, a landmark €50 billion support package covering 2024–2027 combining grants and loans. The facility was designed to support Ukraine's recovery, reconstruction, and modernization while advancing EU accession reforms. It represented the EU's most ambitious long-term commitment to a candidate country, tying financial support directly to reform milestones.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "European Council – Ukraine Facility",
+    "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2024/02/01/ukraine-facility/"
+  },
+  {
+    "id": "dignity-anniversary-2024",
+    "year": "2024",
+    "yearSort": 2024.2,
+    "title": "10th Anniversary of the Revolution of Dignity",
+    "description": "In February 2024, Ukraine and its European partners marked ten years since the Revolution of Dignity (Euromaidan), the pro-European uprising that toppled President Yanukovych after he rejected the EU Association Agreement. The anniversary was observed with renewed significance as Ukraine was now a formal EU candidate actively negotiating accession. European leaders acknowledged the protests as a defining moment in Ukraine's European trajectory.",
+    "era": "eu-path",
+    "type": "cultural",
+    "europeanConnection": true,
+    "sourceLabel": "European Parliament – Euromaidan Anniversary",
+    "sourceUrl": "https://www.europarl.europa.eu/news/en/press-room/20240219IPR17811/"
+  },
+  {
+    "id": "screening-all-chapters",
+    "year": "2024",
+    "yearSort": 2024.5,
+    "title": "EU Opens Screening on All Negotiation Chapters",
+    "description": "By mid-2024, the European Commission had launched the screening process across all 35 negotiation chapters of the EU acquis for Ukraine. Screening is the first formal step in accession negotiations, where the Commission assesses a candidate's readiness chapter by chapter. Ukraine's rapid progression through this phase was unprecedented, reflecting both the political urgency and Ukraine's substantive preparation.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "European Commission – Enlargement Package 2024",
+    "sourceUrl": "https://neighbourhood-enlargement.ec.europa.eu/enlargement-policy/ukraine_en"
   },
   {
     "id": "screening-completed",

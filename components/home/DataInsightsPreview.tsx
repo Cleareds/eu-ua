@@ -3,7 +3,7 @@ import type { EUUkraineData } from "@/lib/types";
 
 function MiniStat({ label, value, change, color }: { label: string; value: string; change: string; color: string }) {
   return (
-    <div className="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow" role="figure" aria-label={`${label}: ${value}. ${change}`}>
       <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">{label}</div>
       <div className="text-3xl font-bold mb-1" style={{ color }}>{value}</div>
       <div className="text-xs text-green-600 font-medium">{change}</div>

@@ -24,7 +24,7 @@ export function TradeShareChart({ data }: { data: TradeDataPoint[] }) {
       </div>
       <p className="text-xs text-gray-400 mb-4">% of total Ukrainian exports going to EU countries (Eurostat)</p>
       <ResponsiveContainer width="100%" height={220}>
-        <LineChart data={data}>
+        <LineChart data={data} role="img" aria-label="Line chart showing EU share of Ukraine's total exports as a percentage over time. Reference lines mark DCFTA in 2014 and full-scale war in 2022.">
           <CartesianGrid strokeDasharray="3 3" stroke="#F3F4F6" />
           <XAxis dataKey="year" tick={{ fontSize: 11 }} />
           <YAxis tick={{ fontSize: 11 }} unit="%" domain={[20, 70]} />
@@ -47,7 +47,7 @@ export function TradeGrowthChart({ data }: { data: TradeDataPoint[] }) {
       </div>
       <p className="text-xs text-gray-400 mb-4">Total bilateral trade in billions of euros (Eurostat)</p>
       <ResponsiveContainer width="100%" height={220}>
-        <LineChart data={data}>
+        <LineChart data={data} role="img" aria-label="Line chart showing total EU-Ukraine bilateral trade volume in billions of euros over time. Reference line marks DCFTA in 2014.">
           <CartesianGrid strokeDasharray="3 3" stroke="#F3F4F6" />
           <XAxis dataKey="year" tick={{ fontSize: 11 }} />
           <YAxis tick={{ fontSize: 11 }} unit="B€" />

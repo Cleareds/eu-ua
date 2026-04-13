@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TimelineEvent, TimelineEra } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
+import { ERA_COLORS } from "@/lib/constants";
 
 const ERA_LABELS: Record<string, string> = {
   ancient: "Ancient",
@@ -12,16 +13,6 @@ const ERA_LABELS: Record<string, string> = {
   independence: "Independence Era",
   "eu-path": "Path to EU",
   modern: "Modern",
-};
-
-const ERA_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  ancient:              { bg: "#EFF6FF", text: "#1d4ed8", border: "#93c5fd" },
-  medieval:             { bg: "#F5F3FF", text: "#6d28d9", border: "#c4b5fd" },
-  "early-modern":       { bg: "#FFF7ED", text: "#c2410c", border: "#fdba74" },
-  "national-awakening": { bg: "#FDF4FF", text: "#7e22ce", border: "#e879f9" },
-  independence:         { bg: "#F0FDF4", text: "#166534", border: "#86efac" },
-  "eu-path":            { bg: "#EFF6FF", text: "#003399", border: "#60a5fa" },
-  modern:               { bg: "#F8F9FA", text: "#374151", border: "#9ca3af" },
 };
 
 const TYPE_ICON: Record<string, string> = {

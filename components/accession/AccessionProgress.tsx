@@ -1,12 +1,7 @@
 import { EUChapter, ChapterStatus } from "@/lib/types";
+import { CHAPTER_STATUS } from "@/lib/constants";
 
 const statusOrder: ChapterStatus[] = ["completed", "negotiation", "screening", "not_started"];
-const statusColors: Record<ChapterStatus, string> = {
-  completed: "#059669",
-  negotiation: "#2563EB",
-  screening: "#D97706",
-  not_started: "#E5E7EB",
-};
 
 export default function AccessionProgress({ chapters }: { chapters: EUChapter[] }) {
   const counts = chapters.reduce((acc, ch) => {
@@ -35,7 +30,7 @@ export default function AccessionProgress({ chapters }: { chapters: EUChapter[] 
           return (
             <div
               key={status}
-              style={{ width: `${pct}%`, backgroundColor: statusColors[status] }}
+              style={{ width: `${pct}%`, backgroundColor: CHAPTER_STATUS[status].color }}
               title={`${status}: ${count}`}
             />
           );
@@ -45,9 +40,9 @@ export default function AccessionProgress({ chapters }: { chapters: EUChapter[] 
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
         {[
-          { label: "Completed", count: completed, color: "#059669" },
-          { label: "Negotiation", count: negotiation, color: "#2563EB" },
-          { label: "Screening", count: screening, color: "#D97706" },
+          { label: "Completed", count: completed, color: CHAPTER_STATUS.completed.color },
+          { label: "Negotiation", count: negotiation, color: CHAPTER_STATUS.negotiation.color },
+          { label: "Screening", count: screening, color: CHAPTER_STATUS.screening.color },
           { label: "Not Started", count: notStarted, color: "#9CA3AF" },
         ].map((s) => (
           <div key={s.label} className="text-center">

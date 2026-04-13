@@ -22,7 +22,7 @@ export default function StudentsChart({ data }: { data: TradeDataPoint[] }) {
       </div>
       <p className="text-xs text-gray-400 mb-4">Thousands of Ukrainians enrolled in EU educational institutions (UNESCO, UNHCR, Eurostat)</p>
       <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={chartData}>
+        <BarChart data={chartData} role="img" aria-label="Bar chart showing the number of Ukrainian students and learners enrolled in EU educational institutions over time, measured in thousands.">
           <CartesianGrid strokeDasharray="3 3" stroke="#F3F4F6" />
           <XAxis dataKey="year" tick={{ fontSize: 11 }} />
           <YAxis tick={{ fontSize: 11 }} unit="K" />

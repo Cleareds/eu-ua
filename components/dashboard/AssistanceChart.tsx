@@ -19,7 +19,7 @@ export default function AssistanceChart({ data }: { data: TradeDataPoint[] }) {
       </div>
       <p className="text-xs text-gray-400 mb-4">Annual EU macro-financial support in billions of euros (European Commission)</p>
       <ResponsiveContainer width="100%" height={220}>
-        <AreaChart data={data}>
+        <AreaChart data={data} role="img" aria-label="Area chart showing EU financial assistance to Ukraine over time in billions of euros. Includes a reference line at 2022 marking the start of the full-scale war.">
           <defs>
             <linearGradient id="assistGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#003399" stopOpacity={0.3} />

@@ -41,6 +41,7 @@ export interface CulturalSite {
   description: string;
   damage: SiteDamage;
   date: string;
+  image?: string;
   sources: CitySource[];
 }
 

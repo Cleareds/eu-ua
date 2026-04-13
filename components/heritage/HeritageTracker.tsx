@@ -4,14 +4,9 @@ import { useState } from "react";
 import culturalSitesData from "@/data/cultural-sites.json";
 import { CulturalSite, SiteDamage } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
+import { DAMAGE_CONFIG } from "@/lib/constants";
 
 const sites = culturalSitesData as CulturalSite[];
-
-const DAMAGE_CONFIG: Record<SiteDamage, { label: string; bg: string; color: string; dot: string }> = {
-  destroyed:        { label: "Destroyed",        bg: "#FEF2F2", color: "#cc0000", dot: "#cc0000" },
-  severely_damaged: { label: "Severely Damaged",  bg: "#FFF7ED", color: "#c2410c", dot: "#f97316" },
-  damaged:          { label: "Damaged",           bg: "#FFFBEB", color: "#b45309", dot: "#eab308" },
-};
 
 const TYPE_OPTIONS = ["All", ...Array.from(new Set(sites.map((s) => s.type))).sort()];
 const DAMAGE_OPTIONS: Array<"all" | SiteDamage> = ["all", "destroyed", "severely_damaged", "damaged"];
@@ -141,6 +136,11 @@ export default function HeritageTracker() {
                     <div className="w-3 h-3 rounded-full shrink-0 mt-1.5" style={{ backgroundColor: cfg.dot }} />
                   </div>
 
+                  {isExpanded && site.image && (
+                    <div className="mt-3 w-full h-40 rounded-lg overflow-hidden">
+                      <img src={site.image} alt={site.name} className="w-full h-full object-cover" />
+                    </div>
+                  )}
                   <p className={`text-sm text-gray-600 leading-relaxed mt-2 ${isExpanded ? "" : "line-clamp-2"}`}>
                     {site.description}
                   </p>

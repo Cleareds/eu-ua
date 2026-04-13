@@ -1,14 +1,9 @@
 import { CulturalSite } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
-
-const damageLabel: Record<string, { label: string; bg: string; color: string }> = {
-  destroyed: { label: "Destroyed", bg: "#FEF2F2", color: "#cc0000" },
-  severely_damaged: { label: "Severely Damaged", bg: "#FFF7ED", color: "#c2410c" },
-  damaged: { label: "Damaged", bg: "#FFFBEB", color: "#b45309" },
-};
+import { DAMAGE_CONFIG } from "@/lib/constants";
 
 export default function CulturalSitePanel({ site, onClose }: { site: CulturalSite; onClose: () => void }) {
-  const badge = damageLabel[site.damage] ?? damageLabel.damaged;
+  const badge = DAMAGE_CONFIG[site.damage] ?? DAMAGE_CONFIG.damaged;
   const dateFormatted = new Date(site.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   return (
@@ -42,6 +37,13 @@ export default function CulturalSitePanel({ site, onClose }: { site: CulturalSit
           </span>
           <span className="text-xs text-gray-500">{dateFormatted}</span>
         </div>
+
+        {/* Image */}
+        {site.image && (
+          <div className="relative w-full h-36 rounded-lg overflow-hidden">
+            <img src={site.image} alt={site.name} className="w-full h-full object-cover" />
+          </div>
+        )}
 
         {/* Description */}
         <p className="text-sm text-gray-700 leading-relaxed">{site.description}</p>
