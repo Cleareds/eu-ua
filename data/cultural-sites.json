@@ -1123,5 +1123,187 @@
         "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
       }
     ]
+  },
+  {
+    "id": "slovo-building-kharkiv",
+    "name": "Slovo Building (Будинок Слово)",
+    "city": "Kharkiv",
+    "lat": 50.0065,
+    "lng": 36.2325,
+    "type": "Literary Monument",
+    "description": "On 7 March 2022, the Slovo Building was damaged by Russian shelling. Completed in 1929, designed by Mytrophan Dashkevych in the shape of the Cyrillic letter 'С' (for 'slovo' — 'word'), this five-storey building with 66 apartments was built to house Ukraine's most prominent writers and intellectuals. Between 1931 and 1934, Soviet secret police arrested most residents — 33 were executed, five sent to the Gulag, and writer Mykola Khvylovy committed suicide here in 1933. The victims are known as the 'Executed Renaissance' — an entire generation of Ukrainian cultural figures erased by Stalin's terror. The building became a Monument of National Significance in 2019.",
+    "damage": "damaged",
+    "date": "2022-03-07",
+    "sources": [
+      {
+        "title": "Wikipedia: Slovo Building",
+        "url": "https://en.wikipedia.org/wiki/Slovo_Building"
+      },
+      {
+        "title": "Wikipedia: Executed Renaissance",
+        "url": "https://en.wikipedia.org/wiki/Executed_Renaissance"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      }
+    ],
+    "image": "/images/sites/slovo-building-kharkiv.jpg"
+  },
+  {
+    "id": "dormition-cathedral-kharkiv",
+    "name": "Dormition (Assumption) Cathedral",
+    "city": "Kharkiv",
+    "lat": 49.9935,
+    "lng": 36.2308,
+    "type": "Cathedral",
+    "description": "On 2 March 2022, a Russian missile struck the Dormition Cathedral while civilians were sheltering inside. Built in 1780, the cathedral features Ukrainian Baroque and Neoclassical architecture with a gilded Rococo icon screen carved from limewood. Its freestanding Alexander Bell Tower (1820s–1830s) at 90 metres was the tallest structure in Kharkiv for nearly two centuries. The cathedral was Kharkiv's main Orthodox church and was visited by nearly every Russian emperor from Catherine the Great onward — making its deliberate targeting by Russian forces particularly significant.",
+    "damage": "damaged",
+    "date": "2022-03-02",
+    "sources": [
+      {
+        "title": "Wikipedia: Dormition Cathedral, Kharkiv",
+        "url": "https://en.wikipedia.org/wiki/Dormition_Cathedral,_Kharkiv"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "ICOMOS: Ukraine Heritage Emergency",
+        "url": "https://www.icomos.org/en/focus/armed-conflicts-and-heritage/84977-icomos-calls-for-the-protection-of-ukraine-s-cultural-heritage"
+      }
+    ],
+    "image": "/images/sites/dormition-cathedral-kharkiv.jpg"
+  },
+  {
+    "id": "annunciation-cathedral-kharkiv",
+    "name": "Annunciation Cathedral",
+    "city": "Kharkiv",
+    "lat": 49.9873,
+    "lng": 36.2255,
+    "type": "Cathedral",
+    "description": "On 23 January 2024, the Annunciation Cathedral was damaged by a Russian rocket attack on Kharkiv. Built 1888–1901 by architect Mikhail Lovtsov, this Neo-Byzantine cathedral features an 80-metre bell tower, a distinctive candy-striped exterior, and a Carrara marble icon screen. It was one of the largest churches in the Russian Empire and currently serves as the seat of the Kharkiv and Bohodukhiv eparchy. It houses the burial of Ecumenical Patriarch Athanasius III.",
+    "damage": "damaged",
+    "date": "2024-01-23",
+    "sources": [
+      {
+        "title": "Wikipedia: Annunciation Cathedral, Kharkiv",
+        "url": "https://en.wikipedia.org/wiki/Annunciation_Cathedral,_Kharkiv"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "BBC: Kharkiv under attack",
+        "url": "https://www.bbc.com/news/world-europe-60576528"
+      }
+    ],
+    "image": "/images/sites/annunciation-cathedral-kharkiv.jpg"
+  },
+  {
+    "id": "drobytsky-yar-memorial",
+    "name": "Drobytsky Yar Holocaust Memorial",
+    "city": "Kharkiv",
+    "lat": 49.9583,
+    "lng": 36.3489,
+    "type": "Memorial Site",
+    "description": "Russian artillery shelling in March 2022 damaged the menorah monument at Drobytsky Yar — a memorial to approximately 16,000–30,000 residents, primarily Jewish citizens, murdered by Nazi forces between October 1941 and 1942. The memorial complex, opened in 2002, includes a monument symbolising a synagogue with the Ten Commandments, two mass burial trenches, and a 'Room of Tragedy' containing names of identified victims. The damage to a Holocaust memorial by forces claiming to 'denazify' Ukraine carries particular historical irony.",
+    "damage": "damaged",
+    "date": "2022-03-26",
+    "sources": [
+      {
+        "title": "Wikipedia: Drobytsky Yar",
+        "url": "https://en.wikipedia.org/wiki/Drobytsky_Yar"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Battle of Kharkiv (2022)",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Kharkiv_(2022)"
+      }
+    ],
+    "image": "/images/sites/drobytsky-yar-memorial.jpg"
+  },
+  {
+    "id": "kharkiv-choral-synagogue",
+    "name": "Kharkiv Choral Synagogue",
+    "city": "Kharkiv",
+    "lat": 49.9924,
+    "lng": 36.2352,
+    "type": "Synagogue",
+    "description": "The Kharkiv Choral Synagogue was partially damaged by Russian bombing in March 2022. Built 1909–1913 by St. Petersburg architect Yakov Gevirts in a striking Romano-Gothic and Moorish Revival style, it was closed by the Soviets in 1923 and repurposed as a workers' club and cinema. After a 1998 fire, Chabad completed extensive renovations in 2003, and the building now serves as a synagogue, school, kindergarten, and yeshiva — the centre of Jewish life in Kharkiv.",
+    "damage": "damaged",
+    "date": "2022-03-15",
+    "sources": [
+      {
+        "title": "Wikipedia: Kharkiv Choral Synagogue",
+        "url": "https://en.wikipedia.org/wiki/Kharkiv_Choral_Synagogue"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "BBC: Kharkiv under bombardment",
+        "url": "https://www.bbc.com/news/world-europe-60576528"
+      }
+    ],
+    "image": "/images/sites/kharkiv-choral-synagogue.jpg"
+  },
+  {
+    "id": "odesa-museum-western-eastern-art",
+    "name": "Odesa Museum of Western and Eastern Art",
+    "city": "Odesa",
+    "lat": 46.486,
+    "lng": 30.7365,
+    "type": "Museum",
+    "description": "On 20 July 2023, the museum was damaged by a Russian rocket attack on Odesa. Established in 1923 and housed in an 1856 palace, its collection of approximately 10,000 works includes pieces by Rubens and Tintoretto, plus significant Eastern art from China, Japan, India, Iran, and Tibet. The museum gained international fame in 1958 when curator Irina Linnik discovered two lost Frans Hals paintings in storage, leading to the recovery of companion works — one of the great art rediscoveries of the 20th century.",
+    "damage": "damaged",
+    "date": "2023-07-20",
+    "sources": [
+      {
+        "title": "Wikipedia: Odesa Museum of Western and Eastern Art",
+        "url": "https://en.wikipedia.org/wiki/Odesa_Museum_of_Western_and_Eastern_Art"
+      },
+      {
+        "title": "UNESCO: Odesa attacks",
+        "url": "https://www.unesco.org/en/articles/odesa-once-again-targeted-russia-unesco-condemns-deliberate-attack-cultural-heritage"
+      },
+      {
+        "title": "The Art Newspaper: Odesa museums struck",
+        "url": "https://www.theartnewspaper.com/2023/11/06/odesa-museums-damaged-russian-strike"
+      }
+    ],
+    "image": "/images/sites/odesa-museum-western-eastern-art.jpg"
+  },
+  {
+    "id": "izium-polovtsian-statues",
+    "name": "Polovtsian Stone Statues, Mount Kremenets",
+    "city": "Izium",
+    "lat": 49.22,
+    "lng": 37.255,
+    "type": "Archaeological Monument",
+    "description": "Ancient Polovtsian (Cuman) stone statues dating from the 9th–13th centuries on Mount Kremenets near Izium were heavily damaged during the 2022 Battle of Izium, with one statue completely destroyed. These irreplaceable archaeological artefacts from the medieval Cuman-Kipchak peoples survived nearly a millennium of conflict only to be obliterated by Russian bombardment. The statues represented some of the oldest surviving cultural heritage in the Donets River region.",
+    "damage": "destroyed",
+    "date": "2022-06-01",
+    "sources": [
+      {
+        "title": "Wikipedia: Izium",
+        "url": "https://en.wikipedia.org/wiki/Izium"
+      },
+      {
+        "title": "UNESCO: Archaeological sites at risk",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Kipchaks",
+        "url": "https://en.wikipedia.org/wiki/Kipchaks"
+      }
+    ],
+    "image": "/images/sites/izium-polovtsian-statues.jpg"
   }
 ]

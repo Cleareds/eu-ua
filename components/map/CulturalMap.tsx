@@ -256,7 +256,6 @@ export default function CulturalMap() {
           cursor: pointer; display: flex; align-items: center; justify-content: center;
           color: white; font-weight: bold; font-size: 11px; font-family: inherit;
           box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-          transition: transform 0.2s, box-shadow 0.2s;
           position: relative; z-index: 1;
         }
         .city-pin--occupied {
@@ -268,6 +267,7 @@ export default function CulturalMap() {
         .city-pin:hover {
           transform: scale(1.25); box-shadow: 0 4px 16px rgba(0,51,153,0.4);
           z-index: 9999 !important;
+          transition: transform 0.2s, box-shadow 0.2s;
         }
         /* Cultural damage pins */
         .site-pin {
@@ -275,7 +275,6 @@ export default function CulturalMap() {
           cursor: pointer; display: flex; align-items: center; justify-content: center;
           font-weight: bold; font-size: 14px; font-family: inherit;
           box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-          transition: transform 0.2s;
           position: relative; z-index: 2;
           border: 2px solid rgba(255,255,255,0.8);
         }
@@ -287,6 +286,7 @@ export default function CulturalMap() {
         }
         .site-pin:hover {
           transform: scale(1.3); z-index: 9999 !important;
+          transition: transform 0.2s;
         }
         /* Legend swatches */
         .city-pin-legend {
@@ -303,7 +303,7 @@ export default function CulturalMap() {
         .site-pin-legend--destroyed { background: #cc0000; }
         .site-pin-legend--damaged { background: #f97316; }
         /* Leaflet overrides */
-        .leaflet-marker-icon { overflow: visible !important; background: none !important; border: none !important; }
+        .leaflet-marker-icon { overflow: visible !important; background: none !important; border: none !important; will-change: auto; }
         @keyframes slideIn {
           from { transform: translateX(100%); opacity: 0; }
           to { transform: translateX(0); opacity: 1; }
