@@ -70,7 +70,7 @@ export default function CulturalMap() {
         const marker = L.marker([city.lat, city.lng], { icon });
         marker.on("click", () => {
           setSelection({ type: "city", item: city });
-          map.flyTo([city.lat, city.lng], 7, { duration: 0.8 });
+          map.flyTo([city.lat, city.lng], Math.max(map.getZoom(), 7), { duration: 0.8 });
         });
         marker.addTo(map);
       });
@@ -86,7 +86,7 @@ export default function CulturalMap() {
         const marker = L.marker([site.lat, site.lng], { icon });
         marker.on("click", () => {
           setSelection({ type: "site", item: site });
-          map.flyTo([site.lat, site.lng], 9, { duration: 0.8 });
+          map.flyTo([site.lat, site.lng], Math.max(map.getZoom(), 9), { duration: 0.8 });
         });
         marker.addTo(map);
       });
@@ -181,7 +181,7 @@ export default function CulturalMap() {
               {freeCities.map((city) => (
                 <CityButton key={city.id} city={city} selection={selection} onClick={() => {
                   setSelection({ type: "city", item: city });
-                  mapInstance.current?.flyTo([city.lat, city.lng], 7, { duration: 0.8 });
+                  mapInstance.current?.flyTo([city.lat, city.lng], Math.max(mapInstance.current.getZoom(), 7), { duration: 0.8 });
                 }} />
               ))}
               {liberatedCities.length > 0 && (
@@ -190,7 +190,7 @@ export default function CulturalMap() {
               {liberatedCities.map((city) => (
                 <CityButton key={city.id} city={city} selection={selection} onClick={() => {
                   setSelection({ type: "city", item: city });
-                  mapInstance.current?.flyTo([city.lat, city.lng], 7, { duration: 0.8 });
+                  mapInstance.current?.flyTo([city.lat, city.lng], Math.max(mapInstance.current.getZoom(), 7), { duration: 0.8 });
                 }} />
               ))}
               {occupiedCities.length > 0 && (
@@ -199,7 +199,7 @@ export default function CulturalMap() {
               {occupiedCities.map((city) => (
                 <CityButton key={city.id} city={city} selection={selection} onClick={() => {
                   setSelection({ type: "city", item: city });
-                  mapInstance.current?.flyTo([city.lat, city.lng], 7, { duration: 0.8 });
+                  mapInstance.current?.flyTo([city.lat, city.lng], Math.max(mapInstance.current.getZoom(), 7), { duration: 0.8 });
                 }} />
               ))}
             </div>
@@ -213,7 +213,7 @@ export default function CulturalMap() {
                     key={site.id}
                     onClick={() => {
                       setSelection({ type: "site", item: site });
-                      mapInstance.current?.flyTo([site.lat, site.lng], 9, { duration: 0.8 });
+                      mapInstance.current?.flyTo([site.lat, site.lng], Math.max(mapInstance.current.getZoom(), 9), { duration: 0.8 });
                     }}
                     className="w-full text-left px-2 py-1 rounded text-xs hover:bg-red-50 transition-colors"
                     style={
@@ -238,7 +238,10 @@ export default function CulturalMap() {
           style={{ animation: "slideIn 0.3s ease-out" }}
         >
           {selection.type === "city" ? (
-            <CityPanel city={selection.item} onClose={() => setSelection(null)} />
+            <CityPanel city={selection.item} onClose={() => setSelection(null)} onSelectSite={(site) => {
+              setSelection({ type: "site", item: site });
+              mapInstance.current?.flyTo([site.lat, site.lng], Math.max(mapInstance.current.getZoom(), 9), { duration: 0.8 });
+            }} />
           ) : (
             <CulturalSitePanel site={selection.item} onClose={() => setSelection(null)} />
           )}

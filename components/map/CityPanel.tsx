@@ -1,7 +1,12 @@
-import { City } from "@/lib/types";
+import { City, CulturalSite } from "@/lib/types";
 import { ExternalLink } from "lucide-react";
+import { DAMAGE_CONFIG } from "@/lib/constants";
+import culturalSitesData from "@/data/cultural-sites.json";
 
-export default function CityPanel({ city, onClose }: { city: City; onClose: () => void }) {
+const allSites = culturalSitesData as CulturalSite[];
+
+export default function CityPanel({ city, onClose, onSelectSite }: { city: City; onClose: () => void; onSelectSite?: (site: CulturalSite) => void }) {
+  const citySites = allSites.filter((s) => s.city === city.name);
   return (
     <div className="h-full flex flex-col overflow-hidden">
       {/* Header */}
@@ -84,6 +89,43 @@ export default function CityPanel({ city, onClose }: { city: City; onClose: () =
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {/* Damaged Cultural Sites */}
+        {citySites.length > 0 && (
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#cc0000" }}>
+              Damaged Cultural Sites ({citySites.length})
+            </h3>
+            <div className="space-y-2">
+              {citySites.map((site) => {
+                const cfg = DAMAGE_CONFIG[site.damage];
+                return (
+                  <button
+                    key={site.id}
+                    onClick={() => onSelectSite?.(site)}
+                    className="w-full text-left p-3 rounded-lg border hover:shadow-sm transition-all"
+                    style={{ borderColor: "#E5E7EB" }}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <span
+                        className="w-2 h-2 rounded-full shrink-0"
+                        style={{ backgroundColor: cfg.dot }}
+                      />
+                      <span
+                        className="text-xs font-semibold px-1.5 py-0.5 rounded"
+                        style={{ backgroundColor: cfg.bg, color: cfg.color }}
+                      >
+                        {cfg.label}
+                      </span>
+                      <span className="text-xs text-gray-400">{site.type}</span>
+                    </div>
+                    <p className="text-sm font-medium" style={{ color: "#1A1A2E" }}>{site.name}</p>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
 
