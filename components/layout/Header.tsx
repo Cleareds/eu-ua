@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -66,29 +67,62 @@ export default function Header() {
 }
 
 function MobileMenu({ pathname }: { pathname: string }) {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close on click outside
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
+
+  // Close on route change
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <details className="relative">
-      <summary className="cursor-pointer list-none text-white p-2 rounded-md hover:bg-white/10">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </summary>
-      <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 z-50" style={{ backgroundColor: "#003399" }}>
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              "block px-4 py-2 text-sm",
-              pathname === link.href
-                ? "text-[#FFD700]"
-                : "text-white/80 hover:text-white"
-            )}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div>
-    </details>
+    <div className="relative" ref={menuRef}>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="text-white p-2 rounded-md hover:bg-white/10"
+        aria-label={open ? "Close menu" : "Open menu"}
+      >
+        {open ? (
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        )}
+      </button>
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 z-[9999]" style={{ backgroundColor: "#003399" }}>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className={cn(
+                "block px-4 py-2 text-sm",
+                pathname === link.href
+                  ? "text-[#FFD700]"
+                  : "text-white/80 hover:text-white"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

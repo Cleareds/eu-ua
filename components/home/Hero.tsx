@@ -52,8 +52,8 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-xl sm:text-2xl text-white/75 max-w-2xl mb-12 leading-relaxed">
-          Explore Ukraine&apos;s deep European roots, track the EU accession journey,
-          and discover the cultural connections binding two continents together.
+          Ukraine has always been part of Europe. Follow the EU accession journey,
+          explore centuries of shared culture, and see where things stand today.
         </p>
 
         {/* CTAs */}
