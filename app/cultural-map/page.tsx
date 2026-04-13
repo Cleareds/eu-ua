@@ -17,7 +17,7 @@ export default function CulturalMapPage() {
       </div>
 
       {/* Map fills remaining height */}
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-hidden" style={{ isolation: "isolate" }}>
         <CulturalMap />
       </div>
     </div>
