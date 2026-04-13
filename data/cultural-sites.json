@@ -1305,5 +1305,83 @@
       }
     ],
     "image": "/images/sites/izium-polovtsian-statues.jpg"
+  },
+  {
+    "id": "kharkiv-tv-tower",
+    "name": "Kharkiv TV Tower",
+    "city": "Kharkiv",
+    "lat": 50.0236,
+    "lng": 36.2011,
+    "type": "Broadcasting Tower",
+    "description": "The 240.7-metre Kharkiv TV Tower — the tallest structure in Kharkiv, completed in 1981 — was first struck on 6 March 2022 by eight FAB-500 bombs from a Russian Su-34 fighter jet. The pilot was shot down, captured, and sentenced to 12 years. On 22 April 2024, a Kh-59 cruise missile destroyed the upper half of the tower, knocking out digital television across the Kharkiv region. Authorities stated restoration would only begin after hostilities end.",
+    "damage": "destroyed",
+    "date": "2022-03-06",
+    "sources": [
+      {
+        "title": "Wikipedia: Kharkiv TV Tower",
+        "url": "https://en.wikipedia.org/wiki/Kharkiv_TV_Tower"
+      },
+      {
+        "title": "BBC: Kharkiv infrastructure attacks",
+        "url": "https://www.bbc.com/news/world-europe-60576528"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      }
+    ],
+    "image": "/images/sites/kharkiv-tv-tower.jpg"
+  },
+  {
+    "id": "azovstal-mariupol",
+    "name": "Azovstal Iron and Steel Works",
+    "city": "Mariupol",
+    "lat": 47.0975,
+    "lng": 37.585,
+    "type": "Industrial Heritage",
+    "description": "Founded in 1930, Azovstal was Ukraine's third-largest steel producer (15% of national output) and a landmark of Mariupol's industrial identity. During the 82-day siege, the plant's nuclear-proof tunnels became the last pocket of Ukrainian resistance — the Azov Brigade and marines held out until 17 May 2022. The factory was 'practically destroyed' by artillery and airstrikes. Russian-backed authorities announced plans to demolish the remains entirely. During its original construction, a Neolithic cemetery with 124 graves was discovered on the site.",
+    "damage": "destroyed",
+    "date": "2022-05-17",
+    "sources": [
+      {
+        "title": "Wikipedia: Azovstal iron and steel works",
+        "url": "https://en.wikipedia.org/wiki/Azovstal_iron_and_steel_works"
+      },
+      {
+        "title": "BBC: Siege of Azovstal",
+        "url": "https://www.bbc.com/news/world-europe-61407991"
+      },
+      {
+        "title": "Wikipedia: Siege of Mariupol",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol_(2022)"
+      }
+    ],
+    "image": "/images/sites/azovstal-mariupol.jpg"
+  },
+  {
+    "id": "chernihiv-collegium",
+    "name": "Chernihiv Collegium",
+    "city": "Chernihiv",
+    "lat": 51.4935,
+    "lng": 31.3035,
+    "type": "Historic Educational Building",
+    "description": "Founded in 1700 by Archbishop Ioan Maksimovich with funding from Hetman Ivan Mazepa, the Chernihiv Collegium is a masterpiece of Ukrainian Baroque ('Cossack Baroque') architecture — 48 metres long with a 40-metre bell tower, featuring pilasters, columns, ceramic reliefs, and vaulted ceilings. Known as 'Chernihiv Athens' during its golden age, it was the first institution of higher spiritual education in the Cossack Hetmanate. The building, an Immovable Monument of National Significance and part of the 'Ancient Chernihiv' National Reserve, sustained damage during the 35-day Russian siege of Chernihiv in March 2022.",
+    "damage": "damaged",
+    "date": "2022-03-10",
+    "sources": [
+      {
+        "title": "Wikipedia: Chernihiv Collegium",
+        "url": "https://en.wikipedia.org/wiki/Chernihiv_Collegium"
+      },
+      {
+        "title": "Wikipedia: Siege of Chernihiv",
+        "url": "https://en.wikipedia.org/wiki/Siege_of_Chernihiv"
+      },
+      {
+        "title": "UNESCO: Ukraine Cultural Heritage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      }
+    ],
+    "image": "/images/sites/chernihiv-collegium.jpg"
   }
 ]
