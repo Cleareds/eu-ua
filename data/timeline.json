@@ -108,6 +108,18 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Danylo_of_Halych"
   },
   {
+    "id": "magdeburg-law",
+    "year": "14th–16th century",
+    "yearSort": 1356,
+    "title": "Ukrainian Cities Receive Magdeburg Rights",
+    "description": "Dozens of Ukrainian cities including Kyiv (1494), Lviv (1356), and Kamianets-Podilskyi (1374) received Magdeburg Rights — a German system of municipal self-governance that spread across Central Europe. This connected Ukrainian urban life directly to the European legal tradition of citizen rights and civic autonomy.",
+    "era": "medieval",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Magdeburg rights",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Magdeburg_rights"
+  },
+  {
     "id": "polish-lithuanian",
     "year": "1569",
     "yearSort": 1569,
@@ -132,6 +144,18 @@
     "sourceUrl": "https://en.wikipedia.org/wiki/Union_of_Brest"
   },
   {
+    "id": "kyiv-mohyla-academy",
+    "year": "1632",
+    "yearSort": 1632,
+    "title": "Kyiv-Mohyla Academy Founded",
+    "description": "Metropolitan Petro Mohyla established the Kyiv-Mohyla Academy, one of the first institutions of higher education in Eastern Europe. Modelled on European Jesuit colleges, it educated the intellectual elite of the region and became a beacon of European scholarship in Ukraine for centuries.",
+    "era": "early-modern",
+    "type": "cultural",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Kyiv-Mohyla Academy",
+    "sourceUrl": "https://en.wikipedia.org/wiki/National_University_of_Kyiv-Mohyla_Academy"
+  },
+  {
     "id": "cossack-hetmanate",
     "year": "1648",
     "yearSort": 1648,
@@ -154,6 +178,18 @@
     "europeanConnection": true,
     "sourceLabel": "Wikipedia: Battle of Poltava",
     "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Poltava"
+  },
+  {
+    "id": "orlyk-constitution",
+    "year": "1710",
+    "yearSort": 1710,
+    "title": "Orlyk's Constitution — One of Europe's Earliest",
+    "description": "Hetman Pylyp Orlyk drafted a constitution for the Cossack Hetmanate that established separation of powers, limited the Hetman's authority, and protected individual rights. Written 77 years before the US Constitution, it is considered one of the earliest constitutional documents in European history.",
+    "era": "early-modern",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Constitution of Pylyp Orlyk",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Constitution_of_Pylyp_Orlyk"
   },
   {
     "id": "habsburg-galicia",
@@ -214,6 +250,30 @@
     "europeanConnection": false,
     "sourceLabel": "Wikipedia: Holodomor",
     "sourceUrl": "https://en.wikipedia.org/wiki/Holodomor"
+  },
+  {
+    "id": "un-founding",
+    "year": "24 October 1945",
+    "yearSort": 1945,
+    "title": "Ukraine Becomes a Founding Member of the United Nations",
+    "description": "The Ukrainian SSR was one of 51 founding members of the United Nations, giving Ukraine a distinct international presence separate from the Soviet Union. This unique status reflected Ukraine's immense sacrifice in WWII — 8-10 million Ukrainians died, making it the most devastated European nation by casualties.",
+    "era": "independence",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Ukrainian SSR in the UN",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic"
+  },
+  {
+    "id": "chernobyl",
+    "year": "26 April 1986",
+    "yearSort": 1986,
+    "title": "Chernobyl Nuclear Disaster",
+    "description": "The explosion at the Chernobyl nuclear power plant near Pripyat was the worst nuclear disaster in history. Radioactive fallout reached Scandinavia and Western Europe, making it a pan-European event. The disaster accelerated both environmental cooperation across Europe and Ukrainian independence sentiment.",
+    "era": "independence",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: Chernobyl disaster",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
   },
   {
     "id": "independence-1991",
@@ -360,6 +420,18 @@
     "sourceUrl": "https://ec.europa.eu/home-affairs/content/eu-ukraine-association-agreement_en"
   },
   {
+    "id": "constitution-eu-nato",
+    "year": "19 February 2019",
+    "yearSort": 2019,
+    "title": "Ukraine Enshrines EU and NATO Goals in Constitution",
+    "description": "Ukraine's parliament amended the Constitution to enshrine EU and NATO membership as strategic goals in the preamble. This made European integration a constitutional obligation, not just a policy preference.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia",
+    "sourceUrl": "https://en.wikipedia.org/wiki/2019_amendments_to_the_Constitution_of_Ukraine"
+  },
+  {
     "id": "full-scale-invasion",
     "year": "24 February 2022",
     "yearSort": 2022,
@@ -394,6 +466,30 @@
     "europeanConnection": true,
     "sourceLabel": "European Council: Ukraine candidate status",
     "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2022/06/23/european-council-decision-on-ukraine/"
+  },
+  {
+    "id": "entso-e-sync",
+    "year": "16 March 2022",
+    "yearSort": 2022,
+    "title": "Ukraine's Power Grid Synchronised with Continental Europe",
+    "description": "In an emergency operation, Ukraine's electricity grid was disconnected from Russia's and synchronised with ENTSO-E (Continental Europe's grid). This physically connected Ukraine to Europe's energy infrastructure. Permanent synchronisation followed on 28 November 2023.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia: ENTSO-E",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Synchronisation_of_the_Ukrainian_power_grid_with_ENTSO-E"
+  },
+  {
+    "id": "ep-candidate-vote",
+    "year": "1 March 2022",
+    "yearSort": 2022,
+    "title": "European Parliament Votes 637-13 for Ukraine's EU Candidacy",
+    "description": "The European Parliament voted nearly unanimously (637 for, 13 against) to recommend EU candidate status for Ukraine, just five days after the full-scale invasion began. The resolution explicitly referenced Article 49 TEU.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Parliament",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Accession_of_Ukraine_to_the_European_Union"
   },
   {
     "id": "trade-liberalization-2022",
@@ -504,6 +600,30 @@
     "sourceUrl": "https://enlargement.ec.europa.eu/news/2025-enlargement-package-shows-progress-towards-eu-membership-key-enlargement-partners-2025-11-04_en"
   },
   {
+    "id": "reform-benchmarks-completed",
+    "year": "July 2025",
+    "yearSort": 2025,
+    "title": "All Seven Pre-Accession Reform Benchmarks Completed",
+    "description": "Ukraine reported completing all seven reform conditions set by the European Council when granting candidate status in June 2022. These covered judicial reform, anti-corruption, media freedom, anti-oligarch legislation, minority rights, and rule of law.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Accession_of_Ukraine_to_the_European_Union"
+  },
+  {
+    "id": "dcp-december-2025",
+    "year": "11 December 2025",
+    "yearSort": 2025,
+    "title": "First Draft Common Positions Issued for Three Clusters",
+    "description": "The European Commission presented Draft Common Positions on Clusters 1 (Fundamentals), 2 (Internal Market), and 6 (External Relations) — the first time in EU history that negotiating positions were shared before formal cluster opening. Hungary had blocked the opening at an Intergovernmental Conference.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Accession_of_Ukraine_to_the_European_Union"
+  },
+  {
     "id": "clusters-2026",
     "year": "2026 (target)",
     "yearSort": 2026,
@@ -514,5 +634,17 @@
     "europeanConnection": true,
     "sourceLabel": "Promote Ukraine: EU Accession Priorities 2026",
     "sourceUrl": "https://www.promoteukraine.org/ukraines-eu-accession-policy-priorities-for-advocacy-in-2026/"
+  },
+  {
+    "id": "hungarian-election-2026",
+    "year": "12 April 2026",
+    "yearSort": 2026,
+    "title": "Hungary's Orban Defeated — Key EU Veto Removed",
+    "description": "Peter Magyar's pro-EU Tisza Party won a landslide in Hungary's parliamentary election with 52.4% of the vote and a two-thirds supermajority, ending Viktor Orban's 16 years in power. Orban had been the primary blocker of Ukraine's EU accession negotiations.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Wikipedia",
+    "sourceUrl": "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
   }
 ]

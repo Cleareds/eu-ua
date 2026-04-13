@@ -16,7 +16,9 @@ export const CHAPTER_STATUS: Record<
 > = {
   not_started: { label: "Not Started", color: "#6B7280", bg: "#F3F4F6" },
   screening: { label: "Screening", color: "#D97706", bg: "#FEF3C7" },
-  negotiation: { label: "Negotiation", color: "#2563EB", bg: "#DBEAFE" },
+  screening_completed: { label: "Screened", color: "#7C3AED", bg: "#EDE9FE" },
+  dcp_received: { label: "DCP Received", color: "#2563EB", bg: "#DBEAFE" },
+  negotiation: { label: "Negotiation", color: "#0891B2", bg: "#CFFAFE" },
   completed: { label: "Completed", color: "#059669", bg: "#D1FAE5" },
 };
 

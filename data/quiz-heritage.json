@@ -178,5 +178,29 @@
     ],
     "correct": 2,
     "explanation": "By 2024, UNESCO had verified damage to approximately 350 cultural sites in Ukraine, including religious sites, museums, monuments, libraries, and historic buildings. The actual number is believed to be significantly higher."
+  },
+  {
+    "id": 16,
+    "question": "What is the Slovo Building (Будинок Слово) in Kharkiv known for?",
+    "options": [
+      "Ukraine's first parliament building",
+      "A residential building for writers whose residents were executed in Stalin's terror",
+      "Kharkiv's main train station",
+      "The headquarters of Ukraine's space program"
+    ],
+    "correct": 1,
+    "explanation": "The Slovo Building (1929) was built to house Ukraine's most prominent writers. Between 1931-1934, Soviet secret police arrested most residents — 33 were executed, 5 sent to the Gulag. The victims are known as the 'Executed Renaissance', an entire generation of Ukrainian cultural figures erased by Stalin's terror."
+  },
+  {
+    "id": 17,
+    "question": "Pylyp Orlyk's 1710 Constitution is notable because it was:",
+    "options": [
+      "The first document written in Ukrainian",
+      "One of the earliest constitutional documents in European history",
+      "The founding charter of the Russian Empire",
+      "The peace treaty ending the Great Northern War"
+    ],
+    "correct": 1,
+    "explanation": "Written 77 years before the US Constitution, Orlyk's Constitution established separation of powers, limited the Hetman's authority, and protected individual rights — one of the earliest such documents in European constitutional history."
   }
 ]

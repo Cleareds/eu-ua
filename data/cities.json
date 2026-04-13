@@ -891,5 +891,214 @@
       }
     ],
     "image": "/images/cities/sevastopol.jpg"
+  },
+  {
+    "id": "khmelnytskyi",
+    "name": "Khmelnytskyi",
+    "lat": 49.42,
+    "lng": 26.98,
+    "status": "free",
+    "description": "Founded in 1431, won the Council of Europe's Europe Prize in 2021 — the highest honour for spreading European ideals. Sister cities: Prague 6, Stuttgart, Dresden. Rich Polish-Lithuanian Commonwealth heritage.",
+    "connections": [
+      "Won the Council of Europe's Europe Prize in 2021",
+      "Sister cities with Prague 6 (Czech Republic), Stuttgart and Dresden (Germany)",
+      "Part of the Polish-Lithuanian Commonwealth from 1569",
+      "Active participant in EU cross-border cooperation programs",
+      "Struve Geodetic Arc UNESCO site passes through the region"
+    ],
+    "notableFigures": [
+      "Bohdan Khmelnytsky (1595–1657) — Hetman who established the Cossack state; the city is named after him"
+    ],
+    "europeanInfluences": [
+      "Polish Renaissance-era Old Town layout",
+      "17th-century Dominican and Jesuit monasteries",
+      "Habsburg-era civic buildings (19th century)",
+      "Interwar Polish modernist architecture"
+    ],
+    "sources": [
+      {
+        "title": "Council of Europe: Europe Prize 2021",
+        "url": "https://www.coe.int/en/web/congress/europe-prize"
+      },
+      {
+        "title": "Wikipedia: Khmelnytskyi",
+        "url": "https://en.wikipedia.org/wiki/Khmelnytskyi"
+      }
+    ],
+    "image": "/images/cities/khmelnytskyi.jpg"
+  },
+  {
+    "id": "kryvyi-rih",
+    "name": "Kryvyi Rih",
+    "lat": 47.91,
+    "lng": 33.39,
+    "status": "free",
+    "description": "Ukraine's 8th largest city (604K). Founded as an industrial hub with European investment — ArcelorMittal (Luxembourg) operates major steel plants. Birthplace of President Volodymyr Zelensky.",
+    "connections": [
+      "ArcelorMittal (Luxembourg HQ) operates Ukraine's largest steel complex here",
+      "Belgian, British, and French industrialists built the city's mining infrastructure in the 19th century",
+      "Major supplier of iron ore and steel to EU markets",
+      "Sister cities with Duisburg (Germany) and Częstochowa (Poland)",
+      "Birthplace of President Volodymyr Zelensky, who led Ukraine's EU membership application"
+    ],
+    "notableFigures": [
+      "Volodymyr Zelensky (b. 1978) — President of Ukraine, led EU membership application in 2022"
+    ],
+    "europeanInfluences": [
+      "19th-century European industrial architecture (mining facilities, worker settlements)",
+      "Art Nouveau buildings from the early 1900s industrial boom",
+      "French-designed metallurgical complex (1880s)"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Kryvyi Rih",
+        "url": "https://en.wikipedia.org/wiki/Kryvyi_Rih"
+      },
+      {
+        "title": "ArcelorMittal Kryvyi Rih",
+        "url": "https://ukraine.arcelormittal.com/"
+      }
+    ],
+    "image": "/images/cities/kryvyi-rih.jpg"
+  },
+  {
+    "id": "sumy",
+    "name": "Sumy",
+    "lat": 50.91,
+    "lng": 34.8,
+    "status": "free",
+    "description": "Founded in 1655, Sumy is a frontline city near the Russian border that has faced continuous shelling and a 2025 Russian incursion into the oblast. Despite this, the city maintains European partnerships.",
+    "connections": [
+      "Sister cities with Celle (Germany) and Lublin (Poland)",
+      "Active Erasmus+ partnerships with EU universities",
+      "Part of the EU's Eastern Partnership civil society network",
+      "30,000 Polish soldiers trained here during WWII",
+      "EU humanitarian aid distribution hub for the region"
+    ],
+    "notableFigures": [
+      "Anton Chekhov (1860–1904) — spent summers at his family's Sumy estate, setting stories here"
+    ],
+    "europeanInfluences": [
+      "18th-century Baroque civic architecture",
+      "Almazny Horse Stud Farm (1750s, European equestrian tradition)",
+      "Art Nouveau buildings from the early 1900s sugar industry boom"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Sumy",
+        "url": "https://en.wikipedia.org/wiki/Sumy"
+      },
+      {
+        "title": "Sumy sister cities",
+        "url": "https://en.wikipedia.org/wiki/Sumy#Twin_towns_%E2%80%93_sister_cities"
+      }
+    ],
+    "image": "/images/cities/sumy.jpg"
+  },
+  {
+    "id": "lutsk",
+    "name": "Lutsk",
+    "lat": 50.75,
+    "lng": 25.34,
+    "status": "free",
+    "description": "One of Ukraine's oldest cities (first mentioned in 1085), Lutsk is dominated by Lubart's Castle — a 13th-14th century Gothic fortress built by Lithuanian Grand Duke Liubartas. Deep Lithuanian and Polish heritage.",
+    "connections": [
+      "7+ sister cities in Poland including Gdańsk, Lublin, Zamość",
+      "Lubart's Castle — one of Ukraine's best-preserved medieval fortresses",
+      "Part of the Grand Duchy of Lithuania from the 14th century",
+      "Historic centre reflects Polish-Lithuanian Commonwealth urban planning",
+      "Active cross-border cooperation with Lublin Voivodeship (Poland)"
+    ],
+    "notableFigures": [
+      "Liubartas (c. 1312–1384) — Lithuanian prince who built the iconic castle and made Lutsk a European trading hub"
+    ],
+    "europeanInfluences": [
+      "Lubart's Castle — 13th-14th century Gothic fortress",
+      "16th-century Dominican and Jesuit monastery complexes",
+      "Polish Baroque churches and civic buildings",
+      "Art Nouveau facades on Lesia Ukrainka Street"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Lutsk",
+        "url": "https://en.wikipedia.org/wiki/Lutsk"
+      },
+      {
+        "title": "Wikipedia: Lubart's Castle",
+        "url": "https://en.wikipedia.org/wiki/Lubart%27s_Castle"
+      }
+    ],
+    "image": "/images/cities/lutsk.jpg"
+  },
+  {
+    "id": "ternopil",
+    "name": "Ternopil",
+    "lat": 49.55,
+    "lng": 25.59,
+    "status": "free",
+    "description": "Founded in 1540 by Polish Crown Commander Jan Tarnowski, Ternopil preserves rich Galician heritage from its centuries under Polish and then Habsburg rule. The city is a centre of western Ukrainian cultural identity.",
+    "connections": [
+      "Founded by Polish commander Jan Tarnowski in 1540",
+      "Part of the Habsburg Empire's Kingdom of Galicia (1772-1918)",
+      "Sister cities with Elblag (Poland), Braga (Portugal), Opole (Poland)",
+      "Active Erasmus+ and Bologna Process partnerships",
+      "Railway connection to Lemberg (Lviv) since 1870"
+    ],
+    "notableFigures": [
+      "Solomiya Krushelnytska (1872–1952) — studied at the Ternopil Music School before conquering European opera stages"
+    ],
+    "europeanInfluences": [
+      "Polish Renaissance Old Town layout (1540s)",
+      "Habsburg-era civic architecture (19th century)",
+      "Dominican and Jesuit church complexes",
+      "Art Nouveau and Secession buildings from Galician era"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Ternopil",
+        "url": "https://en.wikipedia.org/wiki/Ternopil"
+      },
+      {
+        "title": "Wikipedia: Kingdom of Galicia and Lodomeria",
+        "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia_and_Lodomeria"
+      }
+    ],
+    "image": "/images/cities/ternopil.jpg"
+  },
+  {
+    "id": "zhytomyr",
+    "name": "Zhytomyr",
+    "lat": 50.25,
+    "lng": 28.66,
+    "status": "free",
+    "description": "One of the oldest cities in Ukraine (founded 884), Zhytomyr has deep connections to Polish, Jewish, and wider European culture. Birthplace of the space pioneer Sergei Korolev and pianist Sviatoslav Richter.",
+    "connections": [
+      "Part of the Polish-Lithuanian Commonwealth from 1569; third-largest Polish cemetery outside Poland",
+      "Major centre of the Pale of Settlement — rich Jewish European heritage",
+      "Sister cities with Poitiers (France) and Lübben (Germany)",
+      "Historic crossroads on trade routes connecting Kyiv to Central Europe",
+      "EU-funded urban development projects since 2015"
+    ],
+    "notableFigures": [
+      "Sergei Korolev (1907–1966) — born here, father of the Soviet space program (Sputnik, Gagarin)",
+      "Sviatoslav Richter (1915–1997) — born here, one of the 20th century's greatest pianists, performed across Europe"
+    ],
+    "europeanInfluences": [
+      "Polish Baroque churches and monasteries (17th century)",
+      "Synagogues and Jewish heritage sites (Pale of Settlement era)",
+      "Neoclassical civic buildings from the Russian Imperial era",
+      "Art Nouveau facades from early 1900s"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Zhytomyr",
+        "url": "https://en.wikipedia.org/wiki/Zhytomyr"
+      },
+      {
+        "title": "Wikipedia: Sergei Korolev",
+        "url": "https://en.wikipedia.org/wiki/Sergei_Korolev"
+      }
+    ],
+    "image": "/images/cities/zhytomyr.jpg"
   }
 ]

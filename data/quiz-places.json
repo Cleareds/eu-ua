@@ -178,5 +178,29 @@
     ],
     "correct": 2,
     "explanation": "The Dnipro River, Europe's fourth-longest river, flows through the center of Kyiv and divides the city into its historic right bank (western side) and the newer left bank (eastern side)."
+  },
+  {
+    "id": 16,
+    "question": "Which Ukrainian city won the Council of Europe's prestigious Europe Prize in 2021?",
+    "options": [
+      "Kyiv",
+      "Lviv",
+      "Khmelnytskyi",
+      "Odesa"
+    ],
+    "correct": 2,
+    "explanation": "Khmelnytskyi won the Europe Prize in 2021, the highest honour awarded by the Council of Europe's Parliamentary Assembly for promoting European ideals. The city has sister city partnerships with Prague, Stuttgart, and Dresden."
+  },
+  {
+    "id": 17,
+    "question": "Approximately how many Ukrainian refugees are living in EU countries under the Temporary Protection Directive?",
+    "options": [
+      "500,000",
+      "1.5 million",
+      "4 million",
+      "8 million"
+    ],
+    "correct": 2,
+    "explanation": "Approximately 4 million Ukrainians are living in EU countries under the Temporary Protection Directive, activated for the first time in EU history in March 2022. The largest host countries are Germany, Poland, and the Czech Republic."
   }
 ]

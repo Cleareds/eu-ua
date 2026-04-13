@@ -85,15 +85,15 @@
   },
   {
     "id": 8,
-    "question": "Lesya Ukrainka (1871–1913) is celebrated as one of Ukraine's greatest poets. What language did she NOT write in?",
+    "question": "Lesya Ukrainka (1871–1913) is celebrated as one of Ukraine's greatest poets. Which ancient literary tradition most influenced her dramatic works?",
     "options": [
-      "Ukrainian",
-      "French",
-      "Russian",
-      "German"
+      "Norse sagas",
+      "Ancient Greek drama",
+      "Chinese poetry",
+      "Arabic literature"
     ],
-    "correct": 2,
-    "explanation": "Lesya Ukrainka wrote primarily in Ukrainian and was deeply European in her outlook — she translated works from German, French, and ancient Greek, and corresponded with European intellectuals. She deliberately avoided Russian, asserting Ukrainian as a full literary language against imperial pressure."
+    "correct": 1,
+    "explanation": "Lesya Ukrainka was deeply European in her outlook — her drama-poems drew heavily on Ancient Greek mythology and biblical themes, and she translated works from German, French, and ancient Greek. She corresponded with European intellectuals and asserted Ukrainian as a full literary language equal to any in Europe."
   },
   {
     "id": 9,
@@ -141,7 +141,7 @@
       "Yuri Kondratyuk"
     ],
     "correct": 1,
-    "explanation": "Lev Landau, born in Baku but raised and educated in Ukraine (Kharkiv), won the 1962 Nobel Prize in Physics for his pioneering theories on condensed matter, particularly liquid helium."
+    "explanation": "Lev Landau, born in Baku, spent his most productive years at the Ukrainian Physico-Technical Institute in Kharkiv (1932-1937), where he founded his famous school of theoretical physics. He won the 1962 Nobel Prize for his pioneering theories on condensed matter, particularly liquid helium."
   },
   {
     "id": 13,

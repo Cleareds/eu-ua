@@ -2,23 +2,16 @@
 
 import { useState } from "react";
 import { EUChapter, ChapterStatus } from "@/lib/types";
+import { CHAPTER_STATUS } from "@/lib/constants";
 import ChapterCard from "./ChapterCard";
 
 const tabs: { label: string; value: ChapterStatus | "all" }[] = [
   { label: "All", value: "all" },
-  { label: "Not Started", value: "not_started" },
-  { label: "Screening", value: "screening" },
+  { label: "DCP Received", value: "dcp_received" },
+  { label: "Screened", value: "screening_completed" },
   { label: "Negotiation", value: "negotiation" },
   { label: "Completed", value: "completed" },
 ];
-
-const tabActiveColors: Record<string, { bg: string; color: string }> = {
-  all: { bg: "#003399", color: "white" },
-  not_started: { bg: "#F3F4F6", color: "#6B7280" },
-  screening: { bg: "#FEF3C7", color: "#D97706" },
-  negotiation: { bg: "#DBEAFE", color: "#2563EB" },
-  completed: { bg: "#D1FAE5", color: "#059669" },
-};
 
 export default function ChapterGrid({ chapters }: { chapters: EUChapter[] }) {
   const [activeTab, setActiveTab] = useState<ChapterStatus | "all">("all");
@@ -31,8 +24,11 @@ export default function ChapterGrid({ chapters }: { chapters: EUChapter[] }) {
       <div className="flex flex-wrap gap-2 mb-8">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.value;
-          const colors = tabActiveColors[tab.value];
+          const colors = tab.value === "all"
+            ? { bg: "#003399", color: "white" }
+            : { bg: CHAPTER_STATUS[tab.value].bg, color: CHAPTER_STATUS[tab.value].color };
           const count = tab.value === "all" ? chapters.length : chapters.filter((c) => c.status === tab.value).length;
+          if (tab.value !== "all" && count === 0) return null;
           return (
             <button
               key={tab.value}

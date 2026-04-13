@@ -1383,5 +1383,152 @@
       }
     ],
     "image": "/images/sites/chernihiv-collegium.jpg"
+  },
+  {
+    "id": "kyiv-tv-tower-strike",
+    "name": "Kyiv TV Tower Strike (near Babyn Yar)",
+    "city": "Kyiv",
+    "lat": 50.4713,
+    "lng": 30.4468,
+    "type": "Broadcasting / Memorial Area",
+    "description": "On 1 March 2022, Russian cruise missiles struck the Kyiv TV tower adjacent to the Babyn Yar Holocaust memorial, killing 5 people. The strike damaged broadcasting infrastructure and sent shrapnel into the memorial grounds — the site where 33,771 Jews were massacred by the Nazis in September 1941.",
+    "damage": "damaged",
+    "date": "2022-03-01",
+    "sources": [
+      {
+        "title": "BBC: Russian missile hits Kyiv TV tower",
+        "url": "https://www.bbc.com/news/world-europe-60585709"
+      },
+      {
+        "title": "Wikipedia: Babyn Yar",
+        "url": "https://en.wikipedia.org/wiki/Babi_Yar"
+      }
+    ]
+  },
+  {
+    "id": "lviv-unesco-buffer-zone",
+    "name": "Lviv UNESCO Buffer Zone Buildings",
+    "city": "Lviv",
+    "lat": 49.8397,
+    "lng": 24.0297,
+    "type": "Historic District",
+    "description": "On 6 July 2023, Russian missiles struck buildings in the buffer zone of Lviv's UNESCO-inscribed Historic Centre. Although the medieval core was not directly hit, shrapnel damaged 19th-century Habsburg-era buildings within the protected zone. UNESCO condemned the strike as a threat to the World Heritage site.",
+    "damage": "damaged",
+    "date": "2023-07-06",
+    "sources": [
+      {
+        "title": "UNESCO: Lviv heritage at risk",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Lviv",
+        "url": "https://en.wikipedia.org/wiki/Lviv"
+      }
+    ]
+  },
+  {
+    "id": "church-all-saints-sviatohirsk",
+    "name": "All Saints Skete, Sviatohirsk Lavra",
+    "city": "Sviatohirsk",
+    "lat": 49.063,
+    "lng": 37.558,
+    "type": "Church / Monastery",
+    "description": "The All Saints Skete of the Sviatohirsk Lavra was destroyed by Russian shelling in June 2022. This wooden church, built in the traditional Cossack Baroque style, was part of one of Ukraine's holiest monastery complexes. Dozens of monks and displaced civilians sheltering in the Lavra were killed.",
+    "damage": "destroyed",
+    "date": "2022-06-04",
+    "sources": [
+      {
+        "title": "Wikipedia: Sviatohirsk Lavra",
+        "url": "https://en.wikipedia.org/wiki/Sviatohirsk_Lavra"
+      },
+      {
+        "title": "Reuters: monastery charred",
+        "url": "https://www.reuters.com/world/europe/ukraines-holiest-monastery-charred-abandoned-after-shelling-2022-06-09/"
+      }
+    ]
+  },
+  {
+    "id": "church-nativity-novyi-bykiv",
+    "name": "Church of the Assumption, Novyi Bykiv",
+    "city": "Novyi Bykiv",
+    "lat": 50.6333,
+    "lng": 31.4833,
+    "type": "Church",
+    "description": "The Church of the Assumption of the Virgin Mary in Novyi Bykiv, Chernihiv Oblast — built 1801-1804 in the Ukrainian Baroque style — was destroyed by Russian shelling in March 2022 during the advance on Kyiv. The wooden church was an architectural monument of national significance.",
+    "damage": "destroyed",
+    "date": "2022-03-15",
+    "sources": [
+      {
+        "title": "UNESCO: Religious sites damaged",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Chernihiv Oblast cultural heritage",
+        "url": "https://en.wikipedia.org/wiki/Chernihiv_Oblast"
+      }
+    ]
+  },
+  {
+    "id": "church-george-zavorychi",
+    "name": "St. George's Church, Zavorychi",
+    "city": "Zavorychi",
+    "lat": 50.5,
+    "lng": 30.9333,
+    "type": "Church",
+    "description": "St. George's 19th-century wooden church in Zavorychi village, Kyiv Oblast, was destroyed by Russian shelling during the Battle of Kyiv in March 2022. The church was a protected architectural monument and an example of traditional Polissia wooden church architecture.",
+    "damage": "destroyed",
+    "date": "2022-03-10",
+    "sources": [
+      {
+        "title": "UNESCO: Religious sites damaged in Ukraine",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "ICOMOS: Ukraine heritage emergency",
+        "url": "https://www.icomos.org/en/focus/armed-conflicts-and-heritage/84977-icomos-calls-for-the-protection-of-ukraine-s-cultural-heritage"
+      }
+    ]
+  },
+  {
+    "id": "dnipro-apartment-strike",
+    "name": "Dnipro Residential Building (January 2023 Strike)",
+    "city": "Dnipro",
+    "lat": 48.465,
+    "lng": 35.048,
+    "type": "Residential Building",
+    "description": "On 14 January 2023, a Russian Kh-22 cruise missile struck a 9-storey residential building in Dnipro, killing 46 people and injuring over 80. The building collapse became one of the deadliest single strikes on a civilian building in the war and damaged the nearby Dnipro National Historical Museum.",
+    "damage": "destroyed",
+    "date": "2023-01-14",
+    "sources": [
+      {
+        "title": "Wikipedia: January 2023 Dnipro missile strike",
+        "url": "https://en.wikipedia.org/wiki/2023_Dnipro_missile_strike"
+      },
+      {
+        "title": "BBC: Dnipro apartment block strike",
+        "url": "https://www.bbc.com/news/world-europe-64276824"
+      }
+    ]
+  },
+  {
+    "id": "mosque-sievierodonetsk",
+    "name": "Islamic Cultural Centre 'Bismillah', Sievierodonetsk",
+    "city": "Sievierodonetsk",
+    "lat": 48.9472,
+    "lng": 38.4934,
+    "type": "Mosque / Islamic Centre",
+    "description": "The Bismillah Islamic Cultural Centre in Sievierodonetsk was damaged during the intense battle for the city in May-June 2022 before Russian forces captured it. The mosque served the city's Tatar and Muslim communities, representing Ukraine's religious diversity.",
+    "damage": "damaged",
+    "date": "2022-06-01",
+    "sources": [
+      {
+        "title": "UNESCO: Religious heritage damage",
+        "url": "https://www.unesco.org/en/articles/ukraine-conflict-cultural-heritage"
+      },
+      {
+        "title": "Wikipedia: Battle of Sievierodonetsk",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Sievierodonetsk_(2022)"
+      }
+    ]
   }
 ]

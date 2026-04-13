@@ -178,5 +178,65 @@
     ],
     "correct": 2,
     "explanation": "Visa-free travel for Ukrainian citizens to the Schengen Area took effect on 11 June 2017, allowing stays of up to 90 days within any 180-day period for tourism, business, or family visits."
+  },
+  {
+    "id": 16,
+    "question": "What are the Copenhagen criteria that Ukraine must meet for EU membership?",
+    "options": [
+      "Military spending targets and NATO compatibility",
+      "Stable democracy, rule of law, functioning market economy, and ability to adopt EU law",
+      "GDP per capita above EU average and zero budget deficit",
+      "Full adoption of the euro and Schengen membership"
+    ],
+    "correct": 1,
+    "explanation": "The Copenhagen criteria, established in 1993, require candidate countries to have stable institutions guaranteeing democracy and rule of law, a functioning market economy, and the ability to implement the full body of EU law (acquis communautaire)."
+  },
+  {
+    "id": 17,
+    "question": "When did Ukraine physically connect its electricity grid to Continental Europe (ENTSO-E)?",
+    "options": [
+      "June 2014",
+      "March 2022",
+      "January 2023",
+      "September 2025"
+    ],
+    "correct": 1,
+    "explanation": "In an emergency operation on 16 March 2022, three weeks after the full-scale invasion, Ukraine's power grid was disconnected from Russia's and synchronised with ENTSO-E (Continental Europe). Permanent synchronisation followed in November 2023."
+  },
+  {
+    "id": 18,
+    "question": "How many EU accession clusters group Ukraine's 35 negotiation chapters?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "EU accession chapters are grouped into 6 thematic clusters: Fundamentals, Internal Market, Competitiveness & Inclusive Growth, Green Agenda & Sustainable Connectivity, Resources/Agriculture/Cohesion, and External Relations."
+  },
+  {
+    "id": 19,
+    "question": "What unprecedented action did the EU take in March 2022 regarding Ukrainian refugees?",
+    "options": [
+      "Closed all borders with Ukraine",
+      "Activated the Temporary Protection Directive for the first time ever",
+      "Granted automatic citizenship to all Ukrainians",
+      "Created a new refugee agency"
+    ],
+    "correct": 1,
+    "explanation": "On 4 March 2022, the EU activated the Temporary Protection Directive for the first time in its history, granting approximately 4 million Ukrainians immediate protection, residence rights, and access to employment, education, and healthcare across EU member states."
+  },
+  {
+    "id": 20,
+    "question": "What happened in Hungary's April 2026 election that affected Ukraine's EU accession prospects?",
+    "options": [
+      "Orban won a fourth consecutive term",
+      "Hungary left the EU",
+      "Peter Magyar's pro-EU Tisza Party defeated Orban in a landslide",
+      "A referendum rejected Ukraine's accession"
+    ],
+    "correct": 2,
+    "explanation": "Peter Magyar's Tisza Party won 52.4% of the vote and a two-thirds supermajority, ending Orban's 16-year rule. Orban had been the primary political obstacle to Ukraine's EU accession, repeatedly blocking formal chapter openings."
   }
 ]

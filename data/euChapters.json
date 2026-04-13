@@ -1,37 +1,282 @@
 [
-  { "id": 1, "name": "Free Movement of Goods", "status": "screening", "description": "Aligning Ukrainian product standards, technical regulations, and conformity assessment with EU norms. Screening completed September 2025; chapter part of Cluster 2 (Internal Market)." },
-  { "id": 2, "name": "Freedom of Movement for Workers", "status": "screening", "description": "Establishing rights for Ukrainian workers in the EU and vice versa, including mutual recognition of professional qualifications. Part of Cluster 5 (Resources, Agriculture & Cohesion)." },
-  { "id": 3, "name": "Right of Establishment and Freedom to Provide Services", "status": "screening", "description": "Opening markets for businesses and service providers, including financial, postal, and professional services. Part of Cluster 2 (Internal Market)." },
-  { "id": 4, "name": "Free Movement of Capital", "status": "screening", "description": "Liberalising capital flows, harmonising rules on foreign investment, and aligning anti-money-laundering frameworks. Part of Cluster 5." },
-  { "id": 5, "name": "Public Procurement", "status": "negotiation", "description": "Part of Cluster 1 (Fundamentals), opened at the first Intergovernmental Conference in June 2024. Ukraine has reformed ProZorro, its procurement system, which is widely praised as a model for transparency." },
-  { "id": 6, "name": "Company Law", "status": "screening", "description": "Harmonising corporate legislation, accounting standards, and corporate governance requirements with EU company law. Screening completed 2025." },
-  { "id": 7, "name": "Intellectual Property Law", "status": "screening", "description": "Strengthening IP protection including patents, trademarks, copyright, and enforcement mechanisms. Screening completed 2025." },
-  { "id": 8, "name": "Competition Policy", "status": "screening", "description": "Bringing state aid rules and antitrust enforcement in line with EU competition law. Screening completed 2025." },
-  { "id": 9, "name": "Financial Services", "status": "screening", "description": "Aligning banking, insurance, and investment regulations with EU financial services directives. Screening completed 2025." },
-  { "id": 10, "name": "Information Society and Media", "status": "screening", "description": "Updating rules on electronic communications, audiovisual media services, and digital single market alignment. Screening completed 2025." },
-  { "id": 11, "name": "Agriculture and Rural Development", "status": "screening", "description": "Reforming agricultural policy, food safety standards, and rural development programs to meet Common Agricultural Policy standards. Part of Cluster 4." },
-  { "id": 12, "name": "Food Safety, Veterinary and Phytosanitary Policy", "status": "negotiation", "description": "Implementing EU food safety standards, sanitary controls, and phytosanitary measures across the food chain. Opened as part of Cluster 4 (Green Agenda & Sustainable Connectivity)." },
-  { "id": 13, "name": "Fisheries", "status": "screening", "description": "Aligning fisheries management, conservation, and control measures with the EU's Common Fisheries Policy. Screening completed 2025." },
-  { "id": 14, "name": "Transport Policy", "status": "screening", "description": "Harmonising road, rail, air, and inland waterway transport rules, including safety standards and market access. Part of Cluster 4." },
-  { "id": 15, "name": "Energy", "status": "negotiation", "description": "Ukraine joined ENTSO-E (European electricity grid) in March 2022. Active negotiations on aligning the energy market, renewables legislation, and nuclear safety with the EU Energy Community acquis." },
-  { "id": 16, "name": "Taxation", "status": "screening", "description": "Harmonising VAT, excise duties, and direct taxation with EU tax acquis and OECD standards. Part of Cluster 3 (Competitiveness & Inclusive Growth). Screening completed 2025." },
-  { "id": 17, "name": "Economic and Monetary Policy", "status": "screening", "description": "Aligning macroeconomic frameworks, central bank independence, and preparing for eventual eurozone integration. Part of Cluster 3." },
-  { "id": 18, "name": "Statistics", "status": "completed", "description": "Ukraine has fully aligned statistical methodology with Eurostat standards. Ukraine's State Statistics Service now produces comparable data across economy, society, and environment indicators." },
-  { "id": 19, "name": "Social Policy and Employment", "status": "screening", "description": "Updating labour law, health and safety at work, and social dialogue mechanisms to meet EU standards. Part of Cluster 3." },
-  { "id": 20, "name": "Enterprise and Industrial Policy", "status": "screening", "description": "Improving the business environment, supporting SMEs, and aligning industrial policy with EU competitiveness goals. Part of Cluster 3." },
-  { "id": 21, "name": "Trans-European Networks", "status": "screening", "description": "Integrating Ukrainian transport and energy infrastructure into Trans-European Networks (TEN-T and TEN-E). Part of Cluster 4." },
-  { "id": 22, "name": "Regional Policy and Coordination of Structural Instruments", "status": "screening", "description": "Building capacity to implement cohesion policy, manage structural funds, and reduce regional disparities. Part of Cluster 5." },
-  { "id": 23, "name": "Judiciary and Fundamental Rights", "status": "negotiation", "description": "Core chapter of Cluster 1 (Fundamentals), opened June 2024. Covers judicial reform, Constitutional Court reform, anti-corruption institutions (NABU, SAPO, HACC), and protection of fundamental rights." },
-  { "id": 24, "name": "Justice, Freedom and Security", "status": "negotiation", "description": "Part of Cluster 1 (Fundamentals), opened June 2024. Covers border management, migration rules, asylum policy, anti-money laundering, and police and judicial cooperation." },
-  { "id": 25, "name": "Science and Research", "status": "completed", "description": "Ukraine is fully associated with Horizon Europe since 2022, participating in EU research funding on equal terms with member states. Strong academic and institutional links across EU research networks." },
-  { "id": 26, "name": "Education and Culture", "status": "screening", "description": "Expanding participation in Erasmus+, aligning higher education with Bologna Process, and cultural cooperation. Part of Cluster 3. Screening completed 2025." },
-  { "id": 27, "name": "Environment and Climate Change", "status": "screening", "description": "Implementing EU environmental directives on water, air, waste, biodiversity, and aligning with the European Green Deal commitments. Part of Cluster 4." },
-  { "id": 28, "name": "Consumer and Health Protection", "status": "screening", "description": "Strengthening consumer rights enforcement and aligning public health and pharmaceutical regulations with EU standards. Part of Cluster 2. Screening completed 2025." },
-  { "id": 29, "name": "Customs Union", "status": "screening", "description": "Modernising Ukrainian customs procedures, IT systems, and aligning with the EU Customs Code. Part of Cluster 3." },
-  { "id": 30, "name": "External Relations", "status": "screening", "description": "Aligning foreign policy instruments and trade agreements with Common Commercial Policy. Part of Cluster 6 (External Relations)." },
-  { "id": 31, "name": "Foreign, Security and Defence Policy", "status": "screening", "description": "Deepening participation in Common Foreign and Security Policy (CFSP) and Crisis Management. Part of Cluster 6." },
-  { "id": 32, "name": "Financial Control", "status": "negotiation", "description": "Part of Cluster 1 (Fundamentals), opened June 2024. Establishing public internal financial control systems and aligning with EU audit and accountability standards." },
-  { "id": 33, "name": "Finance and Budgetary Provisions", "status": "screening", "description": "Preparing administrative capacity to manage EU budget contributions and structural fund financing. Part of Cluster 5." },
-  { "id": 34, "name": "Institutions", "status": "screening", "description": "Reviewing institutional arrangements, translation capacity, and preparedness for EU institutional participation. Part of Cluster 6." },
-  { "id": 35, "name": "Other Matters", "status": "screening", "description": "Covering transitional arrangements, derogations, and remaining technical issues. Part of Cluster 6." }
+  {
+    "id": 1,
+    "name": "Free Movement of Goods",
+    "status": "dcp_received",
+    "description": "Aligning Ukrainian product standards, technical regulations, and conformity assessment with EU norms. Screening completed September 2025; chapter part of Cluster 2 (Internal Market).",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 2,
+    "name": "Freedom of Movement for Workers",
+    "status": "dcp_received",
+    "description": "Part of Cluster 2 (Internal Market). Screening completed 2025. Draft Common Position received December 2025. Establishing rights for Ukrainian workers in the EU and vice versa, including mutual recognition of professional qualifications.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 3,
+    "name": "Right of Establishment and Freedom to Provide Services",
+    "status": "dcp_received",
+    "description": "Opening markets for businesses and service providers, including financial, postal, and professional services. Part of Cluster 2 (Internal Market).",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 4,
+    "name": "Free Movement of Capital",
+    "status": "dcp_received",
+    "description": "Part of Cluster 2 (Internal Market). Screening completed 2025. Draft Common Position received December 2025. Liberalising capital flows, harmonising rules on foreign investment, and aligning anti-money-laundering frameworks.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 5,
+    "name": "Public Procurement",
+    "status": "dcp_received",
+    "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Ukraine's ProZorro procurement system is widely praised as a model for transparency.",
+    "cluster": 1,
+    "clusterName": "Fundamentals"
+  },
+  {
+    "id": 6,
+    "name": "Company Law",
+    "status": "dcp_received",
+    "description": "Harmonising corporate legislation, accounting standards, and corporate governance requirements with EU company law. Screening completed 2025.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 7,
+    "name": "Intellectual Property Law",
+    "status": "dcp_received",
+    "description": "Strengthening IP protection including patents, trademarks, copyright, and enforcement mechanisms. Screening completed 2025.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 8,
+    "name": "Competition Policy",
+    "status": "dcp_received",
+    "description": "Bringing state aid rules and antitrust enforcement in line with EU competition law. Screening completed 2025.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 9,
+    "name": "Financial Services",
+    "status": "dcp_received",
+    "description": "Aligning banking, insurance, and investment regulations with EU financial services directives. Screening completed 2025.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 10,
+    "name": "Information Society and Media",
+    "status": "screening_completed",
+    "description": "Updating rules on electronic communications, audiovisual media services, and digital single market alignment. Screening completed 2025.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 11,
+    "name": "Agriculture and Rural Development",
+    "status": "screening_completed",
+    "description": "Part of Cluster 5 (Resources, Agriculture & Cohesion). Screening completed 2025. Reforming agricultural policy, food safety standards, and rural development programs to meet Common Agricultural Policy standards.",
+    "cluster": 5,
+    "clusterName": "Resources, Agriculture & Cohesion"
+  },
+  {
+    "id": 12,
+    "name": "Food Safety, Veterinary and Phytosanitary Policy",
+    "status": "screening_completed",
+    "description": "Part of Cluster 5 (Resources, Agriculture & Cohesion). Screening completed 2025. Implementing EU food safety standards, sanitary controls, and phytosanitary measures across the food chain.",
+    "cluster": 5,
+    "clusterName": "Resources, Agriculture & Cohesion"
+  },
+  {
+    "id": 13,
+    "name": "Fisheries",
+    "status": "screening_completed",
+    "description": "Aligning fisheries management, conservation, and control measures with the EU's Common Fisheries Policy. Screening completed 2025.",
+    "cluster": 5,
+    "clusterName": "Resources, Agriculture & Cohesion"
+  },
+  {
+    "id": 14,
+    "name": "Transport Policy",
+    "status": "screening_completed",
+    "description": "Harmonising road, rail, air, and inland waterway transport rules, including safety standards and market access. Part of Cluster 4.",
+    "cluster": 4,
+    "clusterName": "Green Agenda & Sustainable Connectivity"
+  },
+  {
+    "id": 15,
+    "name": "Energy",
+    "status": "screening_completed",
+    "description": "Part of Cluster 4 (Green Agenda). Screening completed 2025. Ukraine joined ENTSO-E (European electricity grid) in March 2022, physically connecting to Europe's energy network. Aligning energy market, renewables legislation, and nuclear safety with EU acquis.",
+    "cluster": 4,
+    "clusterName": "Green Agenda & Sustainable Connectivity"
+  },
+  {
+    "id": 16,
+    "name": "Taxation",
+    "status": "screening_completed",
+    "description": "Harmonising VAT, excise duties, and direct taxation with EU tax acquis and OECD standards. Part of Cluster 3 (Competitiveness & Inclusive Growth). Screening completed 2025.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 17,
+    "name": "Economic and Monetary Policy",
+    "status": "screening_completed",
+    "description": "Aligning macroeconomic frameworks, central bank independence, and preparing for eventual eurozone integration. Part of Cluster 3.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 18,
+    "name": "Statistics",
+    "status": "dcp_received",
+    "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Ukraine's State Statistics Service produces data comparable with Eurostat standards, rated 'some level of preparation' by the EC.",
+    "cluster": 1,
+    "clusterName": "Fundamentals"
+  },
+  {
+    "id": 19,
+    "name": "Social Policy and Employment",
+    "status": "screening_completed",
+    "description": "Updating labour law, health and safety at work, and social dialogue mechanisms to meet EU standards. Part of Cluster 3.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 20,
+    "name": "Enterprise and Industrial Policy",
+    "status": "screening_completed",
+    "description": "Improving the business environment, supporting SMEs, and aligning industrial policy with EU competitiveness goals. Part of Cluster 3.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 21,
+    "name": "Trans-European Networks",
+    "status": "screening_completed",
+    "description": "Integrating Ukrainian transport and energy infrastructure into Trans-European Networks (TEN-T and TEN-E). Part of Cluster 4.",
+    "cluster": 4,
+    "clusterName": "Green Agenda & Sustainable Connectivity"
+  },
+  {
+    "id": 22,
+    "name": "Regional Policy and Coordination of Structural Instruments",
+    "status": "screening_completed",
+    "description": "Building capacity to implement cohesion policy, manage structural funds, and reduce regional disparities. Part of Cluster 5.",
+    "cluster": 5,
+    "clusterName": "Resources, Agriculture & Cohesion"
+  },
+  {
+    "id": 23,
+    "name": "Judiciary and Fundamental Rights",
+    "status": "dcp_received",
+    "description": "Core chapter of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Covers judicial reform, Constitutional Court reform, anti-corruption institutions (NABU, SAPO, HACC), and protection of fundamental rights.",
+    "cluster": 1,
+    "clusterName": "Fundamentals"
+  },
+  {
+    "id": 24,
+    "name": "Justice, Freedom and Security",
+    "status": "dcp_received",
+    "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Covers border management, migration rules, asylum policy, anti-money laundering, and police and judicial cooperation.",
+    "cluster": 1,
+    "clusterName": "Fundamentals"
+  },
+  {
+    "id": 25,
+    "name": "Science and Research",
+    "status": "screening_completed",
+    "description": "Part of Cluster 3 (Competitiveness & Inclusive Growth). Screening completed 2025. Ukraine is fully associated with Horizon Europe since 2022, participating in EU research funding on equal terms with member states. Rated 'moderately prepared' by the EC.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 26,
+    "name": "Education and Culture",
+    "status": "screening_completed",
+    "description": "Expanding participation in Erasmus+, aligning higher education with Bologna Process, and cultural cooperation. Part of Cluster 3. Screening completed 2025.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 27,
+    "name": "Environment and Climate Change",
+    "status": "screening_completed",
+    "description": "Implementing EU environmental directives on water, air, waste, biodiversity, and aligning with the European Green Deal commitments. Part of Cluster 4.",
+    "cluster": 4,
+    "clusterName": "Green Agenda & Sustainable Connectivity"
+  },
+  {
+    "id": 28,
+    "name": "Consumer and Health Protection",
+    "status": "dcp_received",
+    "description": "Strengthening consumer rights enforcement and aligning public health and pharmaceutical regulations with EU standards. Part of Cluster 2. Screening completed 2025.",
+    "cluster": 2,
+    "clusterName": "Internal Market"
+  },
+  {
+    "id": 29,
+    "name": "Customs Union",
+    "status": "screening_completed",
+    "description": "Modernising Ukrainian customs procedures, IT systems, and aligning with the EU Customs Code. Part of Cluster 3.",
+    "cluster": 3,
+    "clusterName": "Competitiveness & Inclusive Growth"
+  },
+  {
+    "id": 30,
+    "name": "External Relations",
+    "status": "dcp_received",
+    "description": "Aligning foreign policy instruments and trade agreements with Common Commercial Policy. Part of Cluster 6 (External Relations).",
+    "cluster": 6,
+    "clusterName": "External Relations"
+  },
+  {
+    "id": 31,
+    "name": "Foreign, Security and Defence Policy",
+    "status": "dcp_received",
+    "description": "Deepening participation in Common Foreign and Security Policy (CFSP) and Crisis Management. Part of Cluster 6.",
+    "cluster": 6,
+    "clusterName": "External Relations"
+  },
+  {
+    "id": 32,
+    "name": "Financial Control",
+    "status": "dcp_received",
+    "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Establishing public internal financial control systems and aligning with EU audit and accountability standards.",
+    "cluster": 1,
+    "clusterName": "Fundamentals"
+  },
+  {
+    "id": 33,
+    "name": "Finance and Budgetary Provisions",
+    "status": "screening_completed",
+    "description": "Preparing administrative capacity to manage EU budget contributions and structural fund financing. Part of Cluster 5.",
+    "cluster": 5,
+    "clusterName": "Resources, Agriculture & Cohesion"
+  },
+  {
+    "id": 34,
+    "name": "Institutions",
+    "status": "dcp_received",
+    "description": "Reviewing institutional arrangements, translation capacity, and preparedness for EU institutional participation. Part of Cluster 6.",
+    "cluster": 6,
+    "clusterName": "External Relations"
+  },
+  {
+    "id": 35,
+    "name": "Other Matters",
+    "status": "dcp_received",
+    "description": "Covering transitional arrangements, derogations, and remaining technical issues. Part of Cluster 6.",
+    "cluster": 6,
+    "clusterName": "External Relations"
+  }
 ]

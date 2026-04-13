@@ -39,13 +39,26 @@ interface NewsItem {
 
 async function fetchLatestNews(): Promise<RawArticle[]> {
   if (!NEWS_API_KEY) throw new Error("NEWS_API_KEY not set");
-  const query = encodeURIComponent('Ukraine AND ("EU accession" OR "European Union" OR "EU integration" OR "EU membership" OR "European integration")');
-  const from = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-  const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&language=en&sortBy=relevancy&pageSize=10&apiKey=${NEWS_API_KEY}`;
+  const query = encodeURIComponent('Ukraine AND ("EU accession" OR "European Union" OR "EU integration" OR "EU membership" OR "European integration" OR "EU sanctions" OR "EU enlargement" OR "EU defense" OR "European Peace Facility" OR "EUMAM Ukraine")');
+  const from = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+  const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&language=en&sortBy=relevancy&pageSize=20&apiKey=${NEWS_API_KEY}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`NewsAPI error: ${res.status} ${res.statusText}`);
   const data = await res.json() as { articles: RawArticle[] };
   return data.articles || [];
+}
+
+// Low-quality sources to exclude
+const EXCLUDED_SOURCES = new Set([
+  "rt.com", "sputniknews.com",
+]);
+
+function isRelevantSource(article: RawArticle): boolean {
+  const urlLower = article.url.toLowerCase();
+  for (const excluded of EXCLUDED_SOURCES) {
+    if (urlLower.includes(excluded)) return false;
+  }
+  return true;
 }
 
 async function summarizeArticle(client: Anthropic, article: RawArticle): Promise<string> {
@@ -55,7 +68,7 @@ async function summarizeArticle(client: Anthropic, article: RawArticle): Promise
     max_tokens: 120,
     messages: [{
       role: "user",
-      content: `Summarize this EU-Ukraine news article in exactly 2 clear, factual sentences. Be concise and neutral.\n\nTitle: ${article.title}\nContent: ${text}`,
+      content: `Write exactly 2 factual sentences summarizing this EU-Ukraine news article. Do NOT start with "Summary:" or any prefix — just the sentences. If the article is not about EU-Ukraine relations, respond with exactly "IRRELEVANT".\n\nTitle: ${article.title}\nContent: ${text}`,
     }],
   });
   const content = msg.content[0];
@@ -100,9 +113,17 @@ async function main() {
       console.log(`Skipping (duplicate): ${article.title}`);
       continue;
     }
+    if (!isRelevantSource(article)) {
+      console.log(`Skipping (excluded source): ${article.source.name}`);
+      continue;
+    }
     try {
       console.log(`Summarizing: ${article.title}`);
       const summary = await summarizeArticle(anthropic, article);
+      if (summary === "IRRELEVANT") {
+        console.log(`Skipping (irrelevant content): ${article.title}`);
+        continue;
+      }
       newEntries.push({
         date: article.publishedAt.split("T")[0],
         headline: article.title,

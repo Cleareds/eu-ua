@@ -1,9 +1,11 @@
-export type ChapterStatus = "not_started" | "screening" | "negotiation" | "completed";
+export type ChapterStatus = "not_started" | "screening" | "screening_completed" | "dcp_received" | "negotiation" | "completed";
 
 export interface EUChapter {
   id: number;
   name: string;
   status: ChapterStatus;
+  cluster?: number;
+  clusterName?: string;
   description: string;
 }
 

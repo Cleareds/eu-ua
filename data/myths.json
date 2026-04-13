@@ -4,8 +4,14 @@
     "myth": "Ukraine is historically isolated from Europe and has no deep cultural roots in European civilization.",
     "reality": "Ukraine has been at the crossroads of European civilizations for millennia. Kyiv was a major medieval European city when Paris was still a small town. The Kyivan Rus was connected by dynastic marriages to France, England, Hungary, Norway and Sweden. Western Ukraine was part of the Habsburg Empire for over a century, leaving deep architectural and cultural legacies that persist today.",
     "sources": [
-      { "title": "Kyiv: A History of the City", "url": "https://en.wikipedia.org/wiki/History_of_Kyiv" },
-      { "title": "Ukrainian-European Historical Connections", "url": "https://euromaidanpress.com/2015/01/26/ukraine-in-europe/" }
+      {
+        "title": "Kyiv: A History of the City",
+        "url": "https://en.wikipedia.org/wiki/History_of_Kyiv"
+      },
+      {
+        "title": "Ukrainian-European Historical Connections",
+        "url": "https://euromaidanpress.com/2015/01/26/ukraine-in-europe/"
+      }
     ]
   },
   {
@@ -13,8 +19,14 @@
     "myth": "Ukraine is too large and poor to join the EU — it would be a burden on EU finances.",
     "reality": "Ukraine has the largest territory and significant agricultural potential in Europe. It is already the EU's largest neighbour by land area. EU enlargement historically increased the EU's economic size — Poland's GDP quadrupled after joining. Ukraine's reconstruction could be a massive economic opportunity, and its agricultural output already feeds much of the EU. The European Commission has assessed the costs as manageable relative to the economic gains.",
     "sources": [
-      { "title": "European Commission: Ukraine Enlargement Assessment 2023", "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_4884" },
-      { "title": "CEPR: Economic Effects of Ukraine's EU Accession", "url": "https://cepr.org/publications/policy-insights" }
+      {
+        "title": "European Commission: Ukraine Enlargement Assessment 2023",
+        "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_4884"
+      },
+      {
+        "title": "CEPR: Economic Effects of Ukraine's EU Accession",
+        "url": "https://cepr.org/publications/policy-insights"
+      }
     ]
   },
   {
@@ -22,8 +34,14 @@
     "myth": "Ukrainians and Russians are basically the same people and speak the same language.",
     "reality": "Ukrainian and Russian are distinct Slavic languages with different grammar, vocabulary, and pronunciation — no more mutually intelligible than Spanish and Portuguese. Ukrainian has been spoken and written since at least the 13th century. Ukraine developed a distinct national identity, literature, and culture over centuries. The tsarist and Soviet regimes repeatedly tried to suppress the Ukrainian language, but it survived and flourished. Today, over 67% of Ukrainians consider Ukrainian their native language.",
     "sources": [
-      { "title": "UNESCO Atlas of the World's Languages in Danger", "url": "https://www.unesco.org/en/languages-education" },
-      { "title": "Ukrainian vs Russian: Linguistic Analysis", "url": "https://euromaidanpress.com/2022/03/18/how-different-are-ukrainian-and-russian/" }
+      {
+        "title": "UNESCO Atlas of the World's Languages in Danger",
+        "url": "https://www.unesco.org/en/languages-education"
+      },
+      {
+        "title": "Ukrainian vs Russian: Linguistic Analysis",
+        "url": "https://euromaidanpress.com/2022/03/18/how-different-are-ukrainian-and-russian/"
+      }
     ]
   },
   {
@@ -31,8 +49,14 @@
     "myth": "Ukraine is deeply corrupt and will never be able to reform enough to meet EU standards.",
     "reality": "Ukraine has made substantial anti-corruption progress since 2014 and especially since 2022. It established independent anti-corruption institutions (NABU, SAPO, HACC) that are EU-mandated benchmarks. Transparency International's Corruption Perceptions Index shows consistent improvement. The EU has acknowledged progress in its 2023 and 2024 progress reports. Reform momentum under wartime conditions has been remarkable and comparable to other accession candidates.",
     "sources": [
-      { "title": "Transparency International: Ukraine CPI Scores", "url": "https://www.transparency.org/en/countries/ukraine" },
-      { "title": "European Commission Ukraine Progress Report 2023", "url": "https://ec.europa.eu/neighbourhood-enlargement/ukraine_en" }
+      {
+        "title": "Transparency International: Ukraine CPI Scores",
+        "url": "https://www.transparency.org/en/countries/ukraine"
+      },
+      {
+        "title": "European Commission Ukraine Progress Report 2023",
+        "url": "https://ec.europa.eu/neighbourhood-enlargement/ukraine_en"
+      }
     ]
   },
   {
@@ -40,8 +64,14 @@
     "myth": "NATO and EU membership for Ukraine will provoke Russia and make Europe less safe.",
     "reality": "Historical evidence shows the opposite: countries that joined NATO and the EU became dramatically safer and more stable. The Baltic states, Poland, and Czech Republic all joined despite Russian objections, and they are now among the most secure countries in Europe. Ukraine without NATO membership has been invaded twice (2014 and 2022). Security experts widely argue that integrating Ukraine into European institutions provides deterrence, not provocation.",
     "sources": [
-      { "title": "RAND Corporation: NATO Enlargement and Security", "url": "https://www.rand.org/pubs/research_reports" },
-      { "title": "ECFR: Security Arguments for Ukraine's Integration", "url": "https://ecfr.eu/publication/ukraine-nato-membership/" }
+      {
+        "title": "RAND Corporation: NATO Enlargement and Security",
+        "url": "https://www.rand.org/pubs/research_reports"
+      },
+      {
+        "title": "ECFR: Security Arguments for Ukraine's Integration",
+        "url": "https://ecfr.eu/publication/ukraine-nato-membership/"
+      }
     ]
   },
   {
@@ -49,8 +79,104 @@
     "myth": "Ukrainian agriculture would destroy EU farmers if Ukraine joined the Common Market.",
     "reality": "Ukraine's agricultural integration with the EU is already underway through the DCFTA and autonomous trade measures. EU-Ukraine agricultural trade has grown substantially without causing the feared disruptions. Transition periods and phased integration (as used with all new member states) can manage adjustment. Moreover, Ukraine's agricultural productivity would strengthen European food security and reduce dependence on non-EU suppliers.",
     "sources": [
-      { "title": "European Parliament: Ukraine Agriculture and EU Integration", "url": "https://www.europarl.europa.eu/thinktank/en/document/EXPO_IDA(2023)702580" },
-      { "title": "Bruegel Institute: Agricultural Trade Post-Accession", "url": "https://www.bruegel.org/policy-brief/ukraine-eu-agriculture" }
+      {
+        "title": "European Parliament: Ukraine Agriculture and EU Integration",
+        "url": "https://www.europarl.europa.eu/thinktank/en/document/EXPO_IDA(2023)702580"
+      },
+      {
+        "title": "Bruegel Institute: Agricultural Trade Post-Accession",
+        "url": "https://www.bruegel.org/policy-brief/ukraine-eu-agriculture"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "myth": "Ukraine was given candidate status only because of the war — it’s a political gesture, not merit-based.",
+    "reality": "Ukraine had been implementing EU reforms for years before 2022: the DCFTA since 2016, visa liberalisation since 2017, Association Agreement since 2014. The European Commission assessed Ukraine against the same Copenhagen criteria as all candidates, setting seven specific reform benchmarks — all completed by July 2025. No other candidate has completed screening of all 35 chapters in under 18 months.",
+    "sources": [
+      {
+        "title": "European Commission: Ukraine's EU Candidacy Assessment",
+        "url": "https://neighbourhood-enlargement.ec.europa.eu/enlargement-policy/ukraine_en"
+      },
+      {
+        "title": "Wikipedia: Accession of Ukraine to the EU",
+        "url": "https://en.wikipedia.org/wiki/Accession_of_Ukraine_to_the_European_Union"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "myth": "EU accession will take decades — Ukraine won’t join before 2040.",
+    "reality": "Ukraine’s pace is unprecedented. All 35 chapters were screened in under 18 months (vs. years for Western Balkan countries). Draft Common Positions were issued in December 2025 — a first in EU history. Lithuania’s 2027 EU presidency is discussed as a potential accession window. The timeline depends on reform pace and political will, not a fixed calendar.",
+    "sources": [
+      {
+        "title": "Wikipedia: Accession of Ukraine to the EU",
+        "url": "https://en.wikipedia.org/wiki/Accession_of_Ukraine_to_the_European_Union"
+      },
+      {
+        "title": "European Council conclusions on enlargement",
+        "url": "https://www.consilium.europa.eu/en/policies/enlargement/"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "myth": "Ukraine is ‘between’ Russia and Europe — it belongs to neither.",
+    "reality": "The ‘buffer state’ narrative is a geopolitical construct, not a historical or cultural reality. Ukraine hosted Greek colonies, was governed under Magdeburg Law (German municipal rights), was part of the Polish-Lithuanian Commonwealth and Habsburg Empire, and has constitutional commitment to EU membership since 2019. In 2024 polling, 91% of Ukrainians supported EU membership.",
+    "sources": [
+      {
+        "title": "Wikipedia: Ukraine–European Union relations",
+        "url": "https://en.wikipedia.org/wiki/Ukraine%E2%80%93European_Union_relations"
+      },
+      {
+        "title": "Rating Group poll: EU membership support",
+        "url": "https://ratinggroup.ua/en/"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "myth": "EU enlargement fatigue means Ukraine will be blocked by existing members.",
+    "reality": "Majorities in almost all EU member states support Ukraine’s membership: Poland 92%, Portugal 87%, Estonia 83%, Germany 68%, France 65%. The European Parliament voted 637-13 in favour. Hungary was the only significant blocker — and in April 2026, voters replaced Orban’s government with the pro-EU Tisza party.",
+    "sources": [
+      {
+        "title": "Eurobarometer: EU enlargement support",
+        "url": "https://europa.eu/eurobarometer/surveys/detail/3152"
+      },
+      {
+        "title": "2026 Hungarian parliamentary election",
+        "url": "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "myth": "Ukraine’s economy is too dependent on Russia to integrate with the EU.",
+    "reality": "Ukraine has dramatically reoriented its economy since 2014. The EU now accounts for 61% of Ukraine’s exports (up from 26% in 2013). Ukraine physically disconnected from Russia’s electricity grid and synchronised with ENTSO-E (Continental Europe) in March 2022. The DCFTA has aligned thousands of Ukrainian regulations with EU standards.",
+    "sources": [
+      {
+        "title": "Eurostat: EU trade with Ukraine",
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_trade_with_Ukraine_-_latest_developments"
+      },
+      {
+        "title": "Wikipedia: ENTSO-E synchronisation",
+        "url": "https://en.wikipedia.org/wiki/Synchronisation_of_the_Ukrainian_power_grid_with_ENTSO-E"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "myth": "Allowing Ukraine in would set a precedent for endless EU expansion.",
+    "reality": "EU membership requires meeting strict Copenhagen criteria — there is no automatic domino effect. Each candidate is assessed individually. Turkey’s accession has been frozen since 2018 despite being a candidate since 1999. The EU has always controlled the pace and scope of enlargement based on merit.",
+    "sources": [
+      {
+        "title": "European Commission: Enlargement policy",
+        "url": "https://neighbourhood-enlargement.ec.europa.eu/enlargement-policy_en"
+      },
+      {
+        "title": "Wikipedia: Copenhagen criteria",
+        "url": "https://en.wikipedia.org/wiki/Copenhagen_criteria"
+      }
     ]
   }
 ]
