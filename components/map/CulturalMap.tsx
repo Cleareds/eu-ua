@@ -1,15 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { City, CulturalSite } from "@/lib/types";
+import { City, CulturalSite, DiasporaHeritageSite } from "@/lib/types";
 import CityPanel from "./CityPanel";
 import CulturalSitePanel from "./CulturalSitePanel";
+import DiasporaPanel from "./DiasporaPanel";
 import citiesData from "@/data/cities.json";
 import culturalSitesData from "@/data/cultural-sites.json";
+import diasporaData from "@/data/diaspora-heritage.json";
+import { DIASPORA_CATEGORY } from "@/lib/constants";
 
 type Selection =
   | { type: "city"; item: City }
   | { type: "site"; item: CulturalSite }
+  | { type: "diaspora"; item: DiasporaHeritageSite }
   | null;
 
 function markerHTML(city: City) {
@@ -21,6 +25,11 @@ function markerHTML(city: City) {
     return `<div class="city-pin city-pin--liberated" title="${city.name}">${label}</div>`;
   }
   return `<div class="city-pin" title="${city.name}">${label}</div>`;
+}
+
+function diasporaMarkerHTML(site: DiasporaHeritageSite) {
+  const cat = DIASPORA_CATEGORY[site.category] ?? DIASPORA_CATEGORY.monument;
+  return `<div class="diaspora-pin" title="${site.name}" style="border-color: ${cat.color}">${cat.icon}</div>`;
 }
 
 function siteMarkerHTML(site: CulturalSite) {
@@ -39,6 +48,9 @@ export default function CulturalMap() {
 
   const cities = citiesData as City[];
   const culturalSites = culturalSitesData as CulturalSite[];
+  const diasporaSites = diasporaData as DiasporaHeritageSite[];
+  const [showDiaspora, setShowDiaspora] = useState(false);
+  const diasporaMarkersRef = useRef<import("leaflet").Marker[]>([]);
 
   useEffect(() => {
     if (!mapRef.current || mapInstance.current) return;
@@ -101,6 +113,37 @@ export default function CulturalMap() {
       mapInstance.current = null;
     };
   }, []);
+
+  // Toggle diaspora markers on/off
+  useEffect(() => {
+    const map = mapInstance.current;
+    if (!map || !mapLoaded) return;
+
+    // Remove existing diaspora markers
+    diasporaMarkersRef.current.forEach((m) => m.remove());
+    diasporaMarkersRef.current = [];
+
+    if (!showDiaspora) return;
+
+    import("leaflet").then((mod) => {
+      const L = mod.default;
+      diasporaSites.forEach((site) => {
+        const icon = L.divIcon({
+          html: diasporaMarkerHTML(site),
+          className: "",
+          iconSize: [32, 32],
+          iconAnchor: [16, 16],
+        });
+        const marker = L.marker([site.lat, site.lng], { icon });
+        marker.on("click", () => {
+          setSelection({ type: "diaspora", item: site });
+          map.flyTo([site.lat, site.lng], Math.max(map.getZoom(), 6), { duration: 0.8 });
+        });
+        marker.addTo(map);
+        diasporaMarkersRef.current.push(marker);
+      });
+    });
+  }, [showDiaspora, mapLoaded]);
 
   const freeCities = cities.filter((c) => !c.status || c.status === "free");
   const occupiedCities = cities.filter((c) => c.status === "occupied");
@@ -175,6 +218,21 @@ export default function CulturalMap() {
               </div>
             </div>
 
+            {/* Heritage in Europe toggle */}
+            <div className="mt-1 mb-4 border-t border-gray-200 pt-3">
+              <button
+                onClick={() => setShowDiaspora((v) => !v)}
+                className="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs font-semibold transition-colors"
+                style={showDiaspora
+                  ? { backgroundColor: "#EFF6FF", color: "#003399", border: "1px solid #003399" }
+                  : { backgroundColor: "#F8F9FA", color: "#6B7280", border: "1px solid #E5E7EB" }
+                }
+              >
+                <span className="diaspora-pin-legend" />
+                {showDiaspora ? "Hide" : "Show"} Ukrainian Heritage in Europe
+              </button>
+            </div>
+
             {/* City lists */}
             <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#003399" }}>Cities</p>
             <div className="space-y-0.5 max-h-[40vh] overflow-y-auto">
@@ -242,8 +300,10 @@ export default function CulturalMap() {
               setSelection({ type: "site", item: site });
               mapInstance.current?.flyTo([site.lat, site.lng], Math.max(mapInstance.current.getZoom(), 9), { duration: 0.8 });
             }} />
-          ) : (
+          ) : selection.type === "site" ? (
             <CulturalSitePanel site={selection.item} onClose={() => setSelection(null)} />
+          ) : (
+            <DiasporaPanel site={selection.item} onClose={() => setSelection(null)} />
           )}
         </div>
       )}
@@ -302,6 +362,24 @@ export default function CulturalMap() {
         }
         .site-pin-legend--destroyed { background: #cc0000; }
         .site-pin-legend--damaged { background: #f97316; }
+        /* Diaspora heritage pins */
+        .diaspora-pin {
+          width: 32px; height: 32px; border-radius: 6px;
+          background-color: #FFD700; border: 2.5px solid #003399;
+          cursor: pointer; display: flex; align-items: center; justify-content: center;
+          color: #003399; font-weight: bold; font-size: 13px; font-family: inherit;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+          position: relative; z-index: 3;
+        }
+        .diaspora-pin:hover {
+          transform: scale(1.25); box-shadow: 0 4px 16px rgba(255,215,0,0.5);
+          z-index: 9999 !important;
+          transition: transform 0.2s;
+        }
+        .diaspora-pin-legend {
+          display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+          flex-shrink: 0; background: #FFD700; border: 2px solid #003399;
+        }
         /* Leaflet overrides */
         .leaflet-marker-icon { overflow: visible !important; background: none !important; border: none !important; will-change: auto; }
         @keyframes slideIn {

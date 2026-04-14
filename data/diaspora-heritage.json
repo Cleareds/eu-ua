@@ -1,0 +1,339 @@
+[
+  {
+    "id": "anne-of-kyiv-senlis",
+    "name": "Statue of Anne of Kyiv (Anna Yaroslavna)",
+    "city": "Senlis",
+    "country": "France",
+    "lat": 49.21,
+    "lng": 2.59,
+    "category": "monument",
+    "ukrainianConnection": "Anna Yaroslavna (c. 1030–1075), daughter of Kyiv's Grand Prince Yaroslav the Wise, became Queen of France by marrying King Henry I in 1051. She brought Slavic learning and culture to the French court and founded the Abbey of St. Vincent in Senlis. This bronze statue, unveiled in 2005 by President Yushchenko, commemorates one of the most direct royal ties between Ukraine and Western Europe.",
+    "description": "Bronze statue of Anna Yaroslavna, daughter of Yaroslav the Wise and Queen of France (1051–1060). Unveiled by Ukrainian President Viktor Yushchenko on 22 June 2005 in the town where Anna founded the Abbey of St. Vincent in 1065.",
+    "sources": [
+      {
+        "title": "Wikipedia: Anne of Kyiv",
+        "url": "https://en.wikipedia.org/wiki/Anne_of_Kyiv"
+      },
+      {
+        "title": "Wikipedia: Senlis",
+        "url": "https://en.wikipedia.org/wiki/Senlis,_Oise"
+      }
+    ],
+    "image": "/images/diaspora/anne-of-kyiv-senlis.jpg"
+  },
+  {
+    "id": "reims-gospel",
+    "name": "Reims Gospel (Texte du Sacre)",
+    "city": "Reims",
+    "country": "France",
+    "lat": 49.254,
+    "lng": 3.934,
+    "category": "manuscript",
+    "ukrainianConnection": "This 11th-century manuscript was brought to France from the library of Yaroslav the Wise in Kyiv by his daughter Anna when she married King Henry I. For centuries, French kings from Henry III to Louis XIV swore their coronation oaths upon this book — meaning the French monarchy was crowned on a Ukrainian treasure. It is one of the most remarkable material links between medieval Kyivan Rus and European royalty.",
+    "description": "An 11th–12th century Slavonic illuminated manuscript held in Reims Cathedral. French kings swore their coronation oaths on this book for centuries. Its Cyrillic portion was brought from Kyiv by Anna Yaroslavna.",
+    "sources": [
+      {
+        "title": "Wikipedia: Reims Gospel",
+        "url": "https://en.wikipedia.org/wiki/Reims_Gospel"
+      },
+      {
+        "title": "Wikipedia: Anne of Kyiv",
+        "url": "https://en.wikipedia.org/wiki/Anne_of_Kyiv"
+      }
+    ],
+    "image": "/images/diaspora/reims-gospel.jpg"
+  },
+  {
+    "id": "santa-sofia-rome",
+    "name": "Basilica of Santa Sofia",
+    "city": "Rome",
+    "country": "Italy",
+    "lat": 41.9117,
+    "lng": 12.3975,
+    "category": "church",
+    "ukrainianConnection": "Built in 1967–1968 by Cardinal Josyf Slipyj — who survived 18 years in Soviet Gulag camps — this basilica was modelled on Kyiv's Saint Sophia Cathedral. While the original in Kyiv was under Soviet/Russian Orthodox control, this Rome basilica served as the de facto mother church of the entire Ukrainian Greek Catholic Church, preserving Ukrainian spiritual continuity during decades of Soviet persecution.",
+    "description": "Ukrainian Greek Catholic basilica modelled on Kyiv's Saint Sophia Cathedral. Built by Cardinal Josyf Slipyj (18 years in Soviet Gulag) as the de facto mother church of the Ukrainian Catholic Church. Elevated to minor basilica in 1998.",
+    "sources": [
+      {
+        "title": "Wikipedia: Basilica of Santa Sofia, Rome",
+        "url": "https://en.wikipedia.org/wiki/Basilica_of_Santa_Sofia,_Rome"
+      },
+      {
+        "title": "Wikipedia: Josyf Slipyj",
+        "url": "https://en.wikipedia.org/wiki/Josyf_Slipyj"
+      }
+    ]
+  },
+  {
+    "id": "st-volodymyr-paris",
+    "name": "Cathedral of St. Volodymyr the Great",
+    "city": "Paris",
+    "country": "France",
+    "lat": 48.8547,
+    "lng": 2.3308,
+    "category": "church",
+    "ukrainianConnection": "Named after Prince Volodymyr the Great, who Christianised Kyivan Rus in 988 and connected Ukraine to European Christian civilisation. The cathedral serves as the seat of the Ukrainian Catholic Eparchy covering France, Belgium, Luxembourg, the Netherlands, and Switzerland — demonstrating the breadth of the Ukrainian Catholic community across Western Europe.",
+    "description": "Cathedral of the Ukrainian Catholic Eparchy of Paris, named after Prince Volodymyr who Christianised Kyivan Rus in 988. Serves the Ukrainian Catholic community across France and the Benelux countries.",
+    "sources": [
+      {
+        "title": "Wikipedia: Ukrainian Catholic Eparchy of Paris",
+        "url": "https://en.wikipedia.org/wiki/Ukrainian_Catholic_Eparchy_of_Saint_Volodymyr_the_Great_of_Paris"
+      }
+    ],
+    "image": "/images/diaspora/st-volodymyr-paris.jpg"
+  },
+  {
+    "id": "holy-family-london",
+    "name": "Cathedral of the Holy Family in Exile",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.5138,
+    "lng": -0.1522,
+    "category": "church",
+    "ukrainianConnection": "Purchased by Ukrainian Catholics in 1967, this Mayfair cathedral became the spiritual centre for Ukrainians in Britain. The word 'in Exile' reflects the community's displacement from Soviet-occupied Ukraine. During the 2022 full-scale invasion, it became a major rallying point — thousands gathered here for vigils, and it served as a coordination hub for British-Ukrainian solidarity.",
+    "description": "Ukrainian Greek Catholic cathedral in London's Mayfair. Purchased in 1967 as headquarters for exiled Ukrainian Catholics. Became a major rallying point during the 2022 Russian invasion.",
+    "sources": [
+      {
+        "title": "Wikipedia: Ukrainian Catholic Cathedral, London",
+        "url": "https://en.wikipedia.org/wiki/Ukrainian_Catholic_Cathedral_of_the_Holy_Family_in_Exile"
+      }
+    ],
+    "image": "/images/diaspora/holy-family-london.jpg"
+  },
+  {
+    "id": "st-barbara-vienna",
+    "name": "St. Barbara's Church (Barbarakirche)",
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2065,
+    "lng": 16.378,
+    "category": "church",
+    "ukrainianConnection": "Granted to the Ukrainian Greek Catholic community by Empress Maria Theresa in 1775, this church has been the spiritual centre for Ukrainians in Austria for 250 years. Its seminary (the Barbareum) was a crucial cultural institution during the Habsburg era, educating generations of Ukrainian clergy and intellectuals who shaped the national awakening movement from within the Austrian Empire.",
+    "description": "Built by Jesuits in 1652, granted to Greek Catholics by Empress Maria Theresa in 1775. The spiritual centre of the Ukrainian community in Vienna for 250 years. The Barbareum seminary educated generations of Ukrainian leaders.",
+    "sources": [
+      {
+        "title": "Wikipedia: St. Barbara's Church, Vienna",
+        "url": "https://en.wikipedia.org/wiki/St._Barbara%27s_Church,_Vienna"
+      }
+    ]
+  },
+  {
+    "id": "josaphat-college-rome",
+    "name": "Pontifical Ukrainian College of St. Josaphat",
+    "city": "Rome",
+    "country": "Italy",
+    "lat": 41.8953,
+    "lng": 12.4608,
+    "category": "education",
+    "ukrainianConnection": "Founded in 1897 by Pope Leo XIII specifically for Ukrainian seminarians, this college on the Janiculum Hill has trained Ukrainian Catholic clergy for over 125 years. It has produced bishops serving Ukrainian communities across North America and Europe, ensuring the survival of the Ukrainian Church and its Byzantine-rite traditions even during decades of Soviet suppression.",
+    "description": "Pontifical College on the Janiculum Hill, founded by Pope Leo XIII in 1897 for Ukrainian Greek Catholic seminarians. Has trained Ukrainian clergy for 125+ years.",
+    "sources": [
+      {
+        "title": "Wikipedia: Pontifical Ukrainian College of Saint Josaphat",
+        "url": "https://en.wikipedia.org/wiki/Pontifical_Ukrainian_College_of_Saint_Josaphat"
+      }
+    ]
+  },
+  {
+    "id": "ukrainian-free-university-munich",
+    "name": "Ukrainian Free University",
+    "city": "Munich",
+    "country": "Germany",
+    "lat": 48.1637,
+    "lng": 11.5094,
+    "category": "education",
+    "ukrainianConnection": "Founded in Vienna in 1921 by Ukrainian scholars who fled the Bolshevik takeover, the UFU relocated to Prague and then Munich. For decades it was the only university in the world offering graduate degrees in Ukrainian studies outside Soviet control. It preserved Ukrainian academic traditions, language, and scholarship when these were actively suppressed in Soviet Ukraine — a direct act of cultural resistance.",
+    "description": "Private graduate university specialising in Ukrainian studies. Founded 1921 in Vienna by scholars fleeing Bolshevik rule. The only institution offering Ukrainian-language graduate degrees in the free world during Soviet era.",
+    "sources": [
+      {
+        "title": "Wikipedia: Ukrainian Free University",
+        "url": "https://en.wikipedia.org/wiki/Ukrainian_Free_University"
+      }
+    ],
+    "image": "/images/diaspora/ukrainian-free-university-munich.jpg"
+  },
+  {
+    "id": "shevchenko-square-paris",
+    "name": "Square Taras-Chevtchenko (Shevchenko Square)",
+    "city": "Paris",
+    "country": "France",
+    "lat": 48.8545,
+    "lng": 2.3255,
+    "category": "monument",
+    "ukrainianConnection": "Taras Shevchenko (1814–1861) is Ukraine's national poet, whose works awakened Ukrainian national consciousness and asserted Ukrainian as a full literary language. This square in the heart of Saint-Germain-des-Prés — Paris's literary quarter — places Ukraine's greatest writer alongside the French literary tradition. The bronze bust (1978) bears an inscription identifying him as a Ukrainian poet.",
+    "description": "Public square in Saint-Germain-des-Prés with a bronze bust of Taras Shevchenko, Ukraine's national poet. Named and installed in 1978 in Paris's historic literary district.",
+    "sources": [
+      {
+        "title": "Wikipedia: Taras Shevchenko",
+        "url": "https://en.wikipedia.org/wiki/Taras_Shevchenko"
+      },
+      {
+        "title": "Paris Square Information",
+        "url": "https://en.wikipedia.org/wiki/Square_Taras-Chevtchenko"
+      }
+    ]
+  },
+  {
+    "id": "shevchenko-prague",
+    "name": "Taras Shevchenko Monument",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "lat": 50.07,
+    "lng": 14.405,
+    "category": "monument",
+    "ukrainianConnection": "Prague was one of the most important centres of Ukrainian political and cultural life in exile during the 1920s–1940s. The Ukrainian Free University operated here, and the city hosted a vibrant Ukrainian intellectual community. This 2009 monument by sculptor Valentyn Znoba honours Shevchenko's role as the father of Ukrainian literature in a city that sheltered Ukrainian culture when it was persecuted at home.",
+    "description": "Statue of the Ukrainian national poet in Prague's Smíchov district. Inaugurated 2009 by sculptor Valentyn Znoba. Prague was a major centre of Ukrainian exile culture in the 1920s–1940s.",
+    "sources": [
+      {
+        "title": "Wikipedia: Taras Shevchenko",
+        "url": "https://en.wikipedia.org/wiki/Taras_Shevchenko"
+      }
+    ],
+    "image": "/images/diaspora/shevchenko-prague.jpg"
+  },
+  {
+    "id": "shevchenko-warsaw",
+    "name": "Taras Shevchenko Monument",
+    "city": "Warsaw",
+    "country": "Poland",
+    "lat": 52.2297,
+    "lng": 21.0122,
+    "category": "monument",
+    "ukrainianConnection": "Poland hosts the largest Ukrainian community in the EU — over 2 million Ukrainians lived in Poland before the 2022 invasion, with millions more arriving as refugees. This Shevchenko monument in Warsaw symbolises centuries of intertwined Polish-Ukrainian history, from the shared Commonwealth through WWII to today's unprecedented solidarity.",
+    "description": "Monument to Ukraine's national poet in Warsaw. Reflects the deep historical ties between Poland and Ukraine — Poland hosts the largest Ukrainian community in the EU.",
+    "sources": [
+      {
+        "title": "Wikipedia: Ukrainians in Poland",
+        "url": "https://en.wikipedia.org/wiki/Ukrainians_in_Poland"
+      }
+    ]
+  },
+  {
+    "id": "shevchenko-vilnius",
+    "name": "Taras Shevchenko Monument",
+    "city": "Vilnius",
+    "country": "Lithuania",
+    "lat": 54.6872,
+    "lng": 25.2797,
+    "category": "monument",
+    "ukrainianConnection": "Lithuania and Ukraine share a deep historical bond through the Grand Duchy of Lithuania, which ruled much of modern Ukraine from the 14th to 16th centuries. Vilnius has been one of Ukraine's strongest EU allies — Lithuania was the first to recognise Ukrainian independence in 1991 and has been the most vocal advocate for Ukraine's EU and NATO membership.",
+    "description": "Monument to the Ukrainian national poet at a site where Shevchenko reportedly lived. Vilnius also has a street named after him. Lithuania was the first country to recognise Ukrainian independence.",
+    "sources": [
+      {
+        "title": "Wikipedia: Taras Shevchenko monuments",
+        "url": "https://en.wikipedia.org/wiki/Taras_Shevchenko"
+      }
+    ]
+  },
+  {
+    "id": "holodomor-memorial-warsaw",
+    "name": "Holodomor Memorial",
+    "city": "Warsaw",
+    "country": "Poland",
+    "lat": 52.235,
+    "lng": 20.955,
+    "category": "memorial",
+    "ukrainianConnection": "The Holodomor (1932–1933) was a man-made famine engineered by Stalin's regime that killed 3.5–7 million Ukrainians. Poland, which shares a border and centuries of history with Ukraine, was among the first countries to recognise it as genocide. This memorial in the Ukrainian section of Warsaw's Wolski Cemetery honours the victims and stands as a testament to Polish-Ukrainian solidarity.",
+    "description": "Memorial in the Ukrainian section of Warsaw's Wolski Cemetery (2009). Commemorates the 3.5–7 million Ukrainians killed in the 1932–1933 Holodomor. Poland was among the first to recognise the Holodomor as genocide.",
+    "sources": [
+      {
+        "title": "Wikipedia: Holodomor memorial",
+        "url": "https://en.wikipedia.org/wiki/Holodomor_memorial"
+      }
+    ]
+  },
+  {
+    "id": "holodomor-memorial-munich",
+    "name": "Holodomor Memorial",
+    "city": "Munich",
+    "country": "Germany",
+    "lat": 48.15,
+    "lng": 11.58,
+    "category": "memorial",
+    "ukrainianConnection": "Munich has been a centre of the Ukrainian diaspora since WWII, when displaced persons settled in the city. Germany recognised the Holodomor as genocide in 2022 — 90 years after the famine. This 2008 memorial near the Cathedral of the Intercession represents the long presence of Ukrainian culture in Germany and European recognition of one of the 20th century's worst atrocities.",
+    "description": "Memorial (2008) near the Cathedral of the Intercession in Munich. Germany recognised the Holodomor as genocide in 2022. Munich has been a centre of Ukrainian diaspora culture since WWII.",
+    "sources": [
+      {
+        "title": "Wikipedia: Holodomor memorial",
+        "url": "https://en.wikipedia.org/wiki/Holodomor_memorial"
+      }
+    ]
+  },
+  {
+    "id": "holodomor-memorial-edinburgh",
+    "name": "Holodomor Memorial",
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "lat": 55.9545,
+    "lng": -3.178,
+    "category": "memorial",
+    "ukrainianConnection": "Erected in 2017 on Calton Hill, one of Edinburgh's most prominent landmarks, this memorial brought the Holodomor to public attention in Scotland. The UK has been one of Ukraine's strongest allies since 2022, and this memorial preceded that alliance — showing that awareness of Ukraine's European identity and tragic history was already growing before the full-scale invasion.",
+    "description": "Memorial (2017) on Calton Hill in Edinburgh. One of the UK's first public Holodomor memorials, preceding the widespread British-Ukrainian solidarity of 2022.",
+    "sources": [
+      {
+        "title": "Wikipedia: Holodomor memorial",
+        "url": "https://en.wikipedia.org/wiki/Holodomor_memorial"
+      }
+    ]
+  },
+  {
+    "id": "ukrainian-institute-london",
+    "name": "Ukrainian Institute London",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.507,
+    "lng": -0.202,
+    "category": "cultural_centre",
+    "ukrainianConnection": "Founded in the 1970s by Patriarch Josyf Slipyj — the same Gulag survivor who built the Basilica of Santa Sofia in Rome. The institute promotes Ukrainian culture, language, and identity in the UK through exhibitions, film festivals, literary events, and policy discussions. It has become increasingly important since 2022 as a bridge between Ukrainian and British cultural communities.",
+    "description": "Independent cultural charity at 79 Holland Park, founded by Patriarch Josyf Slipyj. Promotes Ukrainian culture in the UK through exhibitions, film, literature, and language classes.",
+    "sources": [
+      {
+        "title": "Ukrainian Institute London",
+        "url": "https://ukrainianinstitute.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "wooden-tserkvas-poland",
+    "name": "Wooden Tserkvas of the Carpathian Region (Poland)",
+    "city": "Multiple locations",
+    "country": "Poland",
+    "lat": 49.55,
+    "lng": 21.5,
+    "category": "unesco",
+    "ukrainianConnection": "This transnational UNESCO site (inscribed 2013) comprises 16 wooden churches — 8 in Poland, 8 in Ukraine — built by Lemko, Boyko, and Hutsul communities between the 16th and 19th centuries. The Polish churches were built by ethnic Ukrainians/Rusyns who lived in southeastern Poland for centuries. They represent shared Ukrainian-Polish cultural heritage and the Byzantine-rite tradition that connects Ukraine to Eastern Christianity's European dimension.",
+    "description": "8 UNESCO-listed wooden churches in southeastern Poland, built by ethnic Ukrainian/Rusyn communities (16th–19th centuries). Transnational site shared with Ukraine — a symbol of shared cultural heritage.",
+    "sources": [
+      {
+        "title": "UNESCO: Wooden Tserkvas",
+        "url": "https://whc.unesco.org/en/list/1424/"
+      },
+      {
+        "title": "Wikipedia: Wooden tserkvas of the Carpathian region",
+        "url": "https://en.wikipedia.org/wiki/Wooden_tserkvas_of_the_Carpathian_region_in_Poland_and_Ukraine"
+      }
+    ],
+    "image": "/images/diaspora/wooden-tserkvas-poland.jpg"
+  },
+  {
+    "id": "lemko-museum-zyndranowa",
+    "name": "Museum of Lemko Culture",
+    "city": "Zyndranowa",
+    "country": "Poland",
+    "lat": 49.51,
+    "lng": 21.67,
+    "category": "museum",
+    "ukrainianConnection": "The Lemkos are an East Slavic/Rusyn ethnic group with deep Ukrainian cultural ties who lived in the Carpathian Mountains of southeastern Poland for centuries. This open-air museum (skansen), established in 1968 by Lemko activists who returned from forced exile, preserves their unique traditions — wooden architecture, folk art, and Byzantine-rite Christianity. It represents the survival of Ukrainian-adjacent culture despite Soviet-era ethnic cleansing (Operation Vistula, 1947).",
+    "description": "Open-air museum (skansen) preserving Lemko/Rusyn culture. Established 1968 by activists returning from forced exile after Operation Vistula (1947). Hosts the annual 'Od Rusal do Jana' folklore festival.",
+    "sources": [
+      {
+        "title": "Wikipedia: Lemko culture",
+        "url": "https://en.wikipedia.org/wiki/Lemko_culture"
+      },
+      {
+        "title": "Wikipedia: Operation Vistula",
+        "url": "https://en.wikipedia.org/wiki/Operation_Vistula"
+      }
+    ]
+  }
+]

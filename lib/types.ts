@@ -47,6 +47,22 @@ export interface CulturalSite {
   sources: CitySource[];
 }
 
+export type DiasporaCategory = "church" | "monument" | "memorial" | "museum" | "education" | "cultural_centre" | "manuscript" | "unesco";
+
+export interface DiasporaHeritageSite {
+  id: string;
+  name: string;
+  city: string;
+  country: string;
+  lat: number;
+  lng: number;
+  category: DiasporaCategory;
+  ukrainianConnection: string;
+  description: string;
+  image?: string;
+  sources: CitySource[];
+}
+
 export interface TradeDataPoint {
   year: number;
   value: number;

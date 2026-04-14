@@ -46,6 +46,21 @@ export const ERA_COLORS: Record<
   modern: { bg: "#F8F9FA", text: "#374151", border: "#9ca3af" },
 };
 
+// ── Diaspora Heritage Categories ──────────────────────────
+export const DIASPORA_CATEGORY: Record<
+  string,
+  { label: string; color: string; icon: string }
+> = {
+  church: { label: "Church", color: "#7C3AED", icon: "†" },
+  monument: { label: "Monument", color: "#003399", icon: "★" },
+  memorial: { label: "Memorial", color: "#1A1A2E", icon: "◆" },
+  museum: { label: "Museum", color: "#D97706", icon: "M" },
+  education: { label: "University", color: "#059669", icon: "U" },
+  cultural_centre: { label: "Cultural Centre", color: "#0891B2", icon: "C" },
+  manuscript: { label: "Manuscript", color: "#B45309", icon: "📜" },
+  unesco: { label: "UNESCO Site", color: "#DC2626", icon: "◇" },
+};
+
 // ── Chart Colors ──────────────────────────────────────────
 export const CHART_COLORS = {
   primary: "#003399",
