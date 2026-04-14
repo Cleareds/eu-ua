@@ -1100,5 +1100,114 @@
       }
     ],
     "image": "/images/cities/zhytomyr.jpg"
+  },
+  {
+    "id": "rivne",
+    "name": "Rivne",
+    "lat": 50.62,
+    "lng": 26.25,
+    "status": "free",
+    "description": "First mentioned in 1283, Rivne received Magdeburg Rights in 1492 from King Casimir IV Jagiellon, connecting it to the European tradition of municipal self-governance. The city developed under Lithuanian and Polish noble families (Ostrogski, Lubomirski) until the Second Partition of Poland in 1795. Before WWII, approximately 50% of the population was Jewish, making it a major centre of European Jewish culture. A 1992 memorial commemorates 17,500 Jews murdered in November 1941.",
+    "connections": [
+      "Received Magdeburg Rights in 1492 from the Polish-Lithuanian Crown",
+      "Sister cities with Essen and Pankow (Germany), Gdańsk, Lublin, Jelenia Góra, Olsztyn (Poland)",
+      "Partner cities with Lund (Sweden), Zvolen (Slovakia), Fredrikstad (Norway)",
+      "Leonard Bernstein's mother was from the Rivne region — referenced in his operetta Candide",
+      "Anna Walentynowicz (1929–2010), co-founder of Poland's Solidarity movement, was born here"
+    ],
+    "notableFigures": [
+      "Anna Walentynowicz (1929–2010) — born in Rivne, co-founded the Solidarity trade union movement in Gdańsk that helped end communism in Europe",
+      "Zuzanna Ginczanka (1917–1945) — major Polish interwar poet, born in Rivne's multicultural community"
+    ],
+    "europeanInfluences": [
+      "Church of the Assumption (1756) — Polish Baroque ecclesiastical architecture",
+      "Cathedral of the Ascension (1890) — Russian Imperial-era Orthodox cathedral",
+      "Classicism-style gymnasium (1839) — Habsburg-influenced educational architecture",
+      "Lubomirski Palace — remnants of the Polish noble estate that governed the city"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Rivne",
+        "url": "https://en.wikipedia.org/wiki/Rivne"
+      },
+      {
+        "title": "Wikipedia: Magdeburg rights",
+        "url": "https://en.wikipedia.org/wiki/Magdeburg_rights"
+      }
+    ],
+    "image": "/images/cities/rivne.jpg"
+  },
+  {
+    "id": "cherkasy",
+    "name": "Cherkasy",
+    "lat": 49.44,
+    "lng": 32.06,
+    "status": "free",
+    "description": "Entering the Grand Duchy of Lithuania in the 1360s, Cherkasy became an important fortress defending Europe's southern borders against Crimean Tatar raids. After the Union of Lublin (1569), it became a royal city of Poland and seat of a county in the Kyiv Voivodeship. The city received Magdeburg Rights in 1791. The Cherkasy Cossack Regiment (est. 1625) was a key unit in the Khmelnytsky Uprising that created the Cossack Hetmanate — a precursor to Ukrainian statehood.",
+    "connections": [
+      "Part of the Grand Duchy of Lithuania from the 1360s as a border fortress",
+      "Royal city of Poland after the Union of Lublin (1569)",
+      "Sister city with Bydgoszcz (Poland)",
+      "Received Magdeburg Rights in 1791 — one of the last Ukrainian cities to gain this European self-governance charter",
+      "Home to Sofiyivka Park (Uman, Cherkasy Oblast) — one of Ukraine's most famous landscaped parks, on the UNESCO Tentative List"
+    ],
+    "notableFigures": [
+      "Taras Shevchenko (1814–1861) — Ukraine's national poet was born in Moryntsi, Cherkasy Oblast; his Kobzar awakened European-style national consciousness",
+      "Ivan Piddubnyi (1871–1949) — born in Cherkasy Oblast, six-time World Greco-Roman Wrestling Champion across European capitals"
+    ],
+    "europeanInfluences": [
+      "19th-century urban planning by William Heste, a Scottish-born architect",
+      "Neoclassical civic buildings from the Russian Imperial era",
+      "Cossack Hetmanate heritage — the Cherkasy Regiment's role in early Ukrainian democracy",
+      "Sofiyivka Park (Uman) — designed in the English landscape garden tradition (1796–1802)"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Cherkasy",
+        "url": "https://en.wikipedia.org/wiki/Cherkasy"
+      },
+      {
+        "title": "Wikipedia: Sofiyivka Park",
+        "url": "https://en.wikipedia.org/wiki/Sofiyivka_Park"
+      }
+    ],
+    "image": "/images/cities/cherkasy.jpg"
+  },
+  {
+    "id": "kropyvnytskyi",
+    "name": "Kropyvnytskyi",
+    "lat": 48.51,
+    "lng": 32.26,
+    "status": "free",
+    "description": "Founded in 1754 as Fort St. Elizabeth by Serbian colonel Jovan Horvat, Kropyvnytskyi (formerly Yelisavetgrad/Kirovohrad) is known as 'Little Paris' for its eclectic European architecture — Gothic, Rococo, Renaissance, and Moorish Revival palaces line its central streets. The city's main architect in the 19th century was Andrey Dostoevsky, brother of the novelist. In 1882, the Theatre of Coryphaei was founded here — the first professional theatrical company in Central or Eastern Ukraine, establishing a tradition that shaped Ukrainian performing arts.",
+    "connections": [
+      "Founded by Serbian military colonists (New Serbia project, 1754) — direct Balkan-European founding",
+      "Sister city with Dobrich (Bulgaria)",
+      "Home to the Theatre of Coryphaei (1882) — first professional Ukrainian theatre company",
+      "19th-century architecture designed by Andrey Dostoevsky (brother of the novelist Fyodor Dostoevsky)",
+      "Nobel Prize physicist Igor Tamm (1958) was from Kropyvnytskyi"
+    ],
+    "notableFigures": [
+      "Igor Tamm (1895–1971) — Nobel Prize in Physics (1958) for explaining Cherenkov radiation; born in Yelisavetgrad",
+      "Arseny Tarkovsky (1907–1989) — poet and translator, father of filmmaker Andrei Tarkovsky; born here",
+      "Marko Kropyvnytsky (1840–1910) — playwright and actor who founded the first professional Ukrainian theatre; the city is named after him"
+    ],
+    "europeanInfluences": [
+      "Gothic, Rococo, and Renaissance facades along central streets — earned the city its 'Little Paris' nickname",
+      "Moorish Revival architecture (19th century commercial buildings)",
+      "Fort St. Elizabeth (1754) — Serbian Baroque military fortress, one of the earliest European-style fortifications in central Ukraine",
+      "European-style sculptures and Art Nouveau elements throughout the historic centre"
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Kropyvnytskyi",
+        "url": "https://en.wikipedia.org/wiki/Kropyvnytskyi"
+      },
+      {
+        "title": "Wikipedia: Theatre of Coryphaei",
+        "url": "https://en.wikipedia.org/wiki/Theatre_of_Coryphaei"
+      }
+    ],
+    "image": "/images/cities/kropyvnytskyi.jpg"
   }
 ]
