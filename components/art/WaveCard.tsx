@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getArtImageUrl } from "@/lib/art-utils";
 import type { ArtWave } from "@/lib/types-art";
 
 export default function WaveCard({ wave }: { wave: ArtWave }) {
@@ -7,18 +8,20 @@ export default function WaveCard({ wave }: { wave: ArtWave }) {
     ? `${wave.start_year}${wave.end_year ? `–${wave.end_year}` : "–present"}`
     : null);
 
+  const cover = getArtImageUrl(wave.cover_image_url, { width: 800, quality: 75 });
+
   return (
     <Link
       href={`/ukrainian-art/waves/${wave.slug}`}
       className="group relative bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-100 transition-all"
     >
-      {wave.cover_image_url && (
+      {cover && (
         <div className="relative h-32 overflow-hidden">
-          <Image src={wave.cover_image_url} alt={wave.name} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+          <Image src={cover} alt={wave.name} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-300" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
         </div>
       )}
-      <div className={`p-5 ${wave.cover_image_url ? "" : "border-l-4"}`} style={wave.cover_image_url ? {} : { borderLeftColor: "#003399" }}>
+      <div className={`p-5 ${cover ? "" : "border-l-4"}`} style={cover ? {} : { borderLeftColor: "#003399" }}>
         {period && (
           <span className="text-xs font-mono font-medium mb-1 block" style={{ color: "#003399" }}>{period}</span>
         )}

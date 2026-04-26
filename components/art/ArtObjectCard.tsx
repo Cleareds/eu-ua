@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getArtImageUrl } from "@/lib/art-utils";
 import type { ArtObject } from "@/lib/types-art";
 
 export default function ArtObjectCard({ obj }: { obj: ArtObject }) {
   const artistName = typeof obj.artist === "object" && obj.artist ? obj.artist.name : null;
-  const artistSlug = typeof obj.artist === "object" && obj.artist ? obj.artist.slug : null;
+  const thumb = getArtImageUrl(obj.image_url, { width: 600, quality: 75 });
 
   return (
     <Link
@@ -12,12 +13,12 @@ export default function ArtObjectCard({ obj }: { obj: ArtObject }) {
       className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-100 transition-all"
     >
       <div className="relative aspect-[4/3] bg-gray-50">
-        {obj.image_url ? (
+        {thumb ? (
           <Image
-            src={obj.image_url}
+            src={thumb}
             alt={obj.title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
           />
         ) : (
@@ -34,17 +35,13 @@ export default function ArtObjectCard({ obj }: { obj: ArtObject }) {
           {obj.title}
         </h3>
         {artistName && (
-          <p className="text-xs mb-2" style={{ color: "#003399" }}>
-            {artistName}
-          </p>
+          <p className="text-xs mb-2" style={{ color: "#003399" }}>{artistName}</p>
         )}
         <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{obj.short_description}</p>
         {obj.tags?.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-3">
             {obj.tags.slice(0, 3).map(tag => (
-              <span key={tag} className="text-[10px] px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                {tag}
-              </span>
+              <span key={tag} className="text-[10px] px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">{tag}</span>
             ))}
           </div>
         )}

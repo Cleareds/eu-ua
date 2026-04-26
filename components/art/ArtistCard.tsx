@@ -1,21 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
-import { artistLifespan } from "@/lib/art-utils";
+import { artistLifespan, getArtImageUrl } from "@/lib/art-utils";
 import type { ArtArtist } from "@/lib/types-art";
 
 export default function ArtistCard({ artist }: { artist: ArtArtist }) {
+  const thumb = getArtImageUrl(artist.profile_image_url, { width: 400, quality: 80 });
+
   return (
     <Link
       href={`/ukrainian-art/artists/${artist.slug}`}
       className="group flex flex-col bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md hover:border-blue-100 transition-all"
     >
       <div className="relative aspect-square bg-gray-100">
-        {artist.profile_image_url ? (
+        {thumb ? (
           <Image
-            src={artist.profile_image_url}
+            src={thumb}
             alt={artist.name}
             fill
-            sizes="(max-width: 768px) 50vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
             className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
           />
         ) : (

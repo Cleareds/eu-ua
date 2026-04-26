@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getArtArtistBySlug, getArtObjectsByArtist, getAllArtistSlugs } from "@/lib/supabase/art-data";
-import { artistLifespan } from "@/lib/art-utils";
+import { artistLifespan, getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 
@@ -51,7 +51,13 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
           <div className="flex items-start gap-8">
             {artist.profile_image_url && (
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shrink-0 border-4 border-white/10">
-                <Image src={artist.profile_image_url} alt={artist.name} fill className="object-cover object-top" priority />
+                <Image
+                  src={getArtImageUrl(artist.profile_image_url, { width: 320, quality: 85 }) ?? artist.profile_image_url}
+                  alt={artist.name}
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
             )}
             <div>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getArtWaveBySlug, getArtistsByWave, getArtObjectsByWave, getAllArtWaveSlugs } from "@/lib/supabase/art-data";
+import { getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
@@ -49,7 +50,12 @@ export default async function WavePage({ params }: { params: Promise<{ slug: str
       <div className="relative py-16 px-4 overflow-hidden" style={{ backgroundColor: "#1A1A2E" }}>
         {wave.cover_image_url && (
           <div className="absolute inset-0">
-            <Image src={wave.cover_image_url} alt={wave.name} fill className="object-cover opacity-20" />
+            <Image
+              src={getArtImageUrl(wave.cover_image_url, { width: 1600, quality: 70 }) ?? wave.cover_image_url}
+              alt={wave.name}
+              fill
+              className="object-cover opacity-20"
+            />
           </div>
         )}
         <div className="relative max-w-7xl mx-auto">

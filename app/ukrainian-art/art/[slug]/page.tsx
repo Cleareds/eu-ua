@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getArtObjectBySlug, getArtObjectsByArtist, getArtObjectsByWave, getAllArtObjectSlugs } from "@/lib/supabase/art-data";
+import { getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 
@@ -68,14 +69,14 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
 
           {/* Main content */}
           <div>
-            {/* Image */}
+            {/* Image — full display version (high quality); original preserved in storage */}
             {obj.image_url && (
-              <div className="relative w-full rounded-xl overflow-hidden bg-gray-100 mb-8" style={{ maxHeight: "600px" }}>
+              <div className="relative w-full rounded-xl overflow-hidden bg-gray-100 mb-8" style={{ maxHeight: "700px" }}>
                 <Image
-                  src={obj.image_url}
+                  src={getArtImageUrl(obj.image_url, { width: 1400, quality: 90 }) ?? obj.image_url}
                   alt={obj.title}
-                  width={900}
-                  height={600}
+                  width={1400}
+                  height={900}
                   className="w-full h-auto object-contain"
                   priority
                 />
