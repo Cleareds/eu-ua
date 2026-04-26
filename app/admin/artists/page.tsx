@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
 import { useAdminAuth } from "@/components/admin/useAdminAuth";
 import { Toast } from "@/components/admin/FormField";
@@ -10,6 +11,7 @@ import type { ArtArtist } from "@/lib/types-art";
 
 export default function ArtistsAdminPage() {
   const { adminFetch, state } = useAdminAuth();
+  const router = useRouter();
   const [artists, setArtists] = useState<ArtArtist[]>([]);
   const [loading, setLoading] = useState(true);
   const [toast, setToast] = useState<{ msg: string; type: "success" | "error" } | null>(null);
@@ -29,7 +31,8 @@ export default function ArtistsAdminPage() {
 
   useEffect(() => { if (state === "authenticated") load(); }, [state]); // eslint-disable-line
 
-  async function handleDelete(artist: ArtArtist) {
+  async function handleDelete(e: React.MouseEvent, artist: ArtArtist) {
+    e.stopPropagation();
     if (!confirm(`Delete artist "${artist.name}"? Art objects by this artist will lose their artist reference.`)) return;
     const res = await adminFetch(`/api/admin/art-artists/${artist.id}`, { method: "DELETE" });
     if (res.ok) { showToast("Artist deleted", "success"); load(); }
@@ -68,7 +71,11 @@ export default function ArtistsAdminPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {artists.map(artist => (
-                  <tr key={artist.id} className="hover:bg-gray-50">
+                  <tr
+                    key={artist.id}
+                    className="hover:bg-gray-50 cursor-pointer"
+                    onClick={() => router.push(`/admin/artists/${artist.id}/edit`)}
+                  >
                     <td className="px-4 py-3">
                       <div className="font-medium text-gray-900">{artist.name}</div>
                       <div className="text-xs text-gray-400 font-mono">{artist.slug}</div>
@@ -80,9 +87,9 @@ export default function ArtistsAdminPage() {
                         {artist.published ? "Published" : "Draft"}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-right space-x-3">
+                    <td className="px-4 py-3 text-right space-x-3" onClick={e => e.stopPropagation()}>
                       <Link href={`/admin/artists/${artist.id}/edit`} className="text-xs text-blue-600 hover:underline">Edit</Link>
-                      <button onClick={() => handleDelete(artist)} className="text-xs text-red-500 hover:underline">Delete</button>
+                      <button onClick={e => handleDelete(e, artist)} className="text-xs text-red-500 hover:underline">Delete</button>
                     </td>
                   </tr>
                 ))}

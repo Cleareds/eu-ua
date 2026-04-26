@@ -146,6 +146,37 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
           </aside>
         </div>
 
+        {/* Movements */}
+        {artist.waves && artist.waves.length > 0 && (
+          <section className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: "#1A1A2E" }}>Art Movements</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {artist.waves.map(wave => (
+                <Link
+                  key={wave.id}
+                  href={`/ukrainian-art/waves/${wave.slug}`}
+                  className="group block bg-white rounded-xl border border-gray-100 p-5 hover:border-blue-200 hover:shadow-sm transition-all"
+                >
+                  {wave.period && (
+                    <span className="text-xs font-mono font-medium mb-2 block" style={{ color: "#003399" }}>
+                      {wave.period}
+                    </span>
+                  )}
+                  <h3 className="font-bold text-base mb-2 group-hover:underline" style={{ color: "#1A1A2E" }}>
+                    {wave.name}
+                  </h3>
+                  {wave.description && (
+                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">{wave.description}</p>
+                  )}
+                  <span className="text-xs font-medium mt-3 block" style={{ color: "#003399" }}>
+                    Explore movement →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Artworks */}
         {artworks.length > 0 && (
           <section className="mt-12 pt-8 border-t border-gray-200">

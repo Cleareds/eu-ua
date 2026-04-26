@@ -195,7 +195,7 @@ export function QuickCreateWave({ adminFetch, onCreated, onClose }: QuickWavePro
   }
 
   return (
-    <Modal title="Quick-add Art Wave" onClose={onClose}>
+    <Modal title="Quick-add Movement" onClose={onClose}>
       <form onSubmit={handleSubmit} className="space-y-4">
         <Field label="Name" required>
           <Input ref={firstRef} value={name} onChange={e => setName(e.target.value)} required placeholder="e.g. Ukrainian Avant-Garde" />
@@ -222,7 +222,7 @@ export function QuickCreateWave({ adminFetch, onCreated, onClose }: QuickWavePro
             className="px-4 py-2 text-sm font-medium text-white rounded disabled:opacity-60"
             style={{ backgroundColor: "#003399" }}
           >
-            {saving ? "Creating…" : "Create Wave"}
+            {saving ? "Creating…" : "Create Movement"}
           </button>
           <button type="button" onClick={onClose} className="px-4 py-2 text-sm text-gray-500 hover:underline">
             Cancel

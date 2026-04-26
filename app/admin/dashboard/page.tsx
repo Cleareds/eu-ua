@@ -36,7 +36,7 @@ export default function DashboardPage() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
           {[
-            { label: "Art Waves", count: stats?.waves, href: "/admin/waves", color: "#003399" },
+            { label: "Movements", count: stats?.waves, href: "/admin/waves", color: "#003399" },
             { label: "Artists", count: stats?.artists, href: "/admin/artists", color: "#1A1A2E" },
             { label: "Art Objects", count: stats?.artObjects, href: "/admin/art", color: "#8B5CF6" },
           ].map(s => (
@@ -60,7 +60,7 @@ export default function DashboardPage() {
             {[
               { label: "New Art Object", href: "/admin/art/new", icon: "🖼" },
               { label: "New Artist", href: "/admin/artists/new", icon: "👤" },
-              { label: "New Art Wave", href: "/admin/waves/new", icon: "🌊" },
+              { label: "New Movement", href: "/admin/waves/new", icon: "🌊" },
             ].map(a => (
               <Link
                 key={a.href}

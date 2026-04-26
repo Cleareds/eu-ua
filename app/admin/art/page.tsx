@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
 import { useAdminAuth } from "@/components/admin/useAdminAuth";
 import { Toast } from "@/components/admin/FormField";
@@ -10,6 +11,7 @@ import type { ArtObject } from "@/lib/types-art";
 
 export default function ArtObjectsAdminPage() {
   const { adminFetch, state } = useAdminAuth();
+  const router = useRouter();
   const [objects, setObjects] = useState<ArtObject[]>([]);
   const [loading, setLoading] = useState(true);
   const [toast, setToast] = useState<{ msg: string; type: "success" | "error" } | null>(null);
@@ -29,7 +31,8 @@ export default function ArtObjectsAdminPage() {
 
   useEffect(() => { if (state === "authenticated") load(); }, [state]); // eslint-disable-line
 
-  async function handleDelete(obj: ArtObject) {
+  async function handleDelete(e: React.MouseEvent, obj: ArtObject) {
+    e.stopPropagation();
     if (!confirm(`Delete "${obj.title}"? This cannot be undone.`)) return;
     const res = await adminFetch(`/api/admin/art-objects/${obj.id}`, { method: "DELETE" });
     if (res.ok) { showToast("Art object deleted", "success"); load(); }
@@ -69,7 +72,11 @@ export default function ArtObjectsAdminPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {objects.map(obj => (
-                  <tr key={obj.id} className="hover:bg-gray-50">
+                  <tr
+                    key={obj.id}
+                    className="hover:bg-gray-50 cursor-pointer"
+                    onClick={() => router.push(`/admin/art/${obj.id}/edit`)}
+                  >
                     <td className="px-4 py-2">
                       {obj.image_url ? (
                         <div className="relative w-10 h-10 rounded overflow-hidden bg-gray-100">
@@ -95,9 +102,9 @@ export default function ArtObjectsAdminPage() {
                         {obj.featured && <span className="text-xs">⭐</span>}
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-right space-x-3">
+                    <td className="px-4 py-3 text-right space-x-3" onClick={e => e.stopPropagation()}>
                       <Link href={`/admin/art/${obj.id}/edit`} className="text-xs text-blue-600 hover:underline">Edit</Link>
-                      <button onClick={() => handleDelete(obj)} className="text-xs text-red-500 hover:underline">Delete</button>
+                      <button onClick={e => handleDelete(e, obj)} className="text-xs text-red-500 hover:underline">Delete</button>
                     </td>
                   </tr>
                 ))}

@@ -7,7 +7,7 @@ import { useAdminAuth } from "@/components/admin/useAdminAuth";
 export default function NewWavePage() {
   const { adminFetch } = useAdminAuth();
   return (
-    <AdminShell title="New Art Wave">
+    <AdminShell title="New Movement">
       <WaveForm adminFetch={adminFetch} />
     </AdminShell>
   );

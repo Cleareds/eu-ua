@@ -57,7 +57,7 @@ export default function WaveForm({ initial, adminFetch }: Props) {
       const res = await adminFetch(url, { method, body: JSON.stringify(payload) });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Save failed");
-      showToast(initial ? "Wave updated!" : "Wave created!", "success");
+      showToast(initial ? "Movement updated!" : "Movement created!", "success");
       setTimeout(() => router.push("/admin/waves"), 1200);
     } catch (err: unknown) {
       showToast(err instanceof Error ? err.message : "Save failed", "error");
@@ -105,7 +105,7 @@ export default function WaveForm({ initial, adminFetch }: Props) {
         <Field label="Short description" required hint="Shown on listing cards (1–2 sentences)">
           <Textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} required />
         </Field>
-        <Field label="Full description" hint="Markdown supported — shown on the wave's detail page">
+        <Field label="Full description" hint="Markdown supported — shown on the movement's detail page">
           <Textarea value={fullDescription} onChange={e => setFullDescription(e.target.value)} rows={10} className="font-mono text-xs" />
         </Field>
       </FormSection>

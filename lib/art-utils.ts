@@ -41,25 +41,14 @@ export function artistLifespan(born?: number | null, died?: number | null): stri
 }
 
 /**
- * Returns a resized/compressed URL using Supabase Storage Image Transformations.
- * The original file is preserved untouched in the bucket — this only affects the
- * URL used for rendering. Falls back to the original URL for non-Supabase sources.
- *
- * Supabase transforms are available on Pro plan. On free plan the transformation
- * URL still works but returns the original image without resizing.
+ * Returns the original storage URL unchanged.
+ * next/image handles optimization (resize, format, quality) via its own pipeline.
+ * The `width` and `quality` params are accepted but unused — kept for call-site
+ * compatibility so callers don't need to change.
  */
 export function getArtImageUrl(
   url: string | null | undefined,
-  { width, quality = 80 }: { width?: number; quality?: number } = {}
+  _opts: { width?: number; quality?: number } = {}
 ): string | null {
-  if (!url) return null;
-  // Only transform Supabase Storage object URLs
-  if (!url.includes('.supabase.co/storage/v1/object/public/')) return url;
-  const rendered = url.replace(
-    '/storage/v1/object/public/',
-    '/storage/v1/render/image/public/'
-  );
-  const params = new URLSearchParams({ quality: String(quality) });
-  if (width) params.set('width', String(width));
-  return `${rendered}?${params}`;
+  return url ?? null;
 }

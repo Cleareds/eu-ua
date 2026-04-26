@@ -10,7 +10,7 @@ const navItems = [
   { href: "/admin/dashboard", label: "Dashboard", icon: "⊞" },
   { href: "/admin/art", label: "Art Objects", icon: "🖼" },
   { href: "/admin/artists", label: "Artists", icon: "👤" },
-  { href: "/admin/waves", label: "Art Waves", icon: "🌊" },
+  { href: "/admin/waves", label: "Movements", icon: "🌊" },
 ];
 
 export default function AdminShell({ children, title }: { children: React.ReactNode; title: string }) {

@@ -151,7 +151,7 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
               </button>
             </div>
           </Field>
-          <Field label="Art Movement / Wave">
+          <Field label="Art Movement">
             <div className="flex gap-2">
               <Select value={waveId} onChange={e => setWaveId(e.target.value)} className="flex-1">
                 <option value="">— No movement —</option>
@@ -161,7 +161,7 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
                 type="button"
                 onClick={() => setShowWaveModal(true)}
                 className="shrink-0 px-3 py-2 text-sm rounded border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
-                title="Create new art wave"
+                title="Create new movement"
               >
                 + New
               </button>

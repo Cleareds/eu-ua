@@ -22,11 +22,11 @@ export default function EditWavePage({ params }: { params: Promise<{ id: string 
   }, [id, state, adminFetch]);
 
   if (notFound) {
-    return <AdminShell title="Edit Wave"><p className="text-sm text-gray-500">Wave not found.</p></AdminShell>;
+    return <AdminShell title="Edit Movement"><p className="text-sm text-gray-500">Movement not found.</p></AdminShell>;
   }
 
   return (
-    <AdminShell title={wave ? `Edit: ${wave.name}` : "Edit Wave"}>
+    <AdminShell title={wave ? `Edit: ${wave.name}` : "Edit Movement"}>
       {wave ? <WaveForm initial={wave} adminFetch={adminFetch} /> : <p className="text-sm text-gray-400">Loading…</p>}
     </AdminShell>
   );

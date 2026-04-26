@@ -123,7 +123,7 @@ export default function ArtistForm({ initial, adminFetch }: Props) {
 
       <FormSection title="Art Movements">
         {allWaves.length === 0 ? (
-          <p className="text-xs text-gray-400">No art waves yet — create some first.</p>
+          <p className="text-xs text-gray-400">No movements yet — create some first.</p>
         ) : (
           <div className="grid grid-cols-2 gap-2">
             {allWaves.map(wave => (
