@@ -74,16 +74,6 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Setup reminder */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800 space-y-1">
-          <p className="font-medium">Setup checklist</p>
-          <ul className="list-disc list-inside text-xs space-y-1 text-yellow-700">
-            <li>Run <code className="bg-yellow-100 px-1 rounded">supabase/schema-art.sql</code> in your Supabase SQL editor</li>
-            <li>Create the <code className="bg-yellow-100 px-1 rounded">art-images</code> storage bucket (public) in Supabase Storage</li>
-            <li>Set <code className="bg-yellow-100 px-1 rounded">ADMIN_EMAIL</code> and <code className="bg-yellow-100 px-1 rounded">SUPABASE_SERVICE_ROLE_KEY</code> in <code className="bg-yellow-100 px-1 rounded">.env.local</code></li>
-            <li>Create your admin user in Supabase Auth → Users → Add User</li>
-          </ul>
-        </div>
       </div>
     </AdminShell>
   );
