@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getArtObjectBySlug, getArtObjectsByArtist, getArtObjectsByWave, getAllArtObjectSlugs } from "@/lib/supabase/art-data";
-import { getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 
@@ -69,20 +68,6 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
 
           {/* Main content */}
           <div>
-            {/* Image — full display version (high quality); original preserved in storage */}
-            {obj.image_url && (
-              <div className="relative w-full rounded-xl overflow-hidden bg-gray-100 mb-8" style={{ maxHeight: "700px" }}>
-                <Image
-                  src={getArtImageUrl(obj.image_url, { width: 1400, quality: 90 }) ?? obj.image_url}
-                  alt={obj.title}
-                  width={1400}
-                  height={900}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
-              </div>
-            )}
-
             {/* Title */}
             <h1 className="text-3xl font-bold mb-2" style={{ color: "#1A1A2E" }}>{obj.title}</h1>
             {obj.title_uk && (
@@ -134,9 +119,21 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
             </div>
 
             {/* Short description */}
-            <p className="text-gray-600 text-base leading-relaxed mb-6 border-l-4 pl-4" style={{ borderColor: "#FFD700" }}>
+            <p className="text-gray-600 text-base leading-relaxed mb-8 border-l-4 pl-4" style={{ borderColor: "#FFD700" }}>
               {obj.short_description}
             </p>
+
+            {/* Image — exact proportions, centered, not cropped */}
+            {obj.image_url && (
+              <div className="flex justify-center mb-8 rounded-xl overflow-hidden bg-gray-100 p-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={obj.image_url}
+                  alt={obj.title}
+                  style={{ maxWidth: "100%", height: "auto", display: "block" }}
+                />
+              </div>
+            )}
 
             {/* Full description (markdown) */}
             {obj.full_description && (
