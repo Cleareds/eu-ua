@@ -1,0 +1,157 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { getArtArtistBySlug, getArtObjectsByArtist, getAllArtistSlugs } from "@/lib/supabase/art-data";
+import { artistLifespan } from "@/lib/art-utils";
+import MarkdownContent from "@/components/art/MarkdownContent";
+import ArtObjectCard from "@/components/art/ArtObjectCard";
+
+export const dynamic = "force-dynamic";
+
+export async function generateStaticParams() {
+  const slugs = await getAllArtistSlugs();
+  return slugs.map(slug => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const artist = await getArtArtistBySlug(slug);
+  if (!artist) return { title: "Artist Not Found — EU-UA.com" };
+  return {
+    title: `${artist.name} — Ukrainian Artist — EU-UA.com`,
+    description: artist.short_bio,
+    openGraph: {
+      title: artist.name,
+      description: artist.short_bio,
+      images: artist.profile_image_url ? [{ url: artist.profile_image_url }] : [],
+    },
+  };
+}
+
+export default async function ArtistPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const artist = await getArtArtistBySlug(slug);
+  if (!artist) notFound();
+
+  const artworks = await getArtObjectsByArtist(artist.id);
+
+  return (
+    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      {/* Hero */}
+      <div className="py-12 px-4" style={{ backgroundColor: "#1A1A2E" }}>
+        <div className="max-w-7xl mx-auto">
+          <nav className="text-xs text-white/40 mb-6 flex gap-2">
+            <Link href="/ukrainian-art" className="hover:text-white">Ukrainian Art</Link>
+            <span>/</span>
+            <Link href="/ukrainian-art/artists" className="hover:text-white">Artists</Link>
+            <span>/</span>
+            <span className="text-white/60">{artist.name}</span>
+          </nav>
+          <div className="flex items-start gap-8">
+            {artist.profile_image_url && (
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shrink-0 border-4 border-white/10">
+                <Image src={artist.profile_image_url} alt={artist.name} fill className="object-cover object-top" priority />
+              </div>
+            )}
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-1">{artist.name}</h1>
+              {artist.name_uk && <p className="text-white/50 text-xl mb-3 font-light">{artist.name_uk}</p>}
+              {(artist.born || artist.birth_place) && (
+                <p className="text-white/60 text-sm mb-3">
+                  {artistLifespan(artist.born, artist.died)}
+                  {artist.birth_place && ` · ${artist.birth_place}`}
+                </p>
+              )}
+              {artist.waves && artist.waves.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {artist.waves.map(wave => (
+                    <Link
+                      key={wave.id}
+                      href={`/ukrainian-art/waves/${wave.slug}`}
+                      className="text-xs px-3 py-1 rounded-full font-medium hover:opacity-80 transition-opacity"
+                      style={{ backgroundColor: "#FFD700", color: "#003399" }}
+                    >
+                      {wave.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-12">
+
+          {/* Biography */}
+          <div>
+            <p className="text-gray-600 text-base leading-relaxed border-l-4 pl-4 mb-8" style={{ borderColor: "#FFD700" }}>
+              {artist.short_bio}
+            </p>
+            {artist.full_bio && <MarkdownContent content={artist.full_bio} />}
+          </div>
+
+          {/* Sidebar */}
+          <aside className="space-y-6">
+            {/* Quick facts */}
+            <div className="bg-white rounded-xl border border-gray-100 p-5">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick facts</h3>
+              <dl className="space-y-3 text-sm">
+                {artist.born && (
+                  <div>
+                    <dt className="text-xs text-gray-400">Born</dt>
+                    <dd className="font-medium text-gray-800">{artist.born}{artist.birth_place ? `, ${artist.birth_place}` : ""}</dd>
+                  </div>
+                )}
+                {artist.died && (
+                  <div>
+                    <dt className="text-xs text-gray-400">Died</dt>
+                    <dd className="font-medium text-gray-800">{artist.died}</dd>
+                  </div>
+                )}
+                {artist.waves && artist.waves.length > 0 && (
+                  <div>
+                    <dt className="text-xs text-gray-400">Movements</dt>
+                    <dd className="space-y-1">
+                      {artist.waves.map(wave => (
+                        <Link key={wave.id} href={`/ukrainian-art/waves/${wave.slug}`} className="block font-medium hover:underline" style={{ color: "#003399" }}>
+                          {wave.name}
+                        </Link>
+                      ))}
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </div>
+
+            {/* Tags */}
+            {artist.tags?.length > 0 && (
+              <div className="bg-white rounded-xl border border-gray-100 p-5">
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Tags</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {artist.tags.map(tag => (
+                    <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
+        </div>
+
+        {/* Artworks */}
+        {artworks.length > 0 && (
+          <section className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: "#1A1A2E" }}>
+              Works by {artist.name}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {artworks.map(obj => <ArtObjectCard key={obj.id} obj={obj} />)}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}

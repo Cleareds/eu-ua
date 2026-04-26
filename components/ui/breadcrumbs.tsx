@@ -7,6 +7,11 @@ const ROUTE_LABELS: Record<string, string> = {
   "eu-accession": "EU Accession",
   "cultural-map": "Cultural Map",
   "data-dashboard": "Data Dashboard",
+  "ukrainian-art": "Ukrainian Art",
+  artists: "Artists",
+  waves: "Movements",
+  art: "Artwork",
+  admin: "Admin",
   timeline: "Timeline",
   people: "People",
   heritage: "Heritage",
@@ -18,7 +23,7 @@ const ROUTE_LABELS: Record<string, string> = {
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  if (pathname === "/" || pathname.startsWith("/admin")) return null;
 
   const segments = pathname.split("/").filter(Boolean);
   const items = segments.map((seg, i) => ({

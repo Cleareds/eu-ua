@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/timeline", label: "Timeline" },
   { href: "/people", label: "People" },
   { href: "/heritage", label: "Heritage" },
+  { href: "/ukrainian-art", label: "Art" },
   { href: "/data-dashboard", label: "Data" },
   { href: "/news", label: "News" },
   { href: "/myths", label: "Myths" },
