@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifyAdminRequest, adminDb } from "@/lib/supabase/art-admin";
+import { verifyAdminRequest, adminClient } from "@/lib/supabase/art-admin";
 import { generateSlug } from "@/lib/art-utils";
 
 export async function GET(req: NextRequest) {
   const auth = await verifyAdminRequest(req);
   if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: 401 });
 
-  const db = adminDb();
+  const db = adminClient(auth.token);
   const { data, error } = await db
     .from("art_waves")
     .select("*")
@@ -20,12 +20,9 @@ export async function POST(req: NextRequest) {
   if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: 401 });
 
   const body = await req.json();
-  const db = adminDb();
+  const db = adminClient(auth.token);
 
-  // Auto-generate slug if not provided
   const slug = body.slug?.trim() || generateSlug(body.name);
-
-  // Check uniqueness
   const { data: existing } = await db
     .from("art_waves")
     .select("id")

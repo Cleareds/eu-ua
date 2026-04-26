@@ -20,7 +20,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "File too large. Max 8 MB." }, { status: 400 });
   }
 
-  // Sanitize filename to prevent path traversal
   const ext = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") ?? "jpg";
   const safeName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
   const storagePath = `${folder}/${safeName}`;
@@ -28,7 +27,7 @@ export async function POST(req: NextRequest) {
   const buffer = Buffer.from(await file.arrayBuffer());
 
   try {
-    const publicUrl = await uploadArtImage(buffer, storagePath, file.type);
+    const publicUrl = await uploadArtImage(buffer, storagePath, file.type, auth.token);
     return NextResponse.json({ url: publicUrl });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Upload failed";

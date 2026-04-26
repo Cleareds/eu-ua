@@ -1,7 +1,7 @@
 /**
  * Server-only admin utilities for Ukrainian Art.
- * Uses SUPABASE_SERVICE_ROLE_KEY to bypass RLS.
- * All public exports verify admin identity before operating.
+ * Write operations use the user's JWT so Supabase RLS admin policies fire.
+ * The service-role client is kept for verifyAdminRequest only (getUser call).
  */
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { NextRequest } from "next/server";
@@ -12,15 +12,23 @@ function serviceClient(): SupabaseClient {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
-/** Extract and verify the admin JWT from the Authorization header.
- *
- * Admin status is stored in Supabase Auth app_metadata (not an env var).
- * Grant with:
- *   UPDATE auth.users
- *   SET raw_app_meta_data = raw_app_meta_data || '{"role":"admin"}'::jsonb
- *   WHERE email = 'your@email.com';
+/**
+ * Creates a Supabase client authenticated with the user's JWT.
+ * RLS sees auth.jwt() → app_metadata → role = "admin" on every request.
  */
-export async function verifyAdminRequest(req: NextRequest): Promise<{ ok: true; adminEmail: string } | { ok: false; error: string }> {
+export function adminClient(token: string): SupabaseClient {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+  return createClient(url, key, {
+    global: { headers: { Authorization: `Bearer ${token}` } },
+    auth: { persistSession: false },
+  });
+}
+
+/** Extract and verify the admin JWT from the Authorization header. */
+export async function verifyAdminRequest(
+  req: NextRequest
+): Promise<{ ok: true; adminEmail: string; token: string } | { ok: false; error: string }> {
   const authHeader = req.headers.get("Authorization");
   const token = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null;
   if (!token) return { ok: false, error: "Missing Authorization header" };
@@ -29,30 +37,33 @@ export async function verifyAdminRequest(req: NextRequest): Promise<{ ok: true; 
   const { data: { user }, error } = await svc.auth.getUser(token);
   if (error || !user) return { ok: false, error: "Invalid or expired token" };
 
-  // Role is stored in Supabase Auth app_metadata — set via SQL, not env var
   if (user.app_metadata?.role !== "admin") {
     return { ok: false, error: "Forbidden" };
   }
 
-  return { ok: true, adminEmail: user.email! };
+  return { ok: true, adminEmail: user.email!, token };
 }
 
-/** Returns the service-role Supabase client for DB writes. */
+/** @deprecated Use adminClient(token) from verifyAdminRequest instead. */
 export function adminDb(): SupabaseClient {
   return serviceClient();
 }
 
-/** Upload an image buffer to Supabase Storage, return the public URL. */
+/**
+ * Upload an image buffer to Supabase Storage using the admin's JWT so that
+ * the storage RLS "Admin upload art-images" policy is satisfied.
+ */
 export async function uploadArtImage(
   buffer: Buffer,
   path: string,
-  contentType: string
+  contentType: string,
+  token?: string
 ): Promise<string> {
-  const svc = serviceClient();
-  const { error } = await svc.storage
+  const client = token ? adminClient(token) : serviceClient();
+  const { error } = await client.storage
     .from("art-images")
     .upload(path, buffer, { contentType, upsert: true });
   if (error) throw new Error(`Upload failed: ${error.message}`);
-  const { data } = svc.storage.from("art-images").getPublicUrl(path);
+  const { data } = client.storage.from("art-images").getPublicUrl(path);
   return data.publicUrl;
 }

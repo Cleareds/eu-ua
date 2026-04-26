@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 
 interface FieldProps {
   label: string;
@@ -21,25 +21,27 @@ export function Field({ label, hint, required, children }: FieldProps) {
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-export function Input({ className = "", ...props }: InputProps) {
+export const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ className = "", ...props }, ref) {
   return (
     <input
+      ref={ref}
       {...props}
       className={`w-full border border-gray-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-100 ${className}`}
     />
   );
-}
+});
 
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
-export function Textarea({ className = "", ...props }: TextareaProps) {
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea({ className = "", ...props }, ref) {
   return (
     <textarea
+      ref={ref}
       {...props}
       className={`w-full border border-gray-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-100 resize-y ${className}`}
     />
   );
-}
+});
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   children: ReactNode;

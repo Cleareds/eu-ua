@@ -129,5 +129,67 @@ create policy "Public read art_artist_waves"
 create policy "Public read art_objects"
   on art_objects for select using (published = true);
 
--- Admin writes bypass RLS via service_role key (SUPABASE_SERVICE_ROLE_KEY env var).
--- No write policies needed — service_role skips RLS entirely.
+-- Admin write policies (JWT-based).
+-- These fire when API routes use adminClient(token) — the user's access token
+-- carries app_metadata.role = "admin" so RLS allows the write.
+-- Also works as fallback when SUPABASE_SERVICE_ROLE_KEY is not set.
+
+drop policy if exists "Admin write art_waves"        on art_waves;
+drop policy if exists "Admin write art_artists"      on art_artists;
+drop policy if exists "Admin write art_artist_waves" on art_artist_waves;
+drop policy if exists "Admin write art_objects"      on art_objects;
+
+create policy "Admin write art_waves"
+  on art_waves for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+create policy "Admin write art_artists"
+  on art_artists for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+create policy "Admin write art_artist_waves"
+  on art_artist_waves for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+create policy "Admin write art_objects"
+  on art_objects for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+-- ─────────────────────────────────────────
+-- Storage RLS for art-images bucket
+-- Run after creating the bucket in Supabase dashboard.
+-- ─────────────────────────────────────────
+
+drop policy if exists "Public read art-images"  on storage.objects;
+drop policy if exists "Admin upload art-images" on storage.objects;
+drop policy if exists "Admin update art-images" on storage.objects;
+drop policy if exists "Admin delete art-images" on storage.objects;
+
+create policy "Public read art-images"
+  on storage.objects for select
+  using (bucket_id = 'art-images');
+
+create policy "Admin upload art-images"
+  on storage.objects for insert
+  with check (
+    bucket_id = 'art-images'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  );
+
+create policy "Admin update art-images"
+  on storage.objects for update
+  using (
+    bucket_id = 'art-images'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  );
+
+create policy "Admin delete art-images"
+  on storage.objects for delete
+  using (
+    bucket_id = 'art-images'
+    AND (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
+  );
