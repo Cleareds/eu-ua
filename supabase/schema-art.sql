@@ -34,6 +34,7 @@ create table if not exists art_artists (
   short_bio text not null default '',
   full_bio text,
   profile_image_url text,
+  website_url text,
   tags text[] not null default '{}',
   featured boolean not null default false,
   published boolean not null default true,
@@ -71,6 +72,52 @@ create table if not exists art_objects (
 );
 
 -- Indexes
+-- Add website_url to existing artists tables (idempotent)
+alter table art_artists add column if not exists website_url text;
+
+-- ─────────────────────────────────────────
+-- People (Notable Ukrainians) — managed via /admin/people
+-- Powers the public /people page.
+-- ─────────────────────────────────────────
+create table if not exists people (
+  id uuid primary key default gen_random_uuid(),
+  slug text not null unique,
+  name text not null,
+  years text,
+  role text,
+  birthplace text,
+  era text,
+  description text not null default '',
+  european_connections text[] not null default '{}',
+  sources jsonb not null default '[]'::jsonb,
+  profile_image_url text,
+  display_order integer,
+  featured boolean not null default false,
+  published boolean not null default true,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create index if not exists people_era_idx on people(era);
+create index if not exists people_published_idx on people(published);
+
+drop trigger if exists people_updated_at on people;
+create trigger people_updated_at
+  before update on people
+  for each row execute function set_updated_at();
+
+alter table people enable row level security;
+
+drop policy if exists "Public read people" on people;
+create policy "Public read people"
+  on people for select using (published = true);
+
+drop policy if exists "Admin write people" on people;
+create policy "Admin write people"
+  on people for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
 create index if not exists art_objects_artist_idx on art_objects(artist_id);
 create index if not exists art_objects_wave_idx on art_objects(wave_id);
 create index if not exists art_objects_featured_idx on art_objects(featured) where published = true;

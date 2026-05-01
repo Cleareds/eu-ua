@@ -1,6 +1,9 @@
 import peopleData from "@/data/people.json";
 import { Person } from "@/lib/types";
 import PeopleGrid from "@/components/people/PeopleGrid";
+import { getAllPeople } from "@/lib/supabase/people-data";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Notable Ukrainians with European Connections — EU-UA",
@@ -12,8 +15,9 @@ export const metadata = {
   keywords: ["Ukrainian notable figures", "Ukraine Europe culture", "Yaroslav the Wise Europe", "Ukrainian scientists Europe", "Ukrainian artists Europe"],
 };
 
-export default function PeoplePage() {
-  const people = peopleData as Person[];
+export default async function PeoplePage() {
+  const fromDb = await getAllPeople();
+  const people: Person[] = fromDb.length > 0 ? fromDb : (peopleData as Person[]);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>

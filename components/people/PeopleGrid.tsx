@@ -31,8 +31,8 @@ function getInitials(name: string) {
 
 function PersonAvatar({ person, eraStyle }: { person: Person; eraStyle: { bg: string; text: string } }) {
   const [imgError, setImgError] = useState(false);
-  // Script outputs .png; fall back to .jpg for backwards compat
-  const src = `/people/${person.id}.png`;
+  // Prefer Supabase-uploaded image; fall back to bundled /public/people/<id>.png
+  const src = person.profileImageUrl || `/people/${person.id}.png`;
 
   if (!imgError) {
     return (

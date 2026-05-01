@@ -102,8 +102,8 @@ export default function WaveForm({ initial, adminFetch }: Props) {
       </FormSection>
 
       <FormSection title="Content">
-        <Field label="Short description" required hint="Shown on listing cards (1–2 sentences)">
-          <Textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} required />
+        <Field label="Short description" hint="Shown on listing cards (1–2 sentences)">
+          <Textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} />
         </Field>
         <Field label="Full description" hint="Markdown supported — shown on the movement's detail page">
           <Textarea value={fullDescription} onChange={e => setFullDescription(e.target.value)} rows={10} className="font-mono text-xs" />

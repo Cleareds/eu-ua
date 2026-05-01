@@ -55,6 +55,7 @@ export function QuickCreateArtist({ adminFetch, waves, onCreated, onClose }: Qui
   const [born, setBorn] = useState("");
   const [died, setDied] = useState("");
   const [shortBio, setShortBio] = useState("");
+  const [websiteUrl, setWebsiteUrl] = useState("");
   const [selectedWaveIds, setSelectedWaveIds] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -76,6 +77,7 @@ export function QuickCreateArtist({ adminFetch, waves, onCreated, onClose }: Qui
       born: born ? parseInt(born) : null,
       died: died ? parseInt(died) : null,
       short_bio: shortBio,
+      website_url: websiteUrl || null,
       tags: [],
       featured: false,
       published: true,
@@ -108,8 +110,11 @@ export function QuickCreateArtist({ adminFetch, waves, onCreated, onClose }: Qui
             <Input type="number" value={died} onChange={e => setDied(e.target.value)} placeholder="1937" min="1200" max="2100" />
           </Field>
         </div>
-        <Field label="Short bio" required hint="1–3 sentences">
-          <Textarea value={shortBio} onChange={e => setShortBio(e.target.value)} rows={3} required />
+        <Field label="Short bio" hint="1–3 sentences">
+          <Textarea value={shortBio} onChange={e => setShortBio(e.target.value)} rows={3} />
+        </Field>
+        <Field label="Website for all works" hint="Optional link to more works">
+          <Input type="url" value={websiteUrl} onChange={e => setWebsiteUrl(e.target.value)} placeholder="https://example.com/artist" />
         </Field>
         {waves.length > 0 && (
           <Field label="Art movements">
@@ -211,8 +216,8 @@ export function QuickCreateWave({ adminFetch, onCreated, onClose }: QuickWavePro
             <Input type="number" value={endYear} onChange={e => setEndYear(e.target.value)} placeholder="1934" min="100" max="2100" />
           </Field>
         </div>
-        <Field label="Short description" required>
-          <Textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} required />
+        <Field label="Short description">
+          <Textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} />
         </Field>
         {error && <p className="text-xs text-red-600 bg-red-50 rounded px-3 py-2">{error}</p>}
         <div className="flex gap-2 pt-1">

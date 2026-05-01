@@ -27,6 +27,7 @@ export default function ArtistForm({ initial, adminFetch }: Props) {
   const [shortBio, setShortBio] = useState(initial?.short_bio ?? "");
   const [fullBio, setFullBio] = useState(initial?.full_bio ?? "");
   const [profileImage, setProfileImage] = useState(initial?.profile_image_url ?? "");
+  const [websiteUrl, setWebsiteUrl] = useState(initial?.website_url ?? "");
   const [tags, setTags] = useState(formatTags(initial?.tags ?? []));
   const [featured, setFeatured] = useState(initial?.featured ?? false);
   const [published, setPublished] = useState(initial?.published ?? true);
@@ -64,6 +65,7 @@ export default function ArtistForm({ initial, adminFetch }: Props) {
       birth_place: birthPlace || null,
       short_bio: shortBio, full_bio: fullBio || null,
       profile_image_url: profileImage || null,
+      website_url: websiteUrl || null,
       tags: parseTags(tags), featured, published,
       wave_ids: selectedWaveIds,
     };
@@ -113,8 +115,8 @@ export default function ArtistForm({ initial, adminFetch }: Props) {
       </FormSection>
 
       <FormSection title="Content">
-        <Field label="Short bio" required hint="1–3 sentences shown on cards and listings">
-          <Textarea value={shortBio} onChange={e => setShortBio(e.target.value)} rows={3} required />
+        <Field label="Short bio" hint="1–3 sentences shown on cards and listings">
+          <Textarea value={shortBio} onChange={e => setShortBio(e.target.value)} rows={3} />
         </Field>
         <Field label="Full biography" hint="Markdown supported — shown on artist's detail page">
           <Textarea value={fullBio} onChange={e => setFullBio(e.target.value)} rows={12} className="font-mono text-xs" />
@@ -145,6 +147,9 @@ export default function ArtistForm({ initial, adminFetch }: Props) {
       <FormSection title="Media & Tags">
         <Field label="Profile photo">
           <ImageUpload value={profileImage} onChange={setProfileImage} folder="artists" adminFetch={adminFetch} />
+        </Field>
+        <Field label="Website for all works" hint="Link to a page listing more of the artist's works (optional)">
+          <Input type="url" value={websiteUrl} onChange={e => setWebsiteUrl(e.target.value)} placeholder="https://example.com/artist" />
         </Field>
         <Field label="Tags" hint="Comma-separated: e.g. modernism, lviv, graphic-arts">
           <Input value={tags} onChange={e => setTags(e.target.value)} />

@@ -11,6 +11,7 @@ const navItems = [
   { href: "/admin/art", label: "Art Objects", icon: "🖼" },
   { href: "/admin/artists", label: "Artists", icon: "👤" },
   { href: "/admin/waves", label: "Movements", icon: "🌊" },
+  { href: "/admin/people", label: "People", icon: "👥" },
 ];
 
 export default function AdminShell({ children, title }: { children: React.ReactNode; title: string }) {

@@ -142,4 +142,25 @@ export interface Person {
   description: string;
   europeanConnections: string[];
   sources: PersonSource[];
+  profileImageUrl?: string | null;
+}
+
+/** DB-shape Person record (snake_case columns). */
+export interface PersonRecord {
+  id: string;
+  slug: string;
+  name: string;
+  years: string | null;
+  role: string | null;
+  birthplace: string | null;
+  era: string | null;
+  description: string;
+  european_connections: string[];
+  sources: PersonSource[];
+  profile_image_url: string | null;
+  display_order: number | null;
+  featured: boolean;
+  published: boolean;
+  created_at: string;
+  updated_at: string;
 }

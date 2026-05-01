@@ -26,6 +26,7 @@ export interface ArtArtist {
   short_bio: string;
   full_bio?: string | null;
   profile_image_url?: string | null;
+  website_url?: string | null;
   tags: string[];
   featured: boolean;
   published: boolean;

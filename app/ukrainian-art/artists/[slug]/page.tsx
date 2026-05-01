@@ -117,6 +117,22 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
                     <dd className="font-medium text-gray-800">{artist.died}</dd>
                   </div>
                 )}
+                {artist.website_url && (
+                  <div>
+                    <dt className="text-xs text-gray-400">Website</dt>
+                    <dd>
+                      <a
+                        href={artist.website_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium hover:underline break-all"
+                        style={{ color: "#003399" }}
+                      >
+                        All works →
+                      </a>
+                    </dd>
+                  </div>
+                )}
                 {artist.waves && artist.waves.length > 0 && (
                   <div>
                     <dt className="text-xs text-gray-400">Movements</dt>

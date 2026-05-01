@@ -189,8 +189,8 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
         </FormSection>
 
         <FormSection title="Content">
-          <Field label="Short description" required hint="1–2 sentences shown on cards">
-            <Textarea value={shortDescription} onChange={e => setShortDescription(e.target.value)} rows={3} required />
+          <Field label="Short description" hint="1–2 sentences shown on cards">
+            <Textarea value={shortDescription} onChange={e => setShortDescription(e.target.value)} rows={3} />
           </Field>
           <Field label="Full description" hint="Markdown supported — detailed curatorial text shown on the artwork page">
             <Textarea value={fullDescription} onChange={e => setFullDescription(e.target.value)} rows={12} className="font-mono text-xs" />
