@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getFeaturedArtObjects, getArtWaves, getFeaturedArtists, getArtObjects } from "@/lib/supabase/art-data";
+import { getFeaturedArtObjects, getArtWaves, getFeaturedArtists, getRecentArtObjects } from "@/lib/supabase/art-data";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
 import WaveCard from "@/components/art/WaveCard";
@@ -22,11 +22,11 @@ export default async function UkrainianArtPage() {
     getFeaturedArtObjects(9),
     getArtWaves(),
     getFeaturedArtists(6),
-    getArtObjects(3),
+    getRecentArtObjects(6),
   ]);
 
-  // Show recent if not enough featured
-  const heroWorks = featured.length >= 3 ? featured : recent;
+  // Show featured if any exist, otherwise the 6 most recently added
+  const heroWorks = featured.length > 0 ? featured : recent;
   const hasContent = heroWorks.length > 0 || waves.length > 0 || featuredArtists.length > 0;
 
   return (

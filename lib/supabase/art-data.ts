@@ -131,6 +131,19 @@ export async function getArtObjects(limit?: number): Promise<ArtObject[]> {
   return (data ?? []) as unknown as ArtObject[];
 }
 
+export async function getRecentArtObjects(limit = 6): Promise<ArtObject[]> {
+  const client = db();
+  if (!client) return [];
+  const { data, error } = await client
+    .from("art_objects")
+    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves(id,slug,name)")
+    .eq("published", true)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+  if (error) { console.error("getRecentArtObjects:", error.message); return []; }
+  return (data ?? []) as unknown as ArtObject[];
+}
+
 export async function getFeaturedArtObjects(limit = 9): Promise<ArtObject[]> {
   const client = db();
   if (!client) return [];
