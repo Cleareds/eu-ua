@@ -168,7 +168,31 @@ export async function getArtObjectBySlug(slug: string): Promise<ArtObject | null
     .eq("published", true)
     .single();
   if (error) return null;
-  return data as unknown as ArtObject;
+
+  // Fetch the full list of associated movements via the junction
+  const { data: junctionData } = await client
+    .from("art_object_waves")
+    .select("wave_id")
+    .eq("object_id", data.id);
+
+  let waves: ArtWave[] = [];
+  if (junctionData?.length) {
+    const waveIds = junctionData.map((j: { wave_id: string }) => j.wave_id);
+    const { data: wavesData } = await client
+      .from("art_waves")
+      .select("*")
+      .in("id", waveIds)
+      .eq("published", true);
+    const list = (wavesData ?? []) as ArtWave[];
+    // Put primary wave (data.wave_id) first
+    waves = data.wave_id
+      ? [...list.filter(w => w.id === data.wave_id), ...list.filter(w => w.id !== data.wave_id)]
+      : list;
+  } else if (data.wave) {
+    waves = [data.wave as ArtWave];
+  }
+
+  return { ...data, waves } as unknown as ArtObject;
 }
 
 export async function getArtObjectsByArtist(artistId: string, excludeSlug?: string): Promise<ArtObject[]> {
@@ -190,11 +214,21 @@ export async function getArtObjectsByArtist(artistId: string, excludeSlug?: stri
 export async function getArtObjectsByWave(waveId: string, excludeSlug?: string): Promise<ArtObject[]> {
   const client = db();
   if (!client) return [];
+
+  // Pull from the M2M junction so works in multiple movements show up on each
+  const { data: junctionData } = await client
+    .from("art_object_waves")
+    .select("object_id")
+    .eq("wave_id", waveId);
+
+  if (!junctionData?.length) return [];
+  const ids = junctionData.map((j: { object_id: string }) => j.object_id);
+
   let query = client
     .from("art_objects")
     .select("*, artist:art_artists(id,slug,name)")
     .eq("published", true)
-    .eq("wave_id", waveId)
+    .in("id", ids)
     .order("year", { ascending: true, nullsFirst: false })
     .limit(12);
   if (excludeSlug) query = query.neq("slug", excludeSlug);

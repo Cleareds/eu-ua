@@ -58,6 +58,7 @@ export interface ArtObject {
   // Joined in queries
   artist?: ArtArtist | null;
   wave?: ArtWave | null;
+  waves?: ArtWave[];
 }
 
 // Form payloads (omit DB-generated fields)
@@ -65,4 +66,6 @@ export type ArtWavePayload = Omit<ArtWave, 'id' | 'created_at' | 'updated_at'>;
 export type ArtArtistPayload = Omit<ArtArtist, 'id' | 'created_at' | 'updated_at' | 'waves'> & {
   wave_ids?: string[];
 };
-export type ArtObjectPayload = Omit<ArtObject, 'id' | 'created_at' | 'updated_at' | 'artist' | 'wave'>;
+export type ArtObjectPayload = Omit<ArtObject, 'id' | 'created_at' | 'updated_at' | 'artist' | 'wave' | 'waves'> & {
+  wave_ids?: string[];
+};

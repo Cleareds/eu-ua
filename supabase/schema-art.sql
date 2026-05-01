@@ -76,6 +76,34 @@ create table if not exists art_objects (
 alter table art_artists add column if not exists website_url text;
 
 -- ─────────────────────────────────────────
+-- Art Object ↔ Wave junction (many-to-many) — added 2026-05-01
+-- art_objects.wave_id is kept as the denormalized "primary" movement.
+-- This junction holds the full list including the primary.
+-- ─────────────────────────────────────────
+create table if not exists art_object_waves (
+  object_id uuid references art_objects(id) on delete cascade,
+  wave_id uuid references art_waves(id) on delete cascade,
+  primary key (object_id, wave_id)
+);
+
+alter table art_object_waves enable row level security;
+
+drop policy if exists "Public read art_object_waves" on art_object_waves;
+create policy "Public read art_object_waves"
+  on art_object_waves for select using (true);
+
+drop policy if exists "Admin write art_object_waves" on art_object_waves;
+create policy "Admin write art_object_waves"
+  on art_object_waves for all
+  using     ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+-- Backfill: copy existing single wave_id assignments into the junction
+insert into art_object_waves (object_id, wave_id)
+select id, wave_id from art_objects where wave_id is not null
+on conflict do nothing;
+
+-- ─────────────────────────────────────────
 -- People (Notable Ukrainians) — managed via /admin/people
 -- Powers the public /people page.
 -- ─────────────────────────────────────────

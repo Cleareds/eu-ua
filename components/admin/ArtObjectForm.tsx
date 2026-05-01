@@ -9,7 +9,7 @@ import { QuickCreateArtist, QuickCreateWave } from "./QuickCreate";
 import type { ArtObject, ArtArtist, ArtWave } from "@/lib/types-art";
 
 interface Props {
-  initial?: ArtObject;
+  initial?: ArtObject & { wave_ids?: string[] };
   adminFetch: (url: string, opts?: RequestInit) => Promise<Response>;
 }
 
@@ -26,7 +26,9 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
   const [titleUk, setTitleUk] = useState(initial?.title_uk ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
   const [artistId, setArtistId] = useState(initial?.artist_id ?? "");
-  const [waveId, setWaveId] = useState(initial?.wave_id ?? "");
+  const [selectedWaveIds, setSelectedWaveIds] = useState<string[]>(
+    initial?.wave_ids ?? (initial?.wave_id ? [initial.wave_id] : [])
+  );
   const [year, setYear] = useState(initial?.year?.toString() ?? "");
   const [medium, setMedium] = useState(initial?.medium ?? "");
   const [dimensions, setDimensions] = useState(initial?.dimensions ?? "");
@@ -66,8 +68,21 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
 
   function onWaveCreated(wave: ArtWave) {
     setWaves(prev => [...prev, wave].sort((a, b) => (a.start_year ?? 9999) - (b.start_year ?? 9999)));
-    setWaveId(wave.id);
+    setSelectedWaveIds(prev => prev.includes(wave.id) ? prev : [...prev, wave.id]);
     showToast(`Wave "${wave.name}" created and selected`, "success");
+  }
+
+  function toggleWave(id: string) {
+    setSelectedWaveIds(prev =>
+      prev.includes(id) ? prev.filter(w => w !== id) : [...prev, id]
+    );
+  }
+
+  function makeWavePrimary(id: string) {
+    setSelectedWaveIds(prev => {
+      if (!prev.includes(id)) return prev;
+      return [id, ...prev.filter(w => w !== id)];
+    });
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -75,7 +90,9 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
     setSaving(true);
     const payload = {
       title, title_uk: titleUk || null, slug,
-      artist_id: artistId || null, wave_id: waveId || null,
+      artist_id: artistId || null,
+      wave_id: selectedWaveIds[0] ?? null,
+      wave_ids: selectedWaveIds,
       year: year ? parseInt(year) : null,
       medium: medium || null, dimensions: dimensions || null, location: location || null,
       short_description: shortDescription, full_description: fullDescription || null,
@@ -151,19 +168,55 @@ export default function ArtObjectForm({ initial, adminFetch }: Props) {
               </button>
             </div>
           </Field>
-          <Field label="Art Movement">
-            <div className="flex gap-2">
-              <Select value={waveId} onChange={e => setWaveId(e.target.value)} className="flex-1">
-                <option value="">— No movement —</option>
-                {waves.map(w => <option key={w.id} value={w.id}>{w.name}{w.period ? ` (${w.period})` : ""}</option>)}
-              </Select>
+          <Field label="Art Movements" hint="Select one or more. The first selected is the primary movement shown on cards.">
+            <div className="space-y-2">
+              {waves.length === 0 ? (
+                <p className="text-xs text-gray-400">No movements yet — create one below.</p>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-56 overflow-y-auto border border-gray-100 rounded p-2">
+                  {waves.map(w => {
+                    const checked = selectedWaveIds.includes(w.id);
+                    const isPrimary = checked && selectedWaveIds[0] === w.id;
+                    return (
+                      <div key={w.id} className="flex items-center gap-2 text-sm">
+                        <label className="flex items-center gap-2 cursor-pointer flex-1 min-w-0">
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => toggleWave(w.id)}
+                            className="rounded border-gray-300"
+                          />
+                          <span className="truncate">
+                            {w.name}{w.period ? ` (${w.period})` : ""}
+                          </span>
+                        </label>
+                        {checked && (
+                          isPrimary ? (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded font-semibold shrink-0" style={{ backgroundColor: "#FFD700", color: "#003399" }}>
+                              Primary
+                            </span>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => makeWavePrimary(w.id)}
+                              className="text-[10px] text-gray-500 hover:underline shrink-0"
+                              title="Make this the primary movement"
+                            >
+                              Make primary
+                            </button>
+                          )
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
               <button
                 type="button"
                 onClick={() => setShowWaveModal(true)}
-                className="shrink-0 px-3 py-2 text-sm rounded border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
-                title="Create new movement"
+                className="text-xs px-3 py-1.5 rounded border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
               >
-                + New
+                + New movement
               </button>
             </div>
           </Field>

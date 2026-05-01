@@ -10,7 +10,20 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
   const db = adminClient(auth.token);
   const { data, error } = await db.from("art_objects").select("*").eq("id", id).single();
   if (error) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  return NextResponse.json(data);
+
+  const { data: junctionData } = await db
+    .from("art_object_waves")
+    .select("wave_id")
+    .eq("object_id", id);
+  const wave_ids = (junctionData ?? []).map((j: { wave_id: string }) => j.wave_id);
+  // Ensure primary wave_id is first in the list (preserves UX ordering)
+  if (data.wave_id && wave_ids.includes(data.wave_id)) {
+    const others = wave_ids.filter(w => w !== data.wave_id);
+    wave_ids.length = 0;
+    wave_ids.push(data.wave_id, ...others);
+  }
+
+  return NextResponse.json({ ...data, wave_ids });
 }
 
 export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -19,9 +32,10 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 
   const { id } = await params;
   const body = await req.json();
+  const { wave_ids, ...objectData } = body;
   const db = adminClient(auth.token);
 
-  const slug = body.slug?.trim() || generateSlug(body.title);
+  const slug = objectData.slug?.trim() || generateSlug(objectData.title);
   const { data: existing } = await db
     .from("art_objects")
     .select("id")
@@ -30,13 +44,24 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     .maybeSingle();
   if (existing) return NextResponse.json({ error: `Slug "${slug}" already in use` }, { status: 409 });
 
+  const primaryWaveId: string | null =
+    Array.isArray(wave_ids) && wave_ids.length > 0 ? wave_ids[0] : (objectData.wave_id ?? null);
+
   const { data, error } = await db
     .from("art_objects")
-    .update({ ...body, slug })
+    .update({ ...objectData, slug, wave_id: primaryWaveId })
     .eq("id", id)
     .select()
     .single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+  await db.from("art_object_waves").delete().eq("object_id", id);
+  if (Array.isArray(wave_ids) && wave_ids.length) {
+    await db.from("art_object_waves").insert(
+      wave_ids.map((wid: string) => ({ object_id: id, wave_id: wid }))
+    );
+  }
+
   return NextResponse.json(data);
 }
 

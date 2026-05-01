@@ -20,9 +20,10 @@ export async function POST(req: NextRequest) {
   if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: 401 });
 
   const body = await req.json();
+  const { wave_ids, ...objectData } = body;
   const db = adminClient(auth.token);
 
-  const slug = body.slug?.trim() || generateSlug(body.title);
+  const slug = objectData.slug?.trim() || generateSlug(objectData.title);
   const { data: existing } = await db
     .from("art_objects")
     .select("id")
@@ -30,11 +31,22 @@ export async function POST(req: NextRequest) {
     .maybeSingle();
   if (existing) return NextResponse.json({ error: `Slug "${slug}" already exists` }, { status: 409 });
 
+  // wave_id is the denormalized "primary" — first selected movement
+  const primaryWaveId: string | null =
+    Array.isArray(wave_ids) && wave_ids.length > 0 ? wave_ids[0] : (objectData.wave_id ?? null);
+
   const { data, error } = await db
     .from("art_objects")
-    .insert({ ...body, slug })
+    .insert({ ...objectData, slug, wave_id: primaryWaveId })
     .select()
     .single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+  if (Array.isArray(wave_ids) && wave_ids.length) {
+    await db.from("art_object_waves").insert(
+      wave_ids.map((wid: string) => ({ object_id: data.id, wave_id: wid }))
+    );
+  }
+
   return NextResponse.json(data, { status: 201 });
 }

@@ -178,10 +178,12 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
               </div>
             )}
 
-            {/* Wave card */}
+            {/* Wave card(s) — primary movement first, then any additional ones */}
             {waveName && waveSlug && (
               <div className="bg-white rounded-xl border border-gray-100 p-5">
-                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Movement</h3>
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                  {(obj.waves?.length ?? 0) > 1 ? "Movements" : "Movement"}
+                </h3>
                 <p className="font-semibold text-sm mb-1" style={{ color: "#1A1A2E" }}>{waveName}</p>
                 {obj.wave?.period && <p className="text-xs mb-2 font-mono" style={{ color: "#003399" }}>{obj.wave.period}</p>}
                 {obj.wave?.description && (
@@ -190,6 +192,23 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
                 <Link href={`/ukrainian-art/waves/${waveSlug}`} className="text-xs font-medium hover:underline" style={{ color: "#003399" }}>
                   Explore movement →
                 </Link>
+                {obj.waves && obj.waves.length > 1 && (
+                  <div className="mt-4 pt-3 border-t border-gray-100">
+                    <p className="text-[11px] uppercase tracking-wider text-gray-400 mb-2">Also part of</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {obj.waves.filter(w => w.slug !== waveSlug).map(w => (
+                        <Link
+                          key={w.id}
+                          href={`/ukrainian-art/waves/${w.slug}`}
+                          className="text-xs px-2.5 py-1 rounded-full font-medium hover:opacity-80 transition-opacity"
+                          style={{ backgroundColor: "#FFD700", color: "#003399" }}
+                        >
+                          {w.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </aside>
