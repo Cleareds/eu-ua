@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   const db = adminClient(auth.token);
   const { data, error } = await db
     .from("art_objects")
-    .select("*, artist:art_artists(id,name), wave:art_waves(id,name)")
+    .select("*, artist:art_artists(id,name), wave:art_waves!wave_id(id,name)")
     .order("created_at", { ascending: false });
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json(data);

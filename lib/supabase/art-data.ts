@@ -122,7 +122,7 @@ export async function getArtObjects(limit?: number): Promise<ArtObject[]> {
   if (!client) return [];
   let query = client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves(id,slug,name)")
+    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
     .eq("published", true)
     .order("year", { ascending: true, nullsFirst: false });
   if (limit) query = query.limit(limit);
@@ -136,7 +136,7 @@ export async function getRecentArtObjects(limit = 6): Promise<ArtObject[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves(id,slug,name)")
+    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
     .eq("published", true)
     .order("created_at", { ascending: false })
     .limit(limit);
@@ -149,7 +149,7 @@ export async function getFeaturedArtObjects(limit = 9): Promise<ArtObject[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves(id,slug,name)")
+    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
     .eq("published", true)
     .eq("featured", true)
     .order("created_at", { ascending: false })
@@ -163,7 +163,7 @@ export async function getArtObjectBySlug(slug: string): Promise<ArtObject | null
   if (!client) return null;
   const { data, error } = await client
     .from("art_objects")
-    .select("*, artist:art_artists(*), wave:art_waves(*)")
+    .select("*, artist:art_artists(*), wave:art_waves!wave_id(*)")
     .eq("slug", slug)
     .eq("published", true)
     .single();
@@ -200,7 +200,7 @@ export async function getArtObjectsByArtist(artistId: string, excludeSlug?: stri
   if (!client) return [];
   let query = client
     .from("art_objects")
-    .select("*, wave:art_waves(id,slug,name)")
+    .select("*, wave:art_waves!wave_id(id,slug,name)")
     .eq("published", true)
     .eq("artist_id", artistId)
     .order("year", { ascending: true, nullsFirst: false })
