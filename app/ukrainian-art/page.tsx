@@ -9,10 +9,10 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Ukrainian Art — EU-UA.com",
-  description: "Explore Ukrainian visual art across centuries: from Baroque icon painting and avant-garde movements to contemporary Ukrainian artists. Discover artworks, artists, and art movements.",
+  description: "A personal selection of Ukrainian paintings and the artists behind them — landscapes, still lifes, portraits and folk art we love.",
   openGraph: {
     title: "Ukrainian Art — EU-UA.com",
-    description: "A curated guide to Ukrainian visual art — artworks, artists, and movements from the 17th century to today.",
+    description: "A personal selection of Ukrainian paintings and the artists behind them.",
     type: "website",
   },
 };
@@ -41,7 +41,7 @@ export default async function UkrainianArtPage() {
             Ukrainian Visual Art
           </h1>
           <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
-            From the Byzantine-inflected icon painters of the 17th century to the radical avant-garde of the 1920s and the resilient contemporary scene — Ukrainian art carries the soul of a nation across centuries.
+            A personal selection of Ukrainian artists and works we love — landscapes, still lifes, portraits, folk art and more. Not a textbook, not a survey: just paintings worth looking at, gathered in one place.
           </p>
           <div className="flex gap-3 mt-6">
             <Link href="/ukrainian-art/waves" className="text-sm px-5 py-2.5 rounded-lg font-medium transition-opacity hover:opacity-90" style={{ backgroundColor: "#FFD700", color: "#003399" }}>
