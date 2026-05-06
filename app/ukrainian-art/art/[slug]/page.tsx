@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getArtObjectBySlug, getArtObjectsByArtist, getArtObjectsByWave, getAllArtObjectSlugs } from "@/lib/supabase/art-data";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -21,11 +22,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${obj.title}${artistName ? ` — ${artistName}` : ""} — EU-UA.com`,
     description: obj.short_description,
+    alternates: { canonical: `/ukrainian-art/art/${obj.slug}` },
     openGraph: {
       title: obj.title,
       description: obj.short_description,
       images: obj.image_url ? [{ url: obj.image_url }] : [],
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: obj.title,
+      description: obj.short_description,
+      images: obj.image_url ? [obj.image_url] : [],
     },
   };
 }
@@ -47,6 +55,37 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
     ...byWave.filter(r => !relatedIds.has(r.id)).slice(0, 4 - byArtist.slice(0, 4).length),
   ].slice(0, 4);
 
+  const artworkLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    name: obj.title,
+    alternateName: obj.title_uk ?? undefined,
+    description: obj.short_description,
+    url: `https://eu-ua.com/ukrainian-art/art/${obj.slug}`,
+    image: obj.image_url ?? undefined,
+    dateCreated: obj.year ? String(obj.year) : undefined,
+    artMedium: obj.medium ?? undefined,
+    artworkSurface: obj.medium ?? undefined,
+    width: obj.dimensions ?? undefined,
+    locationCreated: obj.location ?? undefined,
+    creator: obj.artist
+      ? {
+          "@type": "Person",
+          name: obj.artist.name,
+          url: `https://eu-ua.com/ukrainian-art/artists/${obj.artist.slug}`,
+          image: obj.artist.profile_image_url ?? undefined,
+        }
+      : undefined,
+    isPartOf: obj.wave
+      ? {
+          "@type": "CreativeWorkSeries",
+          name: obj.wave.name,
+          url: `https://eu-ua.com/ukrainian-art/waves/${obj.wave.slug}`,
+        }
+      : undefined,
+    keywords: obj.tags?.length ? obj.tags.join(", ") : undefined,
+  };
+
   const artistSlug = obj.artist?.slug;
   const artistName = obj.artist?.name;
   const waveSlug = obj.wave?.slug;
@@ -54,6 +93,7 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <JsonLd data={artworkLd} />
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">

@@ -1,11 +1,16 @@
 import { getNews } from "@/lib/data";
 import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "EU-Ukraine News — EU-UA.com",
   description: "Latest news on Ukraine's EU integration, accession negotiations, and European connections. Updated daily.",
+  alternates: {
+    canonical: "/news",
+    types: { "application/rss+xml": "https://eu-ua.com/feed.xml" },
+  },
   openGraph: {
     title: "EU-Ukraine Integration News — EU-UA.com",
     description: "Daily-updated news on Ukraine's EU accession progress, policy developments, and European integration.",
@@ -16,8 +21,28 @@ export const metadata: Metadata = {
 export default async function NewsPage() {
   const news = await getNews(50);
 
+  const newsLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "EU-Ukraine News",
+    url: "https://eu-ua.com/news",
+    itemListElement: news.slice(0, 20).map((n, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "NewsArticle",
+        headline: n.headline,
+        description: n.summary,
+        url: n.url,
+        datePublished: n.date,
+        publisher: { "@type": "Organization", name: n.source },
+      },
+    })),
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <JsonLd data={newsLd} />
       <div className="mb-10">
         <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#003399" }}>
           📰 Daily Updates

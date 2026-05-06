@@ -7,6 +7,7 @@ import { getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -22,10 +23,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${wave.name} — Ukrainian Art Movement — EU-UA.com`,
     description: wave.description,
+    alternates: { canonical: `/ukrainian-art/waves/${wave.slug}` },
     openGraph: {
       title: wave.name,
       description: wave.description,
       images: wave.cover_image_url ? [{ url: wave.cover_image_url }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: wave.name,
+      description: wave.description,
+      images: wave.cover_image_url ? [wave.cover_image_url] : [],
     },
   };
 }
@@ -44,8 +52,30 @@ export default async function WavePage({ params }: { params: Promise<{ slug: str
     ? `${wave.start_year}${wave.end_year ? `–${wave.end_year}` : "–present"}`
     : null);
 
+  const collectionLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: wave.name,
+    alternateName: wave.name_uk ?? undefined,
+    description: wave.description,
+    url: `https://eu-ua.com/ukrainian-art/waves/${wave.slug}`,
+    image: wave.cover_image_url ?? undefined,
+    temporalCoverage: period ?? undefined,
+    keywords: wave.tags?.length ? wave.tags.join(", ") : undefined,
+    hasPart: artworks.slice(0, 20).map(a => ({
+      "@type": "VisualArtwork",
+      name: a.title,
+      url: `https://eu-ua.com/ukrainian-art/art/${a.slug}`,
+      image: a.image_url ?? undefined,
+      creator: a.artist
+        ? { "@type": "Person", name: a.artist.name, url: `https://eu-ua.com/ukrainian-art/artists/${a.artist.slug}` }
+        : undefined,
+    })),
+  };
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <JsonLd data={collectionLd} />
       {/* Hero */}
       <div className="relative py-16 px-4 overflow-hidden" style={{ backgroundColor: "#1A1A2E" }}>
         {wave.cover_image_url && (

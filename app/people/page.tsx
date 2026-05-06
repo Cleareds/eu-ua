@@ -2,6 +2,7 @@ import peopleData from "@/data/people.json";
 import { Person } from "@/lib/types";
 import PeopleGrid from "@/components/people/PeopleGrid";
 import { getAllPeople } from "@/lib/supabase/people-data";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -19,8 +20,28 @@ export default async function PeoplePage() {
   const fromDb = await getAllPeople();
   const people: Person[] = fromDb.length > 0 ? fromDb : (peopleData as Person[]);
 
+  const itemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Notable Ukrainians with European Connections",
+    itemListElement: people.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Person",
+        name: p.name,
+        description: p.description,
+        nationality: "Ukrainian",
+        jobTitle: p.role,
+        birthPlace: p.birthplace,
+        image: p.profileImageUrl ?? `https://eu-ua.com/people/${p.id}.png`,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <JsonLd data={itemListLd} />
       {/* Header */}
       <div className="text-white py-14 px-4" style={{ backgroundColor: "#003399" }}>
         <div className="max-w-5xl mx-auto text-center">

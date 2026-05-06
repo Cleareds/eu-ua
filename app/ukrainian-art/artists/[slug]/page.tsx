@@ -6,6 +6,7 @@ import { getArtArtistBySlug, getArtObjectsByArtist, getAllArtistSlugs } from "@/
 import { artistLifespan, getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -21,10 +22,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${artist.name} — Ukrainian Artist — EU-UA.com`,
     description: artist.short_bio,
+    alternates: { canonical: `/ukrainian-art/artists/${artist.slug}` },
     openGraph: {
       title: artist.name,
       description: artist.short_bio,
       images: artist.profile_image_url ? [{ url: artist.profile_image_url }] : [],
+      type: "profile",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: artist.name,
+      description: artist.short_bio,
+      images: artist.profile_image_url ? [artist.profile_image_url] : [],
     },
   };
 }
@@ -36,8 +45,25 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
 
   const artworks = await getArtObjectsByArtist(artist.id);
 
+  const personLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: artist.name,
+    alternateName: artist.name_uk ?? undefined,
+    description: artist.short_bio,
+    url: `https://eu-ua.com/ukrainian-art/artists/${artist.slug}`,
+    image: artist.profile_image_url ?? undefined,
+    birthDate: artist.born ? String(artist.born) : undefined,
+    deathDate: artist.died ? String(artist.died) : undefined,
+    birthPlace: artist.birth_place ?? undefined,
+    nationality: "Ukrainian",
+    sameAs: artist.website_url ? [artist.website_url] : undefined,
+    jobTitle: "Visual Artist",
+  };
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <JsonLd data={personLd} />
       {/* Hero */}
       <div className="py-12 px-4" style={{ backgroundColor: "#1A1A2E" }}>
         <div className="max-w-7xl mx-auto">

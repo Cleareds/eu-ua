@@ -1,5 +1,6 @@
 import { getMyths } from "@/lib/data";
 import MythCard from "@/components/myths/MythCard";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata = {
   title: "Ukraine & Europe Myths Debunked — Fact Check",
@@ -14,8 +15,22 @@ export const metadata = {
 export default async function MythsPage() {
   const myths = await getMyths();
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: myths.map(m => ({
+      "@type": "Question",
+      name: m.myth,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: m.reality,
+      },
+    })),
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <JsonLd data={faqLd} />
       <div className="mb-10">
         <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#DC2626" }}>
           ⚠️ Fact Check
