@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://eu-ua.com/sitemap.xml
