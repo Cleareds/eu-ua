@@ -1,6 +1,34 @@
 [
   {
     "date": "2026-05-04",
+    "headline": "Austria expels 3 Russian Embassy staff over suspected antenna spying in Vienna",
+    "summary": "Austria expelled three Russian Embassy staff members after they were suspected of conducting espionage activities using antennas installed on diplomatic buildings in Vienna. The move reflects ongoing European concerns about Russian intelligence operations on the continent amid heightened geopolitical tensions.",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/International/wireStory/austria-expels-3-russian-embassy-staff-suspected-antenna-132629706"
+  },
+  {
+    "date": "2026-05-04",
+    "headline": "Tenfold increase in drone attacks on ports, Ukraine says",
+    "summary": "Russia launched over 800 drones targeting Ukraine's port infrastructure in the first four months of 2026, compared to just 75 during the same period in 2025. Ukraine's infrastructure minister announced this tenfold increase in drone attacks on the country's ports.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/ukraine/2026/0504/1571663-tenfold-increase-in-drone-attacks-on-port-ukraine-says/"
+  },
+  {
+    "date": "2026-05-04",
+    "headline": "Tenfold increase in drone attacks on ports, Ukraine says",
+    "summary": "Russia launched over 800 drones targeting Ukraine's port infrastructure in the first four months of 2026, compared to just 75 during the same period in 2025. Ukraine's infrastructure minister reported this tenfold increase in drone attacks on the country's ports.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/ukraine/2026/0504/1571663-ukraine-russia/"
+  },
+  {
+    "date": "2026-05-05",
+    "headline": "Armenia hosts a historic EU summit as it charts a course away from Russia",
+    "summary": "Armenia is hosting its first-ever European Union summit in Yerevan, signaling a significant deepening of ties between Armenia and the EU. This development reflects Armenia's gradual shift away from Russia and toward closer alignment with European institutions.",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/Politics/wireStory/armenia-hosts-historic-eu-summit-charts-russia-132662534"
+  },
+  {
+    "date": "2026-05-04",
     "headline": "Russia and Ukraine declare competing ceasefires",
     "summary": "Russia announced a unilateral ceasefire for May 9, coinciding with its Victory Day celebrations, while Ukraine declared its own ceasefire terms in response. Ukraine framed Russia's truce declaration as a sign of fear stemming from the effectiveness of Ukrainian drone attacks against Russian territory.",
     "source": "Al Jazeera English",
