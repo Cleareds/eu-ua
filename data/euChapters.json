@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Public Procurement",
-    "status": "dcp_received",
+    "status": "negotiation",
     "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Ukraine's ProZorro procurement system is widely praised as a model for transparency.",
     "cluster": 1,
     "clusterName": "Fundamentals"
@@ -138,7 +138,7 @@
   {
     "id": 18,
     "name": "Statistics",
-    "status": "dcp_received",
+    "status": "negotiation",
     "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Ukraine's State Statistics Service produces data comparable with Eurostat standards, rated 'some level of preparation' by the EC.",
     "cluster": 1,
     "clusterName": "Fundamentals"
@@ -178,7 +178,7 @@
   {
     "id": 23,
     "name": "Judiciary and Fundamental Rights",
-    "status": "dcp_received",
+    "status": "negotiation",
     "description": "Core chapter of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Covers judicial reform, Constitutional Court reform, anti-corruption institutions (NABU, SAPO, HACC), and protection of fundamental rights.",
     "cluster": 1,
     "clusterName": "Fundamentals"
@@ -186,7 +186,7 @@
   {
     "id": 24,
     "name": "Justice, Freedom and Security",
-    "status": "dcp_received",
+    "status": "negotiation",
     "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Covers border management, migration rules, asylum policy, anti-money laundering, and police and judicial cooperation.",
     "cluster": 1,
     "clusterName": "Fundamentals"
@@ -250,7 +250,7 @@
   {
     "id": 32,
     "name": "Financial Control",
-    "status": "dcp_received",
+    "status": "negotiation",
     "description": "Part of Cluster 1 (Fundamentals). Screening completed 2024. Draft Common Position received December 2025. Establishing public internal financial control systems and aligning with EU audit and accountability standards.",
     "cluster": 1,
     "clusterName": "Fundamentals"

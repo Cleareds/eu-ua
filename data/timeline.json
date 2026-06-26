@@ -541,10 +541,10 @@
   },
   {
     "id": "cluster1-opened",
-    "year": "June 2024",
+    "year": "25 June 2024",
     "yearSort": 2024,
-    "title": "Cluster 1 (Fundamentals) Negotiations Opened",
-    "description": "The EU formally opened Cluster 1 negotiations — covering rule of law, judiciary reform, fundamental rights, and democratic institutions. This 'Fundamentals' cluster is the most complex and carries the most weight in the accession process. Opening it is both the most significant step and the longest journey.",
+    "title": "First Intergovernmental Conference — Negotiating Framework Adopted",
+    "description": "At the first Intergovernmental Conference in Luxembourg, the EU and Ukraine formally launched accession negotiations and adopted the negotiating framework setting the rules and principles of the process. This started the screening phase across all six clusters; the individual clusters — beginning with the 'Fundamentals' cluster — would only be opened in later years.",
     "era": "eu-path",
     "type": "diplomatic",
     "europeanConnection": true,
@@ -646,5 +646,17 @@
     "europeanConnection": true,
     "sourceLabel": "Wikipedia",
     "sourceUrl": "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
+  },
+  {
+    "id": "fundamentals-cluster-opened-2026",
+    "year": "15 June 2026",
+    "yearSort": 2026,
+    "title": "EU Opens First Accession Cluster with Ukraine",
+    "description": "At the Second Accession Conference in Brussels, the EU formally opened the 'Fundamentals' cluster — the first and most important negotiating cluster — with Ukraine (and Moldova). It covers the rule of law, fundamental rights, the functioning of democratic institutions, public administration reform and economic criteria (chapters 5, 18, 23, 24 and 32). The breakthrough came after Hungary's new government lifted Budapest's long-standing veto. By convention the Fundamentals cluster is the first opened and the last to be closed in any accession.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "European Council (Consilium)",
+    "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/eu-and-ukraine-open-first-accession-negotiations-cluster/"
   }
 ]
