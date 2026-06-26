@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getArtObjects, getArtArtists } from "@/lib/supabase/art-data";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
-import ArtistCard from "@/components/art/ArtistCard";
 
 export const dynamic = "force-dynamic";
 
@@ -50,24 +49,6 @@ export default async function AllArtPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {works.map(obj => <ArtObjectCard key={obj.id} obj={obj} />)}
           </div>
-        )}
-
-        {/* Separate block: artists */}
-        {artists.length > 0 && (
-          <section className="mt-16 pt-10 border-t border-gray-200">
-            <div className="flex items-end justify-between mb-6">
-              <div>
-                <h2 className="text-2xl font-bold" style={{ color: "#1A1A2E" }}>Artists</h2>
-                <p className="text-gray-500 text-sm mt-1">The {artists.length} painters, icon masters and graphic artists in this collection</p>
-              </div>
-              <Link href="/ukrainian-art/artists" className="text-sm font-medium hover:underline" style={{ color: "#003399" }}>
-                Artists page →
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-              {artists.map(artist => <ArtistCard key={artist.id} artist={artist} />)}
-            </div>
-          </section>
         )}
       </div>
     </div>

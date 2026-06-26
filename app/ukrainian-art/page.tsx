@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getFeaturedArtObjects, getArtWaves, getFeaturedArtists, getRecentArtObjects } from "@/lib/supabase/art-data";
+import { getFeaturedArtObjects, getArtWaves, getFeaturedArtists, getRecentArtObjects, getArtArtists } from "@/lib/supabase/art-data";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
 import WaveCard from "@/components/art/WaveCard";
@@ -18,16 +18,19 @@ export const metadata: Metadata = {
 };
 
 export default async function UkrainianArtPage() {
-  const [featured, waves, featuredArtists, recent] = await Promise.all([
+  const [featured, waves, featuredArtists, recent, allArtists] = await Promise.all([
     getFeaturedArtObjects(9),
     getArtWaves(),
     getFeaturedArtists(6),
     getRecentArtObjects(6),
+    getArtArtists(),
   ]);
 
   // Show featured if any exist, otherwise the 6 most recently added
   const heroWorks = featured.length > 0 ? featured : recent;
-  const hasContent = heroWorks.length > 0 || waves.length > 0 || featuredArtists.length > 0;
+  // Show featured artists if any are flagged, otherwise the first 12 from the collection
+  const artistsToShow = featuredArtists.length > 0 ? featuredArtists : allArtists.slice(0, 12);
+  const hasContent = heroWorks.length > 0 || waves.length > 0 || artistsToShow.length > 0;
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
@@ -104,8 +107,8 @@ export default async function UkrainianArtPage() {
           </section>
         )}
 
-        {/* Featured Artists */}
-        {featuredArtists.length > 0 && (
+        {/* Artists */}
+        {artistsToShow.length > 0 && (
           <section className="py-12 border-t border-gray-200">
             <div className="flex items-end justify-between mb-6">
               <div>
@@ -117,7 +120,7 @@ export default async function UkrainianArtPage() {
               </Link>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {featuredArtists.map(artist => <ArtistCard key={artist.id} artist={artist} />)}
+              {artistsToShow.map(artist => <ArtistCard key={artist.id} artist={artist} />)}
             </div>
           </section>
         )}
