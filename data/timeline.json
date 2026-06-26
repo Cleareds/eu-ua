@@ -658,5 +658,17 @@
     "europeanConnection": true,
     "sourceLabel": "European Council (Consilium)",
     "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/eu-and-ukraine-open-first-accession-negotiations-cluster/"
+  },
+  {
+    "id": "hungary-blocks-remaining-clusters-2026",
+    "year": "23–26 June 2026",
+    "yearSort": 2026,
+    "title": "Hungary Blocks Opening of the Remaining Clusters",
+    "description": "Days after the Fundamentals cluster opened, Hungary's new Magyar government blocked the EU Council's working group (COELA) from approving the procedural step needed to open the remaining clusters (2–6) for Ukraine and Moldova, objecting on 23 and 26 June that its experts needed more time. Although PM Péter Magyar had lifted the veto on the first cluster, he declined to back a faster pace and had the phrase 'open all remaining clusters as soon as possible' removed from the joint conclusions. Brussels scaled back its pre-summer goal to opening just two clusters — Internal Market (2) and External Relations (6) — instead of five, underlining that Hungarian obstruction continued even after Orbán.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "Euronews / Ukrainska Pravda (Politico)",
+    "sourceUrl": "https://www.euronews.com/my-europe/2026/06/24/eu-scales-back-ukraines-accession-timetable-due-to-hungarian-resistance"
   }
 ]
