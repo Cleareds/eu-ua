@@ -43,8 +43,11 @@ export default async function UkrainianArtPage() {
           <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
             A personal selection of Ukrainian artists and works we love — landscapes, still lifes, portraits, folk art and more. Not a textbook, not a survey: just paintings worth looking at, gathered in one place.
           </p>
-          <div className="flex gap-3 mt-6">
-            <Link href="/ukrainian-art/waves" className="text-sm px-5 py-2.5 rounded-lg font-medium transition-opacity hover:opacity-90" style={{ backgroundColor: "#FFD700", color: "#003399" }}>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <Link href="/ukrainian-art/art" className="text-sm px-5 py-2.5 rounded-lg font-medium transition-opacity hover:opacity-90" style={{ backgroundColor: "#FFD700", color: "#003399" }}>
+              All Works
+            </Link>
+            <Link href="/ukrainian-art/waves" className="text-sm px-5 py-2.5 rounded-lg font-medium text-white bg-white/10 hover:bg-white/20 transition-colors">
               Art Movements
             </Link>
             <Link href="/ukrainian-art/artists" className="text-sm px-5 py-2.5 rounded-lg font-medium text-white bg-white/10 hover:bg-white/20 transition-colors">
@@ -73,8 +76,8 @@ export default async function UkrainianArtPage() {
                   {featured.length > 0 ? "Featured Works" : "Recent Additions"}
                 </h2>
               </div>
-              <Link href="/ukrainian-art/artists" className="text-sm font-medium hover:underline" style={{ color: "#003399" }}>
-                All artists →
+              <Link href="/ukrainian-art/art" className="text-sm font-medium hover:underline" style={{ color: "#003399" }}>
+                All works →
               </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
