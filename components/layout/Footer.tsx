@@ -1,11 +1,13 @@
 import Link from "next/link";
 import NewsletterSignup from "@/components/newsletter/NewsletterSignup";
+import { NEWSLETTER_ENABLED } from "@/lib/site";
 
 export default function Footer() {
   return (
     <footer className="border-t" style={{ backgroundColor: "#1A1A2E", color: "#F8F9FA" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Newsletter — above the columns so it isn't buried in the link lists */}
+        {NEWSLETTER_ENABLED && (
         <div className="mb-10 pb-10 border-b border-white/10">
           <div className="max-w-xl">
             <h3 className="font-semibold mb-1" style={{ color: "#FFD700" }}>
@@ -18,6 +20,7 @@ export default function Footer() {
             <NewsletterSignup source="footer" variant="dark" />
           </div>
         </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}

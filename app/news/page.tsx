@@ -2,6 +2,7 @@ import { getNews } from "@/lib/data";
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
 import NewsletterSignup from "@/components/newsletter/NewsletterSignup";
+import { NEWSLETTER_ENABLED } from "@/lib/site";
 import { SITE_URL } from "@/lib/site";
 
 // News is refreshed by the daily fetch-news commit; a 30 min window keeps
@@ -61,6 +62,7 @@ export default async function NewsPage() {
       </div>
 
       {/* Readers already on the news page are the most likely to want the digest */}
+      {NEWSLETTER_ENABLED && (
       <div className="mb-10 rounded-xl border border-gray-100 bg-white p-5">
         <h2 className="font-semibold mb-1" style={{ color: "#1A1A2E" }}>
           Get the brief by email
@@ -70,6 +72,7 @@ export default async function NewsPage() {
         </p>
         <NewsletterSignup source="news" variant="light" />
       </div>
+      )}
 
       <div className="space-y-4">
         {news.map((item, i) => (

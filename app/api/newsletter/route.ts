@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { subscribe } from "@/lib/supabase/newsletter";
+import { NEWSLETTER_ENABLED } from "@/lib/site";
 
 const ALLOWED_SOURCES = new Set(["footer", "news", "home", "unknown"]);
 
 export async function POST(req: NextRequest) {
+  // Gated by the same switch as the forms, so hiding the UI actually closes the
+  // endpoint rather than just making it harder to find.
+  if (!NEWSLETTER_ENABLED) {
+    return NextResponse.json({ error: "Newsletter signup is not open yet." }, { status: 404 });
+  }
+
   let body: unknown;
   try {
     body = await req.json();
