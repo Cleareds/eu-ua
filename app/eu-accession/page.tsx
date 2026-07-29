@@ -34,12 +34,14 @@ export default async function EUAccessionPage() {
             <h1 className="text-4xl font-bold mb-4" style={{ color: "#1A1A2E" }}>EU Accession Progress</h1>
             <p className="text-gray-600 max-w-2xl">
               Ukraine is negotiating membership across 35 chapters covering everything from trade and agriculture
-              to judiciary reform and energy policy. Screening completed in September 2025. All six clusters
-              targeted for formal opening in H1 2026.
+              to judiciary reform and energy policy. Screening completed in September 2025. Two of the six
+              negotiating clusters are now open — Fundamentals since 15 June 2026 and External Relations since
+              14 July 2026 — while clusters 2 to 5 wait on Hungary approving their screening results, next on
+              the Council&apos;s agenda on 1 September 2026.
             </p>
           </div>
           <div className="pt-2">
-            <SourceModal title="EU Accession Chapter Data" sources={sources} note="Chapter statuses reflect publicly reported progress as of early 2026. This is an independent summary — always check official EC progress reports for authoritative status." />
+            <SourceModal title="EU Accession Chapter Data" sources={sources} note="Chapter statuses reflect publicly reported progress as of late July 2026. This is an independent summary — always check official EC progress reports for authoritative status." />
           </div>
         </div>
       </div>

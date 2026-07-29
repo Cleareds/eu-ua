@@ -1,9 +1,24 @@
 import Link from "next/link";
+import NewsletterSignup from "@/components/newsletter/NewsletterSignup";
 
 export default function Footer() {
   return (
     <footer className="border-t" style={{ backgroundColor: "#1A1A2E", color: "#F8F9FA" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Newsletter — above the columns so it isn't buried in the link lists */}
+        <div className="mb-10 pb-10 border-b border-white/10">
+          <div className="max-w-xl">
+            <h3 className="font-semibold mb-1" style={{ color: "#FFD700" }}>
+              The EU-UA brief
+            </h3>
+            <p className="text-sm text-gray-400 mb-4">
+              A short email when Ukraine&apos;s accession actually moves — clusters opening, chapters
+              closing, and what it means. No ads, no spam, unsubscribe in one click.
+            </p>
+            <NewsletterSignup source="footer" variant="dark" />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
@@ -32,6 +47,7 @@ export default function Footer() {
                 { href: "/myths", label: "Myths & Reality" },
                 { href: "/quiz", label: "Knowledge Quiz" },
                 { href: "/contact", label: "Contact & Support" },
+                { href: "/privacy", label: "Privacy Notice" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="hover:text-white transition-colors">{l.label}</Link>

@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Claude local settings (may contain sensitive data)
 .claude/
+
+# Supabase CLI scratch
+supabase/.temp/

@@ -670,5 +670,29 @@
     "europeanConnection": true,
     "sourceLabel": "Euronews / Ukrainska Pravda (Politico)",
     "sourceUrl": "https://www.euronews.com/my-europe/2026/06/24/eu-scales-back-ukraines-accession-timetable-due-to-hungarian-resistance"
+  },
+  {
+    "id": "external-relations-cluster-opened-2026",
+    "year": "14 July 2026",
+    "yearSort": 2026,
+    "title": "EU Opens Second Cluster — External Relations",
+    "description": "At the Third EU-Ukraine Accession Conference in Brussels, the EU opened Cluster 6 (External Relations) with Ukraine, covering chapter 30 (external relations) and chapter 31 (foreign, security and defence policy). Member states had unanimously approved the opening on 10 July. The EU delegation was led by Irish Minister of State for European Affairs Thomas Byrne for the Irish Council presidency, with Enlargement Commissioner Marta Kos; Ukraine was represented by Deputy Prime Minister Taras Kachka. It was the second of six clusters to open, a month after Fundamentals, and the same cluster was opened with Moldova on the same day.",
+    "era": "eu-path",
+    "type": "diplomatic",
+    "europeanConnection": true,
+    "sourceLabel": "Council of the EU (newsroom)",
+    "sourceUrl": "https://newsroom.consilium.europa.eu/events/20260714-eu-ukraine-accession-conference-july-2026"
+  },
+  {
+    "id": "hungary-blocks-clusters-2-3-july-2026",
+    "year": "17-22 July 2026",
+    "yearSort": 2026,
+    "title": "Clusters 2 and 3 Postponed to September",
+    "description": "Hungary twice refused to approve the screening results for Cluster 2 (Internal Market) and Cluster 3 (Competitiveness and Inclusive Growth) at the Council enlargement working party (COELA) — first on 17 July, then again on 22 July, the last meeting before the summer recess. Approving the screening results is the procedural step that must precede a formal opening, so no further cluster could open before the break. On 17 July Hungary offered to open Cluster 3 for Moldova alone, which failed to win majority support among member states. The next attempt was set for 1 September 2026, leaving clusters 2, 3, 4 and 5 unopened.",
+    "era": "eu-path",
+    "type": "political",
+    "europeanConnection": true,
+    "sourceLabel": "European Pravda",
+    "sourceUrl": "https://www.eurointegration.com.ua/eng/news/2026/07/22/7242099/"
   }
 ]
