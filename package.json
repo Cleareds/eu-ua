@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync-data": "tsx scripts/sync-reference-data.ts",
+    "check-data": "tsx scripts/sync-reference-data.ts --check"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
