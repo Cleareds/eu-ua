@@ -8,8 +8,13 @@ import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+// Prerendered at build time from generateStaticParams below, refreshed hourly,
+// and purged on admin writes via lib/revalidate-art.ts. Slugs created after the
+// build (e.g. by the add-art skill) render on first request, then cache.
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const slugs = await getAllArtWaveSlugs();
@@ -58,17 +63,17 @@ export default async function WavePage({ params }: { params: Promise<{ slug: str
     name: wave.name,
     alternateName: wave.name_uk ?? undefined,
     description: wave.description,
-    url: `https://eu-ua.com/ukrainian-art/waves/${wave.slug}`,
+    url: `${SITE_URL}/ukrainian-art/waves/${wave.slug}`,
     image: wave.cover_image_url ?? undefined,
     temporalCoverage: period ?? undefined,
     keywords: wave.tags?.length ? wave.tags.join(", ") : undefined,
     hasPart: artworks.slice(0, 20).map(a => ({
       "@type": "VisualArtwork",
       name: a.title,
-      url: `https://eu-ua.com/ukrainian-art/art/${a.slug}`,
+      url: `${SITE_URL}/ukrainian-art/art/${a.slug}`,
       image: a.image_url ?? undefined,
       creator: a.artist
-        ? { "@type": "Person", name: a.artist.name, url: `https://eu-ua.com/ukrainian-art/artists/${a.artist.slug}` }
+        ? { "@type": "Person", name: a.artist.name, url: `${SITE_URL}/ukrainian-art/artists/${a.artist.slug}` }
         : undefined,
     })),
   };
@@ -82,8 +87,10 @@ export default async function WavePage({ params }: { params: Promise<{ slug: str
           <div className="absolute inset-0">
             <Image
               src={getArtImageUrl(wave.cover_image_url, { width: 1600, quality: 70 }) ?? wave.cover_image_url}
-              alt={wave.name}
+              alt=""
+              aria-hidden
               fill
+              sizes="100vw"
               className="object-cover opacity-20"
             />
           </div>

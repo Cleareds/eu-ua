@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getArtObjects, getArtArtists } from "@/lib/supabase/art-data";
+import { getArtObjects, getArtCounts } from "@/lib/supabase/art-data";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 
-export const dynamic = "force-dynamic";
+// Statically rendered and refreshed hourly; admin writes purge this path
+// immediately via lib/revalidate-art.ts.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "All Artworks — Ukrainian Art — EU-UA.com",
@@ -16,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default async function AllArtPage() {
-  const [works, artists] = await Promise.all([
+  const [works, counts] = await Promise.all([
     getArtObjects(),
-    getArtArtists(),
+    getArtCounts(),
   ]);
 
   return (
@@ -33,7 +35,7 @@ export default async function AllArtPage() {
           </nav>
           <h1 className="text-4xl font-bold text-white mb-2">All Artworks</h1>
           <p className="text-white/70 max-w-xl">
-            The full collection — {works.length} works by {artists.length} Ukrainian artists, from Baroque icons to the modernist avant-garde.
+            The full collection — {counts.objects} works by {counts.artists} Ukrainian artists, from Baroque icons to the modernist avant-garde.
           </p>
         </div>
       </div>

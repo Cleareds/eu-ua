@@ -7,8 +7,13 @@ import { artistLifespan, getArtImageUrl } from "@/lib/art-utils";
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+// Prerendered at build time from generateStaticParams below, refreshed hourly,
+// and purged on admin writes via lib/revalidate-art.ts. Slugs created after the
+// build (e.g. by the add-art skill) render on first request, then cache.
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const slugs = await getAllArtistSlugs();
@@ -51,7 +56,7 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
     name: artist.name,
     alternateName: artist.name_uk ?? undefined,
     description: artist.short_bio,
-    url: `https://eu-ua.com/ukrainian-art/artists/${artist.slug}`,
+    url: `${SITE_URL}/ukrainian-art/artists/${artist.slug}`,
     image: artist.profile_image_url ?? undefined,
     birthDate: artist.born ? String(artist.born) : undefined,
     deathDate: artist.died ? String(artist.died) : undefined,
@@ -81,6 +86,9 @@ export default async function ArtistPage({ params }: { params: Promise<{ slug: s
                   src={getArtImageUrl(artist.profile_image_url, { width: 320, quality: 85 }) ?? artist.profile_image_url}
                   alt={artist.name}
                   fill
+                  // Without this, `fill` defaults to sizes="100vw" and the browser
+                  // picks a 1920w–3840w candidate for a 160px circle.
+                  sizes="160px"
                   className="object-cover object-top"
                   priority
                 />

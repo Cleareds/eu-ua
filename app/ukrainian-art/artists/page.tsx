@@ -3,7 +3,9 @@ import { getArtArtists } from "@/lib/supabase/art-data";
 import ArtistCard from "@/components/art/ArtistCard";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
+// Statically rendered and refreshed hourly; admin writes purge this path
+// immediately via lib/revalidate-art.ts.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Ukrainian Artists — EU-UA.com",

@@ -6,8 +6,13 @@ import { getArtObjectBySlug, getArtObjectsByArtist, getArtObjectsByWave, getAllA
 import MarkdownContent from "@/components/art/MarkdownContent";
 import ArtObjectCard from "@/components/art/ArtObjectCard";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+// Prerendered at build time from generateStaticParams below, refreshed hourly,
+// and purged on admin writes via lib/revalidate-art.ts. Slugs created after the
+// build (e.g. by the add-art skill) render on first request, then cache.
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const slugs = await getAllArtObjectSlugs();
@@ -61,7 +66,7 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
     name: obj.title,
     alternateName: obj.title_uk ?? undefined,
     description: obj.short_description,
-    url: `https://eu-ua.com/ukrainian-art/art/${obj.slug}`,
+    url: `${SITE_URL}/ukrainian-art/art/${obj.slug}`,
     image: obj.image_url ?? undefined,
     dateCreated: obj.year ? String(obj.year) : undefined,
     artMedium: obj.medium ?? undefined,
@@ -72,7 +77,7 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
       ? {
           "@type": "Person",
           name: obj.artist.name,
-          url: `https://eu-ua.com/ukrainian-art/artists/${obj.artist.slug}`,
+          url: `${SITE_URL}/ukrainian-art/artists/${obj.artist.slug}`,
           image: obj.artist.profile_image_url ?? undefined,
         }
       : undefined,
@@ -80,7 +85,7 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
       ? {
           "@type": "CreativeWorkSeries",
           name: obj.wave.name,
-          url: `https://eu-ua.com/ukrainian-art/waves/${obj.wave.slug}`,
+          url: `${SITE_URL}/ukrainian-art/waves/${obj.wave.slug}`,
         }
       : undefined,
     keywords: obj.tags?.length ? obj.tags.join(", ") : undefined,
@@ -163,14 +168,20 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
               {obj.short_description}
             </p>
 
-            {/* Image — exact proportions, centered, not cropped */}
+            {/* Image — exact proportions, centered, not cropped.
+                The box height is fixed and the image is contained inside it, so the
+                page reserves its space before the image loads (no layout shift) and
+                paintings of any aspect ratio stay uncropped. We don't store intrinsic
+                dimensions, which is what a width/height pair would otherwise need. */}
             {obj.image_url && (
-              <div className="flex justify-center mb-8 rounded-xl overflow-hidden bg-gray-100 p-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="relative w-full h-[60vh] sm:h-[70vh] mb-8 rounded-xl overflow-hidden bg-gray-100 p-4">
+                <Image
                   src={obj.image_url}
                   alt={obj.title}
-                  style={{ maxWidth: "100%", height: "auto", display: "block" }}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 880px"
+                  className="object-contain"
+                  priority
                 />
               </div>
             )}
@@ -200,7 +211,7 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
                 <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">About the Artist</h3>
                 {obj.artist?.profile_image_url && (
                   <div className="relative w-16 h-16 rounded-full overflow-hidden mb-3">
-                    <Image src={obj.artist.profile_image_url} alt={artistName} fill className="object-cover" />
+                    <Image src={obj.artist.profile_image_url} alt={artistName} fill sizes="64px" className="object-cover" />
                   </div>
                 )}
                 <p className="font-semibold text-sm mb-1" style={{ color: "#1A1A2E" }}>{artistName}</p>

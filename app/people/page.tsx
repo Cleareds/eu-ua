@@ -3,8 +3,11 @@ import { Person } from "@/lib/types";
 import PeopleGrid from "@/components/people/PeopleGrid";
 import { getAllPeople } from "@/lib/supabase/people-data";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+// Statically rendered and refreshed hourly instead of hitting the DB on every
+// request; admin edits appear within the window.
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Notable Ukrainians with European Connections — EU-UA",
@@ -34,7 +37,7 @@ export default async function PeoplePage() {
         nationality: "Ukrainian",
         jobTitle: p.role,
         birthPlace: p.birthplace,
-        image: p.profileImageUrl ?? `https://eu-ua.com/people/${p.id}.png`,
+        image: p.profileImageUrl ?? `${SITE_URL}/people/${p.id}.png`,
       },
     })),
   };

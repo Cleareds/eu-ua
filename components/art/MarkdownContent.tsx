@@ -1,5 +1,6 @@
-"use client";
-
+// Server component on purpose: this renders static prose with no interactivity,
+// so react-markdown + remark run at render time instead of being shipped to the
+// browser on every artist/artwork/movement page.
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 

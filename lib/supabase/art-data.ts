@@ -9,6 +9,19 @@ function db() {
   return createReadClient();
 }
 
+/**
+ * Column lists for grid/card views, i.e. everything except the long markdown
+ * body. Cards never render it, but `select("*")` still ships it to the browser
+ * inside the RSC payload — on /ukrainian-art/art that was ~700 KB of the
+ * 780 KB response. Detail pages still select "*".
+ */
+const OBJECT_CARD_COLUMNS =
+  "id,slug,title,title_uk,artist_id,wave_id,year,medium,dimensions,location,short_description,image_url,tags,featured,published,created_at,updated_at";
+const ARTIST_CARD_COLUMNS =
+  "id,slug,name,name_uk,born,died,birth_place,short_bio,profile_image_url,website_url,tags,featured,published,created_at,updated_at";
+const WAVE_CARD_COLUMNS =
+  "id,slug,name,name_uk,period,start_year,end_year,description,cover_image_url,tags,published,created_at,updated_at";
+
 // ─── Art Waves ───────────────────────────────────────────────────────────────
 
 export async function getArtWaves(): Promise<ArtWave[]> {
@@ -16,7 +29,7 @@ export async function getArtWaves(): Promise<ArtWave[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_waves")
-    .select("*")
+    .select(WAVE_CARD_COLUMNS)
     .eq("published", true)
     .order("start_year", { ascending: true, nullsFirst: false });
   if (error) { console.error("getArtWaves:", error.message); return []; }
@@ -43,7 +56,7 @@ export async function getArtArtists(): Promise<ArtArtist[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_artists")
-    .select("*")
+    .select(ARTIST_CARD_COLUMNS)
     .eq("published", true)
     .order("born", { ascending: true, nullsFirst: false });
   if (error) { console.error("getArtArtists:", error.message); return []; }
@@ -55,7 +68,7 @@ export async function getFeaturedArtists(limit = 6): Promise<ArtArtist[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_artists")
-    .select("*")
+    .select(ARTIST_CARD_COLUMNS)
     .eq("published", true)
     .eq("featured", true)
     .order("born", { ascending: true })
@@ -107,7 +120,7 @@ export async function getArtistsByWave(waveId: string): Promise<ArtArtist[]> {
   const ids = junctionData.map((j: { artist_id: string }) => j.artist_id);
   const { data, error } = await client
     .from("art_artists")
-    .select("*")
+    .select(ARTIST_CARD_COLUMNS)
     .in("id", ids)
     .eq("published", true)
     .order("born", { ascending: true });
@@ -122,7 +135,7 @@ export async function getArtObjects(limit?: number): Promise<ArtObject[]> {
   if (!client) return [];
   let query = client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
+    .select(`${OBJECT_CARD_COLUMNS}, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)`)
     .eq("published", true)
     .order("year", { ascending: true, nullsFirst: false });
   if (limit) query = query.limit(limit);
@@ -136,7 +149,7 @@ export async function getRecentArtObjects(limit = 6): Promise<ArtObject[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
+    .select(`${OBJECT_CARD_COLUMNS}, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)`)
     .eq("published", true)
     .order("created_at", { ascending: false })
     .limit(limit);
@@ -149,7 +162,7 @@ export async function getFeaturedArtObjects(limit = 9): Promise<ArtObject[]> {
   if (!client) return [];
   const { data, error } = await client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)")
+    .select(`${OBJECT_CARD_COLUMNS}, artist:art_artists(id,slug,name,profile_image_url), wave:art_waves!wave_id(id,slug,name)`)
     .eq("published", true)
     .eq("featured", true)
     .order("created_at", { ascending: false })
@@ -200,7 +213,7 @@ export async function getArtObjectsByArtist(artistId: string, excludeSlug?: stri
   if (!client) return [];
   let query = client
     .from("art_objects")
-    .select("*, wave:art_waves!wave_id(id,slug,name)")
+    .select(`${OBJECT_CARD_COLUMNS}, wave:art_waves!wave_id(id,slug,name)`)
     .eq("published", true)
     .eq("artist_id", artistId)
     .order("year", { ascending: true, nullsFirst: false })
@@ -226,7 +239,7 @@ export async function getArtObjectsByWave(waveId: string, excludeSlug?: string):
 
   let query = client
     .from("art_objects")
-    .select("*, artist:art_artists(id,slug,name)")
+    .select(`${OBJECT_CARD_COLUMNS}, artist:art_artists(id,slug,name)`)
     .eq("published", true)
     .in("id", ids)
     .order("year", { ascending: true, nullsFirst: false })
@@ -265,4 +278,15 @@ export async function getAllArtWaveSlugs(): Promise<string[]> {
     .select("slug")
     .eq("published", true);
   return (data ?? []).map((r: { slug: string }) => r.slug);
+}
+
+/** Row counts for headline copy — avoids fetching every row just to call .length */
+export async function getArtCounts(): Promise<{ objects: number; artists: number }> {
+  const client = db();
+  if (!client) return { objects: 0, artists: 0 };
+  const [objects, artists] = await Promise.all([
+    client.from("art_objects").select("id", { count: "exact", head: true }).eq("published", true),
+    client.from("art_artists").select("id", { count: "exact", head: true }).eq("published", true),
+  ]);
+  return { objects: objects.count ?? 0, artists: artists.count ?? 0 };
 }

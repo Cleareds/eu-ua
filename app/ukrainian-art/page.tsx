@@ -5,7 +5,9 @@ import ArtObjectCard from "@/components/art/ArtObjectCard";
 import ArtistCard from "@/components/art/ArtistCard";
 import WaveCard from "@/components/art/WaveCard";
 
-export const dynamic = "force-dynamic";
+// Statically rendered and refreshed hourly; admin writes purge this path
+// immediately via lib/revalidate-art.ts.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Ukrainian Art — EU-UA.com",

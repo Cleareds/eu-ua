@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DisclaimerBanner from "@/components/ui/disclaimer-banner";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
+import { SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  // cyrillic is needed for the Ukrainian names and titles shown across the art
+  // and people sections — without it they fall back to a system font.
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eu-ua.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "EU-UA.com — Ukraine & Europe",
     template: "%s — EU-UA.com",
@@ -47,15 +52,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-19QC7D2JX0"></script>
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-19QC7D2JX0');
-        `}} />
-      </head>
       <body className={`${geistSans.variable} antialiased min-h-screen flex flex-col`} style={{ backgroundColor: "#F8F9FA", color: "#1A1A2E" }}>
         <script
           type="application/ld+json"
@@ -64,17 +60,17 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "EU-UA.com",
-              url: "https://eu-ua.com",
+              url: SITE_URL,
               description: "An independent educational platform exploring Ukraine's European identity, tracking EU accession progress, and connecting the cultural ties between Ukraine and Europe.",
               publisher: {
                 "@type": "Organization",
                 name: "EU-UA.com",
-                url: "https://eu-ua.com",
-                logo: { "@type": "ImageObject", url: "https://eu-ua.com/og-image.png" },
+                url: SITE_URL,
+                logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.png` },
               },
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://eu-ua.com/?q={search_term_string}",
+                target: `${SITE_URL}/?q={search_term_string}`,
                 "query-input": "required name=search_term_string",
               },
             }),
@@ -87,6 +83,18 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* Analytics loads after hydration so it never competes with the page's own
+            JS for the main thread during load. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-19QC7D2JX0"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-19QC7D2JX0');`}
+        </Script>
       </body>
     </html>
   );

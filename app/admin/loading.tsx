@@ -1,3 +1,7 @@
+// Scoped to /admin, which is the only genuinely dynamic part of the site.
+// At the root this file put a Suspense boundary above every page, so the shell
+// (and a 200 status) flushed before the page could call notFound() — turning
+// every missing artist/artwork into a soft 404.
 export default function Loading() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh]">

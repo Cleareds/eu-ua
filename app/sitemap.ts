@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { createReadClient } from "@/lib/supabase/server";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://eu-ua.com";
+const BASE_URL = SITE_URL;
 
 // Re-render the sitemap hourly so new admin-created artists/works show up
 // without waiting for a redeploy.

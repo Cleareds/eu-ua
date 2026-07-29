@@ -1,8 +1,9 @@
 import { getNews } from "@/lib/data";
+import { SITE_URL } from "@/lib/site";
 
 export const revalidate = 3600; // refresh hourly
 
-const SITE = "https://eu-ua.com";
+const SITE = SITE_URL;
 
 function escape(s: string): string {
   return s

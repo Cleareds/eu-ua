@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, adminClient } from "@/lib/supabase/art-admin";
 import { generateSlug } from "@/lib/art-utils";
+import { revalidateArt } from "@/lib/revalidate-art";
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const auth = await verifyAdminRequest(req);
@@ -53,6 +54,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     );
   }
 
+  revalidateArt();
   return NextResponse.json(artist);
 }
 
@@ -64,5 +66,6 @@ export async function DELETE(req: NextRequest, { params }: { params: Promise<{ i
   const db = adminClient(auth.token);
   const { error } = await db.from("art_artists").delete().eq("id", id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  revalidateArt();
   return NextResponse.json({ ok: true });
 }

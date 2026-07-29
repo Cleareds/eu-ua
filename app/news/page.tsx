@@ -1,15 +1,18 @@
 import { getNews } from "@/lib/data";
 import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+// News is refreshed by the daily fetch-news commit; a 30 min window keeps
+// the page CDN-cached without going noticeably stale.
+export const revalidate = 1800;
 
 export const metadata: Metadata = {
   title: "EU-Ukraine News — EU-UA.com",
   description: "Latest news on Ukraine's EU integration, accession negotiations, and European connections. Updated daily.",
   alternates: {
     canonical: "/news",
-    types: { "application/rss+xml": "https://eu-ua.com/feed.xml" },
+    types: { "application/rss+xml": `${SITE_URL}/feed.xml` },
   },
   openGraph: {
     title: "EU-Ukraine Integration News — EU-UA.com",
@@ -25,7 +28,7 @@ export default async function NewsPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "EU-Ukraine News",
-    url: "https://eu-ua.com/news",
+    url: `${SITE_URL}/news`,
     itemListElement: news.slice(0, 20).map((n, i) => ({
       "@type": "ListItem",
       position: i + 1,

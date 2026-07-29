@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SITE_URL } from "@/lib/site";
 
 const ROUTE_LABELS: Record<string, string> = {
   "eu-accession": "EU Accession",
@@ -21,13 +22,25 @@ const ROUTE_LABELS: Record<string, string> = {
   contact: "Contact",
 };
 
+/**
+ * Entity slugs (artists, artworks, movements) have no label in ROUTE_LABELS, and
+ * capitalising only the first letter produced breadcrumbs — and BreadcrumbList
+ * rich results — reading "Hryhorii-svitlytskyi". Title-case each word instead.
+ */
+function humanizeSlug(seg: string): string {
+  return seg
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 export default function Breadcrumbs() {
   const pathname = usePathname();
   if (pathname === "/" || pathname.startsWith("/admin")) return null;
 
   const segments = pathname.split("/").filter(Boolean);
   const items = segments.map((seg, i) => ({
-    label: ROUTE_LABELS[seg] || seg.charAt(0).toUpperCase() + seg.slice(1),
+    label: ROUTE_LABELS[seg] ?? humanizeSlug(seg),
     href: "/" + segments.slice(0, i + 1).join("/"),
   }));
 
@@ -35,12 +48,12 @@ export default function Breadcrumbs() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://eu-ua.com" },
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       ...items.map((item, i) => ({
         "@type": "ListItem",
         position: i + 2,
         name: item.label,
-        item: `https://eu-ua.com${item.href}`,
+        item: `${SITE_URL}${item.href}`,
       })),
     ],
   };

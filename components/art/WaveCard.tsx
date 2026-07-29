@@ -17,7 +17,13 @@ export default function WaveCard({ wave }: { wave: ArtWave }) {
     >
       {cover && (
         <div className="relative h-32 overflow-hidden">
-          <Image src={cover} alt={wave.name} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+          <Image
+            src={cover}
+            alt={wave.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
         </div>
       )}

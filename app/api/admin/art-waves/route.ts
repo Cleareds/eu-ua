@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, adminClient } from "@/lib/supabase/art-admin";
 import { generateSlug } from "@/lib/art-utils";
+import { revalidateArt } from "@/lib/revalidate-art";
 
 export async function GET(req: NextRequest) {
   const auth = await verifyAdminRequest(req);
@@ -36,5 +37,6 @@ export async function POST(req: NextRequest) {
     .select()
     .single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  revalidateArt();
   return NextResponse.json(data, { status: 201 });
 }

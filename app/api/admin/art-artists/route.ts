@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminRequest, adminClient } from "@/lib/supabase/art-admin";
 import { generateSlug } from "@/lib/art-utils";
+import { revalidateArt } from "@/lib/revalidate-art";
 
 export async function GET(req: NextRequest) {
   const auth = await verifyAdminRequest(req);
@@ -44,5 +45,6 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  revalidateArt();
   return NextResponse.json(artist, { status: 201 });
 }
