@@ -163,10 +163,13 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
               )}
             </div>
 
-            {/* Short description */}
-            <p className="text-gray-600 text-base leading-relaxed mb-8 border-l-4 pl-4" style={{ borderColor: "#FFD700" }}>
-              {obj.short_description}
-            </p>
+            {/* Short description — 78 of the 174 published works have none, and an
+                empty bordered block looked like a rendering fault. */}
+            {obj.short_description?.trim() && (
+              <p className="text-gray-600 text-base leading-relaxed mb-8 border-l-4 pl-4" style={{ borderColor: "#FFD700" }}>
+                {obj.short_description}
+              </p>
+            )}
 
             {/* Image — exact proportions, centered, not cropped.
                 The box height is fixed and the image is contained inside it, so the
@@ -174,15 +177,20 @@ export default async function ArtObjectPage({ params }: { params: Promise<{ slug
                 paintings of any aspect ratio stay uncropped. We don't store intrinsic
                 dimensions, which is what a width/height pair would otherwise need. */}
             {obj.image_url && (
-              <div className="relative w-full h-[60vh] sm:h-[70vh] mb-8 rounded-xl overflow-hidden bg-gray-100 p-4">
-                <Image
-                  src={obj.image_url}
-                  alt={obj.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 880px"
-                  className="object-contain"
-                  priority
-                />
+              <div className="mb-8 rounded-xl bg-gray-100 p-4">
+                {/* The positioning context has to be this inner box: a `fill` image
+                    resolves inset:0 against the padding box, so padding on the same
+                    element it fills would have no visible effect. */}
+                <div className="relative w-full h-[55vh] sm:h-[70vh]">
+                  <Image
+                    src={obj.image_url}
+                    alt={obj.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 880px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
             )}
 
