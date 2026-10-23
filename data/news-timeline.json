@@ -1,5 +1,782 @@
 [
   {
+    "date": "2026-10-22",
+    "headline": "New EU sanctions package does not propose to target Aughinish Alumina exports",
+    "summary": "Measures cutting Aughinish Alumina’s exports to Russia not included in draft of EU’s next round of economic sanctions targeting Moscow",
+    "source": "The Irish Times",
+    "url": "https://www.irishtimes.com/ireland/2026/10/22/new-eu-sanctions-package-does-not-propose-to-target-aughinish-alumina-exports/"
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "Russia Drones Are Already Killing People Within EU Territory",
+    "summary": "Bulgarian shipbroker Yordan Petrov no longer sends his vessels into the Black Sea, calling the brave few who still do “kamikazes.” Seven commercial ships have been attacked by drones off the coast of Bulgaria and Romania since the start of …",
+    "source": "Insurance Journal",
+    "url": "https://www.insurancejournal.com/news/international/2026/10/22/889958.htm"
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "Why foreign governments are paying lobbyists to make their case in Brussels",
+    "summary": "More countries are turning to public affairs consultants instead of diplomats to make their case",
+    "source": "The Irish Times",
+    "url": "https://www.irishtimes.com/world/europe/2026/10/22/why-foreign-governments-are-paying-lobbyists-to-make-their-case-in-brussels/"
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "Donald Trump’s Diesel Deal Shows How Western Leaders Are Losing Control",
+    "summary": "From a Western perspective — by which I mean North America and the European Union — we have entered an era of growing confusion. If we relied solely on the Western mainstream media for information, it would be difficult to understand what is happening with re…",
+    "source": "Fair Observer",
+    "url": "https://www.fairobserver.com/united-states/donald-trumps-diesel-deal-shows-how-western-leaders-are-losing-control/"
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "India, Poland agree to deepen defence ties, double bilateral trade by 2030",
+    "summary": "Modi and Tusk agreed to deepen defence industrial cooperation and leverage the India-EU trade pact to double bilateral trade from $6.3 billion by 2030, alongside new partnerships",
+    "source": "Business Standard",
+    "url": "https://www.business-standard.com/external-affairs-defence-security/news/india-poland-agree-to-deepen-defence-ties-double-bilateral-trade-by-2030-126102201503_1.html"
+  },
+  {
+    "date": "2026-10-21",
+    "headline": "EU member to relaunch economic consultations with Moscow",
+    "summary": "The Russian-Slovak intergovernmental commission for economic cooperation is set to meet in Moscow for the first time since the escalation of the Ukraine conflict, the Slovak Foreign Ministry has announced",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/news/647496-slovakia-russia-economic-meeting/"
+  },
+  {
+    "date": "2026-10-21",
+    "headline": "What China wants from a Trump-Putin summit on Ukraine",
+    "summary": "Moscow is pushing for a summit with Donald Trump and Xi Jinping to discuss ending the war in Ukraine, without Kyiv or the EU. What does Russia hope to gain, and why might China be willing to take part?",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/what-china-wants-from-a-trump-putin-summit-on-ukraine/a-79726190"
+  },
+  {
+    "date": "2026-10-21",
+    "headline": "A ‘pipe dream of EU hawks’: What’s in Brussels’ new Arctic Strategy?",
+    "summary": "The EU’s updated Arctic Strategy is a blueprint for confrontation with Russia, in a region where Brussels holds little influence and is outmatched by Moscow",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/news/647492-eu-arctic-strategy-russia/"
+  },
+  {
+    "date": "2026-10-21",
+    "headline": "Brussels goes looking for billions to fund Ukraine",
+    "summary": "With Washington’s support for Kyiv increasingly uncertain, Brussels is looking to its allies to help keep Ukraine afloat. The price tag: €70 billion. On today’s show, Zoya Sheftalovich and Kathryn Carlson discuss how the EU hopes to persuade Canada, Britain a…",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/podcast/brussels-playbook-podcast/brussels-goes-looking-for-billions-to-fund-ukraine/"
+  },
+  {
+    "date": "2026-10-21",
+    "headline": "Trump, Putin and Xi at one table, without Ukraine. What Moscow wants from the proposal and why Beijing might agree.",
+    "summary": "Moscow is pushing for a summit with Donald Trump and Xi Jinping to discuss ending the war in Ukraine, without Kyiv or the EU. What does Russia hope to gain, and why might China be willing to take part? The administration of US President Donald Trump has stepp…",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/trump-putin-and-xi-at-one-table-without-ukraine-what-moscow-wants-from-the-proposal-and-why-beijing-might-agree/a-79726190"
+  },
+  {
+    "date": "2026-10-20",
+    "headline": "The European Union Wants To Punish People for Their Speech—Without Even a Trial",
+    "summary": "Authorities are claiming draconian powers against Hüseyin Doğru, a German journalist accused of spreading Russian propaganda.",
+    "source": "Reason",
+    "url": "https://reason.com/2026/10/20/the-european-union-wants-to-punish-people-for-their-speech-without-even-a-trial/"
+  },
+  {
+    "date": "2026-10-20",
+    "headline": "EU unveils a new Arctic push as global warming and security threats reshape the region",
+    "summary": "The European Union has unveiled a plan to boost its presence in the Arctic",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/International/wireStory/eu-unveils-new-arctic-push-global-warming-security-137410994"
+  },
+  {
+    "date": "2026-10-20",
+    "headline": "Kallas buys time on EU response to US sanctions against the ICC",
+    "summary": "European lawmakers have been pushing the EU executive to take swift action over U.S. sanctions against the Hague-based court.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/kaja-kallas-eu-response-us-sanctions-against-icc/"
+  },
+  {
+    "date": "2026-10-19",
+    "headline": "Ireland's EU budget cause for 'serious concern' - Kallas",
+    "summary": "The EU's foreign policy chief Kaja Kallas has told MEPs that Ireland's draft proposal for the long-term EU budget is a cause for \"serious concern\" due to the cuts it envisages to the EU's foreign and international development budget.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/europe/2026/1019/1595998-eu-budget/"
+  },
+  {
+    "date": "2026-10-19",
+    "headline": "Why Europe’s new defence agenda depends not only on armies, but also on citizens",
+    "summary": "The EU may not yet have a common army but via its citizens, member states can foster a culture of resilience and solidarity if all levels of society can pull together.",
+    "source": "The Conversation Africa",
+    "url": "https://theconversation.com/why-europes-new-defence-agenda-depends-not-only-on-armies-but-also-on-citizens-293357"
+  },
+  {
+    "date": "2026-10-18",
+    "headline": "EU tariffs aimed at China hitting Ukraine, steel boss says",
+    "summary": "The boss of one of Ukraine's biggest steel companies says the country has been \"bundled together\" in measures aimed at curbing cheap imports.",
+    "source": "BBC News",
+    "url": "https://www.bbc.co.uk/news/articles/cwdd8z6gyy96o"
+  },
+  {
+    "date": "2026-10-17",
+    "headline": "Will the EU come to Ukraine’s rescue in war against Russia?",
+    "summary": "US support at risk as Trump-Zelenskyy relations nosedive.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/video/inside-story/2026/10/17/will-the-eu-come-to-ukraines-rescue-in-war-against-russia"
+  },
+  {
+    "date": "2026-10-17",
+    "headline": "Christine Lagarde: IMFC Statement",
+    "summary": "The European Central Bank (ECB) is the central bank of the European Union countries which have adopted the euro. Our main task is to maintain price stability in the euro area and so preserve the purchasing power of the single currency.",
+    "source": "Europa.eu",
+    "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
+  },
+  {
+    "date": "2026-10-17",
+    "headline": "Trump lifts sweeping Russia sanctions as Zelenskyy appeals to EU for €70bn in aid",
+    "summary": "The US president has eased restrictions on Russian energy as he grapples with an oil crisis sparked by the war in Iran, further straining relations with Ukraine.",
+    "source": "TheJournal.ie",
+    "url": "https://www.thejournal.ie/trump-russia-sanctions-eu-7196221-Oct2026/"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Watch: Will Ukraine get the support needed as tensions with US rise?",
+    "summary": "Zelensky thanked the \"real leaders\" ahead of a meeting with the EU in Brussels.",
+    "source": "BBC News",
+    "url": "https://www.bbc.co.uk/news/videos/cm2ke1v8e4geo"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "EU rallies in support of Ukraine amid Trump standoff",
+    "summary": "Ukraine's Volodymyr Zelenskyy asks EU leaders for extra $79bn to help fight Russia next year.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/news/2026/10/16/eu-rallies-in-support-of-ukraine-amid-trump-standoff"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "EU debate Ukraine funding, as Zelenskyy's relations with the Trump administration ebb again",
+    "summary": "European Union leaders rallied around Ukrainian President Volodymyr Zelenskyy at a summit on Friday, as U.S. President Donald Trump fired another salvo at Ukraine, calling its strikes on ‌Russian refineries a \"disgrace.\"",
+    "source": "CBC News",
+    "url": "https://www.cbc.ca/news/world/eu-summit-ukraine-russia-war-9.7383053"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Le Pen looms large as Macron enters final months on EU stage",
+    "summary": "The specter of far-right leader Marine Le Pen winning France’s presidency with a pledge to go head-to-head with the European Union is already giving Brussels the jitters and looming large over Emmanuel Macron’s final months in power.",
+    "source": "Hurriyet Daily News",
+    "url": "https://www.hurriyetdailynews.com/le-pen-looms-large-as-macron-enters-final-months-on-eu-stage-228203"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Zelensky drums up European backing as DC undermines...",
+    "summary": "Ukrainian President Volodymyr Zelensky urged EU leaders Friday to keep financing Kyiv's fight with nearly $80 billion more next year, as he insisted he was s...",
+    "source": "Yahoo Entertainment",
+    "url": "https://www.yahoo.com/news/us/articles/ukraines-zelensky-defies-trump-russian-114221892.html"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "'It's a realistic amount': Zelenskyy asks EU leaders for extra €70b in support next year",
+    "summary": "The EU – Ukraine’s biggest international backer – is currently paying out instalments of a €90 billion loan for Kyiv.",
+    "source": "TheJournal.ie",
+    "url": "https://www.thejournal.ie/zelensky-eu-funding-request-7195879-Oct2026/"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Zelensky: Ukraine aims to advance EU talks by year-end",
+    "summary": "Ukrainian President Volodymyr Zelensky said on Friday that Kyiv aims to open the remaining two negotiation clusters for European Union membership by the end of 2026, following talks with European Coun...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/63b15394961eba23"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Today in Germany: A roundup of the latest news on Friday",
+    "summary": "Germany and France strike deal to further relax EU auto emissions rules, Merz says EU will need to increase funding for Ukraine, house martin named Germany’s Bird of the Year for 2027 and more news on Friday, October 16th.",
+    "source": "The Local Germany",
+    "url": "https://www.thelocal.de/20261016/today-in-germany-a-roundup-of-the-latest-news-on-friday-144"
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Zelensky Straight Up Asked If He’s ‘Being Treated as a Scapegoat’ By Trump",
+    "summary": "\"Do you think you are being treated as a scapegoat for his own problems?” Zelensky was asked by Sky’s correspondent in Brussels. The post Zelensky Straight Up Asked If He’s ‘Being Treated as a Scapegoat’ By Trump first appeared on Mediaite.",
+    "source": "Mediaite",
+    "url": "https://www.mediaite.com/media/news/zelensky-straight-up-asked-if-hes-being-treated-as-a-scapegoat-by-trump/"
+  },
+  {
+    "date": "2026-10-15",
+    "headline": "EU seeks China deal to lift ASML supplier sanctions amid rare-earth crisis",
+    "summary": "The European Union (EU) is negotiating with China to lift sanctions on Sindlhauser Materials GmbH, a small German business that is part of ASML's supply chain, according to people familiar with the matter. In exchange, the EU would remove trade restrictions o…",
+    "source": "Digitimes",
+    "url": "https://www.digitimes.com/news/a20261015PD246/eu-asml-russia-business-beijing.html"
+  },
+  {
+    "date": "2026-10-15",
+    "headline": "EU summit to focus on China, Ukraine and bloc budget",
+    "summary": "EU leaders meeting in Brussels will examine measures to curb the bloc's huge trade deficit with China. But they will also be looking to further agreement on the next EU budget ahead of some major elections next year.",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/eu-summit-to-focus-on-china-ukraine-and-bloc-budget/a-79665338"
+  },
+  {
+    "date": "2026-10-15",
+    "headline": "EU leaders push back on a major budget proposal, putting a deal by 2027 in doubt",
+    "summary": "European Union leaders are voicing strong opposition to a new proposal for the bloc’s long-term budget",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/International/wireStory/eu-leaders-push-back-major-budget-proposal-putting-137284258"
+  },
+  {
+    "date": "2026-10-15",
+    "headline": "Taoiseach to attend summit over Ukraine, EU budget talks",
+    "summary": "Taoiseach Micheál Martin will attend a summit of EU leaders in Brussels which will be dominated by the issue the way in Ukraine and EU budget negotiations.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/world/2026/1015/1595433-eu-summit-taoiseach/"
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "Letting Ukraine into EU would be economic suicide – Le Pen",
+    "summary": "Letting Ukraine into the bloc would result in “absolutely huge economic losses” for France and an effective end to its sovereignty, French presidential frontrunner Marine Le Pen believes",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/news/647211-ukraine-eu-accession-suicide/"
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "UN warns EU against cutting international aid in next budget",
+    "summary": "The UN's refugee agency has warned the European Union against \"short-sighted\" cuts to international aid, as Germany spearheads a push to slash the size of the bloc's next joint budget.",
+    "source": "Hurriyet Daily News",
+    "url": "https://www.hurriyetdailynews.com/un-warns-eu-against-cutting-international-aid-in-next-budget-228103"
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "‘Very risky choice’: Italy's Meloni warns US-Russia diesel deal could help fund war in Ukraine",
+    "summary": "Giorgia Meloni has expressed concerns about the US agreement with Russia regarding diesel supplies during her parliament address. She believes the deal could financially aid Russia's war efforts in Ukraine. Meloni urged the European Union to appoint a represe…",
+    "source": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/world/europe/very-risky-choice-italys-meloni-warns-us-russia-diesel-deal-could-help-fund-war-in-ukraine/articleshow/134941715.cms"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "Most EU citizens oppose Ukraine accession – survey",
+    "summary": "While the Ukrainians remain overwhelmingly eager to join the EU, the support towards the country’s potential accession has dropped beyond 50% within the bloc, a new Bertelsmann Foundation survey shows",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/news/647158-eu-citizens-ukraine-accession/"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "Doubts Grow Over the Terms of Ukraine’s European Union Accession",
+    "summary": "Welcome to The Ukraine Compass, a weekly digest of Ukrainian commentary and analysis from across the political spectrum only for War on the Rocks members. Each week, we bring you a curated selection of articles from Ukrainian media offering insight into how U…",
+    "source": "War on the Rocks",
+    "url": "https://warontherocks.com/doubts-grow-over-the-terms-of-ukraines-european-union-accession/"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "EU Backs Ukraine War Risk Insurance as Market Rebounds",
+    "summary": "The European Union is providing a new backstop to a war risk insurance program for the Ukrainian logistics sector, amid a rise in demand due to intensifying Russian attacks. With EU backing, the European Bank for Reconstruction and Development’s guarantee …",
+    "source": "Insurance Journal",
+    "url": "https://www.insurancejournal.com/news/international/2026/10/13/888728.htm"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "EU spent $320 billion on Russian energy despite sanctions – Moscow",
+    "summary": "The EU purchased $21.3 billion worth of Russian energy in nine months despite sanctions, bringing its total since 2022 to $320.7 billion, Russian Deputy Prime Minister Aleksandr Novak said",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/russia/647143-eu-russian-energy-purchases-sanctions-novak/"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "Fast Takes: Dithering over Putin’s sabotage, Dems’ Rx to ice Alaska and other commentary",
+    "summary": "“The European Union and NATO may not openly be at war with their eastern neighbor, but Putin’s regime is waging” deniable attacks, warns Reason’s J.D. Tuccille.",
+    "source": "New York Post",
+    "url": "https://nypost.com/2026/10/12/opinion/fast-takes-dithering-over-putins-sabotage-dems-rx-to-ice-alaska-and-other-commentary/"
+  },
+  {
+    "date": "2026-10-13",
+    "headline": "Wider Europe Briefing: What To Expect At The EU's October Summit",
+    "summary": "In this week's briefing, RFE/RL Europe Editor Rikard Jozwiak drills down on one issue: the upcoming EU summit, with a focus on Ukraine, Russia sanctions, and EU enlargement.",
+    "source": "Radio Free Europe/ Radio Liberty",
+    "url": "https://www.rferl.org/a/wider-europe-eu-summit-ukraine-funding-russia-sanctions-enlargement/33875302.html"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "Germany's Wadephul calls new EU sanctions 'unprecedented' blow to Russia",
+    "summary": "The European Union has approved its largest-ever sanctions package against Moscow, targeting more than 1,000 entities tied to the military-industrial complex.",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/germanys-wadephul-calls-new-eu-sanctions-unprecedented-blow-to-russia/a-79638017"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "Ukraine’s Zelenskyy accuses Russia of violating Trump’s ‘energy ceasefire’",
+    "summary": "The EU also announced that it officially added almost 1,600 new sanctions on Russia's military industrial complex.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/news/2026/10/12/ukraines-zelenskyy-accuses-russia-of-violating-trumps-energy-ceasefire"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "EU imposes sanctions on almost 1,600 Russians and companies linked to arms industry",
+    "summary": "The European Union has imposed sanctions on nearly 1,600 Russian individuals and companies linked to Russia’s arms industry",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/International/wireStory/eu-imposes-sanctions-1600-russians-companies-linked-russian-137188316"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "EU Targets Major Russian Shipyards in Sweeping Sanctions Expansion",
+    "summary": "The European Union has imposed sanctions on some of Russia’s most important shipyards, including major submarine builders, naval ship-repair facilities and yards involved in commercial vessel construction, as part of...",
+    "source": "gcaptain.com",
+    "url": "https://gcaptain.com/eu-targets-major-russian-shipyards-in-sweeping-sanctions-expansion/"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "‘This is not the time to ease pressure on Moscow’: EU imposes sanctions on nearly 1,600 Russian people and firms for drone and missile development",
+    "summary": "The move brings the total number of Russian officials and “entities” targeted by the EU to more than 4,500—including President Vladimir Putin.",
+    "source": "Fortune",
+    "url": "https://fortune.com/2026/10/12/eu-sanctions-1600-russia-drone-missile/"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "Germany, Italy request ’emergency brake’ power to stop new EU laws",
+    "summary": "Friedrich Merz, Giorgia Meloni and Bart de Wever said Brussels must accelerate business simplification efforts.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/germany-italy-request-emergency-brake-power-to-stop-new-eu-laws/"
+  },
+  {
+    "date": "2026-10-12",
+    "headline": "Kallas: Russia's compliance with ceasefire yet to be seen",
+    "summary": "European Union High Representative for Foreign Affairs and Security Policy Kaja Kallas welcomed on Monday the announcement of an energy ceasefire between Russia and Ukraine, but expressed doubt whethe...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/7ffe484f3309c81e"
+  },
+  {
+    "date": "2026-10-10",
+    "headline": "Germany pursues new Russia sanctions despite US diesel deal",
+    "summary": "Germany said Saturday it would continue to push for new EU sanctions against Russia despite Moscow's agreement with Washington to release diesel to ease a fuel crunch.",
+    "source": "The Local Germany",
+    "url": "https://www.thelocal.de/20261010/germany-pursues-new-russia-sanctions-despite-us-diesel-deal"
+  },
+  {
+    "date": "2026-10-09",
+    "headline": "SAP India challenges order to restore software services to Nayara Energy",
+    "summary": "The German tech giant is contesting a Delhi High Court ruling that barred it from citing EU sanctions against Russian owner Rosneft to halt critical IT maintenance for the energy major.",
+    "source": "Livemint",
+    "url": "https://www.livemint.com/companies/news/sap-india-nayara-energy-delhi-high-court-11791532108416.html"
+  },
+  {
+    "date": "2026-10-09",
+    "headline": "EU meeting highlights aid role as other doners scale back",
+    "summary": "The EU has become the biggest provider of global development assistance after the Trump administration drastically cut back its international aid budget in 2025.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/ireland/2026/1009/1594773-eu-aid-meeting/"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "Europe tightens the screws on Ukrainian men in Lithuania as Kyiv demands more soldiers",
+    "summary": "The European Union, once a beacon of sovereignty and human rights, is now a puppet of Kyiv’s war machine, complicit in a globalist agenda to fuel mass depopulation through the Ukrainian conflict. Under the guise of humanitarian aid, the EU has become a huntin…",
+    "source": "Naturalnews.com",
+    "url": "https://www.naturalnews.com/2026-10-08-europe-tightens-screws-ukrainian-men-lithuania-soldiers.html"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "Piero Cipollone: Interview with Corriere della Sera",
+    "summary": "The European Central Bank (ECB) is the central bank of the European Union countries which have adopted the euro. Our main task is to maintain price stability in the euro area and so preserve the purchasing power of the single currency.",
+    "source": "Europa.eu",
+    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261008~3184e7d0d0.en.html"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "Meeting of 9-10 September 2026",
+    "summary": "The European Central Bank (ECB) is the central bank of the European Union countries which have adopted the euro. Our main task is to maintain price stability in the euro area and so preserve the purchasing power of the single currency.",
+    "source": "Europa.eu",
+    "url": "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg261008~a10153d090.en.html"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "MEP blasts ‘Euro-Gestapo’ for lecturing Russia on democracy (VIDEO)",
+    "summary": "Slovak MEP Lubos Blaha has warned of “totalitarianism” in the EU, accusing Brussels of stifling dissent while lecturing Russia on democracy Read Full Article at RT.com",
+    "source": "Rt-english.com",
+    "url": "https://rt-english.com/news/646931-mep-blasts-euro-gestapo-democracy-russia/"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "Russia eyes return to Europe's gas market despite sanctions, Ukraine war: Report",
+    "summary": "Reports indicate that Russia is looking to reestablish gas supplies via the Nord Stream pipelines by negotiating with US investors, including Jared Kushner and a Russian adviser to Putin. This effort faces formidable challenges due to existing US and EU sanct…",
+    "source": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/business/international-business/russia-eyes-return-to-europes-gas-market-despite-sanctions-ukraine-war-report/articleshow/134781494.cms"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "France and Germany float ‘trade bazooka’ against China as the EU sends envoy to Beijing",
+    "summary": "Politicians and economists across the 27-nation bloc consider China’s exports a threat to core industries",
+    "source": "Fortune",
+    "url": "https://fortune.com/2026/10/08/china-eu-trade-deficit-envoy/"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "EU sends envoy to Beijing as rising exports from China raise economic anxiety",
+    "summary": "The European Union is bracing for a confrontation with China as a trade deficit exceeding $1 billion a day heightens anxiety over potential job losses and pushes the bloc’s political leaders to take a more aggressive approach toward its second-largest ...",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/Business/wireStory/eu-sends-envoy-beijing-rising-exports-china-raise-137085719"
+  },
+  {
+    "date": "2026-10-08",
+    "headline": "EU and Beijing heading for trade war as Brussels slams 'unsustainable' $1billion-a-day deficit - but China warns: 'Trade war? Let them try",
+    "summary": "Beijing hit back by warning that Europe lacks the capacity to wage a trade war, issuing a blunt challenge: 'Let it try.'",
+    "source": "Dailymail.com",
+    "url": "https://www.dailymail.com/news/article-16192597/EU-Beijing-heading-trade-war-Brussels-slams-unsustainable-1billion-day-deficit-China-warns-Trade-war-Let-try.html"
+  },
+  {
+    "date": "2026-10-07",
+    "headline": "EU enlargement: European Commission tables reforms to prepare bloc for new members",
+    "summary": "The European Commission is proposing earlier access to EU markets for candidate countries, new voting rules to reduce vetoes and extra safeguards for a bigger bloc. But is the reform fair — or even feasible?",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/eu-enlargement-european-commission-tables-reforms-to-prepare-bloc-for-new-members/a-79582493"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "EU seeks ways to make expansion more palatable to members",
+    "summary": "The European Commission has put forward ideas it hopes will both ease the EU expansion process and allay concerns among existing members. Several countries, not least war-torn Ukraine, are among the candidates.",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/eu-seeks-ways-to-make-expansion-more-palatable-to-members/a-79567297"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Ukraine says no to EU membership without access to selling grain",
+    "summary": "A permanent restriction on Kyiv's market access would \"run counter to the very logic\" of full EU membership, Ukraine's agriculture minister told POLITICO.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/ukraine-says-no-to-eu-membership-without-access-to-selling-grain/"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Proposals over EU policies for future candidate countries",
+    "summary": "Future EU candidate countries will have to more strictly align with the bloc's policies ahead of joining in the wake of persistent rule of law conflicts between recent arrivals and established member states, according to new plans proposed by the European Com…",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/europe/2026/1006/1594323-eu-countries-policies/"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Why America's Gulf Allies Are Rethinking Aid - And Why It Matters",
+    "summary": "As the current conflict in the Gulf grinds on without resolution, pressure is mounting not just on defense systems, but also on aid budgets. Arab Gulf state aid budgets have historically been important alongside those from the European Union, United Kingdom, …",
+    "source": "Hoover.org",
+    "url": "https://www.hoover.org/research/why-americas-gulf-allies-are-rethinking-aid-and-why-it-matters"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "„Turning into second Ukraine.” Medvedev threatens and accuses another country",
+    "summary": "On Sunday, 4 October, Dmitry Medvedev threatened Armenia, saying that it “could transform into a second Ukraine”. This refers to the Armenians’ aspirations for closer ties with the European Union, which do not please Russia, as it wishes to keep Armenia withi…",
+    "source": "Freerepublic.com",
+    "url": "https://freerepublic.com/focus/f-news/4398115/posts"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Cowardly Europe Fears Dissent",
+    "summary": "Former-banker-turned-tiny-French-President Emmanuel Macron blasted what he called “American free speech” while speaking to reporters last week. Defending the European Union’s robust censorship policies, le petit fromage insisted that Europe’s speech-policing …",
+    "source": "Lewrockwell.com",
+    "url": "https://www.lewrockwell.com/2026/10/no_author/cowardly-europe-fears-dissent/"
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Wider Europe Briefing: The New EU Enlargement Strategy",
+    "summary": "In this week's Wider Europe, Rikard Jozwiak drills down on two issues: the EU's new enlargement strategy and the EU's game plan to keep Russia (and Belarus) out of sports.",
+    "source": "Radio Free Europe/ Radio Liberty",
+    "url": "https://www.rferl.org/a/wider-europe-briefing-the-new-eu-enlargement-strategy/33871257.html"
+  },
+  {
+    "date": "2026-10-05",
+    "headline": "Why reducing the €2,500 student registration charge would be a double-edged sword",
+    "summary": "Do we really want our universities to be much cheaper than others in the EU?",
+    "source": "The Irish Times",
+    "url": "https://www.irishtimes.com/ireland/education/2026/10/05/why-reducing-the-2500-student-registration-charge-would-be-a-double-edged-sword/"
+  },
+  {
+    "date": "2026-10-04",
+    "headline": "Trump forced Release of EU Oil Reserves, but it may not Avert Fuel Crisis",
+    "summary": "Trump successfully strong-armed the European Union into releasing 100 million barrels of petroleum from its reserves over four months.",
+    "source": "Juancole.com",
+    "url": "https://www.juancole.com/2026/10/forced-release-reserves.html"
+  },
+  {
+    "date": "2026-10-04",
+    "headline": "Germany’s Merz visits Kyiv amid fears of ‘hardest’ winter in war",
+    "summary": "The visit is overshadowed by heavy Russian attacks on Kyiv as well as tensions over Ukraine's EU membership prospects",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/germany-friedrich-merz-visits-kyiv-amid-fears-of-hardest-winter-in-war/"
+  },
+  {
+    "date": "2026-10-04",
+    "headline": "Rejoining EU ‘could increase net migration by 200,000’",
+    "summary": "Rejoining the European Union could increase net migration by more than 200,000, according to analysis by Reform UK. Modelling by Nigel Farage’s party suggests that the restoration of free movement from the EU could push net migration over 500,000, more than 2…",
+    "source": "Freerepublic.com",
+    "url": "https://freerepublic.com/focus/f-news/4397916/posts"
+  },
+  {
+    "date": "2026-10-03",
+    "headline": "Latvian PM faces bittersweet victory in election backdropped by Russia",
+    "summary": "An EU sanctions showdown could strenghten Andris Kulbergs's position, but a coalition puzzle awaits.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/latvia-prime-minister-andris-kulbergs-faces-bittersweet-victory-election-2026/"
+  },
+  {
+    "date": "2026-10-03",
+    "headline": "Links 10/3/2026 Plus Short Iran War/Narrative Note",
+    "summary": "Our scary daily links: pet food toxicity, modern architecture uglies, Russia bans diesel exports unless sanctions go, ozone pollutions, EU energy-produced inflation, India v. Trump. Venezuela toadies to Trump, moar on Israel flight false flag, China two syste…",
+    "source": "Nakedcapitalism.com",
+    "url": "https://www.nakedcapitalism.com/2026/10/links-10-3-2026-plus-short-note.html"
+  },
+  {
+    "date": "2026-10-03",
+    "headline": "How is the EU dealing with energy price shocks?",
+    "summary": "RTÉ's Europe Editor Tony Connelly assesses how the EU is dealing with the energy price shock and what choices governments face in trying to alleviate the pressure on households.",
+    "source": "RTE",
+    "url": "https://www.rte.ie/news/analysis-and-comment/2026/1003/1593854-europe-energy-diesel/"
+  },
+  {
+    "date": "2026-10-02",
+    "headline": "Ukraine receives €2.9B from EU",
+    "summary": "Ukraine has received €2.9 billion from the European Union under the Ukraine Facility, Prime Minister Sergii Koretskyi (pictured) announced on Friday.The disbursement follows Ukraine's fulfillment of 1...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/ff42a7cf1e4fce1e"
+  },
+  {
+    "date": "2026-10-02",
+    "headline": "Aughinish Alumina steps up lobbying as European Commission considers sanctions",
+    "summary": "Taoiseach, Cabinet Ministers and MEPs contacted by Russian-owned plant in Co Limerick",
+    "source": "The Irish Times",
+    "url": "https://www.irishtimes.com/ireland/2026/10/02/aughinish-steps-up-lobbying-campaign-as-european-commission-considers-sanctions/"
+  },
+  {
+    "date": "2026-10-01",
+    "headline": "Britain could release emergency diesel stockpiles as Trump threatens to cut off US supplies with export ban",
+    "summary": "UK officials spoke with their counterparts in Germany, France, Italy and Ireland today as well as at the European Commission to consider using stockpiles of the fuel.",
+    "source": "Dailymail.com",
+    "url": "https://www.dailymail.com/news/article-16175705/Britain-release-emergency-diesel-stockpiles-Trump-export-ban.html"
+  },
+  {
+    "date": "2026-10-01",
+    "headline": "EU, Ukraine agree to accelerate €45B loan payout in 2027",
+    "summary": "Kyiv is running out of money to buy weapons to defend itself.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/eu-ukraine-agree-to-accelerate-e45b-loan-payout-in-2027/"
+  },
+  {
+    "date": "2026-10-01",
+    "headline": "VDL: EU found way to cover Kyiv's needs in 2026",
+    "summary": "European Commission President Ursula von der Leyen hailed on Thursday the progress made by teams from the European Union and Ukraine on financial support. She said the two sides \"identified the means\"...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/0aa002b1fcdbf059"
+  },
+  {
+    "date": "2026-10-01",
+    "headline": "Like Canada, the case exists for NZ to join the European Union – Simon Bridges",
+    "summary": "OPINION: The EU president has opened the door to Canada, Australia and NZ.",
+    "source": "New Zealand Herald",
+    "url": "https://www.nzherald.co.nz/nz/like-canada-the-case-exists-for-nz-to-join-the-european-union-simon-bridges/premium/SJ6IIR6EYVCP5AQGR54F2BZKTU/"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Romania’s political crisis intensifies as Parliament rejects pro-EU PM",
+    "summary": "Siegfried Muresan's loss of the confidence motion increases the prospect for snap elections.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/news/2026/9/30/romanian-political-crisis-intensifies-as-parliament-rejects-pro-eu-pm"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Poland's support for Ukraine wears thin",
+    "summary": "The prospect of Ukraine's likely EU accession is becoming less popular with Poles, as farmers and truckers face price collapses. And with disputes over historical memory, too, mistrust is deepening. - 2026/10 / article",
+    "source": "Mondediplo.com",
+    "url": "https://mondediplo.com/2026/10/05poland"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Christine Lagarde: Interview with La Croix",
+    "summary": "The European Central Bank (ECB) is the central bank of the European Union countries which have adopted the euro. Our main task is to maintain price stability in the euro area and so preserve the purchasing power of the single currency.",
+    "source": "Europa.eu",
+    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260930~10084a5f3d.en.html"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Frank Elderson: Supervisory risk appetite, efficiency and effectiveness",
+    "summary": "The European Central Bank (ECB) is the central bank of the European Union countries which have adopted the euro. Our main task is to maintain price stability in the euro area and so preserve the purchasing power of the single currency.",
+    "source": "Europa.eu",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260930~d495288355.en.html"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "How Far Will the Canada-EU Lovefest Go?",
+    "summary": "Both Ottawa and Brussels have good reasons to improve ties, but the EU will need to become more flexible.",
+    "source": "Foreign Policy",
+    "url": "http://foreignpolicy.com/2026/09/30/canada-european-union-membership-trump-ottowa-brussels/"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Russia: EU weapons factories legitimate targets",
+    "summary": "Russian Foreign Ministry spokesperson, Maria Zakharova, warned on Wednesday that all factories in the European Union producing weapons for Ukraine are \"legitimate military targets\" for Moscow.\"One sho...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/44efdb1bfeb82e59"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "UK PM Burnham says may rejoin EU if 'pros outweigh cons'; France, Spain say 'welcome back'",
+    "summary": "British Prime Minister Andy Burnham has suggested the UK need to rethink its relationship with the European Union. He remarked that Brexit has not lived up to its commitment of regaining control, particularly over immigration matters. European leaders remain …",
+    "source": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/world/uk/uk-pm-burnham-says-may-rejoin-eu-if-pros-outweigh-cons-france-spain-say-welcome-back/articleshow/134599792.cms"
+  },
+  {
+    "date": "2026-09-30",
+    "headline": "Politico: European Union and Canada to announce broad cooperation agreement",
+    "summary": "Ursula von der Leyen proposed days ago that Canada be invited to become an associate member of the EU The post Politico: European Union and Canada to announce broad cooperation agreement appeared first on ProtoThema English.",
+    "source": "Protothema.gr",
+    "url": "https://en.protothema.gr/2026/09/30/politico-european-union-and-canada-to-announce-broad-cooperation-agreement/"
+  },
+  {
+    "date": "2026-09-29",
+    "headline": "EU pushes Ukraine to focus on reforms to unlock funding",
+    "summary": "The European Union has told Ukraine to deliver on agreed reforms to unlock billions in available financial assistance amid warnings of a major budget short Read More: https://punchng.com/eu-pushes-ukraine-to-focus-on-reforms-to-unlock-funding/",
+    "source": "The Punch",
+    "url": "https://punchng.com/eu-pushes-ukraine-to-focus-on-reforms-to-unlock-funding/"
+  },
+  {
+    "date": "2026-09-29",
+    "headline": "EU Minister of defence have agreed to push forward the EU assistance initiatives for Ukraine, says R. Kaunas",
+    "summary": "Minister of National Defence Robertas Kaunas took part in the EU Foreign Affairs Council (Defence) in Brussels on September 28. The meeting addressed stepping up the EU military assistance to Ukraine, russia's hybrid campaigns and their escalation, and the se…",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/09/ukraine-260929-lithuania-mnd01.htm"
+  },
+  {
+    "date": "2026-09-29",
+    "headline": "EU nations seek energy alternatives after $113B extra spend since Iran war began",
+    "summary": "European Union nations have spent over an extra $113.5 billion on energy imports since the Iran war began, forcing politicians to seek alternatives to fossil fuels as prices skyrocket",
+    "source": "Abcnews.com",
+    "url": "https://abcnews.com/Business/wireStory/eu-nations-seek-energy-alternatives-after-spending-113-136846986"
+  },
+  {
+    "date": "2026-09-28",
+    "headline": "Pope Leo leans into statesman role, urging peace in an era of renewed war",
+    "summary": "METZ, France - Pope Leo XIV capped a four-day trip to France in the intellectual birthplace of the European Union, heralding its success at “tearing down walls that were dividing it” and leaning into his role not only as spiritual leader of 1.4 billion Cathol…",
+    "source": "Yahoo Entertainment",
+    "url": "https://www.yahoo.com/news/politics/articles/pope-leo-leans-statesman-role-112710984.html"
+  },
+  {
+    "date": "2026-09-28",
+    "headline": "Defence Minister Herem: Ukraine receives billions in effective EU support to boost combat capabilities",
+    "summary": "At today's EU Defence Ministers' meeting in Brussels, the release of €6.6 billion from the European Peace Facility (EPF) to support Ukraine was welcomed. \"This is a powerful step forward to ramp up aid to Ukraine and increase pressure on the Russian Federatio…",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/09/ukraine-260928-estonia-mod01.htm"
+  },
+  {
+    "date": "2026-09-28",
+    "headline": "Kallas Says Russia's Mockery Of UN Meeting Shows It's Not Interested In Ending Ukraine War",
+    "summary": "European Union foreign policy chief Kaja Kallas said on September 28 that Russian Foreign Minister Sergei Lavrov's treatment of his German counterpart, Johann Wadephul, after their recent UN meeting demonstrates that Russia is not interested in peace in Ukrai…",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/09/ukraine-260928-rferl02.htm"
+  },
+  {
+    "date": "2026-09-28",
+    "headline": "Priority defence needs and additional funding: Evgeniy Khmara addresses EU defence ministers",
+    "summary": "Minister of Defence of Ukraine Evgeniy Khmara took part in a meeting of the Foreign Affairs Council (Defence), attended by defence ministers of EU member states.",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/09/ukraine-260928-ukraine-mod02.htm"
+  },
+  {
+    "date": "2026-09-27",
+    "headline": "EU unlocks humanitarian aid for Africa and other crisis-hit regions",
+    "summary": "EU allocates majority of aid to sub-Saharan Africa to fund actions related to migration, conflict and food insecurity.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/news/2026/9/27/eu-unlocks-humanitarian-aid-for-africa-and-other-crisis-hit-regions"
+  },
+  {
+    "date": "2026-09-26",
+    "headline": "EU Publishes Big Tech Reports on DSA Compliance",
+    "summary": "The European Commission published compliance reports on Wednesday from Meta, TikTok, Google, Twitch, and more than two dozen other platforms, detailing the measures each company takes to comply with the Digital Services Act (DSA) and the voluntary Code of Con…",
+    "source": "Naturalnews.com",
+    "url": "https://www.naturalnews.com/2026-09-26-eu-publishes-big-tech-reports-on-dsa-compliance.html"
+  },
+  {
+    "date": "2026-09-25",
+    "headline": "Kallas: EU states agree to release €6.6B for Ukraine",
+    "summary": "European Union Foreign Policy Chief Kaja Kallas said on Friday that member states \"agreed on the terms for releasing €6.6 billion from the European Peace Facility for Ukraine.\"According to Kallas, €90...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/0bbf40567593a4fe"
+  },
+  {
+    "date": "2026-09-25",
+    "headline": "Zelenskyy warns $27B funding gap could leave Ukraine short of weapons",
+    "summary": "The president said he received a positive and constructive response from the EU during his diplomatic talks this week.",
+    "source": "POLITICO.eu",
+    "url": "https://www.politico.eu/article/if-ukraine-fails-to-order-new-drones-soon-it-risks-challenges-at-war-early-next-year-zelenskyy-said/"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "Ukraine support: Council approves payment of nearly €3 billion and welcomes Norway's financial contribution",
+    "summary": "Ukraine will soon receive nearly €3 billion, following the Council's approval of the eighth regular disbursement under the EU's Ukraine Facility. Nearly €800 million of this will be provided for the first time from the Ukraine Support Loan.",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/09/ukraine-260924-ec01.htm"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "EU to condemn war in Ukraine at G20 even if Putin attends",
+    "summary": "Russian President Vladimir Putin has been invited to the G20 summit in Miami by the United States. Multiple members of the group have called for Moscow's exclusion over its invasion of Ukraine.",
+    "source": "DW (English)",
+    "url": "https://www.dw.com/en/eu-to-condemn-war-in-ukraine-at-g20-even-if-putin-attends/a-79413317"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "Russian hybrid threats: EU lists Xenia Fedorova over information manipulation activities",
+    "summary": "Today, the Council decided to adopt restrictive measures against Xenia Fedorova for her role in Russia's continued hybrid activities, and in particular for engaging in foreign information manipulation and interference (FIMI), thereby undermining democracy and…",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/intell/library/news/2026/intell-260924-ec01.htm"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "Ukraine to receive nearly €3B in aid from EU",
+    "summary": "The European Council approved on Thursday nearly €3 billion in aid from the Ukraine Facility, following the country's successful fulfillment of conditions set by the European Union. The funds will sup...",
+    "source": "Biztoc.com",
+    "url": "https://biztoc.com/x/6e903680eceb9f75"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "EAM Jaishankar meets European partners at UNGA: Ukraine conflict, India-EU FTA, bilateral ties on agenda",
+    "summary": "EAM Jaishankar discusses Ukraine conflict, India-EU FTA, and bilateral ties with European partners at UNGA meetings.",
+    "source": "BusinessLine",
+    "url": "https://www.thehindubusinessline.com/news/eam-jaishankar-meets-european-partners-at-unga-ukraine-conflict-india-eu-fta-bilateral-ties-on-agenda/article71502648.ece"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "Europe’s dangerous dependence puts it on Xi and Trump’s menu",
+    "summary": "Mark Carney's warning emphasizes the need for middle powers like the European Union to assert themselves. Europe faces significant challenges in technology dependence and military capabilities compared to the US and China. Supply-chain resilience and trade im…",
+    "source": "The Times of India",
+    "url": "https://economictimes.indiatimes.com/news/international/world-news/europes-dangerous-dependence-puts-it-on-xi-and-trumps-menu/articleshow/134451943.cms"
+  },
+  {
+    "date": "2026-09-24",
+    "headline": "Europe cautiously engages with Trump’s Board of Peace amid UN concerns",
+    "summary": "Europe's cautious engagement with Trump's Board of Peace may redefine international peace efforts, impacting EU-UN dynamics and global diplomacy. The post Europe cautiously engages with Trump’s Board of Peace amid UN concerns appeared first on Crypto Briefing.",
+    "source": "Crypto Briefing",
+    "url": "https://cryptobriefing.com/europe-cautiously-engages-with-trumps-board-of-peace-amid-un-concerns/"
+  },
+  {
+    "date": "2026-09-23",
+    "headline": "Azerbaijan pardons Frenchman after EU lifts sanctions on Russian billionaire",
+    "summary": "Martin Ryan is pardoned months after he was jailed on charges of spying, but a second Frenchman remains in prison.",
+    "source": "BBC News",
+    "url": "https://www.bbc.co.uk/news/articles/cwp84rrrymd0o"
+  },
+  {
+    "date": "2026-09-23",
+    "headline": "Azerbaijan pardons French national jailed for spying",
+    "summary": "The move comes after the EU lifts sanctions on oligarchs following what diplomats described as pressure from Baku.",
+    "source": "Al Jazeera English",
+    "url": "https://www.aljazeera.com/news/2026/9/23/azerbaijan-pardons-french-national-jailed-for-spying"
+  },
+  {
+    "date": "2026-09-23",
+    "headline": "Amid Russian Provocations And Warnings Over Possible Attack, Europe Mulls Contingency Plans",
+    "summary": "Latvian President Edgars Rinkevics disagrees with the mounting calls and reports that Russia may attack NATO or the European Union in the coming months in an attempt to weaken their support for Ukraine. He says they've already started.",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260923-rferl01.htm"
+  },
+  {
+    "date": "2026-09-23",
+    "headline": "EU-CELAC Ministerial Meeting: Co-Chairs' press statement",
+    "summary": "The Foreign Ministers of the European Union (EU) and the Community of Latin American and Caribbean States (CELAC) met today in New York to reaffirm their strategic partnership, advance cooperation in multilateral fora,and address pressing global and regional …",
+    "source": "Globalsecurity.org",
+    "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260923-eeas03.htm"
+  },
+  {
+    "date": "2026-09-23",
+    "headline": "Azerbaijan pardons Frenchman after EU lifts sanctions on oligarchs",
+    "summary": "Azerbaijan’s president on Sept. 23 pardoned Martin Ryan, a Frenchman jailed since 2023 on espionage charges, following the European Union’s removal of two Russian billionaires from its sanctions list.",
+    "source": "Hurriyet Daily News",
+    "url": "https://www.hurriyetdailynews.com/azerbaijan-pardons-frenchman-after-eu-lifts-sanctions-on-oligarchs-227240"
+  },
+  {
     "date": "2026-08-12",
     "headline": "EU Governments Rush to Send Patriot Interceptors to Ukraine as Western Stocks Run Low",
     "summary": "European Union governments are urgently supplying Patriot interceptor missiles to Ukraine ahead of an anticipated Russian winter offensive. The push comes as major donor nations report significantly depleted stocks of the air defense interceptors.",
