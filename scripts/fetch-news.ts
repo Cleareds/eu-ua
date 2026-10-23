@@ -56,7 +56,7 @@ const TRUSTED_DOMAINS = [
   // Wires + international
   "reuters.com", "apnews.com", "bbc.co.uk", "bbc.com", "theguardian.com", "ft.com", "economist.com",
   "nytimes.com", "washingtonpost.com", "bloomberg.com", "aljazeera.com", "npr.org", "cbc.ca",
-  "abcnews.go.com", "cbsnews.com", "abc.net.au", "time.com", "theatlantic.com", "foreignpolicy.com",
+  "abcnews.go.com", "abcnews.com", "cbsnews.com", "abc.net.au", "time.com", "theatlantic.com", "foreignpolicy.com",
   "channelnewsasia.com",
   // European
   "politico.eu", "euronews.com", "euractiv.com", "euobserver.com", "dw.com", "france24.com",
