@@ -67,6 +67,9 @@ const TRUSTED_DOMAINS = [
   // Official EU + analysis
   "europa.eu", "consilium.europa.eu", "ec.europa.eu", "eeas.europa.eu",
   "theconversation.com", "warontherocks.com", "atlanticcouncil.org", "ecfr.eu",
+  "hrw.org", "lse.ac.uk", "foreignaffairs.com",
+  // Manually curated entries cite these
+  "wikipedia.org",
 ];
 
 const isoDay = (d: Date) => d.toISOString().split("T")[0];
