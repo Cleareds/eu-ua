@@ -1,16 +1,17 @@
 #!/usr/bin/env npx tsx
 /**
  * Daily news fetcher: EU-Ukraine integration news
- * Fetches from NewsAPI, filters + summarizes with GitHub Models (free in Actions),
- * writes to Supabase (and JSON fallback).
+ * Fetches from NewsAPI (trusted outlets only), filters for EU-Ukraine relevance,
+ * writes to Supabase (and JSON fallback). No paid API needed.
  *
  * Run:      npx tsx scripts/fetch-news.ts
  * Backfill: DAYS_BACK=30 npx tsx scripts/fetch-news.ts   (NewsAPI free plan: max 30 days)
  * Dry run:  DRY_RUN=1 npx tsx scripts/fetch-news.ts      (prints entries, writes nothing)
  *
  * Requires: NEWS_API_KEY, NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (or anon key)
- * Optional: GITHUB_TOKEN with `models: read`. Without it (or if the model call fails)
- *           a keyword filter + the NewsAPI description are used instead.
+ * Optional: LLM_API_KEY (+ LLM_API_URL, LLM_MODEL) for any OpenAI-compatible chat API,
+ *           e.g. Gemini's free tier. Without it (or if the call fails) a keyword
+ *           filter + the NewsAPI description are used instead.
  */
 
 import fs from "fs";
@@ -21,8 +22,9 @@ import { createClient } from "@supabase/supabase-js";
 config({ path: path.resolve(process.cwd(), ".env.local") });
 
 const NEWS_API_KEY = process.env.NEWS_API_KEY;
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const MODEL = process.env.NEWS_MODEL || "openai/gpt-4.1-mini";
+const LLM_API_KEY = process.env.LLM_API_KEY;
+const LLM_API_URL = process.env.LLM_API_URL || "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
+const LLM_MODEL = process.env.LLM_MODEL || "gemini-2.5-flash";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const DAYS_BACK = Number(process.env.DAYS_BACK || 0);
@@ -49,12 +51,31 @@ interface NewsItem {
 
 const QUERY = 'Ukraine AND ("EU accession" OR "European Union" OR "EU integration" OR "EU membership" OR "European integration" OR "EU sanctions" OR "EU enlargement" OR "EU defense" OR "European Peace Facility" OR "EUMAM Ukraine")';
 
+// Editorially trusted outlets. NewsAPI only searches these, and results are re-checked by hostname.
+const TRUSTED_DOMAINS = [
+  // Wires + international
+  "reuters.com", "apnews.com", "bbc.co.uk", "bbc.com", "theguardian.com", "ft.com", "economist.com",
+  "nytimes.com", "washingtonpost.com", "bloomberg.com", "aljazeera.com", "npr.org", "cbc.ca",
+  "abcnews.go.com", "cbsnews.com", "abc.net.au", "time.com", "theatlantic.com", "foreignpolicy.com",
+  "channelnewsasia.com",
+  // European
+  "politico.eu", "euronews.com", "euractiv.com", "euobserver.com", "dw.com", "france24.com",
+  "lemonde.fr", "rte.ie", "irishtimes.com", "thejournal.ie", "nrc.nl", "notesfrompoland.com",
+  "lrt.lt", "err.ee", "balkaninsight.com", "rferl.org",
+  // Ukrainian
+  "kyivindependent.com", "pravda.com.ua", "kyivpost.com", "ukrinform.net", "president.gov.ua",
+  // Official EU + analysis
+  "europa.eu", "consilium.europa.eu", "ec.europa.eu", "eeas.europa.eu",
+  "theconversation.com", "warontherocks.com", "atlanticcouncil.org", "ecfr.eu",
+];
+
 const isoDay = (d: Date) => d.toISOString().split("T")[0];
 
 async function fetchNewsApi(from: string, to?: string): Promise<RawArticle[]> {
   if (!NEWS_API_KEY) throw new Error("NEWS_API_KEY not set");
   const params = new URLSearchParams({
     q: QUERY, from, language: "en", sortBy: "relevancy", pageSize: "20", apiKey: NEWS_API_KEY,
+    domains: TRUSTED_DOMAINS.join(","),
   });
   if (to) params.set("to", to);
   const res = await fetch(`https://newsapi.org/v2/everything?${params}`);
@@ -78,18 +99,13 @@ async function fetchLatestNews(): Promise<RawArticle[]> {
   return all;
 }
 
-// Kremlin-aligned / disinformation sources to exclude (matched against the URL)
-const EXCLUDED_SOURCES = new Set([
-  "rt.com", "sputniknews.com", "sputnikglobe.com", "sputnik", "tass.com", "tass.ru", "ria.ru",
-  "globalresearch.ca", "strategic-culture", "southfront", "news-front", "pravda-en.com",
-]);
-
-function isRelevantSource(article: RawArticle): boolean {
-  const urlLower = article.url.toLowerCase();
-  for (const excluded of EXCLUDED_SOURCES) {
-    if (urlLower.includes(excluded)) return false;
+function isTrustedSource(article: RawArticle): boolean {
+  try {
+    const host = new URL(article.url).hostname.replace(/^www\./, "");
+    return TRUSTED_DOMAINS.some((d) => host === d || host.endsWith(`.${d}`));
+  } catch {
+    return false;
   }
-  return true;
 }
 
 /** Strip NewsAPI's "[+1234 chars]" tails and stray HTML from descriptions. */
@@ -97,12 +113,14 @@ function cleanText(text: string): string {
   return text.replace(/\s*\[\+\d+ chars\]$/, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 }
 
-// Fallback relevance check when the model is unavailable: the article itself must talk about the EU.
-const EU_PATTERN = /\b(EU|European Union|Brussels|European Commission|European Council|European Parliament|accession|enlargement|von der Leyen|Kallas|Kos)\b/i;
+// Fallback relevance check when no model is available: the article itself must name both Ukraine and the EU.
+const EU_PATTERN = /\b(EU|Europe|European|E\.U\.|European Union|Brussels|European Commission|European Council|European Parliament|von der Leyen|Kallas|Marta Kos)\b/;
+const UA_PATTERN = /Ukrain|Kyiv|Zelensk/i;
 
 function fallbackSummary(article: RawArticle): string | null {
   const text = cleanText(article.description || "");
-  if (!text || !EU_PATTERN.test(`${article.title} ${text}`)) return null;
+  const all = `${article.title} ${text}`;
+  if (!text || !EU_PATTERN.test(all) || !UA_PATTERN.test(all)) return null;
   return text;
 }
 
@@ -116,11 +134,11 @@ async function summarizeBatch(batch: RawArticle[]): Promise<(string | null)[]> {
     title: a.title,
     text: cleanText(a.description || a.content || ""),
   }));
-  const res = await fetch("https://models.github.ai/inference/chat/completions", {
+  const res = await fetch(LLM_API_URL, {
     method: "POST",
-    headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${LLM_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: MODEL,
+      model: LLM_MODEL,
       temperature: 0,
       response_format: { type: "json_object" },
       messages: [
@@ -132,7 +150,7 @@ async function summarizeBatch(batch: RawArticle[]): Promise<(string | null)[]> {
       ],
     }),
   });
-  if (!res.ok) throw new Error(`GitHub Models error: ${res.status} ${await res.text()}`);
+  if (!res.ok) throw new Error(`LLM API error: ${res.status} ${await res.text()}`);
   const data = await res.json() as { choices: { message: { content: string } }[] };
   const parsed = JSON.parse(data.choices[0].message.content) as {
     results: { id: number; relevant: boolean; summary?: string }[];
@@ -172,8 +190,8 @@ async function main() {
   const candidates: RawArticle[] = [];
   for (const article of articles) {
     if (existingUrls.has(article.url)) continue;
-    if (!isRelevantSource(article)) {
-      console.log(`Skipping (excluded source): ${article.source.name}`);
+    if (!isTrustedSource(article)) {
+      console.log(`Skipping (untrusted source): ${article.source.name}`);
       continue;
     }
     if (!article.title || article.title === "[Removed]") continue;
@@ -188,7 +206,7 @@ async function main() {
   for (let i = 0; i < candidates.length; i += BATCH_SIZE) {
     const batch = candidates.slice(i, i + BATCH_SIZE);
     let summaries: (string | null)[];
-    if (GITHUB_TOKEN) {
+    if (LLM_API_KEY) {
       try {
         summaries = await summarizeBatch(batch);
       } catch (err) {
@@ -216,8 +234,7 @@ async function main() {
     });
   }
 
-  if (!GITHUB_TOKEN) console.log("::warning::GITHUB_TOKEN not set — used keyword fallback instead of the model");
-  else if (modelFailures) console.log(`::warning::${modelFailures} model batch(es) failed — used keyword fallback`);
+  if (modelFailures) console.log(`::warning::${modelFailures} model batch(es) failed — used keyword fallback`);
 
   if (newEntries.length === 0) {
     console.log("No new entries to add.");
