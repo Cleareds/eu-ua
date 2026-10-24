@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Supabase CLI scratch
 supabase/.temp/
+
+# generated content audit (scripts/audit-content.ts)
+/reports/
