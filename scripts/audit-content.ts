@@ -266,7 +266,7 @@ async function checkUrl(url: string): Promise<{ status: LinkStatus; code: string
     const code = String(res.status);
     if (res.ok) return { status: "ok", code };
     if ([404, 410].includes(res.status)) return { status: "broken", code };
-    if ([401, 403, 405, 429, 999].includes(res.status)) return { status: "blocked", code };
+    if ([401, 403, 405, 406, 429, 999].includes(res.status)) return { status: "blocked", code };
     return { status: "error", code };
   } catch (err) {
     const msg = (err as Error).name === "AbortError" ? "timeout" : ((err as any).cause?.code ?? (err as Error).message);
